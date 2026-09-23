@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jason D’s Vision — Italy (preview)</title>
-  <!-- preview-build: 2026-09-23T01:22ET unified-preview-frame -->
+  <!-- preview-build: 2026-09-23T08:45ET country-switcher -->
   <style>
     :root {
       --bg: #0f1115;
@@ -39,6 +39,25 @@
       font-weight: 650;
       margin: 1.25rem 0 0.35rem;
       letter-spacing: 0.01em;
+    }
+    .country-switch {
+      margin: 0.15rem 0 0.85rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+      letter-spacing: 0.01em;
+    }
+    .country-switch a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .country-switch a:hover { text-decoration: underline; }
+    .country-switch [aria-current="page"] {
+      color: var(--text);
+      font-weight: 600;
+    }
+    .country-switch .sep {
+      margin: 0 0.45rem;
+      color: var(--line);
     }
     .sub { color: var(--muted); margin: 0 0 1.5rem; }
     .promise h2, #license h2 {
@@ -305,6 +324,9 @@
   <header>
     <p class="pointer">Every image is free to use — no credit required. See <a href="#license">license</a> below.</p>
     <h1>Jason D’s Vision — Italy</h1>
+    <nav class="country-switch" aria-label="Country galleries">
+      <span aria-current="page">Italy</span><span class="sep" aria-hidden="true">|</span><a href="https://muse.ai/s/jason-d-s-vision-gallery-bv6lxwcfmixal">Germany</a>
+    </nav>
     <p class="sub">Preview gallery · Country → Region → City · Merge-ready for the canonical library</p>
   </header>
 
