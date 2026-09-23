@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jason D’s Vision — Italy (preview)</title>
-  <!-- preview-build: 2026-09-23T01:17ET tap-to-view-lightbox -->
+  <!-- preview-build: 2026-09-23T01:22ET unified-preview-frame -->
   <style>
     :root {
       --bg: #0f1115;
@@ -93,44 +93,6 @@
       display: flex;
       flex-direction: column;
     }
-    .thumbs {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 0.5rem;
-      padding: 0.65rem 0.65rem 0;
-      align-items: start;
-      background: #12151c;
-    }
-    .thumb-16,
-    .thumb-45 {
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.3rem;
-    }
-    .thumb-16 img {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
-      display: block;
-      background: #000;
-      border-radius: 8px;
-    }
-    .thumb-45 img {
-      width: 78px;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-      display: block;
-      background: #000;
-      border-radius: 8px;
-    }
-    .thumb-label {
-      font-size: 0.7rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--muted);
-      padding-left: 0.1rem;
-    }
     .card-body { padding: 1rem 1rem 1.15rem; display: flex; flex-direction: column; gap: 0.35rem; flex: 1; }
     .entry-id { font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
     .caption { font-size: 1.05rem; font-weight: 600; margin: 0; }
@@ -172,26 +134,46 @@
     }
     footer .sig { color: var(--text); font-weight: 600; }
 
-    /* Tap-to-view lightbox (Germany/Spain parity) */
-    .thumb-hit {
+
+    /* Unified single preview frame + format toggle (Germany parity) */
+    .preview {
+      padding: 0.65rem 0.65rem 0;
+      background: #12151c;
+    }
+    .preview-frame {
       position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #000;
+    }
+    .thumb-hit {
+      position: absolute;
+      inset: 0;
       display: block;
       border: 0;
       padding: 0;
       margin: 0;
       background: transparent;
       cursor: zoom-in;
-      border-radius: 8px;
-      overflow: hidden;
       width: 100%;
+      height: 100%;
       text-align: left;
     }
-    .thumb-45 .thumb-hit { width: 78px; }
     .thumb-hit:focus-visible {
       outline: 2px solid var(--accent);
-      outline-offset: 2px;
+      outline-offset: -2px;
     }
-    .thumb-hit img { pointer-events: none; }
+    .thumb-hit img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      pointer-events: none;
+      background: #000;
+    }
     .view-affordance {
       position: absolute;
       right: 0.45rem;
@@ -206,15 +188,38 @@
       pointer-events: none;
       opacity: 0.92;
     }
-    .thumb-45 .view-affordance {
-      right: 0.25rem;
-      bottom: 0.25rem;
-      padding: 0.18rem 0.4rem;
-      font-size: 0.6rem;
-    }
     .thumb-hit:hover .view-affordance,
-    .thumb-hit:focus-visible .view-affordance { opacity: 1; border-color: var(--accent); color: var(--accent); }
+    .thumb-hit:focus-visible .view-affordance {
+      opacity: 1;
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .preview-toggle {
+      position: absolute;
+      top: 0.45rem;
+      left: 0.45rem;
+      z-index: 2;
+      display: flex;
+      gap: 0.35rem;
+    }
+    .preview-toggle .fmt-tab {
+      background: rgba(15,17,21,0.78);
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 0.28rem 0.55rem;
+      font: inherit;
+      font-size: 0.75rem;
+      cursor: pointer;
+      line-height: 1.2;
+    }
+    .preview-toggle .fmt-tab:hover { border-color: var(--accent); }
+    .preview-toggle .fmt-tab[aria-pressed="true"] {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
 
+    /* Fullscreen lightbox dialog */
     #viewer {
       width: 100vw;
       max-width: 100vw;
@@ -1271,25 +1276,20 @@
       const scenario = escapeHtml(scene.scenario_label);
       const composition = escapeHtml(scene.composition);
       const alt = escapeHtml(scene.alt_text);
-      const thumb = escapeHtml(scene.thumb);
       const f16 = escapeHtml(scene.file_16x9);
       const f45 = escapeHtml(scene.file_4x5);
 el.innerHTML = `
-        <div class="thumbs">
-          <figure class="thumb-16">
-            <button type="button" class="thumb-hit" data-id="${id}" data-format="16x9" aria-label="View 16:9 image">
-              <img src="${thumb}" alt="${alt} (16:9)" loading="lazy" />
+        <div class="preview">
+          <div class="preview-frame">
+            <div class="preview-toggle" role="group" aria-label="Preview format">
+              <button type="button" class="fmt-tab" data-format="16x9" aria-pressed="true">16:9</button>
+              <button type="button" class="fmt-tab" data-format="4x5" aria-pressed="false">4:5</button>
+            </div>
+            <button type="button" class="thumb-hit" data-id="${id}" data-format="16x9" aria-label="View image">
+              <img src="${f16}" data-src-16="${f16}" data-src-45="${f45}" alt="${alt} (16:9)" loading="lazy" />
               <span class="view-affordance">View image</span>
             </button>
-            <figcaption class="thumb-label">16:9</figcaption>
-          </figure>
-          <figure class="thumb-45">
-            <button type="button" class="thumb-hit" data-id="${id}" data-format="4x5" aria-label="View 4:5 image">
-              <img src="${f45}" alt="${alt} (4:5)" loading="lazy" />
-              <span class="view-affordance">View image</span>
-            </button>
-            <figcaption class="thumb-label">4:5</figcaption>
-          </figure>
+          </div>
         </div>
         <div class="card-body">
           <div class="entry-id">${id}</div>
@@ -1302,7 +1302,8 @@ el.innerHTML = `
             <a class="download" href="${f45}" download="${basename(scene.file_4x5)}">Download 4:5</a>
             <a class="badge" href="#license">Free · no credit needed</a>
           </div>
-        </div>`;
+        </div>
+      `;
       return el;
     }
 
@@ -1333,6 +1334,30 @@ el.innerHTML = `
       filter();
     });
 
+
+
+    // Card preview format toggle (fixed frame; no reflow)
+    gallery.addEventListener("click", (e) => {
+      const tab = e.target.closest(".fmt-tab");
+      if (!tab || !gallery.contains(tab)) return;
+      e.preventDefault();
+      e.stopPropagation();
+      const frame = tab.closest(".preview-frame");
+      if (!frame) return;
+      const format = tab.dataset.format || "16x9";
+      const hit = frame.querySelector(".thumb-hit");
+      const img = hit && hit.querySelector("img");
+      frame.querySelectorAll(".fmt-tab").forEach((t) => {
+        t.setAttribute("aria-pressed", String(t === tab));
+      });
+      if (hit) hit.dataset.format = format;
+      if (img) {
+        const next = format === "4x5" ? img.dataset.src45 : img.dataset.src16;
+        if (next) img.src = next;
+        const baseAlt = (img.alt || "").replace(/\s*\((16:9|4:5)\)\s*$/, "");
+        img.alt = baseAlt + (format === "4x5" ? " (4:5)" : " (16:9)");
+      }
+    }, true);
 
     // Fullscreen tap-to-view lightbox (parity with Germany/Spain galleries)
     const viewer = document.getElementById("viewer");
