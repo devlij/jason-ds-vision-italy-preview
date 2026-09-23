@@ -103,7 +103,7 @@
     .entry-id { font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
     .caption { font-size: 1.05rem; font-weight: 600; margin: 0; }
     .scenario, .composition { font-size: 0.85rem; color: var(--muted); margin: 0; }
-    .meta { font-size: 0.8rem; color: var(--muted); }
+    .meta { font-size: 0.85rem; color: var(--accent); font-weight: 500; letter-spacing: 0.01em; }
     .actions {
       display: flex;
       flex-wrap: wrap;
@@ -159,7 +159,6 @@
       <input id="q" type="search" placeholder="Search by city, site, or region" aria-label="Search by city, site, or region" />
       <select id="region" aria-label="Filter by region">
         <option value="">All regions</option>
-        <option value="Lazio">Lazio</option>
       </select>
       <button type="button" id="clear">Clear</button>
       <span id="result-count"></span>
@@ -199,7 +198,7 @@
         entry_id: "IT-01-002",
         country: "Italy",
         region: "Lazio",
-        city: "Rome",
+        city: "Vatican City",
         caption: "St. Peter's Basilica, Vatican City",
         scenario_label: "23 September 2026 · 16:00 Europe/Rome",
         composition: "Basilica façade and dome · AI-generated artistic interpretation",
@@ -466,10 +465,10 @@
         <img src="${scene.thumb}" alt="${scene.alt_text}" loading="lazy" />
         <div class="card-body">
           <div class="entry-id">${scene.entry_id}</div>
+          <p class="meta">${scene.country} → ${scene.region} → ${scene.city}</p>
           <h3 class="caption">${scene.caption}</h3>
           <p class="scenario">${scene.scenario_label}</p>
           <p class="composition">${scene.composition}</p>
-          <p class="meta">${scene.country} → ${scene.region} → ${scene.city}</p>
           <div class="actions">
             <a class="download" href="${scene.file_16x9}" download="${basename(scene.file_16x9)}">Download 16:9</a>
             <a class="download" href="${scene.file_4x5}" download="${basename(scene.file_4x5)}">Download 4:5</a>
@@ -505,6 +504,23 @@
       region.value = "";
       filter();
     });
+
+
+    // Populate region filter from scenes
+    {
+      const seen = new Set();
+      const regions = [];
+      SCENES.forEach(s => {
+        if (!seen.has(s.region)) { seen.add(s.region); regions.push(s.region); }
+      });
+      regions.sort((a, b) => a.localeCompare(b));
+      regions.forEach(r => {
+        const opt = document.createElement("option");
+        opt.value = r;
+        opt.textContent = r;
+        region.appendChild(opt);
+      });
+    }
 
     render(SCENES);
   </script>
