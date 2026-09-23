@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jason D’s Vision — Italy (preview)</title>
-  <!-- preview-build: 2026-09-23T00:38ET ravenna-dawn-rebuild -->
+  <!-- preview-build: 2026-09-23T01:17ET tap-to-view-lightbox -->
   <style>
     :root {
       --bg: #0f1115;
@@ -171,6 +171,129 @@
       padding-bottom: 2.5rem;
     }
     footer .sig { color: var(--text); font-weight: 600; }
+
+    /* Tap-to-view lightbox (Germany/Spain parity) */
+    .thumb-hit {
+      position: relative;
+      display: block;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      background: transparent;
+      cursor: zoom-in;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 100%;
+      text-align: left;
+    }
+    .thumb-45 .thumb-hit { width: 78px; }
+    .thumb-hit:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    .thumb-hit img { pointer-events: none; }
+    .view-affordance {
+      position: absolute;
+      right: 0.45rem;
+      bottom: 0.45rem;
+      padding: 0.28rem 0.55rem;
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 999px;
+      background: rgba(15,17,21,0.72);
+      color: var(--text);
+      font-size: 0.68rem;
+      letter-spacing: 0.04em;
+      pointer-events: none;
+      opacity: 0.92;
+    }
+    .thumb-45 .view-affordance {
+      right: 0.25rem;
+      bottom: 0.25rem;
+      padding: 0.18rem 0.4rem;
+      font-size: 0.6rem;
+    }
+    .thumb-hit:hover .view-affordance,
+    .thumb-hit:focus-visible .view-affordance { opacity: 1; border-color: var(--accent); color: var(--accent); }
+
+    #viewer {
+      width: 100vw;
+      max-width: 100vw;
+      height: 100dvh;
+      max-height: 100dvh;
+      margin: 0;
+      border: 0;
+      padding: 1.1rem 1.25rem 1.5rem;
+      background: #080a0e;
+      color: var(--text);
+      overflow: auto;
+    }
+    #viewer::backdrop { background: rgba(0,0,0,0.88); }
+    .viewer-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .viewer-top h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin: 0;
+      letter-spacing: 0.01em;
+    }
+    #close-viewer {
+      background: transparent;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 0.45rem 0.85rem;
+      cursor: pointer;
+      font: inherit;
+      white-space: nowrap;
+    }
+    #close-viewer:hover { color: var(--text); border-color: var(--muted); }
+    .viewer-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      align-items: center;
+      margin: 0.9rem 0 1rem;
+    }
+    .viewer-controls button,
+    .viewer-controls a {
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 0.45rem 0.8rem;
+      font: inherit;
+      font-size: 0.9rem;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .viewer-controls button:hover,
+    .viewer-controls a:hover { border-color: var(--accent); }
+    .viewer-controls button[aria-pressed="true"] {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    #viewer-image {
+      display: block;
+      max-width: 100%;
+      max-height: calc(100dvh - 210px);
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      margin: 0 auto;
+      background: #000;
+      border-radius: 6px;
+    }
+    #viewer-caption {
+      margin: 0.85rem auto 0;
+      max-width: 70ch;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
   </style>
 </head>
 <body>
@@ -209,6 +332,21 @@
     <p>AI-generated artistic interpretations</p>
     <p class="sig">Jason D’s Vision</p>
   </footer>
+
+
+  <dialog id="viewer" aria-labelledby="viewer-title">
+    <div class="viewer-top">
+      <h2 id="viewer-title"></h2>
+      <button id="close-viewer" type="button" aria-label="Close image viewer">Close</button>
+    </div>
+    <div class="viewer-controls">
+      <button id="view-wide" type="button">16:9</button>
+      <button id="view-tall" type="button">4:5</button>
+      <a id="view-original" href="#" target="_blank" rel="noopener">Open original</a>
+    </div>
+    <img id="viewer-image" alt="" />
+    <p id="viewer-caption"></p>
+  </dialog>
 
   <script>
     // Approved scenes only — add each newly approved scene here immediately
@@ -1084,14 +1222,20 @@
       const thumb = escapeHtml(scene.thumb);
       const f16 = escapeHtml(scene.file_16x9);
       const f45 = escapeHtml(scene.file_4x5);
-      el.innerHTML = `
+el.innerHTML = `
         <div class="thumbs">
           <figure class="thumb-16">
-            <img src="${thumb}" alt="${alt} (16:9)" loading="lazy" />
+            <button type="button" class="thumb-hit" data-id="${id}" data-format="16x9" aria-label="View 16:9 image">
+              <img src="${thumb}" alt="${alt} (16:9)" loading="lazy" />
+              <span class="view-affordance">View image</span>
+            </button>
             <figcaption class="thumb-label">16:9</figcaption>
           </figure>
           <figure class="thumb-45">
-            <img src="${f45}" alt="${alt} (4:5)" loading="lazy" />
+            <button type="button" class="thumb-hit" data-id="${id}" data-format="4x5" aria-label="View 4:5 image">
+              <img src="${f45}" alt="${alt} (4:5)" loading="lazy" />
+              <span class="view-affordance">View image</span>
+            </button>
             <figcaption class="thumb-label">4:5</figcaption>
           </figure>
         </div>
@@ -1136,6 +1280,51 @@
       region.value = "";
       filter();
     });
+
+
+    // Fullscreen tap-to-view lightbox (parity with Germany/Spain galleries)
+    const viewer = document.getElementById("viewer");
+    const viewerTitle = document.getElementById("viewer-title");
+    const viewerImage = document.getElementById("viewer-image");
+    const viewerCaption = document.getElementById("viewer-caption");
+    const viewWide = document.getElementById("view-wide");
+    const viewTall = document.getElementById("view-tall");
+    const viewOriginal = document.getElementById("view-original");
+    const closeViewer = document.getElementById("close-viewer");
+    let activeScene = null;
+
+    function showViewer(scene, format) {
+      activeScene = scene;
+      const wide = format === "16x9";
+      const src = wide ? scene.file_16x9 : scene.file_4x5;
+      viewerTitle.textContent = scene.caption;
+      viewerImage.src = src;
+      viewerImage.alt = scene.alt_text + (wide ? " (16:9)" : " (4:5)");
+      viewOriginal.href = src;
+      viewOriginal.setAttribute("download", basename(src));
+      viewWide.setAttribute("aria-pressed", String(wide));
+      viewTall.setAttribute("aria-pressed", String(!wide));
+      viewerCaption.textContent =
+        "Scenario: " + scene.scenario_label +
+        " · AI-generated artistic interpretation · Not a photograph.";
+      if (!viewer.open) viewer.showModal();
+    }
+
+    gallery.addEventListener("click", (e) => {
+      const hit = e.target.closest(".thumb-hit");
+      if (!hit || !gallery.contains(hit)) return;
+      const scene = SCENES.find((s) => s.entry_id === hit.dataset.id);
+      if (!scene) return;
+      showViewer(scene, hit.dataset.format || "16x9");
+    });
+
+    closeViewer.addEventListener("click", () => viewer.close());
+    viewWide.addEventListener("click", () => activeScene && showViewer(activeScene, "16x9"));
+    viewTall.addEventListener("click", () => activeScene && showViewer(activeScene, "4x5"));
+    viewer.addEventListener("click", (e) => {
+      if (e.target === viewer) viewer.close();
+    });
+
 
 
     // Populate region filter from scenes and always start unfiltered
