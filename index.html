@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jason D’s Vision — Italy (preview)</title>
-  <!-- preview-build: 2026-09-23T00:29ET scenes=48 -->
+  <!-- preview-build: 2026-09-23T00:32ET scenes=48 dual-thumbs -->
   <style>
     :root {
       --bg: #0f1115;
@@ -93,12 +93,43 @@
       display: flex;
       flex-direction: column;
     }
-    .card img {
+    .thumbs {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.5rem;
+      padding: 0.65rem 0.65rem 0;
+      align-items: start;
+      background: #12151c;
+    }
+    .thumb-16,
+    .thumb-45 {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+    .thumb-16 img {
       width: 100%;
       aspect-ratio: 16 / 9;
       object-fit: cover;
       display: block;
       background: #000;
+      border-radius: 8px;
+    }
+    .thumb-45 img {
+      width: 78px;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      display: block;
+      background: #000;
+      border-radius: 8px;
+    }
+    .thumb-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding-left: 0.1rem;
     }
     .card-body { padding: 1rem 1rem 1.15rem; display: flex; flex-direction: column; gap: 0.35rem; flex: 1; }
     .entry-id { font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
@@ -847,7 +878,16 @@
       const f16 = escapeHtml(scene.file_16x9);
       const f45 = escapeHtml(scene.file_4x5);
       el.innerHTML = `
-        <img src="${thumb}" alt="${alt}" loading="lazy" />
+        <div class="thumbs">
+          <figure class="thumb-16">
+            <img src="${thumb}" alt="${alt} (16:9)" loading="lazy" />
+            <figcaption class="thumb-label">16:9</figcaption>
+          </figure>
+          <figure class="thumb-45">
+            <img src="${f45}" alt="${alt} (4:5)" loading="lazy" />
+            <figcaption class="thumb-label">4:5</figcaption>
+          </figure>
+        </div>
         <div class="card-body">
           <div class="entry-id">${id}</div>
           <p class="meta">${meta}</p>
