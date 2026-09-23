@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jason D’s Vision — Italy (preview)</title>
+  <!-- preview-build: 2026-09-23T00:16ET scenes=44 -->
   <style>
     :root {
       --bg: #0f1115;
@@ -768,6 +769,15 @@
       return path.split("/").pop();
     }
 
+    function escapeHtml(value) {
+      return String(value ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+
     function card(scene) {
       const el = document.createElement("article");
       el.className = "card";
@@ -775,17 +785,26 @@
       el.dataset.region = scene.region.toLowerCase();
       el.dataset.caption = scene.caption.toLowerCase();
       el.dataset.entry = scene.entry_id.toLowerCase();
+      const id = escapeHtml(scene.entry_id);
+      const meta = escapeHtml(`${scene.country} → ${scene.region} → ${scene.city}`);
+      const caption = escapeHtml(scene.caption);
+      const scenario = escapeHtml(scene.scenario_label);
+      const composition = escapeHtml(scene.composition);
+      const alt = escapeHtml(scene.alt_text);
+      const thumb = escapeHtml(scene.thumb);
+      const f16 = escapeHtml(scene.file_16x9);
+      const f45 = escapeHtml(scene.file_4x5);
       el.innerHTML = `
-        <img src="${scene.thumb}" alt="${scene.alt_text}" loading="lazy" />
+        <img src="${thumb}" alt="${alt}" loading="lazy" />
         <div class="card-body">
-          <div class="entry-id">${scene.entry_id}</div>
-          <p class="meta">${scene.country} → ${scene.region} → ${scene.city}</p>
-          <h3 class="caption">${scene.caption}</h3>
-          <p class="scenario">${scene.scenario_label}</p>
-          <p class="composition">${scene.composition}</p>
+          <div class="entry-id">${id}</div>
+          <p class="meta">${meta}</p>
+          <h3 class="caption">${caption}</h3>
+          <p class="scenario">${scenario}</p>
+          <p class="composition">${composition}</p>
           <div class="actions">
-            <a class="download" href="${scene.file_16x9}" download="${basename(scene.file_16x9)}">Download 16:9</a>
-            <a class="download" href="${scene.file_4x5}" download="${basename(scene.file_4x5)}">Download 4:5</a>
+            <a class="download" href="${f16}" download="${basename(scene.file_16x9)}">Download 16:9</a>
+            <a class="download" href="${f45}" download="${basename(scene.file_4x5)}">Download 4:5</a>
             <a class="badge" href="#license">Free · no credit needed</a>
           </div>
         </div>`;
@@ -820,8 +839,11 @@
     });
 
 
-    // Populate region filter from scenes
-    {
+    // Populate region filter from scenes and always start unfiltered
+    // (browsers sometimes restore prior search/region and empty the gallery).
+    try {
+      q.value = "";
+      region.value = "";
       const seen = new Set();
       const regions = [];
       SCENES.forEach(s => {
@@ -834,9 +856,13 @@
         opt.textContent = r;
         region.appendChild(opt);
       });
+      render(SCENES);
+      console.info("Jason D's Vision Italy preview:", SCENES.length, "scenes");
+    } catch (err) {
+      console.error(err);
+      noResults.style.display = "block";
+      noResults.textContent = "Gallery failed to load. Please hard-refresh (cache bust).";
     }
-
-    render(SCENES);
   </script>
 </body>
 </html>
