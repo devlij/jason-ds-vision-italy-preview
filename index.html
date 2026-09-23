@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jason D’s Vision — Italy (preview)</title>
+  <style>
+    :root {
+      --bg: #0f1115;
+      --card: #1a1e26;
+      --text: #f2f4f8;
+      --muted: #a8b0bf;
+      --accent: #e8c47c;
+      --line: #2a3140;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    a { color: var(--accent); }
+    header, main, footer, .promise, #license {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.25rem 1.25rem;
+    }
+    .pointer {
+      font-size: 0.95rem;
+      color: var(--muted);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 1rem;
+    }
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 650;
+      margin: 1.25rem 0 0.35rem;
+      letter-spacing: 0.01em;
+    }
+    .sub { color: var(--muted); margin: 0 0 1.5rem; }
+    .promise h2, #license h2 {
+      font-size: 1.2rem;
+      margin-top: 2rem;
+    }
+    .promise p, #license p { color: var(--muted); max-width: 70ch; }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      margin: 1.5rem 0 1rem;
+    }
+    .toolbar input, .toolbar select {
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 0.55rem 0.75rem;
+      font: inherit;
+    }
+    .toolbar input { flex: 1 1 220px; min-width: 180px; }
+    .toolbar button {
+      background: transparent;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 0.55rem 0.9rem;
+      cursor: pointer;
+      font: inherit;
+    }
+    .toolbar button:hover { color: var(--text); border-color: var(--muted); }
+    #result-count { color: var(--muted); font-size: 0.9rem; }
+    #no-results {
+      display: none;
+      color: var(--muted);
+      padding: 2rem 0;
+      text-align: center;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .card img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+      background: #000;
+    }
+    .card-body { padding: 1rem 1rem 1.15rem; display: flex; flex-direction: column; gap: 0.35rem; flex: 1; }
+    .entry-id { font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+    .caption { font-size: 1.05rem; font-weight: 600; margin: 0; }
+    .scenario, .composition { font-size: 0.85rem; color: var(--muted); margin: 0; }
+    .meta { font-size: 0.8rem; color: var(--muted); }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.85rem;
+      align-items: center;
+    }
+    .actions a.download {
+      display: inline-block;
+      text-decoration: none;
+      background: #243049;
+      color: var(--text);
+      border-radius: 8px;
+      padding: 0.4rem 0.7rem;
+      font-size: 0.85rem;
+      border: 1px solid var(--line);
+    }
+    .actions a.download:hover { border-color: var(--accent); }
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--bg);
+      background: var(--accent);
+      border-radius: 999px;
+      padding: 0.25rem 0.6rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding-bottom: 2.5rem;
+    }
+    footer .sig { color: var(--text); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="pointer">Every image is free to use — no credit required. See <a href="#license">license</a> below.</p>
+    <h1>Jason D’s Vision — Italy</h1>
+    <p class="sub">Preview gallery · Country → Region → City · Merge-ready for the canonical library</p>
+  </header>
+
+  <section class="promise">
+    <h2>Our promise to creators</h2>
+    <p>Beautiful, realistic imagery should never stand between a creator and their work. Everything in this gallery is free to use — for any purpose, forever, with no credit required. We make these images so the people doing the work always have something stunning to build on.</p>
+    <p><a href="#license">Read the full license</a></p>
+  </section>
+
+  <main>
+    <div class="toolbar" role="search">
+      <input id="q" type="search" placeholder="Search by city, site, or region" aria-label="Search by city, site, or region" />
+      <select id="region" aria-label="Filter by region">
+        <option value="">All regions</option>
+        <option value="Lazio">Lazio</option>
+      </select>
+      <button type="button" id="clear">Clear</button>
+      <span id="result-count"></span>
+    </div>
+    <div id="no-results">No scenes match your search.</div>
+    <div class="grid" id="gallery"></div>
+  </main>
+
+  <section id="license">
+    <h2>License</h2>
+    <p>Every image in Jason D's Vision is free to use for any purpose — personal or commercial. No credit is required. If you'd like to credit, 'Jason D's Vision' is appreciated, but it's entirely your choice.</p>
+    <p>Jason D's Vision waives its own rights in these images. This doesn't waive anyone else's rights: if an image happens to include a trademark, logo, or other third-party material, those rights still belong to their owners. All images are AI-generated artistic interpretations, not photographs, and use of an image doesn't imply endorsement by Jason D's Vision.</p>
+  </section>
+
+  <footer>
+    <p>AI-generated artistic interpretations</p>
+    <p class="sig">Jason D’s Vision</p>
+  </footer>
+
+  <script>
+    // Approved scenes only — add each newly approved scene here immediately
+    const SCENES = [
+      {
+        entry_id: "IT-01-001",
+        country: "Italy",
+        region: "Lazio",
+        city: "Rome",
+        caption: "Colosseum, Rome",
+        scenario_label: "23 September 2026 · 14:30 Europe/Rome",
+        composition: "Ancient amphitheatre exterior · AI-generated artistic interpretation",
+        alt_text: "AI-generated artistic interpretation of the Colosseum in Rome under afternoon light",
+        file_16x9: "assets/it-01-001-16x9.png",
+        file_4x5: "assets/it-01-001-4x5.png",
+        thumb: "assets/it-01-001-16x9.png"
+      },
+      {
+        entry_id: "IT-01-002",
+        country: "Italy",
+        region: "Lazio",
+        city: "Rome",
+        caption: "St. Peter's Basilica, Vatican City",
+        scenario_label: "23 September 2026 · 16:00 Europe/Rome",
+        composition: "Basilica façade and dome · AI-generated artistic interpretation",
+        alt_text: "AI-generated artistic interpretation of St. Peter's Basilica in Vatican City under afternoon light",
+        file_16x9: "assets/it-01-002-16x9.png",
+        file_4x5: "assets/it-01-002-4x5.png",
+        thumb: "assets/it-01-002-16x9.png"
+      },
+      {
+        entry_id: "IT-01-004",
+        country: "Italy",
+        region: "Lazio",
+        city: "Rome",
+        caption: "Pantheon, Rome",
+        scenario_label: "23 September 2026 · 03:35 Europe/Rome",
+        composition: "Floodlit portico and piazza at night · AI-generated artistic interpretation",
+        alt_text: "AI-generated artistic interpretation of the Pantheon in Rome floodlit at night from Piazza della Rotonda",
+        file_16x9: "assets/it-01-004-16x9.png",
+        file_4x5: "assets/it-01-004-4x5.png",
+        thumb: "assets/it-01-004-16x9.png"
+      }
+    ];
+
+    const gallery = document.getElementById("gallery");
+    const q = document.getElementById("q");
+    const region = document.getElementById("region");
+    const clearBtn = document.getElementById("clear");
+    const countEl = document.getElementById("result-count");
+    const noResults = document.getElementById("no-results");
+
+    function basename(path) {
+      return path.split("/").pop();
+    }
+
+    function card(scene) {
+      const el = document.createElement("article");
+      el.className = "card";
+      el.dataset.city = scene.city.toLowerCase();
+      el.dataset.region = scene.region.toLowerCase();
+      el.dataset.caption = scene.caption.toLowerCase();
+      el.dataset.entry = scene.entry_id.toLowerCase();
+      el.innerHTML = `
+        <img src="${scene.thumb}" alt="${scene.alt_text}" loading="lazy" />
+        <div class="card-body">
+          <div class="entry-id">${scene.entry_id}</div>
+          <h3 class="caption">${scene.caption}</h3>
+          <p class="scenario">${scene.scenario_label}</p>
+          <p class="composition">${scene.composition}</p>
+          <p class="meta">${scene.country} → ${scene.region} → ${scene.city}</p>
+          <div class="actions">
+            <a class="download" href="${scene.file_16x9}" download="${basename(scene.file_16x9)}">Download 16:9</a>
+            <a class="download" href="${scene.file_4x5}" download="${basename(scene.file_4x5)}">Download 4:5</a>
+            <a class="badge" href="#license">Free · no credit needed</a>
+          </div>
+        </div>`;
+      return el;
+    }
+
+    function render(list) {
+      gallery.innerHTML = "";
+      list.forEach(s => gallery.appendChild(card(s)));
+      countEl.textContent = list.length === 1 ? "1 scene" : list.length + " scenes";
+      noResults.style.display = list.length ? "none" : "block";
+    }
+
+    function filter() {
+      const term = q.value.trim().toLowerCase();
+      const reg = region.value.toLowerCase();
+      const list = SCENES.filter(s => {
+        if (reg && s.region.toLowerCase() !== reg) return false;
+        if (!term) return true;
+        const hay = [s.city, s.caption, s.region, s.entry_id, s.composition].join(" ").toLowerCase();
+        return hay.includes(term);
+      });
+      render(list);
+    }
+
+    q.addEventListener("input", filter);
+    region.addEventListener("change", filter);
+    clearBtn.addEventListener("click", () => {
+      q.value = "";
+      region.value = "";
+      filter();
+    });
+
+    render(SCENES);
+  </script>
+</body>
+</html>
