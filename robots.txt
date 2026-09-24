@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://italy.jdvision.org/sitemap.xml
