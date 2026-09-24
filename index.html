@@ -180,7 +180,21 @@
 .flag-chip.flag-fr{background:linear-gradient(to right,#0055A4 0 33.34%,#fff 0 66.67%,#EF4135 0)}
 .flag-chip.flag-es{background:linear-gradient(to bottom,#AA151B 0 25%,#F1BF00 0 75%,#AA151B 0)}
 .flag-chip.flag-gr{background:repeating-linear-gradient(to bottom,#0D5EAF 0 3px,#fff 0 6px)}
+.lb{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;background:rgba(8,10,9,.93)}
+.lb.open{display:flex}.lb figure{margin:0;max-width:94vw}.lb img{max-width:94vw;max-height:80vh;display:block;border-radius:6px}
+.lb figcaption{display:flex;justify-content:space-between;gap:16px;color:#eef4f0;font-size:14px;padding:10px 2px 0}
+.lb-count{color:#9db3a6;white-space:nowrap}
+.lb-close,.lb-prev,.lb-next{position:absolute;background:rgba(12,20,17,.85);color:#eef4f0;border:1px solid #26402f;border-radius:999px;width:46px;height:46px;font-size:20px;cursor:pointer;line-height:1}
+.lb-close{top:14px;right:14px}.lb-prev{left:12px;top:50%;transform:translateY(-50%)}.lb-next{right:12px;top:50%;transform:translateY(-50%)}
+@media(max-width:640px){.lb-prev{left:4px}.lb-next{right:4px}}
 </style>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Jason D's Vision"/>
+<meta property="og:title" content="Jason D's Vision — Italy"/>
+<meta property="og:description" content="AI-generated artistic interpretations of Italy. Free to use, no credit required."/>
+<meta property="og:image" content="https://devlij.github.io/jason-ds-vision-italy-preview/assets/it-01-001-16x9.png"/>
+<meta property="og:url" content="https://devlij.github.io/jason-ds-vision-italy-preview/"/>
+<meta name="twitter:card" content="summary_large_image"/>
 </head>
 <body>
   <div class="flag-band" aria-hidden="true"></div>
@@ -5114,5 +5128,44 @@ el.innerHTML = `
       noResults.textContent = "Gallery failed to load. Please hard-refresh (cache bust).";
     }
   </script>
+<script>
+(function(){
+  var overlay=document.createElement('div');
+  overlay.className='lb';overlay.setAttribute('aria-hidden','true');
+  overlay.innerHTML='<button class="lb-close" aria-label="Close">&times;</button>'
+    +'<button class="lb-prev" aria-label="Previous image">&#8592;</button>'
+    +'<figure><img alt=""><figcaption><span class="lb-cap"></span><span class="lb-count"></span></figcaption></figure>'
+    +'<button class="lb-next" aria-label="Next image">&#8594;</button>';
+  document.body.appendChild(overlay);
+  var img=overlay.querySelector('img'),cap=overlay.querySelector('.lb-cap'),count=overlay.querySelector('.lb-count');
+  var items=[],idx=0;
+  function visibleCards(){return Array.prototype.filter.call(document.querySelectorAll('.card'),function(c){return c.style.display!=='none';});}
+  function show(i){
+    items=visibleCards().map(function(c){
+      var a=c.querySelector('a.thumb');var t=c.querySelector('.caption');
+      return{src:a?a.href:'',cap:t?t.textContent:''};
+    }).filter(function(x){return x.src;});
+    if(!items.length)return;
+    idx=(i+items.length)%items.length;
+    img.src=items[idx].src;img.alt=items[idx].cap;cap.textContent=items[idx].cap;
+    count.textContent=(idx+1)+' / '+items.length;
+    overlay.classList.add('open');overlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';
+  }
+  function hide(){overlay.classList.remove('open');overlay.setAttribute('aria-hidden','true');document.body.style.overflow='';}
+  document.addEventListener('click',function(e){
+    var a=e.target.closest?e.target.closest('a.thumb'):null;
+    if(a){e.preventDefault();var cards=visibleCards();show(cards.indexOf(a.closest('.card')));return;}
+    if(e.target===overlay||(e.target.closest&&e.target.closest('.lb-close')))hide();
+    else if(e.target.closest&&e.target.closest('.lb-prev'))show(idx-1);
+    else if(e.target.closest&&e.target.closest('.lb-next'))show(idx+1);
+  });
+  document.addEventListener('keydown',function(e){
+    if(!overlay.classList.contains('open'))return;
+    if(e.key==='Escape')hide();
+    else if(e.key==='ArrowLeft')show(idx-1);
+    else if(e.key==='ArrowRight')show(idx+1);
+  });
+})();
+</script>
 </body>
 </html>
