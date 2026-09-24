@@ -7,12 +7,12 @@
   <!-- preview-build: 2026-09-23T08:45ET country-switcher -->
   <style>
     :root {
-      --bg: #0f1115;
-      --card: #1a1e26;
-      --text: #f2f4f8;
-      --muted: #a8b0bf;
-      --accent: #e8c47c;
-      --line: #2a3140;
+      --bg: #0c1411;
+      --card: #122019;
+      --text: #eef4f0;
+      --muted: #9db3a6;
+      --accent: #35b577;
+      --line: #26402f;
     }
     * { box-sizing: border-box; }
     body {
@@ -172,14 +172,23 @@
       background: rgba(15,17,21,0.72); color: var(--text); font-size: 0.7rem; line-height: 1.4;
     }
     .description { font-size: 0.9rem; color: var(--text); margin: 0.35rem 0 0; line-height: 1.55; }
-  </style>
+  .flag-band{height:6px;background:linear-gradient(to right,#009246 0 33.34%,#ffffff 0 66.67%,#CE2B37 0)}
+.flag{display:inline-block;width:46px;height:30px;border-radius:4px;vertical-align:-4px;margin-right:12px;box-shadow:0 0 0 1px rgba(255,255,255,.25);background:linear-gradient(to right,#009246 0 33.34%,#fff 0 66.67%,#CE2B37 0)}
+.flag-chip{display:inline-block;width:22px;height:15px;border-radius:2px;vertical-align:-2px;margin-right:6px;box-shadow:0 0 0 1px rgba(255,255,255,.2)}
+.flag-chip.flag-it{background:linear-gradient(to right,#009246 0 33.34%,#fff 0 66.67%,#CE2B37 0)}
+.flag-chip.flag-de{background:linear-gradient(to bottom,#000 0 33.34%,#DD0000 0 66.67%,#FFCE00 0)}
+.flag-chip.flag-fr{background:linear-gradient(to right,#0055A4 0 33.34%,#fff 0 66.67%,#EF4135 0)}
+.flag-chip.flag-es{background:linear-gradient(to bottom,#AA151B 0 25%,#F1BF00 0 75%,#AA151B 0)}
+.flag-chip.flag-gr{background:repeating-linear-gradient(to bottom,#0D5EAF 0 3px,#fff 0 6px)}
+</style>
 </head>
 <body>
+  <div class="flag-band" aria-hidden="true"></div>
   <header>
     <p class="pointer">Every image is free to use — no credit required. See <a href="#license">license</a> below.</p>
-    <h1>Jason D’s Vision — Italy</h1>
+    <h1><span class="flag" aria-hidden="true"></span>Jason D’s Vision — Italy</h1>
     <nav class="country-switch" aria-label="Country galleries">
-      <span aria-current="page">Italy</span><span class="sep" aria-hidden="true">|</span><a href="https://devlij.github.io/jason-ds-vision-germany/">Germany</a><span class="sep" aria-hidden="true">|</span><a href="https://devlij.github.io/jason-ds-vision-france-preview/">France</a><span class="sep" aria-hidden="true">|</span><a href="https://devlij.github.io/Spain/">Spain</a>
+      <span aria-current="page"><span class="flag-chip flag-it" aria-hidden="true"></span>Italy</span><span class="sep" aria-hidden="true">|</span><a href="https://devlij.github.io/jason-ds-vision-germany/"><span class="flag-chip flag-de" aria-hidden="true"></span>Germany</a><span class="sep" aria-hidden="true">|</span><a href="https://devlij.github.io/jason-ds-vision-france-preview/"><span class="flag-chip flag-fr" aria-hidden="true"></span>France</a><span class="sep" aria-hidden="true">|</span><a href="https://devlij.github.io/Spain/"><span class="flag-chip flag-es" aria-hidden="true"></span>Spain</a><span class="sep" aria-hidden="true">|</span><a href="https://devlij.github.io/jason-ds-vision-greece-preview/"><span class="flag-chip flag-gr" aria-hidden="true"></span>Greece</a>
     </nav>
     <p class="sub">Preview gallery · Country → Region → City · Merge-ready for the canonical library</p>
   </header>
