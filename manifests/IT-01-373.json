@@ -1,0 +1,47 @@
+{
+  "entry_id": "IT-01-373",
+  "country": "Italy",
+  "region": "Sicily",
+  "city": "Capaci",
+  "caption": "Piazza Troia, Capaci",
+  "scenario_label": "24 September 2026 · 21:08 Europe/Rome",
+  "composition": "Town square with the municipal hall under evening lamps · AI-generated artistic interpretation",
+  "description": "The town hall's arcaded facade faces the empty Piazza Troia, flags hanging from its central balcony under warm wall lamps. Twin ornate street lamps stand on the patterned stone paving, flanked by shuttered historic houses. The modelled 24 September 2026, 21:08 scenario is clear and calm at 23°C.",
+  "alt_text": "AI-generated artistic interpretation of Piazza Troia in Capaci at night",
+  "file_16x9": "assets/it-01-373-16x9.png",
+  "file_4x5": "assets/it-01-373-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
+  "sha256_16x9": "610a6e3d0b765bd4ecc66859fff550ac3a3982ece73a09c164a7a05f26d58d1d",
+  "sha256_4x5": "a5eab6ef17f70124cf3d9f6d39d840ca23cf71c6575328f4e8167c3d14f2c8cb",
+  "daylight_variant": {
+    "variant_of_entry_id": "IT-01-373",
+    "derived_from": "Approved night master assets/it-01-373-16x9.png (16:9) and assets/it-01-373-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
+    "source_night": {
+      "16x9": {
+        "path": "assets/it-01-373-16x9.png",
+        "sha256": "610a6e3d0b765bd4ecc66859fff550ac3a3982ece73a09c164a7a05f26d58d1d"
+      },
+      "4x5": {
+        "path": "assets/it-01-373-4x5.png",
+        "sha256": "a5eab6ef17f70124cf3d9f6d39d840ca23cf71c6575328f4e8167c3d14f2c8cb"
+      },
+      "recorded": "SHA-256 of the night masters immediately before this daylight batch. Post-write hashes are identical; night masters were not rewritten."
+    },
+    "files": {
+      "16x9": "assets/it-01-373-daylight-16x9.png",
+      "4x5": "assets/it-01-373-daylight-4x5.png"
+    },
+    "sha256": {
+      "16x9": "adfec606a8a11a862046f1eb1055f3dc249206c028968dd2922ddc2af7a7a72f",
+      "4x5": "39235be2fea017d54bee785d4320104e880d667f64d74a733a2c6c79debf0b2a"
+    },
+    "created_date": "2026-09-26",
+    "on_image_caption": "Piazza Troia, Capaci",
+    "on_image_signature": "Jason D’s Vision",
+    "on_image_disclosure": "AI-generated artistic interpretation · Not a photograph.",
+    "on_image_marking": "☀ Daylight variant · derived from the night interpretation",
+    "derivative_disclosure": "Derivative of the approved night interpretation of this same viewpoint. Not an independently modelled weather or lighting scenario. No weather claim. No scenario timestamp on the variant.",
+    "note": "AI-generated daylight re-interpretation derived from the night master of the same viewpoint and composition. Not a new scene. Architecture and landscape preserved; lighting only was changed from night to daylight. No weather evidence invented. The variant image carries no weather claim and no scenario timestamp. The scene scenario_label remains the night scene's label and is not a daylight weather assertion."
+  }
+}

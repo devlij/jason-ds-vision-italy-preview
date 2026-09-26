@@ -1,0 +1,47 @@
+{
+  "entry_id": "IT-01-374",
+  "country": "Italy",
+  "region": "Sicily",
+  "city": "Capaci",
+  "caption": "Coastline toward Isola delle Femmine, Capaci",
+  "scenario_label": "24 September 2026 · 21:15 Europe/Rome",
+  "composition": "Rocky coastline with the island silhouette offshore at night · AI-generated artistic interpretation",
+  "description": "Moonlit waves break in soft white streaks over dark rocks in the foreground, while the silhouette of Isola delle Femmine sits on the horizon with its small tower. A crescent moon and stars fill the clear sky, and the distant coast glitters with lights to the right. The modelled 24 September 2026, 21:15 scenario is clear at 23°C.",
+  "alt_text": "AI-generated artistic interpretation of the coastline near Capaci toward Isola delle Femmine at night",
+  "file_16x9": "assets/it-01-374-16x9.png",
+  "file_4x5": "assets/it-01-374-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
+  "sha256_16x9": "5d847ce477f71a726b8906b53bea2a0741d2052599a3337cc39eaea840070bde",
+  "sha256_4x5": "a778d73c03302c3dd87c4beb2db0cb61764a8ca9797ba91068719c9e191847fd",
+  "daylight_variant": {
+    "variant_of_entry_id": "IT-01-374",
+    "derived_from": "Approved night master assets/it-01-374-16x9.png (16:9) and assets/it-01-374-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
+    "source_night": {
+      "16x9": {
+        "path": "assets/it-01-374-16x9.png",
+        "sha256": "5d847ce477f71a726b8906b53bea2a0741d2052599a3337cc39eaea840070bde"
+      },
+      "4x5": {
+        "path": "assets/it-01-374-4x5.png",
+        "sha256": "a778d73c03302c3dd87c4beb2db0cb61764a8ca9797ba91068719c9e191847fd"
+      },
+      "recorded": "SHA-256 of the night masters immediately before this daylight batch. Post-write hashes are identical; night masters were not rewritten."
+    },
+    "files": {
+      "16x9": "assets/it-01-374-daylight-16x9.png",
+      "4x5": "assets/it-01-374-daylight-4x5.png"
+    },
+    "sha256": {
+      "16x9": "7bf5a74c743f4cea772aa350905fdfd950f55d95618da7fd7d42b23d23c35c22",
+      "4x5": "fe8c1f01c1b12fa15f5978a8915d05a42f777b7327e4073d12cf2ee8ab980ddb"
+    },
+    "created_date": "2026-09-26",
+    "on_image_caption": "Coastline toward Isola delle Femmine, Capaci",
+    "on_image_signature": "Jason D’s Vision",
+    "on_image_disclosure": "AI-generated artistic interpretation · Not a photograph.",
+    "on_image_marking": "☀ Daylight variant · derived from the night interpretation",
+    "derivative_disclosure": "Derivative of the approved night interpretation of this same viewpoint. Not an independently modelled weather or lighting scenario. No weather claim. No scenario timestamp on the variant.",
+    "note": "AI-generated daylight re-interpretation derived from the night master of the same viewpoint and composition. Not a new scene. Architecture and landscape preserved; lighting only was changed from night to daylight. No weather evidence invented. The variant image carries no weather claim and no scenario timestamp. The scene scenario_label remains the night scene's label and is not a daylight weather assertion."
+  }
+}

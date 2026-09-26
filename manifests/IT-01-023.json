@@ -1,0 +1,47 @@
+{
+  "entry_id": "IT-01-023",
+  "country": "Italy",
+  "region": "Sardinia",
+  "city": "Barumini",
+  "caption": "Su Nuraxi, Barumini",
+  "scenario_label": "23 September 2026 · 06:02 Europe/Rome",
+  "composition": "UNESCO nuraghe complex at night · AI-generated artistic interpretation",
+  "description": "From a raised viewpoint the ancient nuraghe complex spreads below: a central truncated stone tower ringed by concentric circles of dry-stone walls, all floodlit under a starry sky. Rolling Sardinian hills fade into the darkness beyond. The 06:02 night scenario gives the stones a stark, theatrical glow against the black landscape.",
+  "alt_text": "AI-generated artistic interpretation of Su Nuraxi di Barumini floodlit at night",
+  "file_16x9": "assets/it-01-023-16x9.png",
+  "file_4x5": "assets/it-01-023-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
+  "sha256_16x9": "3d4d78ed41bfd392648530b6a001eb27c07fd5f6362282c27680314f8b46cfed",
+  "sha256_4x5": "09b8019671dd6ece3c144dc02d710cc03ea299ab580eeaf9196b5c41603c361b",
+  "daylight_variant": {
+    "variant_of_entry_id": "IT-01-023",
+    "derived_from": "Approved night master assets/it-01-023-16x9.png (16:9) and assets/it-01-023-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
+    "source_night": {
+      "16x9": {
+        "path": "assets/it-01-023-16x9.png",
+        "sha256": "3d4d78ed41bfd392648530b6a001eb27c07fd5f6362282c27680314f8b46cfed"
+      },
+      "4x5": {
+        "path": "assets/it-01-023-4x5.png",
+        "sha256": "09b8019671dd6ece3c144dc02d710cc03ea299ab580eeaf9196b5c41603c361b"
+      },
+      "recorded": "SHA-256 of the night masters immediately before this daylight batch. Post-write hashes are identical; night masters were not rewritten."
+    },
+    "files": {
+      "16x9": "assets/it-01-023-daylight-16x9.png",
+      "4x5": "assets/it-01-023-daylight-4x5.png"
+    },
+    "sha256": {
+      "16x9": "183a55d076b0577f9fc8a8e57183ce13fd95f05c2543aa43c618649e8f56e1f2",
+      "4x5": "235ba561b72d7128537b427984a947fedc510d6a30306ab6e6c83c91c2e2778c"
+    },
+    "created_date": "2026-09-26",
+    "on_image_caption": "Su Nuraxi, Barumini",
+    "on_image_signature": "Jason D’s Vision",
+    "on_image_disclosure": "AI-generated artistic interpretation · Not a photograph.",
+    "on_image_marking": "☀ Daylight variant · derived from the night interpretation",
+    "derivative_disclosure": "Derivative of the approved night interpretation of this same viewpoint. Not an independently modelled weather or lighting scenario. No weather claim. No scenario timestamp on the variant.",
+    "note": "AI-generated daylight re-interpretation derived from the night master of the same viewpoint and composition. Not a new scene. Architecture and landscape preserved; lighting only was changed from night to daylight. No weather evidence invented. The variant image carries no weather claim and no scenario timestamp. The scene scenario_label remains the night scene's label and is not a daylight weather assertion."
+  }
+}

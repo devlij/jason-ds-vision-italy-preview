@@ -1,0 +1,47 @@
+{
+  "entry_id": "IT-01-020",
+  "country": "Italy",
+  "region": "Sicily",
+  "city": "Syracuse",
+  "caption": "Ortigia waterfront, Syracuse",
+  "scenario_label": "23 September 2026 · 05:12 Europe/Rome",
+  "composition": "Floodlit historic Ortygia seafront at night · AI-generated artistic interpretation",
+  "description": "The camera stands across the water from Ortigia's seafront promenade, taking in the long curve of floodlit palazzi in the 05:12 night. A grand arcaded palace fills the right foreground, its carved stonework glowing amber, while the row of historic houses sweeps left toward the distant church dome and bell tower. Street lamps line the waterfront walk, their reflections doubling in the dark harbor water under a deep blue sky.",
+  "alt_text": "AI-generated artistic interpretation of the Ortigia waterfront in Syracuse floodlit at night",
+  "file_16x9": "assets/it-01-020-16x9.png",
+  "file_4x5": "assets/it-01-020-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
+  "sha256_16x9": "f28fb7dbb77d20815c91a997e181e4df7e16d155f833722e9e5362193922ce06",
+  "sha256_4x5": "a3c80e47b31c235174d271059f9ca1444f8e017e63321c1d19a6aa5b3dbd3bd2",
+  "daylight_variant": {
+    "variant_of_entry_id": "IT-01-020",
+    "derived_from": "Approved night master assets/it-01-020-16x9.png (16:9) and assets/it-01-020-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
+    "source_night": {
+      "16x9": {
+        "path": "assets/it-01-020-16x9.png",
+        "sha256": "f28fb7dbb77d20815c91a997e181e4df7e16d155f833722e9e5362193922ce06"
+      },
+      "4x5": {
+        "path": "assets/it-01-020-4x5.png",
+        "sha256": "a3c80e47b31c235174d271059f9ca1444f8e017e63321c1d19a6aa5b3dbd3bd2"
+      },
+      "recorded": "SHA-256 of the night masters immediately before this daylight batch. Post-write hashes are identical; night masters were not rewritten."
+    },
+    "files": {
+      "16x9": "assets/it-01-020-daylight-16x9.png",
+      "4x5": "assets/it-01-020-daylight-4x5.png"
+    },
+    "sha256": {
+      "16x9": "75aa937fb3dc9866a37dea6073404bba951f43a9053be038f73a241908d958e2",
+      "4x5": "1f6aa6ba40a65ecdc90daee9e845b1e2fdbe566c5d905632bfe4fae1c63517f1"
+    },
+    "created_date": "2026-09-26",
+    "on_image_caption": "Ortigia waterfront, Syracuse",
+    "on_image_signature": "Jason D’s Vision",
+    "on_image_disclosure": "AI-generated artistic interpretation · Not a photograph.",
+    "on_image_marking": "☀ Daylight variant · derived from the night interpretation",
+    "derivative_disclosure": "Derivative of the approved night interpretation of this same viewpoint. Not an independently modelled weather or lighting scenario. No weather claim. No scenario timestamp on the variant.",
+    "note": "AI-generated daylight re-interpretation derived from the night master of the same viewpoint and composition. Not a new scene. Architecture and landscape preserved; lighting only was changed from night to daylight. No weather evidence invented. The variant image carries no weather claim and no scenario timestamp. The scene scenario_label remains the night scene's label and is not a daylight weather assertion."
+  }
+}

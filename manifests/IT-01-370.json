@@ -1,0 +1,47 @@
+{
+  "entry_id": "IT-01-370",
+  "country": "Italy",
+  "region": "Sicily",
+  "city": "Capaci",
+  "caption": "Palazzo Pilo, Capaci",
+  "scenario_label": "24 September 2026 · 21:05 Europe/Rome",
+  "composition": "Historic noble palace facade lit at night · AI-generated artistic interpretation",
+  "description": "The corner facade of Palazzo Pilo glows under street lamps, its rows of shuttered windows and stone balconies rising over the arched ground-floor portal. Lamplight reflects along the quiet cobbled street, with neighboring old-town buildings dark at either side. The modelled 24 September 2026, 21:05 scenario is clear at 23°C.",
+  "alt_text": "AI-generated artistic interpretation of Palazzo Pilo in Capaci at night",
+  "file_16x9": "assets/it-01-370-16x9.png",
+  "file_4x5": "assets/it-01-370-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
+  "sha256_16x9": "5c12e829a42b56fecebd50b3fbbaef607477ed6e2133690793e7c669daa523d7",
+  "sha256_4x5": "4925ea38ccdcf20006a212ff46d16130953475d50b1e2e9211273d562a1d54c4",
+  "daylight_variant": {
+    "variant_of_entry_id": "IT-01-370",
+    "derived_from": "Approved night master assets/it-01-370-16x9.png (16:9) and assets/it-01-370-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
+    "source_night": {
+      "16x9": {
+        "path": "assets/it-01-370-16x9.png",
+        "sha256": "5c12e829a42b56fecebd50b3fbbaef607477ed6e2133690793e7c669daa523d7"
+      },
+      "4x5": {
+        "path": "assets/it-01-370-4x5.png",
+        "sha256": "4925ea38ccdcf20006a212ff46d16130953475d50b1e2e9211273d562a1d54c4"
+      },
+      "recorded": "SHA-256 of the night masters immediately before this daylight batch. Post-write hashes are identical; night masters were not rewritten."
+    },
+    "files": {
+      "16x9": "assets/it-01-370-daylight-16x9.png",
+      "4x5": "assets/it-01-370-daylight-4x5.png"
+    },
+    "sha256": {
+      "16x9": "490e68c6e5f24e2afaa2dfb6ace02182efc6088731f5448739c5e7e9b78219b8",
+      "4x5": "128c9a17f9fc05d35110df00a3c167bb3e76fef32af906e5ca2ead696fb20490"
+    },
+    "created_date": "2026-09-26",
+    "on_image_caption": "Palazzo Pilo, Capaci",
+    "on_image_signature": "Jason D’s Vision",
+    "on_image_disclosure": "AI-generated artistic interpretation · Not a photograph.",
+    "on_image_marking": "☀ Daylight variant · derived from the night interpretation",
+    "derivative_disclosure": "Derivative of the approved night interpretation of this same viewpoint. Not an independently modelled weather or lighting scenario. No weather claim. No scenario timestamp on the variant.",
+    "note": "AI-generated daylight re-interpretation derived from the night master of the same viewpoint and composition. Not a new scene. Architecture and landscape preserved; lighting only was changed from night to daylight. No weather evidence invented. The variant image carries no weather claim and no scenario timestamp. The scene scenario_label remains the night scene's label and is not a daylight weather assertion."
+  }
+}

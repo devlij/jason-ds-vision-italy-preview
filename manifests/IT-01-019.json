@@ -1,0 +1,47 @@
+{
+  "entry_id": "IT-01-019",
+  "country": "Italy",
+  "region": "Sicily",
+  "city": "Taormina",
+  "caption": "Ancient Theatre of Taormina, Taormina",
+  "scenario_label": "23 September 2026 · 05:11 Europe/Rome",
+  "composition": "Floodlit Greek-Roman theatre with Etna beyond at night · AI-generated artistic interpretation",
+  "description": "The camera looks across the ancient theatre from above the cavea. The lit stone rows curve down the left side of the frame, while the ruined scene building stands center-right with its great arch and broken colonnade, floodlit against the night. Beyond, the town lights scatter below and the smoking cone of Etna rises on the horizon under the 05:11 dark sky.",
+  "alt_text": "AI-generated artistic interpretation of the Ancient Theatre of Taormina floodlit at night with Mount Etna beyond",
+  "file_16x9": "assets/it-01-019-16x9.png",
+  "file_4x5": "assets/it-01-019-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
+  "sha256_16x9": "aeb7335997c48d6402465a117b190ec5c09b561e755a3a3193f08b5e0bdbde95",
+  "sha256_4x5": "c69f5a72c87afc68a9988860e8f9bec1b34365b97ce9ad693acd6757787c56be",
+  "daylight_variant": {
+    "variant_of_entry_id": "IT-01-019",
+    "derived_from": "Approved night master assets/it-01-019-16x9.png (16:9) and assets/it-01-019-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
+    "source_night": {
+      "16x9": {
+        "path": "assets/it-01-019-16x9.png",
+        "sha256": "aeb7335997c48d6402465a117b190ec5c09b561e755a3a3193f08b5e0bdbde95"
+      },
+      "4x5": {
+        "path": "assets/it-01-019-4x5.png",
+        "sha256": "c69f5a72c87afc68a9988860e8f9bec1b34365b97ce9ad693acd6757787c56be"
+      },
+      "recorded": "SHA-256 of the night masters immediately before this daylight batch. Post-write hashes are identical; night masters were not rewritten."
+    },
+    "files": {
+      "16x9": "assets/it-01-019-daylight-16x9.png",
+      "4x5": "assets/it-01-019-daylight-4x5.png"
+    },
+    "sha256": {
+      "16x9": "2f4db7a2252d353913785770920c7a05436955b2d271e0a888c82efef95d433b",
+      "4x5": "ad85ac73de57e5149f88dd45ed02b36aba07f7c84455a0b2df20f560dbecf6f0"
+    },
+    "created_date": "2026-09-26",
+    "on_image_caption": "Ancient Theatre of Taormina, Taormina",
+    "on_image_signature": "Jason D’s Vision",
+    "on_image_disclosure": "AI-generated artistic interpretation · Not a photograph.",
+    "on_image_marking": "☀ Daylight variant · derived from the night interpretation",
+    "derivative_disclosure": "Derivative of the approved night interpretation of this same viewpoint. Not an independently modelled weather or lighting scenario. No weather claim. No scenario timestamp on the variant.",
+    "note": "AI-generated daylight re-interpretation derived from the night master of the same viewpoint and composition. Not a new scene. Architecture and landscape preserved; lighting only was changed from night to daylight. No weather evidence invented. The variant image carries no weather claim and no scenario timestamp. The scene scenario_label remains the night scene's label and is not a daylight weather assertion."
+  }
+}

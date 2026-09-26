@@ -1,0 +1,47 @@
+{
+  "entry_id": "IT-01-369",
+  "country": "Italy",
+  "region": "Sicily",
+  "city": "Capaci",
+  "caption": "Spiaggia di Capaci, Capaci",
+  "scenario_label": "24 September 2026 · 20:54 Europe/Rome",
+  "composition": "Sandy beach and calm moonlit shoreline at night · AI-generated artistic interpretation",
+  "description": "A bright moon hangs over the Capaci shoreline, its reflection glittering across gentle waves onto the wet sand. Folded beach umbrellas stand at the right along the curving beach, while the dark headland with scattered lights closes the horizon. The modelled 24 September 2026, 20:54 scenario is clear and calm at 23°C.",
+  "alt_text": "AI-generated artistic interpretation of the Capaci beach at night",
+  "file_16x9": "assets/it-01-369-16x9.png",
+  "file_4x5": "assets/it-01-369-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
+  "sha256_16x9": "21ae09f9947bad2cf62099975c1a03ee21e2fda3639b31b9e8b82ac7bc4aa5e5",
+  "sha256_4x5": "ad74a098c1ba5450f1e5447696348f53a24b0cfc911c3b4856fb6dbbf6a4e542",
+  "daylight_variant": {
+    "variant_of_entry_id": "IT-01-369",
+    "derived_from": "Approved night master assets/it-01-369-16x9.png (16:9) and assets/it-01-369-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
+    "source_night": {
+      "16x9": {
+        "path": "assets/it-01-369-16x9.png",
+        "sha256": "21ae09f9947bad2cf62099975c1a03ee21e2fda3639b31b9e8b82ac7bc4aa5e5"
+      },
+      "4x5": {
+        "path": "assets/it-01-369-4x5.png",
+        "sha256": "ad74a098c1ba5450f1e5447696348f53a24b0cfc911c3b4856fb6dbbf6a4e542"
+      },
+      "recorded": "SHA-256 of the night masters immediately before this daylight batch. Post-write hashes are identical; night masters were not rewritten."
+    },
+    "files": {
+      "16x9": "assets/it-01-369-daylight-16x9.png",
+      "4x5": "assets/it-01-369-daylight-4x5.png"
+    },
+    "sha256": {
+      "16x9": "453c03d82e94e25f55beabd44e017734cf276a0f0b7d4fdb27dd4e639fdf8e54",
+      "4x5": "e36e7cb65940b975aa25ef7f8406fecdcf11ca39f05b7a70a4ca231b645fad64"
+    },
+    "created_date": "2026-09-26",
+    "on_image_caption": "Spiaggia di Capaci, Capaci",
+    "on_image_signature": "Jason D’s Vision",
+    "on_image_disclosure": "AI-generated artistic interpretation · Not a photograph.",
+    "on_image_marking": "☀ Daylight variant · derived from the night interpretation",
+    "derivative_disclosure": "Derivative of the approved night interpretation of this same viewpoint. Not an independently modelled weather or lighting scenario. No weather claim. No scenario timestamp on the variant.",
+    "note": "AI-generated daylight re-interpretation derived from the night master of the same viewpoint and composition. Not a new scene. Architecture and landscape preserved; lighting only was changed from night to daylight. No weather evidence invented. The variant image carries no weather claim and no scenario timestamp. The scene scenario_label remains the night scene's label and is not a daylight weather assertion."
+  }
+}

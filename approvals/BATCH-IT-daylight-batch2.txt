@@ -1,0 +1,268 @@
+BATCH IT daylight variants — batch 2
+Date: 2026-09-26
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: 47baa3c40c0328282353025de3513c9461a838d0
+Directive: 2026-09-25 Jason daylight-variants workstream, Italy batch 2 (finish the remaining qualifying night runway).
+Scope scanned: IT-01-001 through IT-01-375 (375 live gallery scenes, no gaps). Germany and other countries not touched. Weather fields not edited. Night images not regenerated. index.html not edited.
+
+Scan rule: Approved night interpretation (live gallery master; composition or alt states night, including moonlight) AND both night masters present (1920x1080 and 864x1080) AND no existing *-daylight-* file AND not a daylight-only or dusk-only or pre-dawn master.
+Italy path layout: night masters live in assets/. Variants were written beside them. There is no library/world tree in this repo.
+
+Qualifying approved night scenes in ID order: 30.
+  Batch 1 already built (not rebuilt): IT-01-003, IT-01-004, IT-01-005, IT-01-006, IT-01-007, IT-01-008, IT-01-009, IT-01-010, IT-01-011, IT-01-012, IT-01-013, IT-01-014, IT-01-015, IT-01-016, IT-01-017, IT-01-018.
+  This batch (remaining 14): IT-01-019, IT-01-020, IT-01-023, IT-01-024, IT-01-366, IT-01-367, IT-01-368, IT-01-369, IT-01-370, IT-01-371, IT-01-372, IT-01-373, IT-01-374, IT-01-375.
+
+Built: 14 scenes × 2 masters = 28 variant masters.
+  it-01-XXX-daylight-16x9.png (1920×1080)
+  it-01-XXX-daylight-4x5.png (864×1080)
+Path layout: beside the night masters under assets/.
+
+SKIP SUMMARY
+- None of the 14 candidates were skipped. Each is an approved night interpretation (moonlight included), both night masters are present, and no *-daylight-* file existed before this batch.
+- IT-01-001, IT-01-002 SKIP — already-daylight. No night master. Not in this batch's candidate list. No daylight variant invented from a daylight master. Unchanged from batch 1.
+- IT-01-003 through IT-01-018 SKIP — daylight variants already exist from batch 1. Not rebuilt. Night masters not rewritten.
+- Pre-dawn, dusk, blue hour, twilight, and other non-night masters were outside this batch's candidate list and were not given variants. Same classification as batch 1.
+- Existing *-daylight-* files before this batch: 32 (16 scenes from batch 1).
+
+Gallery: Italy cards switch 16:9 / 4:5 only. No night/day control. Gallery wiring deferred. index.html was not edited.
+
+On-image text, exact, on every variant: caption identical to the night master; signature Jason D’s Vision (curly apostrophe U+2019); disclosure AI-generated artistic interpretation · Not a photograph.; plus ☀ Daylight variant · derived from the night interpretation. No weather claim. No scenario timestamp.
+Metadata: EU AI Act Art. 50 five PNG chunks (Title iTXt, Description tEXt, Copyright iTXt, Software tEXt, Comment tEXt), Country = Italy, embedded after pixels were final. Title and Copyright use a straight apostrophe and an em dash. Chunk payloads match the batch 1 masters character-for-character. Night IDAT was not touched.
+Derivative disclosure: daylight re-interpretation of the same viewpoint and composition as the night master. Not a new scene. Not an independently modelled weather scenario.
+
+NIGHT-UNCHANGED CONFIRMATION
+Night masters: byte-unchanged. SHA-256 recorded before any variant write and again after. Pre and post are identical for every night file of the 14 selected scenes. No night image was regenerated. Daylight-only masters were not rewritten either. git status shows no modifications to existing night assets or to index.html.
+
+NIGHT RUNWAY
+Qualifying approved night scenes: 30. Daylight variants now exist for all 30. Leftovers: none. Italy night runway is complete.
+
+========================================================================
+IT-01-019  Ancient Theatre of Taormina, Taormina
+  night 16x9  assets/it-01-019-16x9.png
+    sha256 before  aeb7335997c48d6402465a117b190ec5c09b561e755a3a3193f08b5e0bdbde95
+    sha256 after   aeb7335997c48d6402465a117b190ec5c09b561e755a3a3193f08b5e0bdbde95
+    night master   IDENTICAL
+  variant 16x9  assets/it-01-019-daylight-16x9.png
+    sha256         2f4db7a2252d353913785770920c7a05436955b2d271e0a888c82efef95d433b
+  night 4x5  assets/it-01-019-4x5.png
+    sha256 before  c69f5a72c87afc68a9988860e8f9bec1b34365b97ce9ad693acd6757787c56be
+    sha256 after   c69f5a72c87afc68a9988860e8f9bec1b34365b97ce9ad693acd6757787c56be
+    night master   IDENTICAL
+  variant 4x5  assets/it-01-019-daylight-4x5.png
+    sha256         ad85ac73de57e5149f88dd45ed02b36aba07f7c84455a0b2df20f560dbecf6f0
+  derivative disclosure: daylight re-interpretation of the same viewpoint and composition; not a new scene; no weather claim; no scenario timestamp on the variant.
+
+========================================================================
+IT-01-020  Ortigia waterfront, Syracuse
+  night 16x9  assets/it-01-020-16x9.png
+    sha256 before  f28fb7dbb77d20815c91a997e181e4df7e16d155f833722e9e5362193922ce06
+    sha256 after   f28fb7dbb77d20815c91a997e181e4df7e16d155f833722e9e5362193922ce06
+    night master   IDENTICAL
+  variant 16x9  assets/it-01-020-daylight-16x9.png
+    sha256         75aa937fb3dc9866a37dea6073404bba951f43a9053be038f73a241908d958e2
+  night 4x5  assets/it-01-020-4x5.png
+    sha256 before  a3c80e47b31c235174d271059f9ca1444f8e017e63321c1d19a6aa5b3dbd3bd2
+    sha256 after   a3c80e47b31c235174d271059f9ca1444f8e017e63321c1d19a6aa5b3dbd3bd2
+    night master   IDENTICAL
+  variant 4x5  assets/it-01-020-daylight-4x5.png
+    sha256         1f6aa6ba40a65ecdc90daee9e845b1e2fdbe566c5d905632bfe4fae1c63517f1
+  derivative disclosure: daylight re-interpretation of the same viewpoint and composition; not a new scene; no weather claim; no scenario timestamp on the variant.
+
+========================================================================
+IT-01-023  Su Nuraxi, Barumini
+  night 16x9  assets/it-01-023-16x9.png
+    sha256 before  3d4d78ed41bfd392648530b6a001eb27c07fd5f6362282c27680314f8b46cfed
+    sha256 after   3d4d78ed41bfd392648530b6a001eb27c07fd5f6362282c27680314f8b46cfed
+    night master   IDENTICAL
+  variant 16x9  assets/it-01-023-daylight-16x9.png
+    sha256         183a55d076b0577f9fc8a8e57183ce13fd95f05c2543aa43c618649e8f56e1f2
+  night 4x5  assets/it-01-023-4x5.png
+    sha256 before  09b8019671dd6ece3c144dc02d710cc03ea299ab580eeaf9196b5c41603c361b
+    sha256 after   09b8019671dd6ece3c144dc02d710cc03ea299ab580eeaf9196b5c41603c361b
+    night master   IDENTICAL
+  variant 4x5  assets/it-01-023-daylight-4x5.png
+    sha256         235ba561b72d7128537b427984a947fedc510d6a30306ab6e6c83c91c2e2778c
+  derivative disclosure: daylight re-interpretation of the same viewpoint and composition; not a new scene; no weather claim; no scenario timestamp on the variant.
+
+========================================================================
+IT-01-024  Costa Smeralda coast, Arzachena
+  night 16x9  assets/it-01-024-16x9.png
+    sha256 before  d798370891f9a4e04bb0fdcdb1556330aa2f8443a90513dd91b5e485ae96356e
+    sha256 after   d798370891f9a4e04bb0fdcdb1556330aa2f8443a90513dd91b5e485ae96356e
+    night master   IDENTICAL
+  variant 16x9  assets/it-01-024-daylight-16x9.png
+    sha256         db33c3a7a1543d56cc6229dfddb7f0cd3fa10b267b0158a28a6a2478450a5c3d
+  night 4x5  assets/it-01-024-4x5.png
+    sha256 before  eeb5383f557628d5650b9e0fccd3cc5cf76f604d31c9c6ddd03224d1555a60dd
+    sha256 after   eeb5383f557628d5650b9e0fccd3cc5cf76f604d31c9c6ddd03224d1555a60dd
+    night master   IDENTICAL
+  variant 4x5  assets/it-01-024-daylight-4x5.png
+    sha256         ca87b0db51d080127e2f103e7fd1b2611624770e6ed40620b6641dad70f23a3f
+  derivative disclosure: daylight re-interpretation of the same viewpoint and composition; not a new scene; no weather claim; no scenario timestamp on the variant.
+
+========================================================================
+IT-01-366  Chiesa di Sant'Erasmo, Capaci
+  night 16x9  assets/it-01-366-16x9.png
+    sha256 before  03f47a9b1c314b1e0f66b44c8e7e01ead809a823d6708e9ec5509c7d163d7268
+    sha256 after   03f47a9b1c314b1e0f66b44c8e7e01ead809a823d6708e9ec5509c7d163d7268
+    night master   IDENTICAL
+  variant 16x9  assets/it-01-366-daylight-16x9.png
+    sha256         6f0789c26bfc30b45c4b4a78034822a0bf9ed079d6e1efb4206165c6c363f0b9
+  night 4x5  assets/it-01-366-4x5.png
+    sha256 before  286bb04d2ffffe11306f77b4171ca277ee4a4ac2d82eca3464b73afcd98182fb
+    sha256 after   286bb04d2ffffe11306f77b4171ca277ee4a4ac2d82eca3464b73afcd98182fb
+    night master   IDENTICAL
+  variant 4x5  assets/it-01-366-daylight-4x5.png
+    sha256         e307ee6f7870e308c1735428d9a15e37a6d53b2589f98a60d587a4bc8fee60cd
+  derivative disclosure: daylight re-interpretation of the same viewpoint and composition; not a new scene; no weather claim; no scenario timestamp on the variant.
+
+========================================================================
+IT-01-367  Giardino della Memoria, Capaci
+  night 16x9  assets/it-01-367-16x9.png
+    sha256 before  76537de4c45f473e8dbec435bf01e85b8191d6aa1c9a09ce59d42cfff8e2f604
+    sha256 after   76537de4c45f473e8dbec435bf01e85b8191d6aa1c9a09ce59d42cfff8e2f604
+    night master   IDENTICAL
+  variant 16x9  assets/it-01-367-daylight-16x9.png
+    sha256         9b6317db3c57fc1837ba47befc6df6975a3bd0fccf704904f064e8023ba28551
+  night 4x5  assets/it-01-367-4x5.png
+    sha256 before  cb54e10b1515cce2f1cf90e62878f9ce5cac93325a2d8a3e0597e2f5039f8826
+    sha256 after   cb54e10b1515cce2f1cf90e62878f9ce5cac93325a2d8a3e0597e2f5039f8826
+    night master   IDENTICAL
+  variant 4x5  assets/it-01-367-daylight-4x5.png
+    sha256         b176c86466d26ecd4352f6d32a37072739bc4add3c635f0feeb2084daeceda89
+  derivative disclosure: daylight re-interpretation of the same viewpoint and composition; not a new scene; no weather claim; no scenario timestamp on the variant.
+
+========================================================================
+IT-01-368  MuST23 Museo, Capaci
+  night 16x9  assets/it-01-368-16x9.png
+    sha256 before  b8d9537d6243c09aa64bb6d5a089e6250fecd6c253b54a097d1f20f9ab772eb5
+    sha256 after   b8d9537d6243c09aa64bb6d5a089e6250fecd6c253b54a097d1f20f9ab772eb5
+    night master   IDENTICAL
+  variant 16x9  assets/it-01-368-daylight-16x9.png
+    sha256         40122143f547185e65e065bfe838b335f00dccc1a2fbd7220bc0e4bb4ac197b5
+  night 4x5  assets/it-01-368-4x5.png
+    sha256 before  fa05832a27bc04231e2cea7978be347a3665c362da55a6e0037acb5263a0922b
+    sha256 after   fa05832a27bc04231e2cea7978be347a3665c362da55a6e0037acb5263a0922b
+    night master   IDENTICAL
+  variant 4x5  assets/it-01-368-daylight-4x5.png
+    sha256         379685652a012e02c04338291fa394f69fdcc3b99f8aef9f302e9b0df98d4859
+  derivative disclosure: daylight re-interpretation of the same viewpoint and composition; not a new scene; no weather claim; no scenario timestamp on the variant.
+
+========================================================================
+IT-01-369  Spiaggia di Capaci, Capaci
+  night 16x9  assets/it-01-369-16x9.png
+    sha256 before  21ae09f9947bad2cf62099975c1a03ee21e2fda3639b31b9e8b82ac7bc4aa5e5
+    sha256 after   21ae09f9947bad2cf62099975c1a03ee21e2fda3639b31b9e8b82ac7bc4aa5e5
+    night master   IDENTICAL
+  variant 16x9  assets/it-01-369-daylight-16x9.png
+    sha256         453c03d82e94e25f55beabd44e017734cf276a0f0b7d4fdb27dd4e639fdf8e54
+  night 4x5  assets/it-01-369-4x5.png
+    sha256 before  ad74a098c1ba5450f1e5447696348f53a24b0cfc911c3b4856fb6dbbf6a4e542
+    sha256 after   ad74a098c1ba5450f1e5447696348f53a24b0cfc911c3b4856fb6dbbf6a4e542
+    night master   IDENTICAL
+  variant 4x5  assets/it-01-369-daylight-4x5.png
+    sha256         e36e7cb65940b975aa25ef7f8406fecdcf11ca39f05b7a70a4ca231b645fad64
+  derivative disclosure: daylight re-interpretation of the same viewpoint and composition; not a new scene; no weather claim; no scenario timestamp on the variant.
+
+========================================================================
+IT-01-370  Palazzo Pilo, Capaci
+  night 16x9  assets/it-01-370-16x9.png
+    sha256 before  5c12e829a42b56fecebd50b3fbbaef607477ed6e2133690793e7c669daa523d7
+    sha256 after   5c12e829a42b56fecebd50b3fbbaef607477ed6e2133690793e7c669daa523d7
+    night master   IDENTICAL
+  variant 16x9  assets/it-01-370-daylight-16x9.png
+    sha256         490e68c6e5f24e2afaa2dfb6ace02182efc6088731f5448739c5e7e9b78219b8
+  night 4x5  assets/it-01-370-4x5.png
+    sha256 before  4925ea38ccdcf20006a212ff46d16130953475d50b1e2e9211273d562a1d54c4
+    sha256 after   4925ea38ccdcf20006a212ff46d16130953475d50b1e2e9211273d562a1d54c4
+    night master   IDENTICAL
+  variant 4x5  assets/it-01-370-daylight-4x5.png
+    sha256         128c9a17f9fc05d35110df00a3c167bb3e76fef32af906e5ca2ead696fb20490
+  derivative disclosure: daylight re-interpretation of the same viewpoint and composition; not a new scene; no weather claim; no scenario timestamp on the variant.
+
+========================================================================
+IT-01-371  Chiesa di San Rocco, Capaci
+  night 16x9  assets/it-01-371-16x9.png
+    sha256 before  7eab853dbe97788fbf3567ec24702bedf63aef6fcdef7ef3e4aee15f73e02d91
+    sha256 after   7eab853dbe97788fbf3567ec24702bedf63aef6fcdef7ef3e4aee15f73e02d91
+    night master   IDENTICAL
+  variant 16x9  assets/it-01-371-daylight-16x9.png
+    sha256         19a0f26610945314607f4f2622fd985771bb57fd97350f28cf07146793cede20
+  night 4x5  assets/it-01-371-4x5.png
+    sha256 before  7689bc80d76b0bb06b5b9cc7da65740ac8d5f0c380a171893b63ddd561727030
+    sha256 after   7689bc80d76b0bb06b5b9cc7da65740ac8d5f0c380a171893b63ddd561727030
+    night master   IDENTICAL
+  variant 4x5  assets/it-01-371-daylight-4x5.png
+    sha256         111c8398b1e4856096c446bb973e2889bef86565e75f5f33cb38dce14a2cb80d
+  derivative disclosure: daylight re-interpretation of the same viewpoint and composition; not a new scene; no weather claim; no scenario timestamp on the variant.
+
+========================================================================
+IT-01-372  Fontana Grande, Capaci
+  night 16x9  assets/it-01-372-16x9.png
+    sha256 before  05786d8493b93c08c397a49ca2b481aefda6fbee46f1e399f71c01a73323ccef
+    sha256 after   05786d8493b93c08c397a49ca2b481aefda6fbee46f1e399f71c01a73323ccef
+    night master   IDENTICAL
+  variant 16x9  assets/it-01-372-daylight-16x9.png
+    sha256         0dea07ce60ef6cf36eaf8d366b67e5c8284f9c1240dbcb6d4d537f7e4a19473f
+  night 4x5  assets/it-01-372-4x5.png
+    sha256 before  cbd4e5455d6fc2237d693b2f66d9dfc79f509b5b9f51062b89bde88b358a5833
+    sha256 after   cbd4e5455d6fc2237d693b2f66d9dfc79f509b5b9f51062b89bde88b358a5833
+    night master   IDENTICAL
+  variant 4x5  assets/it-01-372-daylight-4x5.png
+    sha256         4c871ffec17a5ebc18a4fe53eca2b39b31cd4778f31d9d31e7f6a4474ce184c7
+  derivative disclosure: daylight re-interpretation of the same viewpoint and composition; not a new scene; no weather claim; no scenario timestamp on the variant.
+
+========================================================================
+IT-01-373  Piazza Troia, Capaci
+  night 16x9  assets/it-01-373-16x9.png
+    sha256 before  610a6e3d0b765bd4ecc66859fff550ac3a3982ece73a09c164a7a05f26d58d1d
+    sha256 after   610a6e3d0b765bd4ecc66859fff550ac3a3982ece73a09c164a7a05f26d58d1d
+    night master   IDENTICAL
+  variant 16x9  assets/it-01-373-daylight-16x9.png
+    sha256         adfec606a8a11a862046f1eb1055f3dc249206c028968dd2922ddc2af7a7a72f
+  night 4x5  assets/it-01-373-4x5.png
+    sha256 before  a5eab6ef17f70124cf3d9f6d39d840ca23cf71c6575328f4e8167c3d14f2c8cb
+    sha256 after   a5eab6ef17f70124cf3d9f6d39d840ca23cf71c6575328f4e8167c3d14f2c8cb
+    night master   IDENTICAL
+  variant 4x5  assets/it-01-373-daylight-4x5.png
+    sha256         39235be2fea017d54bee785d4320104e880d667f64d74a733a2c6c79debf0b2a
+  derivative disclosure: daylight re-interpretation of the same viewpoint and composition; not a new scene; no weather claim; no scenario timestamp on the variant.
+
+========================================================================
+IT-01-374  Coastline toward Isola delle Femmine, Capaci
+  night 16x9  assets/it-01-374-16x9.png
+    sha256 before  5d847ce477f71a726b8906b53bea2a0741d2052599a3337cc39eaea840070bde
+    sha256 after   5d847ce477f71a726b8906b53bea2a0741d2052599a3337cc39eaea840070bde
+    night master   IDENTICAL
+  variant 16x9  assets/it-01-374-daylight-16x9.png
+    sha256         7bf5a74c743f4cea772aa350905fdfd950f55d95618da7fd7d42b23d23c35c22
+  night 4x5  assets/it-01-374-4x5.png
+    sha256 before  a778d73c03302c3dd87c4beb2db0cb61764a8ca9797ba91068719c9e191847fd
+    sha256 after   a778d73c03302c3dd87c4beb2db0cb61764a8ca9797ba91068719c9e191847fd
+    night master   IDENTICAL
+  variant 4x5  assets/it-01-374-daylight-4x5.png
+    sha256         fe8c1f01c1b12fa15f5978a8915d05a42f777b7327e4073d12cf2ee8ab980ddb
+  derivative disclosure: daylight re-interpretation of the same viewpoint and composition; not a new scene; no weather claim; no scenario timestamp on the variant.
+
+========================================================================
+IT-01-375  Citrus groves, Capaci
+  night 16x9  assets/it-01-375-16x9.png
+    sha256 before  586c96ddf10b0bac1687f4150ee9397057a9cf21b9815fd43892238218ff4526
+    sha256 after   586c96ddf10b0bac1687f4150ee9397057a9cf21b9815fd43892238218ff4526
+    night master   IDENTICAL
+  variant 16x9  assets/it-01-375-daylight-16x9.png
+    sha256         f9797bb12fd1bfc746f9c58be8a62ab8c598e47051d8d717a81886c40fc99b3f
+  night 4x5  assets/it-01-375-4x5.png
+    sha256 before  f74619b90b3f2952f7e2c14a088771a51e4ba3e8d950da4d0a19159efc9ec995
+    sha256 after   f74619b90b3f2952f7e2c14a088771a51e4ba3e8d950da4d0a19159efc9ec995
+    night master   IDENTICAL
+  variant 4x5  assets/it-01-375-daylight-4x5.png
+    sha256         1e38d0242ce34ab511c317c3ade19d248058c687faf541e83b61a05638a05d11
+  derivative disclosure: daylight re-interpretation of the same viewpoint and composition; not a new scene; no weather claim; no scenario timestamp on the variant.
+
+========================================================================
+ALL SELECTED NIGHT MASTERS BYTE-UNCHANGED: YES
+Variant scenes: 14. Variant masters: 28.
+Qualifying night scenes still without a daylight variant: 0.
+Italy night runway: COMPLETE.

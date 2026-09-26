@@ -1,0 +1,47 @@
+{
+  "entry_id": "IT-01-367",
+  "country": "Italy",
+  "region": "Sicily",
+  "city": "Capaci",
+  "caption": "Giardino della Memoria, Capaci",
+  "scenario_label": "24 September 2026 · 20:52 Europe/Rome",
+  "composition": "Memorial garden with olive trees and stone stele under lamplight at night · AI-generated artistic interpretation",
+  "description": "A gravel path lined with low glowing bollards leads between mature olive trees to the garden's central stone stele. The lamplight catches the silvery olive foliage on both sides while the night sky, scattered with stars, opens above the memorial. The modelled 24 September 2026, 20:52 scenario is still and clear at 23°C, the garden's respectful quiet unbroken.",
+  "alt_text": "AI-generated artistic interpretation of the Giardino della Memoria in Capaci at night",
+  "file_16x9": "assets/it-01-367-16x9.png",
+  "file_4x5": "assets/it-01-367-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
+  "sha256_16x9": "76537de4c45f473e8dbec435bf01e85b8191d6aa1c9a09ce59d42cfff8e2f604",
+  "sha256_4x5": "cb54e10b1515cce2f1cf90e62878f9ce5cac93325a2d8a3e0597e2f5039f8826",
+  "daylight_variant": {
+    "variant_of_entry_id": "IT-01-367",
+    "derived_from": "Approved night master assets/it-01-367-16x9.png (16:9) and assets/it-01-367-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
+    "source_night": {
+      "16x9": {
+        "path": "assets/it-01-367-16x9.png",
+        "sha256": "76537de4c45f473e8dbec435bf01e85b8191d6aa1c9a09ce59d42cfff8e2f604"
+      },
+      "4x5": {
+        "path": "assets/it-01-367-4x5.png",
+        "sha256": "cb54e10b1515cce2f1cf90e62878f9ce5cac93325a2d8a3e0597e2f5039f8826"
+      },
+      "recorded": "SHA-256 of the night masters immediately before this daylight batch. Post-write hashes are identical; night masters were not rewritten."
+    },
+    "files": {
+      "16x9": "assets/it-01-367-daylight-16x9.png",
+      "4x5": "assets/it-01-367-daylight-4x5.png"
+    },
+    "sha256": {
+      "16x9": "9b6317db3c57fc1837ba47befc6df6975a3bd0fccf704904f064e8023ba28551",
+      "4x5": "b176c86466d26ecd4352f6d32a37072739bc4add3c635f0feeb2084daeceda89"
+    },
+    "created_date": "2026-09-26",
+    "on_image_caption": "Giardino della Memoria, Capaci",
+    "on_image_signature": "Jason D’s Vision",
+    "on_image_disclosure": "AI-generated artistic interpretation · Not a photograph.",
+    "on_image_marking": "☀ Daylight variant · derived from the night interpretation",
+    "derivative_disclosure": "Derivative of the approved night interpretation of this same viewpoint. Not an independently modelled weather or lighting scenario. No weather claim. No scenario timestamp on the variant.",
+    "note": "AI-generated daylight re-interpretation derived from the night master of the same viewpoint and composition. Not a new scene. Architecture and landscape preserved; lighting only was changed from night to daylight. No weather evidence invented. The variant image carries no weather claim and no scenario timestamp. The scene scenario_label remains the night scene's label and is not a daylight weather assertion."
+  }
+}

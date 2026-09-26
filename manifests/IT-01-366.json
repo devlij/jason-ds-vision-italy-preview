@@ -1,0 +1,47 @@
+{
+  "entry_id": "IT-01-366",
+  "country": "Italy",
+  "region": "Sicily",
+  "city": "Capaci",
+  "caption": "Chiesa di Sant'Erasmo, Capaci",
+  "scenario_label": "24 September 2026 · 20:50 Europe/Rome",
+  "composition": "Baroque mother church facade floodlit at night over its piazza · AI-generated artistic interpretation",
+  "description": "The floodlit baroque facade of the Chiesa di Sant'Erasmo fills the frame, its pilasters and statues glowing warm against the deep blue night sky. The bell tower rises at the left with its lit belfry, while two street lamps flank the wide stone steps leading up to the three wooden portals. The modelled 24 September 2026, 20:50 scenario is clear and calm at 23°C, the empty piazza emphasizing the church's quiet presence.",
+  "alt_text": "AI-generated artistic interpretation of the Chiesa di Sant'Erasmo in Capaci at night",
+  "file_16x9": "assets/it-01-366-16x9.png",
+  "file_4x5": "assets/it-01-366-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
+  "sha256_16x9": "03f47a9b1c314b1e0f66b44c8e7e01ead809a823d6708e9ec5509c7d163d7268",
+  "sha256_4x5": "286bb04d2ffffe11306f77b4171ca277ee4a4ac2d82eca3464b73afcd98182fb",
+  "daylight_variant": {
+    "variant_of_entry_id": "IT-01-366",
+    "derived_from": "Approved night master assets/it-01-366-16x9.png (16:9) and assets/it-01-366-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
+    "source_night": {
+      "16x9": {
+        "path": "assets/it-01-366-16x9.png",
+        "sha256": "03f47a9b1c314b1e0f66b44c8e7e01ead809a823d6708e9ec5509c7d163d7268"
+      },
+      "4x5": {
+        "path": "assets/it-01-366-4x5.png",
+        "sha256": "286bb04d2ffffe11306f77b4171ca277ee4a4ac2d82eca3464b73afcd98182fb"
+      },
+      "recorded": "SHA-256 of the night masters immediately before this daylight batch. Post-write hashes are identical; night masters were not rewritten."
+    },
+    "files": {
+      "16x9": "assets/it-01-366-daylight-16x9.png",
+      "4x5": "assets/it-01-366-daylight-4x5.png"
+    },
+    "sha256": {
+      "16x9": "6f0789c26bfc30b45c4b4a78034822a0bf9ed079d6e1efb4206165c6c363f0b9",
+      "4x5": "e307ee6f7870e308c1735428d9a15e37a6d53b2589f98a60d587a4bc8fee60cd"
+    },
+    "created_date": "2026-09-26",
+    "on_image_caption": "Chiesa di Sant'Erasmo, Capaci",
+    "on_image_signature": "Jason D’s Vision",
+    "on_image_disclosure": "AI-generated artistic interpretation · Not a photograph.",
+    "on_image_marking": "☀ Daylight variant · derived from the night interpretation",
+    "derivative_disclosure": "Derivative of the approved night interpretation of this same viewpoint. Not an independently modelled weather or lighting scenario. No weather claim. No scenario timestamp on the variant.",
+    "note": "AI-generated daylight re-interpretation derived from the night master of the same viewpoint and composition. Not a new scene. Architecture and landscape preserved; lighting only was changed from night to daylight. No weather evidence invented. The variant image carries no weather claim and no scenario timestamp. The scene scenario_label remains the night scene's label and is not a daylight weather assertion."
+  }
+}

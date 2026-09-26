@@ -1,0 +1,47 @@
+{
+  "entry_id": "IT-01-375",
+  "country": "Italy",
+  "region": "Sicily",
+  "city": "Capaci",
+  "caption": "Citrus groves, Capaci",
+  "scenario_label": "24 September 2026 · 21:16 Europe/Rome",
+  "composition": "Citrus groves on the hillside with distant town lights at night · AI-generated artistic interpretation",
+  "description": "Rows of lemon and orange trees heavy with fruit frame a dirt path climbing the hillside, farmhouses glowing warmly in the valley below. Beyond, the lights of the coastal towns scatter across the dark hills down to the sea. The modelled 24 September 2026, 21:16 scenario is clear and mild at 23°C.",
+  "alt_text": "AI-generated artistic interpretation of citrus groves above Capaci at night",
+  "file_16x9": "assets/it-01-375-16x9.png",
+  "file_4x5": "assets/it-01-375-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
+  "sha256_16x9": "586c96ddf10b0bac1687f4150ee9397057a9cf21b9815fd43892238218ff4526",
+  "sha256_4x5": "f74619b90b3f2952f7e2c14a088771a51e4ba3e8d950da4d0a19159efc9ec995",
+  "daylight_variant": {
+    "variant_of_entry_id": "IT-01-375",
+    "derived_from": "Approved night master assets/it-01-375-16x9.png (16:9) and assets/it-01-375-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
+    "source_night": {
+      "16x9": {
+        "path": "assets/it-01-375-16x9.png",
+        "sha256": "586c96ddf10b0bac1687f4150ee9397057a9cf21b9815fd43892238218ff4526"
+      },
+      "4x5": {
+        "path": "assets/it-01-375-4x5.png",
+        "sha256": "f74619b90b3f2952f7e2c14a088771a51e4ba3e8d950da4d0a19159efc9ec995"
+      },
+      "recorded": "SHA-256 of the night masters immediately before this daylight batch. Post-write hashes are identical; night masters were not rewritten."
+    },
+    "files": {
+      "16x9": "assets/it-01-375-daylight-16x9.png",
+      "4x5": "assets/it-01-375-daylight-4x5.png"
+    },
+    "sha256": {
+      "16x9": "f9797bb12fd1bfc746f9c58be8a62ab8c598e47051d8d717a81886c40fc99b3f",
+      "4x5": "1e38d0242ce34ab511c317c3ade19d248058c687faf541e83b61a05638a05d11"
+    },
+    "created_date": "2026-09-26",
+    "on_image_caption": "Citrus groves, Capaci",
+    "on_image_signature": "Jason D’s Vision",
+    "on_image_disclosure": "AI-generated artistic interpretation · Not a photograph.",
+    "on_image_marking": "☀ Daylight variant · derived from the night interpretation",
+    "derivative_disclosure": "Derivative of the approved night interpretation of this same viewpoint. Not an independently modelled weather or lighting scenario. No weather claim. No scenario timestamp on the variant.",
+    "note": "AI-generated daylight re-interpretation derived from the night master of the same viewpoint and composition. Not a new scene. Architecture and landscape preserved; lighting only was changed from night to daylight. No weather evidence invented. The variant image carries no weather claim and no scenario timestamp. The scene scenario_label remains the night scene's label and is not a daylight weather assertion."
+  }
+}
