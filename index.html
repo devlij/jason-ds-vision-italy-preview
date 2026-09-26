@@ -146,6 +146,18 @@
       border: 1px solid var(--line);
     }
     .actions a.download:hover { border-color: var(--accent); }
+    .actions button.narrate {
+      display: inline-block;
+      background: #243049;
+      color: var(--text);
+      border-radius: 8px;
+      padding: 0.4rem 0.7rem;
+      font-size: 0.85rem;
+      border: 1px solid var(--line);
+      cursor: pointer;
+    }
+    .actions button.narrate:hover { border-color: var(--accent); }
+    .actions button.narrate.playing { border-color: var(--accent); color: var(--accent); }
     .badge {
       display: inline-block;
       font-size: 0.75rem;
@@ -204,9 +216,10 @@
 .lb figcaption{color:#eef4f0;font-size:14px;padding:10px 2px 0}
 .lb-nav{display:flex;align-items:center;justify-content:center;gap:16px}
 .lb-count{color:#9db3a6;white-space:nowrap;font-size:16px;min-width:84px;text-align:center}
-.lb-close,.lb-prev,.lb-next,.lb-play{background:rgba(12,20,17,.85);color:#eef4f0;border:1px solid #26402f;border-radius:999px;width:46px;height:46px;font-size:20px;cursor:pointer;line-height:1;flex:0 0 auto}
+.lb-close,.lb-prev,.lb-next,.lb-play,.lb-narrate{background:rgba(12,20,17,.85);color:#eef4f0;border:1px solid #26402f;border-radius:999px;width:46px;height:46px;font-size:20px;cursor:pointer;line-height:1;flex:0 0 auto}
 .lb-close{position:absolute;top:14px;right:14px}
-.lb-play.is-playing{color:#f6c344;border-color:#f6c344;box-shadow:0 0 12px rgba(246,195,68,.5)}
+.lb-controls{display:flex;gap:12px;align-items:center;justify-content:center}
+.lb-play.is-playing,.lb-narrate.playing{color:#f6c344;border-color:#f6c344;box-shadow:0 0 12px rgba(246,195,68,.5)}
 
 .wotd{border-top:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12);background:#141419;padding:10px 24px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;font-size:14px;line-height:1.5}
 .wotd .kicker{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8f8a7d;font-weight:600;white-space:nowrap}
@@ -2544,6 +2557,7 @@
     const SCENES = [
       {
         entry_id: "IT-01-001",
+        audio: "audio/it-01-001-narration.mp3",
         country: "Italy",
         region: "Lazio",
         city: "Rome",
@@ -2557,6 +2571,7 @@
         description: "The tourist stands on the curved street facing the Colosseum's great oval, which fills the frame center with its three tiers of travertine arches. A tall cypress and pale apartment blocks line the left edge while ochre facades and plane trees close the right, and the empty asphalt road sweeps across the foreground. The 14:30 September sun is high and bright, throwing crisp shadows across the stonework under a clear blue sky."
       },      {
         entry_id: "IT-01-002",
+        audio: "audio/it-01-002-narration.mp3",
         country: "Italy",
         region: "Lazio",
         city: "Vatican City",
@@ -2570,6 +2585,7 @@
         description: "The view stands in the middle of St. Peter's Square looking straight at the basilica. The Vatican obelisk rises in the center foreground, with the colonnades curving away to the left and right, their rooftop statues silhouetted against the sky. The basilica's broad façade fills the middle ground and the great dome crowns it behind. The modelled scenario is 23 September 2026 at 16:00 Europe/Rome: bright afternoon daylight with long soft shadows crossing the empty piazza."
       },      {
         entry_id: "IT-01-003",
+        audio: "audio/it-01-003-narration.mp3",
         country: "Italy",
         region: "Lazio",
         city: "Rome",
@@ -2583,6 +2599,7 @@
         description: "The camera stands at the piazza edge facing the Trevi Fountain head on. The floodlit travertine facade fills the frame: Corinthian columns frame the central triumphal arch with its figure above the cascade, a niche and statue to either side. Palazzi with lamplit windows close in on left and right, and the rippling basin spreads across the foreground under the deep 03:42 night."
       },      {
         entry_id: "IT-01-004",
+        audio: "audio/it-01-004-narration.mp3",
         country: "Italy",
         region: "Lazio",
         city: "Rome",
@@ -2596,6 +2613,7 @@
         description: "The camera faces the Pantheon's floodlit portico across the wet cobbles of the piazza in the deep night of the 03:35 scenario. Eight great columns carry the triangular pediment at center, the ancient inscription legible across its frieze, with the dark swell of the dome rising behind and the obelisk and fountain standing in the middle ground. Lamp-lit palazzi close in on both sides, their amber windows glowing, and the rain-slicked stones mirror the floodlights beneath the black sky."
       },      {
         entry_id: "IT-01-005",
+        audio: "audio/it-01-005-narration.mp3",
         country: "Italy",
         region: "Tuscany",
         city: "Florence",
@@ -2609,6 +2627,7 @@
         description: "The camera stands in the empty Piazza del Duomo in the deep night, facing the floodlit cathedral from the southwest. Giotto's campanile rises at the left of the frame, Brunelleschi's great terracotta dome fills the center, and the marble-patterned flank of the nave runs to the right. Warm floodlighting picks out the green, white, and rose marble facing against the black sky of the modelled 23 September 2026, 04:57 scenario, while the surrounding palazzi glow softly and the paving stones mirror the light."
       },      {
         entry_id: "IT-01-006",
+        audio: "audio/it-01-006-narration.mp3",
         country: "Italy",
         region: "Tuscany",
         city: "Florence",
@@ -2622,6 +2641,7 @@
         description: "The viewpoint faces the bridge from the riverbank, the floodlit Ponte Vecchio spanning the full width of the frame with its row of shopfronts glowing amber above three stone arches. The left and right embankment walls curve away in shadow, and the still Arno doubles every light in a long golden reflection. It is 04:58 in deep night, and the second bridge glimpsed through the central arch shows how quiet the river is at this hour."
       },      {
         entry_id: "IT-01-007",
+        audio: "audio/it-01-007-narration.mp3",
         country: "Italy",
         region: "Veneto",
         city: "Venice",
@@ -2635,6 +2655,7 @@
         description: "The camera stands on the Rialto Bridge looking down the Grand Canal in the deep pre-dawn dark. Lit palazzi crowd the right bank with glowing arched windows, while the left bank falls into shadow with a lone gondola drifting in the foreground. Warm window light shimmers across the black water toward the distant bend, matching the 04:59 night scenario."
       },      {
         entry_id: "IT-01-008",
+        audio: "audio/it-01-008-narration.mp3",
         country: "Italy",
         region: "Veneto",
         city: "Venice",
@@ -2648,6 +2669,7 @@
         description: "The camera stands in Piazza San Marco facing the floodlit west facade of St. Mark's Basilica, its five arched portals and gilded domes glowing warm against the night sky. The red-brick campanile rises at the left edge while the lamplit arcades of the Procuratie close both sides of the square. The modelled scenario is 23 September 2026 at 05:00 Europe/Rome: a pre-dawn night view over a nearly empty pavement, not a verified on-site observation."
       },      {
         entry_id: "IT-01-009",
+        audio: "audio/it-01-009-narration.mp3",
         country: "Italy",
         region: "Tuscany",
         city: "Pisa",
@@ -2661,6 +2683,7 @@
         description: "The visitor faces the Piazza dei Miracoli at night, where the floodlit Leaning Tower rises left of center, its white arcaded tiers glowing against the dark sky. The cathedral stretches across the middle ground with its long nave and dome, and the baptistery's dome appears at the far right edge. Warm floodlights pick out every arch and column, with the green lawn dark in the foreground and a few clouds drifting overhead."
       },      {
         entry_id: "IT-01-010",
+        audio: "audio/it-01-010-narration.mp3",
         country: "Italy",
         region: "Lombardy",
         city: "Milan",
@@ -2674,6 +2697,7 @@
         description: "The camera faces the Duomo head-on from the center of Piazza del Duomo. Floodlit spires and pinnacles crowd the Gothic façade in the middle of the frame, with the gilded Madonnina glinting at the very top. Arcaded palazzi line the square to the left and right, their windows glowing warm. The modelled scenario is 23 September 2026 at 05:02 Europe/Rome: full night, the cathedral artificially lit against a black sky."
       },      {
         entry_id: "IT-01-011",
+        audio: "audio/it-01-011-narration.mp3",
         country: "Italy",
         region: "Campania",
         city: "Pompeii",
@@ -2687,6 +2711,7 @@
         description: "The camera looks down the forum's stone paving from between the ruins. A long colonnade of floodlit columns runs up the left side, while the raised podium temple with its row of illuminated columns stands on the right. Beyond the scattered foundations the dark cone of Vesuvius closes the horizon, and the 05:03 scenario is true night with warm artificial light on the stone against a black sky."
       },      {
         entry_id: "IT-01-012",
+        audio: "audio/it-01-012-narration.mp3",
         country: "Italy",
         region: "Campania",
         city: "Positano",
@@ -2700,6 +2725,7 @@
         description: "From an elevated viewpoint off the coast, the camera looks along Positano as the lit town cascades down the cliffs toward the dark sea in the 05:04 pre-dawn night. Houses in white, pink, and ochre stack across the center and left slopes, while the church's pale dome glows at the lower right above the waterfront and the beach curves into shadow along the bottom edge. Warm window lights trace the hillside roads, and a few boat lights dot the black water."
       },      {
         entry_id: "IT-01-013",
+        audio: "audio/it-01-013-narration.mp3",
         country: "Italy",
         region: "Veneto",
         city: "Verona",
@@ -2713,6 +2739,7 @@
         description: "The viewpoint is the center of Piazza Bra before dawn, looking straight at the floodlit Roman amphitheatre. The Arena's double ring of arches dominates the frame, its limestone glowing amber under the floodlights, with the broken crown of the outer wall silhouetted at the upper left. Café awnings and ornate street lamps line the left edge of the square, and the modelled 23 September 2026, 05:05 night scenario leaves the sky pitch black above the empty piazza."
       },      {
         entry_id: "IT-01-014",
+        audio: "audio/it-01-014-narration.mp3",
         country: "Italy",
         region: "Piedmont",
         city: "Turin",
@@ -2726,6 +2753,7 @@
         description: "The camera stands at street level looking up as the floodlit Mole rises from the center of the frame, its ribbed dome tapering into the needle spire against a cloudy night sky. Lit apartment blocks line the left and the right foreground, their windows warm against the dark stone, and street lamps bead the avenue below. At 05:06 the monument is the brightest thing in Turin, glowing pale gold above the sleeping streets."
       },      {
         entry_id: "IT-01-015",
+        audio: "audio/it-01-015-narration.mp3",
         country: "Italy",
         region: "Emilia-Romagna",
         city: "Bologna",
@@ -2739,6 +2767,7 @@
         description: "The floodlit Asinelli tower rises dead center, impossibly tall against the dark sky, with the shorter leaning Garisenda tower beside it to the right. Arcaded brick palazzi frame the piazza on both sides, their ground-floor arches and a lone street lamp glowing amber. The square is empty in the 05:07 pre-dawn stillness."
       },      {
         entry_id: "IT-01-016",
+        audio: "audio/it-01-016-narration.mp3",
         country: "Italy",
         region: "Liguria",
         city: "Manarola",
@@ -2752,6 +2781,7 @@
         description: "The viewpoint looks down from the cliffside path above Manarola's small harbor, the pastel tower-houses of the village stacked center-left and glowing with lit windows against the dark hillside. Below, moored boats rest in the cove and a breakwater runs along the right into the calm night sea. The modelled scenario is 23 September 2026 at 05:08 Europe/Rome: pre-dawn dark with warm village light, not a verified on-site observation."
       },      {
         entry_id: "IT-01-017",
+        audio: "audio/it-01-017-narration.mp3",
         country: "Italy",
         region: "Sicily",
         city: "Palermo",
@@ -2765,6 +2795,7 @@
         description: "From across the quiet piazza the tourist faces Palermo Cathedral's floodlit facade, its great arched portal and rose window glowing right of center. Crenellated rooflines and pointed spires rise above, with the tallest bell tower at the right edge and smaller turrets behind. Street lamps burn in the dark foreground, and the warm floodlighting brings out the Norman-Arab carving under the 05:09 night sky."
       },      {
         entry_id: "IT-01-018",
+        audio: "audio/it-01-018-narration.mp3",
         country: "Italy",
         region: "Sicily",
         city: "Agrigento",
@@ -2778,6 +2809,7 @@
         description: "The temple is seen from below its ridge, the floodlit Doric columns glowing gold against the night. The long colonnade runs across the center and right of the frame above its stepped stone base, with rocky scrub in the immediate foreground. To the left the lights of Agrigento scatter across the dark valley. The modelled scenario is 23 September 2026 at 05:10 Europe/Rome: full night, the temple artificially lit under a dark sky."
       },      {
         entry_id: "IT-01-019",
+        audio: "audio/it-01-019-narration.mp3",
         country: "Italy",
         region: "Sicily",
         city: "Taormina",
@@ -2791,6 +2823,7 @@
         description: "The camera looks across the ancient theatre from above the cavea. The lit stone rows curve down the left side of the frame, while the ruined scene building stands center-right with its great arch and broken colonnade, floodlit against the night. Beyond, the town lights scatter below and the smoking cone of Etna rises on the horizon under the 05:11 dark sky."
       },      {
         entry_id: "IT-01-020",
+        audio: "audio/it-01-020-narration.mp3",
         country: "Italy",
         region: "Sicily",
         city: "Syracuse",
@@ -2805,6 +2838,7 @@
       }      ,
       {
         entry_id: "IT-01-021",
+        audio: "audio/it-01-021-narration.mp3",
         country: "Italy",
         region: "Sardinia",
         city: "Cagliari",
@@ -2818,6 +2852,7 @@
         description: "The camera faces the Bastione di Saint Remy from the square below in the last dark minutes before dawn. The floodlit triumphal arch stands at the center-right, its twin staircases sweeping down toward the viewer, while the long balustraded terrace runs leftward behind it. The modelled 23 September 2026, 06:00 sky is still deep blue with drifting cloud, and the warm lights pool on the rain-slick paving stones of the empty piazza."
       },      {
         entry_id: "IT-01-022",
+        audio: "audio/it-01-022-narration.mp3",
         country: "Italy",
         region: "Sardinia",
         city: "Alghero",
@@ -2831,6 +2866,7 @@
         description: "The walkway runs along the ramparts at the left of the frame, warm floodlights picking out the honey-colored stone arches and round tower, while the dark sea fills the right and the town's lights glitter along the far shore. Rocky cliffs drop between the wall and the water, and the sky is still deep night blue at 06:01. The lit promenade curving away under the walls gives the whole scene its sweep."
       },      {
         entry_id: "IT-01-023",
+        audio: "audio/it-01-023-narration.mp3",
         country: "Italy",
         region: "Sardinia",
         city: "Barumini",
@@ -2844,6 +2880,7 @@
         description: "From a raised viewpoint the ancient nuraghe complex spreads below: a central truncated stone tower ringed by concentric circles of dry-stone walls, all floodlit under a starry sky. Rolling Sardinian hills fade into the darkness beyond. The 06:02 night scenario gives the stones a stark, theatrical glow against the black landscape."
       },      {
         entry_id: "IT-01-024",
+        audio: "audio/it-01-024-narration.mp3",
         country: "Italy",
         region: "Sardinia",
         city: "Arzachena",
@@ -7458,6 +7495,7 @@
       el.dataset.region = scene.region.toLowerCase();
       el.dataset.caption = scene.caption.toLowerCase();
       el.dataset.entry = scene.entry_id.toLowerCase();
+      if (scene.audio) el.dataset.audio = scene.audio;
       const id = escapeHtml(scene.entry_id);
       const meta = escapeHtml(`${scene.country} → ${scene.region} → ${scene.city}`);
       const caption = escapeHtml(scene.caption);
@@ -7492,12 +7530,29 @@ el.innerHTML = `
             <a class="download" data-dl="4x5" href="${f45}" download="${basename(scene.file_4x5)}">Download 4:5</a>
             ${f916 ? `<a class="download" data-dl="9x16" href="${f916}" download="${basename(scene.file_9x16)}">Download 9:16</a>` : ""}
             
+            ${scene.audio ? `<button type="button" class="narrate" data-audio="${escapeHtml(scene.audio)}" aria-pressed="false" aria-label="Listen to the scene description">🔊 Listen</button>` : ""}
             <a class="badge" href="#license">Free · no credit needed</a>
           </div>
         </div>
       `;
       return el;
     }
+
+    // Studio narration (no-overlay): singleton audio shared between cards and lightbox.
+    // Starting one narration stops any other; toggles to Pause; stops on scene change/close/nav.
+    const narrBus = (window.__narrBus = window.__narrBus || { stops: [] });
+    const cardNarr = { el: null, btn: null };
+    function stopCardNarr() {
+      if (cardNarr.el) { cardNarr.el.pause(); cardNarr.el = null; }
+      if (cardNarr.btn) {
+        cardNarr.btn.classList.remove("playing");
+        cardNarr.btn.setAttribute("aria-pressed", "false");
+        cardNarr.btn.innerHTML = "🔊 Listen";
+        cardNarr.btn = null;
+      }
+    }
+    function stopAllNarr() { narrBus.stops.forEach(function(fn) { try { fn(); } catch (err) {} }); }
+    narrBus.stops.push(stopCardNarr);
 
     function render(list) {
       gallery.innerHTML = "";
@@ -7528,6 +7583,22 @@ el.innerHTML = `
 
     // Card preview size toggle: 16:9 / 4:5 (tap image opens current size full-size in new tab)
     gallery.addEventListener("click", (e) => {
+      const nbtn = e.target.closest(".narrate");
+      if (nbtn) {
+        e.preventDefault();
+        const src = nbtn.getAttribute("data-audio");
+        if (cardNarr.btn === nbtn && cardNarr.el && !cardNarr.el.paused) { stopAllNarr(); return; }
+        stopAllNarr();
+        const a = new Audio(src);
+        cardNarr.el = a; cardNarr.btn = nbtn;
+        nbtn.classList.add("playing");
+        nbtn.setAttribute("aria-pressed", "true");
+        nbtn.innerHTML = "\u23F8\uFE0E Pause";
+        a.addEventListener("ended", stopAllNarr);
+        a.addEventListener("error", stopAllNarr);
+        a.play().catch(stopAllNarr);
+        return;
+      }
       const dtab = e.target.closest(".day-tab");
       if (dtab) {
         e.preventDefault();
@@ -7614,10 +7685,29 @@ el.innerHTML = `
     +'<span class="lb-count"></span>'
     +'<button class="lb-next" aria-label="Next image">&#8594;</button></div>'
     +'<figure><img alt=""><figcaption><span class="lb-cap"></span></figcaption></figure>'
-    +'<button class="lb-play" aria-label="Play slideshow">&#9654;</button>';
+    +'<div class="lb-controls"><button class="lb-play" aria-label="Play slideshow">&#9654;</button>'
+    +'<button class="lb-narrate" aria-label="Play scene narration" style="display:none">&#128266;</button></div>';
   document.body.appendChild(overlay);
   var img=overlay.querySelector('img'),cap=overlay.querySelector('.lb-cap'),count=overlay.querySelector('.lb-count');
   var playBtn=overlay.querySelector('.lb-play');
+  var narrBtn=overlay.querySelector('.lb-narrate');
+  var narrAudio=null;
+  var lbNarrBus=(window.__narrBus=window.__narrBus||{stops:[]});
+  function stopNarr(){if(narrAudio){narrAudio.pause();narrAudio=null;}narrBtn.classList.remove('playing');narrBtn.setAttribute('aria-label','Play scene narration');narrBtn.innerHTML='&#128266;';}
+  function setNarrState(playing){narrBtn.classList.toggle('playing',playing);narrBtn.setAttribute('aria-label',playing?'Pause scene narration':'Play scene narration');narrBtn.innerHTML=playing?'&#10074;&#10074;':'&#128266;';}
+  function stopAllLbNarr(){lbNarrBus.stops.forEach(function(fn){try{fn();}catch(e){}});}
+  function toggleNarr(){
+    var card=visibleCards()[idx];var src=card?card.getAttribute('data-audio'):'';
+    if(!src)return;
+    if(narrAudio&&!narrAudio.paused){stopAllLbNarr();return;}
+    stopAllLbNarr();
+    narrAudio=new Audio(src);
+    narrAudio.addEventListener('ended',stopAllLbNarr);
+    narrAudio.addEventListener('error',stopAllLbNarr);
+    setNarrState(true);
+    narrAudio.play().catch(stopAllLbNarr);
+  }
+  lbNarrBus.stops.push(stopNarr);
   var items=[],idx=0;
   var lbFormat='16x9';/* lightbox-session format: seeded from the opening card's active tab; persists across prev/next + slideshow, never reset to 16:9 */
   var lbDay='night';/* lightbox-session day/night: seeded from the opening card's active day tab; persists across prev/next and slideshow navigation */
@@ -7644,11 +7734,14 @@ el.innerHTML = `
     }).filter(function(x){return x.src;});
     if(!items.length)return;
     idx=(i+items.length)%items.length;
+    stopAllLbNarr();
     img.src=items[idx].src;img.alt=items[idx].cap;cap.textContent=items[idx].cap;
+    var curCard=visibleCards()[idx];var hasA=!!(curCard&&curCard.getAttribute('data-audio'));
+    narrBtn.style.display=hasA?'':'none';
     count.textContent=(idx+1)+' / '+items.length;
     overlay.classList.add('open');overlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';
   }
-  function hide(){setPlaying(false);overlay.classList.remove('open');overlay.setAttribute('aria-hidden','true');document.body.style.overflow='';}
+  function hide(){setPlaying(false);stopAllLbNarr();overlay.classList.remove('open');overlay.setAttribute('aria-hidden','true');document.body.style.overflow='';}
   function nav(d){show(idx+d);if(playing)setPlaying(true);}
   document.addEventListener('click',function(e){
     var a=e.target.closest?e.target.closest('a.thumb'):null;
@@ -7657,6 +7750,7 @@ el.innerHTML = `
     else if(e.target.closest&&e.target.closest('.lb-prev'))nav(-1);
     else if(e.target.closest&&e.target.closest('.lb-next'))nav(1);
     else if(e.target.closest&&e.target.closest('.lb-play')){setPlaying(!playing);playBtn.blur();}
+    else if(e.target.closest&&e.target.closest('.lb-narrate')){toggleNarr();narrBtn.blur();}
   });
   document.addEventListener('keydown',function(e){
     if(!overlay.classList.contains('open'))return;
