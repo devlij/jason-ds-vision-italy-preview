@@ -164,14 +164,14 @@
     }
     footer .sig { color: var(--text); font-weight: 600; }
 
-
     /* Two-size preview: full-bleed image, 16:9 / 4:5 toggle tabs, tap opens full-size in new tab */
     .preview { position: relative; line-height: 0; }
     .thumb { display: block; aspect-ratio: 16 / 9; overflow: hidden; background: #000; }
     .thumb.tall { aspect-ratio: 4 / 5; }
     .thumb.tall916 { aspect-ratio: 9 / 16; }
     .thumb img { width: 100%; height: 100%; display: block; object-fit: cover; }
-    .fmt-tabs { position: absolute; top: 0.6rem; left: 0.6rem; display: flex; gap: 0.35rem; z-index: 2; }
+    .fmt-tabs { display: flex; gap: 0.35rem; padding: 0.6rem 0.6rem 0; line-height: 1.4; }
+    .day-row { padding: 0.4rem 0.6rem 0; }
     .fmt-tab {
       background: rgba(15,17,21,0.82); color: var(--text); border: 1px solid var(--line);
       border-radius: 8px; padding: 0.28rem 0.6rem; font: inherit; font-size: 0.75rem;
@@ -186,11 +186,6 @@
     .day-tab:hover { border-color: var(--accent); }
     .day-tab.is-active {
       background: #e8b23a; border-color: #e8b23a; color: #1a1405; font-weight: 700;
-    }
-    .view-affordance {
-      position: absolute; right: 0.6rem; bottom: 0.6rem; padding: 0.28rem 0.6rem;
-      border: 1px solid rgba(255,255,255,0.35); border-radius: 999px;
-      background: rgba(15,17,21,0.72); color: var(--text); font-size: 0.7rem; line-height: 1.4;
     }
     .description { font-size: 0.9rem; color: var(--text); margin: 0.35rem 0 0; line-height: 1.55; }
   .flag-band{height:6px;background:linear-gradient(to right,#009246 0 33.34%,#ffffff 0 66.67%,#CE2B37 0)}
@@ -272,7 +267,6 @@
     <p>AI-generated artistic interpretations</p>
     <p class="sig">Jason D’s Vision</p>
   </footer>
-
 
 
   <script>
@@ -5206,16 +5200,16 @@
       const f916 = scene.file_9x16 ? escapeHtml(scene.file_9x16) : "";
 el.innerHTML = `
         <div class="preview">
-          <div class="fmt-tabs" role="group" aria-label="Image size">
+            <a class="thumb" href="${f16}" target="_blank" rel="noopener">
+            <img src="${f16}" data-src-16="${f16}" data-src-45="${f45}"${scene.file_16x9_day ? ` data-src-16-day="${escapeHtml(scene.file_16x9_day)}" data-src-45-day="${escapeHtml(scene.file_4x5_day)}"` : ""}${f916 ? ` data-src-916="${f916}"` : ""}${scene.file_9x16_day ? ` data-src-916-day="${escapeHtml(scene.file_9x16_day)}"` : ""} alt="${alt}" loading="lazy" />
+          </a>
+        </div>
+        <div class="fmt-tabs" role="group" aria-label="Image size">
             <button type="button" class="fmt-tab is-active" data-format="16x9">16:9</button>
             <button type="button" class="fmt-tab" data-format="4x5">4:5</button>
             ${f916 ? `<button type="button" class="fmt-tab" data-format="9x16">9:16</button>` : ""}
           </div>
-          <a class="thumb" href="${f16}" target="_blank" rel="noopener">
-            <img src="${f16}" data-src-16="${f16}" data-src-45="${f45}"${scene.file_16x9_day ? ` data-src-16-day="${escapeHtml(scene.file_16x9_day)}" data-src-45-day="${escapeHtml(scene.file_4x5_day)}"` : ""}${f916 ? ` data-src-916="${f916}"` : ""}${scene.file_9x16_day ? ` data-src-916-day="${escapeHtml(scene.file_9x16_day)}"` : ""} alt="${alt}" loading="lazy" />
-            <span class="view-affordance">View image</span>
-          </a>
-        </div>
+        ${scene.file_16x9_day ? `<div class="day-row"><button type="button" class="day-tab" data-daynight="night" aria-pressed="false" title="Toggle the daylight variant">\u2600 Daylight</button></div>` : ""}
         <div class="card-body">
           <div class="entry-id">${id}</div>
           <p class="meta">${meta}</p>
@@ -5227,7 +5221,7 @@ el.innerHTML = `
             <a class="download" data-dl="16x9" href="${f16}" download="${basename(scene.file_16x9)}">Download 16:9</a>
             <a class="download" data-dl="4x5" href="${f45}" download="${basename(scene.file_4x5)}">Download 4:5</a>
             ${f916 ? `<a class="download" data-dl="9x16" href="${f916}" download="${basename(scene.file_9x16)}">Download 9:16</a>` : ""}
-            ${scene.file_16x9_day ? `<button type="button" class="day-tab" data-daynight="night" aria-pressed="false" title="Toggle the daylight variant">\u2600 Daylight</button>` : ""}
+            
             <a class="badge" href="#license">Free · no credit needed</a>
           </div>
         </div>
@@ -5312,8 +5306,6 @@ el.innerHTML = `
       }
       if (link) { link.classList.toggle("tall", fmt === "4x5"); link.classList.toggle("tall916", fmt === "9x16"); }
     });
-
-
 
 
 
