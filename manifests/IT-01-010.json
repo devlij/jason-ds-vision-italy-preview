@@ -1,0 +1,47 @@
+{
+  "entry_id": "IT-01-010",
+  "country": "Italy",
+  "region": "Lombardy",
+  "city": "Milan",
+  "caption": "Milan Cathedral (Duomo), Milan",
+  "scenario_label": "23 September 2026 · 05:02 Europe/Rome",
+  "composition": "Floodlit Gothic cathedral façade on Piazza del Duomo at night · AI-generated artistic interpretation",
+  "description": "The camera faces the Duomo head-on from the center of Piazza del Duomo. Floodlit spires and pinnacles crowd the Gothic façade in the middle of the frame, with the gilded Madonnina glinting at the very top. Arcaded palazzi line the square to the left and right, their windows glowing warm. The modelled scenario is 23 September 2026 at 05:02 Europe/Rome: full night, the cathedral artificially lit against a black sky.",
+  "alt_text": "AI-generated artistic interpretation of Milan Cathedral floodlit at night on Piazza del Duomo",
+  "file_16x9": "assets/it-01-010-16x9.png",
+  "file_4x5": "assets/it-01-010-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
+  "sha256_16x9": "b8a7c403cc22f6c81d771e1f5d945289b090d703949ed255c7b98b54fadf5b32",
+  "sha256_4x5": "6c236285f3c9cc8c689b5936fd286d942dae0195490cb637f634ebc6cfc75a43",
+  "daylight_variant": {
+    "variant_of_entry_id": "IT-01-010",
+    "derived_from": "Approved night master assets/it-01-010-16x9.png (16:9) and assets/it-01-010-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
+    "source_night": {
+      "16x9": {
+        "path": "assets/it-01-010-16x9.png",
+        "sha256": "b8a7c403cc22f6c81d771e1f5d945289b090d703949ed255c7b98b54fadf5b32"
+      },
+      "4x5": {
+        "path": "assets/it-01-010-4x5.png",
+        "sha256": "6c236285f3c9cc8c689b5936fd286d942dae0195490cb637f634ebc6cfc75a43"
+      },
+      "recorded": "SHA-256 of the night masters immediately before this daylight batch. Post-write hashes are identical; night masters were not rewritten."
+    },
+    "files": {
+      "16x9": "assets/it-01-010-daylight-16x9.png",
+      "4x5": "assets/it-01-010-daylight-4x5.png"
+    },
+    "sha256": {
+      "16x9": "fa55ccdeccfb69589ced8b363039be805f266149b23a2692e4cb3f66f72f5272",
+      "4x5": "a4bd30f1e816b9fd84b25c16410ddbd9e4b7bfb942026ff4652d63a826878438"
+    },
+    "created_date": "2026-09-26",
+    "on_image_caption": "Milan Cathedral (Duomo), Milan",
+    "on_image_signature": "Jason D’s Vision",
+    "on_image_disclosure": "AI-generated artistic interpretation · Not a photograph.",
+    "on_image_marking": "☀ Daylight variant · derived from the night interpretation",
+    "derivative_disclosure": "Derivative of the approved night interpretation of this same viewpoint. Not an independently modelled weather or lighting scenario. No weather claim. No scenario timestamp on the variant.",
+    "note": "AI-generated daylight re-interpretation derived from the night master of the same viewpoint and composition. Not a new scene. Architecture and landscape preserved; lighting only was changed from night to daylight. No weather evidence invented. The variant image carries no weather claim and no scenario timestamp. The scene scenario_label remains the night scene's label and is not a daylight weather assertion."
+  }
+}

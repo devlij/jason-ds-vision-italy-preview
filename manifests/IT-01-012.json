@@ -1,0 +1,47 @@
+{
+  "entry_id": "IT-01-012",
+  "country": "Italy",
+  "region": "Campania",
+  "city": "Positano",
+  "caption": "Positano, Amalfi Coast",
+  "scenario_label": "23 September 2026 · 05:04 Europe/Rome",
+  "composition": "Floodlit cliffside town cascading to the sea at night · AI-generated artistic interpretation",
+  "description": "From an elevated viewpoint off the coast, the camera looks along Positano as the lit town cascades down the cliffs toward the dark sea in the 05:04 pre-dawn night. Houses in white, pink, and ochre stack across the center and left slopes, while the church's pale dome glows at the lower right above the waterfront and the beach curves into shadow along the bottom edge. Warm window lights trace the hillside roads, and a few boat lights dot the black water.",
+  "alt_text": "AI-generated artistic interpretation of Positano on the Amalfi Coast lit at night cascading to the beach",
+  "file_16x9": "assets/it-01-012-16x9.png",
+  "file_4x5": "assets/it-01-012-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
+  "sha256_16x9": "03f4082bdc82a4f630742b1b51630c1d1bf16358d09de0969e9f2b0e00b58c02",
+  "sha256_4x5": "07dd68bd3bee0ea7ed0b7df487062c9003e2a8919ab6aa15ef4a679cc44d419f",
+  "daylight_variant": {
+    "variant_of_entry_id": "IT-01-012",
+    "derived_from": "Approved night master assets/it-01-012-16x9.png (16:9) and assets/it-01-012-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
+    "source_night": {
+      "16x9": {
+        "path": "assets/it-01-012-16x9.png",
+        "sha256": "03f4082bdc82a4f630742b1b51630c1d1bf16358d09de0969e9f2b0e00b58c02"
+      },
+      "4x5": {
+        "path": "assets/it-01-012-4x5.png",
+        "sha256": "07dd68bd3bee0ea7ed0b7df487062c9003e2a8919ab6aa15ef4a679cc44d419f"
+      },
+      "recorded": "SHA-256 of the night masters immediately before this daylight batch. Post-write hashes are identical; night masters were not rewritten."
+    },
+    "files": {
+      "16x9": "assets/it-01-012-daylight-16x9.png",
+      "4x5": "assets/it-01-012-daylight-4x5.png"
+    },
+    "sha256": {
+      "16x9": "9e8f0878d284389c2ad62d0a444ab08f4df94ff6c754208219004825409a013f",
+      "4x5": "f83f30130a0144add225e6bc35e73a61e80741037e50b19bcb87ec1b8c38c557"
+    },
+    "created_date": "2026-09-26",
+    "on_image_caption": "Positano, Amalfi Coast",
+    "on_image_signature": "Jason D’s Vision",
+    "on_image_disclosure": "AI-generated artistic interpretation · Not a photograph.",
+    "on_image_marking": "☀ Daylight variant · derived from the night interpretation",
+    "derivative_disclosure": "Derivative of the approved night interpretation of this same viewpoint. Not an independently modelled weather or lighting scenario. No weather claim. No scenario timestamp on the variant.",
+    "note": "AI-generated daylight re-interpretation derived from the night master of the same viewpoint and composition. Not a new scene. Architecture and landscape preserved; lighting only was changed from night to daylight. No weather evidence invented. The variant image carries no weather claim and no scenario timestamp. The scene scenario_label remains the night scene's label and is not a daylight weather assertion."
+  }
+}

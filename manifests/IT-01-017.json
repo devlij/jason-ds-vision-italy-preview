@@ -1,0 +1,47 @@
+{
+  "entry_id": "IT-01-017",
+  "country": "Italy",
+  "region": "Sicily",
+  "city": "Palermo",
+  "caption": "Palermo Cathedral, Palermo",
+  "scenario_label": "23 September 2026 · 05:09 Europe/Rome",
+  "composition": "Floodlit Norman-Arab-Gothic cathedral at night · AI-generated artistic interpretation",
+  "description": "From across the quiet piazza the tourist faces Palermo Cathedral's floodlit facade, its great arched portal and rose window glowing right of center. Crenellated rooflines and pointed spires rise above, with the tallest bell tower at the right edge and smaller turrets behind. Street lamps burn in the dark foreground, and the warm floodlighting brings out the Norman-Arab carving under the 05:09 night sky.",
+  "alt_text": "AI-generated artistic interpretation of Palermo Cathedral floodlit at night",
+  "file_16x9": "assets/it-01-017-16x9.png",
+  "file_4x5": "assets/it-01-017-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
+  "sha256_16x9": "e565f8035934675b6b408c55b334d0550096607438807d8f4a2a1fc207a5c337",
+  "sha256_4x5": "ae3d9915f4240232611e69383d3514c4223502b11e897024aed15da2e94d85a0",
+  "daylight_variant": {
+    "variant_of_entry_id": "IT-01-017",
+    "derived_from": "Approved night master assets/it-01-017-16x9.png (16:9) and assets/it-01-017-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
+    "source_night": {
+      "16x9": {
+        "path": "assets/it-01-017-16x9.png",
+        "sha256": "e565f8035934675b6b408c55b334d0550096607438807d8f4a2a1fc207a5c337"
+      },
+      "4x5": {
+        "path": "assets/it-01-017-4x5.png",
+        "sha256": "ae3d9915f4240232611e69383d3514c4223502b11e897024aed15da2e94d85a0"
+      },
+      "recorded": "SHA-256 of the night masters immediately before this daylight batch. Post-write hashes are identical; night masters were not rewritten."
+    },
+    "files": {
+      "16x9": "assets/it-01-017-daylight-16x9.png",
+      "4x5": "assets/it-01-017-daylight-4x5.png"
+    },
+    "sha256": {
+      "16x9": "cd92db7ea1160e63c9e10c3fc2dc7236232000d86182f955f33480ee8c689607",
+      "4x5": "6aad7c8860d8f2632ec36de47cfdf854e2bc30e68875fc3155cfe00bc62b9f39"
+    },
+    "created_date": "2026-09-26",
+    "on_image_caption": "Palermo Cathedral, Palermo",
+    "on_image_signature": "Jason D’s Vision",
+    "on_image_disclosure": "AI-generated artistic interpretation · Not a photograph.",
+    "on_image_marking": "☀ Daylight variant · derived from the night interpretation",
+    "derivative_disclosure": "Derivative of the approved night interpretation of this same viewpoint. Not an independently modelled weather or lighting scenario. No weather claim. No scenario timestamp on the variant.",
+    "note": "AI-generated daylight re-interpretation derived from the night master of the same viewpoint and composition. Not a new scene. Architecture and landscape preserved; lighting only was changed from night to daylight. No weather evidence invented. The variant image carries no weather claim and no scenario timestamp. The scene scenario_label remains the night scene's label and is not a daylight weather assertion."
+  }
+}

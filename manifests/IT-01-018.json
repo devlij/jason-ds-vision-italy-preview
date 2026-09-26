@@ -1,0 +1,47 @@
+{
+  "entry_id": "IT-01-018",
+  "country": "Italy",
+  "region": "Sicily",
+  "city": "Agrigento",
+  "caption": "Temple of Concordia, Agrigento",
+  "scenario_label": "23 September 2026 · 05:10 Europe/Rome",
+  "composition": "Floodlit Doric temple in the Valley of the Temples at night · AI-generated artistic interpretation",
+  "description": "The temple is seen from below its ridge, the floodlit Doric columns glowing gold against the night. The long colonnade runs across the center and right of the frame above its stepped stone base, with rocky scrub in the immediate foreground. To the left the lights of Agrigento scatter across the dark valley. The modelled scenario is 23 September 2026 at 05:10 Europe/Rome: full night, the temple artificially lit under a dark sky.",
+  "alt_text": "AI-generated artistic interpretation of the Temple of Concordia in Agrigento floodlit at night",
+  "file_16x9": "assets/it-01-018-16x9.png",
+  "file_4x5": "assets/it-01-018-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
+  "sha256_16x9": "89630ebe40abb6e3051d55cf599d7b4d87040c2b37a4a1554fade7d6160c4d7f",
+  "sha256_4x5": "8a07c52f6e9e9b4e368e656e297ac5a7b4aacb08ea6db8f67d97f8cc0ce9b190",
+  "daylight_variant": {
+    "variant_of_entry_id": "IT-01-018",
+    "derived_from": "Approved night master assets/it-01-018-16x9.png (16:9) and assets/it-01-018-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
+    "source_night": {
+      "16x9": {
+        "path": "assets/it-01-018-16x9.png",
+        "sha256": "89630ebe40abb6e3051d55cf599d7b4d87040c2b37a4a1554fade7d6160c4d7f"
+      },
+      "4x5": {
+        "path": "assets/it-01-018-4x5.png",
+        "sha256": "8a07c52f6e9e9b4e368e656e297ac5a7b4aacb08ea6db8f67d97f8cc0ce9b190"
+      },
+      "recorded": "SHA-256 of the night masters immediately before this daylight batch. Post-write hashes are identical; night masters were not rewritten."
+    },
+    "files": {
+      "16x9": "assets/it-01-018-daylight-16x9.png",
+      "4x5": "assets/it-01-018-daylight-4x5.png"
+    },
+    "sha256": {
+      "16x9": "c669afcf89e5a073dc02e9a33189e473387e370b94f1dd1fd9344c1232f5f5db",
+      "4x5": "ed692c9d6154f2b89a41931ddad1d54d461eafacb4d4fb2cbf97e894cbad3a90"
+    },
+    "created_date": "2026-09-26",
+    "on_image_caption": "Temple of Concordia, Agrigento",
+    "on_image_signature": "Jason D’s Vision",
+    "on_image_disclosure": "AI-generated artistic interpretation · Not a photograph.",
+    "on_image_marking": "☀ Daylight variant · derived from the night interpretation",
+    "derivative_disclosure": "Derivative of the approved night interpretation of this same viewpoint. Not an independently modelled weather or lighting scenario. No weather claim. No scenario timestamp on the variant.",
+    "note": "AI-generated daylight re-interpretation derived from the night master of the same viewpoint and composition. Not a new scene. Architecture and landscape preserved; lighting only was changed from night to daylight. No weather evidence invented. The variant image carries no weather claim and no scenario timestamp. The scene scenario_label remains the night scene's label and is not a daylight weather assertion."
+  }
+}

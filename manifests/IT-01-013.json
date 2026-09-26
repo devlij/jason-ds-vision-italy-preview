@@ -1,0 +1,47 @@
+{
+  "entry_id": "IT-01-013",
+  "country": "Italy",
+  "region": "Veneto",
+  "city": "Verona",
+  "caption": "Arena of Verona, Verona",
+  "scenario_label": "23 September 2026 · 05:05 Europe/Rome",
+  "composition": "Floodlit Roman amphitheatre on Piazza Bra at night · AI-generated artistic interpretation",
+  "description": "The viewpoint is the center of Piazza Bra before dawn, looking straight at the floodlit Roman amphitheatre. The Arena's double ring of arches dominates the frame, its limestone glowing amber under the floodlights, with the broken crown of the outer wall silhouetted at the upper left. Café awnings and ornate street lamps line the left edge of the square, and the modelled 23 September 2026, 05:05 night scenario leaves the sky pitch black above the empty piazza.",
+  "alt_text": "AI-generated artistic interpretation of the Arena of Verona floodlit at night on Piazza Bra",
+  "file_16x9": "assets/it-01-013-16x9.png",
+  "file_4x5": "assets/it-01-013-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
+  "sha256_16x9": "5f4cb1c56a273d131d25f91d938857d4dbf169047a6b1d472af8647cdb27699b",
+  "sha256_4x5": "5b1eae2725e1b3ee3730fb57e5e2f16fdfb400dca98cbf8e28f6790d4a8d43b4",
+  "daylight_variant": {
+    "variant_of_entry_id": "IT-01-013",
+    "derived_from": "Approved night master assets/it-01-013-16x9.png (16:9) and assets/it-01-013-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
+    "source_night": {
+      "16x9": {
+        "path": "assets/it-01-013-16x9.png",
+        "sha256": "5f4cb1c56a273d131d25f91d938857d4dbf169047a6b1d472af8647cdb27699b"
+      },
+      "4x5": {
+        "path": "assets/it-01-013-4x5.png",
+        "sha256": "5b1eae2725e1b3ee3730fb57e5e2f16fdfb400dca98cbf8e28f6790d4a8d43b4"
+      },
+      "recorded": "SHA-256 of the night masters immediately before this daylight batch. Post-write hashes are identical; night masters were not rewritten."
+    },
+    "files": {
+      "16x9": "assets/it-01-013-daylight-16x9.png",
+      "4x5": "assets/it-01-013-daylight-4x5.png"
+    },
+    "sha256": {
+      "16x9": "21e4ad289119324704db8f4587e20e5b627862158fb89eef430851fa33b4fbd4",
+      "4x5": "7cf82a323d1a6f34b0d071130753511c61d792c3f081d62cba4201bb4a4cfd3b"
+    },
+    "created_date": "2026-09-26",
+    "on_image_caption": "Arena of Verona, Verona",
+    "on_image_signature": "Jason D’s Vision",
+    "on_image_disclosure": "AI-generated artistic interpretation · Not a photograph.",
+    "on_image_marking": "☀ Daylight variant · derived from the night interpretation",
+    "derivative_disclosure": "Derivative of the approved night interpretation of this same viewpoint. Not an independently modelled weather or lighting scenario. No weather claim. No scenario timestamp on the variant.",
+    "note": "AI-generated daylight re-interpretation derived from the night master of the same viewpoint and composition. Not a new scene. Architecture and landscape preserved; lighting only was changed from night to daylight. No weather evidence invented. The variant image carries no weather claim and no scenario timestamp. The scene scenario_label remains the night scene's label and is not a daylight weather assertion."
+  }
+}

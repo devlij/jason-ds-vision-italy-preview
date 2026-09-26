@@ -1,0 +1,334 @@
+BATCH IT daylight variants — batch 1
+Date: 2026-09-26
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: f0f14933d2ec77a1bcab810f70b6a930b0bbfeb3
+Directive: 2026-09-25 Jason daylight-variants workstream, Italy batch 1 (first up-to-16 approved night scenes).
+Scope scanned: IT-01-001 through IT-01-375 (375 live gallery scenes, no gaps). Germany and other countries not touched. Weather fields not edited. Night images not regenerated.
+
+Scan rule: Approved night interpretation (live gallery master; composition or alt states night, including moonlight) AND both night masters present (1920x1080 and 864x1080) AND no existing *-daylight-* file AND not a daylight-only or dusk-only or pre-dawn master.
+Italy path layout: night masters live in assets/. Variants were written beside them. There is no library/world tree in this repo.
+
+Qualifying approved night scenes in ID order: 30.
+  IT-01-003, IT-01-004, IT-01-005, IT-01-006, IT-01-007, IT-01-008, IT-01-009, IT-01-010, IT-01-011, IT-01-012, IT-01-013, IT-01-014, IT-01-015, IT-01-016, IT-01-017, IT-01-018, IT-01-019, IT-01-020, IT-01-023, IT-01-024, IT-01-366, IT-01-367, IT-01-368, IT-01-369, IT-01-370, IT-01-371, IT-01-372, IT-01-373, IT-01-374, IT-01-375.
+Selected (first 16): IT-01-003, IT-01-004, IT-01-005, IT-01-006, IT-01-007, IT-01-008, IT-01-009, IT-01-010, IT-01-011, IT-01-012, IT-01-013, IT-01-014, IT-01-015, IT-01-016, IT-01-017, IT-01-018.
+
+Built: 16 scenes × 2 masters = 32 variant masters.
+  it-01-XXX-daylight-16x9.png (1920×1080)
+  it-01-XXX-daylight-4x5.png (864×1080)
+Path layout: beside the night masters under assets/.
+
+SKIP SUMMARY
+- IT-01-001, IT-01-002 SKIP — already-daylight. Approved afternoon masters (14:30 and 16:00 Europe/Rome). No night master. No daylight variant invented from a daylight master.
+- Pre-dawn without a night label, skipped (published master is the pre-dawn interpretation, not a night master): IT-01-021, IT-01-022.
+- Dusk, blue hour, twilight, or dawn masters without a night label: 57 scenes. No variant was derived from them. IDs: IT-01-021, IT-01-022, IT-01-025, IT-01-026, IT-01-027, IT-01-028, IT-01-029, IT-01-030, IT-01-031, IT-01-032, IT-01-033, IT-01-034, IT-01-035, IT-01-036, IT-01-037, IT-01-038, IT-01-039, IT-01-040, IT-01-041, IT-01-042, IT-01-043, IT-01-044, IT-01-045, IT-01-046, IT-01-047, IT-01-048, IT-01-049, IT-01-050, IT-01-051, IT-01-052, IT-01-053, IT-01-054, IT-01-055, IT-01-056, IT-01-057, IT-01-058, IT-01-060, IT-01-061, IT-01-062, IT-01-063, IT-01-064, IT-01-065, IT-01-068, IT-01-069, IT-01-070, IT-01-074, IT-01-075, IT-01-076, IT-01-079, IT-01-083, IT-01-085, IT-01-086, IT-01-088, IT-01-089, IT-01-090, IT-01-091, IT-01-096.
+- Remaining approved daylight masters: 288 scenes (including IT-01-001 and IT-01-002). No variant invented from a daylight master.
+- Deferred past the 16-scene cap (also approved night, both masters present, no prior daylight variant): IT-01-019, IT-01-020, IT-01-023, IT-01-024, IT-01-366, IT-01-367, IT-01-368, IT-01-369, IT-01-370, IT-01-371, IT-01-372, IT-01-373, IT-01-374, IT-01-375.
+- Existing *-daylight-* files before this batch: 0.
+
+Gallery: Italy cards switch 16:9 / 4:5 only. No night/day control already expects *-daylight-* paths. Gallery wiring deferred. index.html was not edited.
+
+On-image text, exact, on every variant: caption identical to the night master; signature Jason D’s Vision (curly apostrophe U+2019); disclosure AI-generated artistic interpretation · Not a photograph.; plus ☀ Daylight variant · derived from the night interpretation. No weather claim. No scenario timestamp.
+Metadata: EU AI Act Art. 50 five PNG chunks (Title iTXt, Description tEXt, Copyright iTXt, Software tEXt, Comment tEXt), Country = Italy, embedded after pixels were final. Title and Copyright use a straight apostrophe and an em dash. Night IDAT was not touched.
+Derivative disclosure: daylight re-interpretation of the same viewpoint and composition as the night master. Not a new scene. Not an independently modelled weather scenario.
+
+NIGHT-UNCHANGED CONFIRMATION
+Night masters: byte-unchanged. SHA-256 recorded before any variant write and again after. Pre and post are identical for every night file of the 16 selected scenes. No night image was regenerated. Daylight-only masters were not rewritten either.
+
+========================================================================
+IT-01-001
+SKIP — daylight-only already. No night master.
+approval_state: Approved
+approval_basis: Live gallery master
+scenario_label: 23 September 2026 · 14:30 Europe/Rome
+caption: Colosseum, Rome
+composition: Ancient amphitheatre exterior · AI-generated artistic interpretation
+published daylight master 16x9: assets/it-01-001-16x9.png
+  pre  SHA-256: 3e667912b0f4cd84e54c5446859a12b2ba5c079ae5b81bd29646c36845c90acc
+  post SHA-256: 3e667912b0f4cd84e54c5446859a12b2ba5c079ae5b81bd29646c36845c90acc
+  unchanged: True
+published daylight master 4x5: assets/it-01-001-4x5.png
+  pre  SHA-256: 17a6c8b8c0a514cae4d27acb02d720cc2587f66716b40c221fe539cbe288bb0f
+  post SHA-256: 17a6c8b8c0a514cae4d27acb02d720cc2587f66716b40c221fe539cbe288bb0f
+  unchanged: True
+night master: none
+variant paths: none
+
+========================================================================
+IT-01-002
+SKIP — daylight-only already. No night master.
+approval_state: Approved
+approval_basis: Live gallery master
+scenario_label: 23 September 2026 · 16:00 Europe/Rome
+caption: St. Peter's Basilica, Vatican City
+composition: Basilica façade and dome · AI-generated artistic interpretation
+published daylight master 16x9: assets/it-01-002-16x9.png
+  pre  SHA-256: e9006f6ff9585ab56dab2bbe49a55ec8b3e21e82e0e690d7c1580b7a4a34959d
+  post SHA-256: e9006f6ff9585ab56dab2bbe49a55ec8b3e21e82e0e690d7c1580b7a4a34959d
+  unchanged: True
+published daylight master 4x5: assets/it-01-002-4x5.png
+  pre  SHA-256: e546d38c38842a7ace519d7a7f1859c9e6c1ddbd766bad2d83633c62ffb95339
+  post SHA-256: e546d38c38842a7ace519d7a7f1859c9e6c1ddbd766bad2d83633c62ffb95339
+  unchanged: True
+night master: none
+variant paths: none
+
+========================================================================
+IT-01-003  Trevi Fountain, Rome
+  night 16x9  assets/it-01-003-16x9.png
+    sha256 before  0a340f756a1870946b3609cdbc3f35a690d7a15fa495aa6477de206ff7644638
+    sha256 after   0a340f756a1870946b3609cdbc3f35a690d7a15fa495aa6477de206ff7644638
+    night master   IDENTICAL
+  variant 16x9  assets/it-01-003-daylight-16x9.png
+    sha256         b307a35bb3bb452b2f82e0c1ebf4136ae6184daeaf69fe3474d75ad6831a179d
+  night 4x5  assets/it-01-003-4x5.png
+    sha256 before  d3e4113a8b3738af8c03b1702561f843b2b8e78865ab4a08b4658a611bcab3d1
+    sha256 after   d3e4113a8b3738af8c03b1702561f843b2b8e78865ab4a08b4658a611bcab3d1
+    night master   IDENTICAL
+  variant 4x5  assets/it-01-003-daylight-4x5.png
+    sha256         9d411ba7eb1d10b179cf44b52d31591371b53881f54d26272a98d12a72dc52d5
+  derivative disclosure: daylight re-interpretation of the same viewpoint and composition; not a new scene; no weather claim; no scenario timestamp on the variant.
+
+========================================================================
+IT-01-004  Pantheon, Rome
+  night 16x9  assets/it-01-004-16x9.png
+    sha256 before  6ad2ebc53c989e04026b2af2353651cf6f543fe5b2f18e6f1349c4cd1121cf7f
+    sha256 after   6ad2ebc53c989e04026b2af2353651cf6f543fe5b2f18e6f1349c4cd1121cf7f
+    night master   IDENTICAL
+  variant 16x9  assets/it-01-004-daylight-16x9.png
+    sha256         55898b60d6265aad4114c8a7de48cc1e8a19b8c8d8d630d0e0af718632254ce3
+  night 4x5  assets/it-01-004-4x5.png
+    sha256 before  cb82287d20244022ecabf07d4d93948310e6f6f0f2cf3d66c53a2d411e523615
+    sha256 after   cb82287d20244022ecabf07d4d93948310e6f6f0f2cf3d66c53a2d411e523615
+    night master   IDENTICAL
+  variant 4x5  assets/it-01-004-daylight-4x5.png
+    sha256         ee943677f71766790fad20d52aa8ac3163fe48ba0673cffc33a9a1b0b142fab8
+  derivative disclosure: daylight re-interpretation of the same viewpoint and composition; not a new scene; no weather claim; no scenario timestamp on the variant.
+
+========================================================================
+IT-01-005  Florence Cathedral (Duomo), Florence
+  night 16x9  assets/it-01-005-16x9.png
+    sha256 before  2fe0422183ce8824fc6cff4700456bd66d956d358d284372a0692777cf2d4d1d
+    sha256 after   2fe0422183ce8824fc6cff4700456bd66d956d358d284372a0692777cf2d4d1d
+    night master   IDENTICAL
+  variant 16x9  assets/it-01-005-daylight-16x9.png
+    sha256         b061e10bf2d61c72fb1b43ce697a362a2a800823177b5c319f83b6c5b0cc4acc
+  night 4x5  assets/it-01-005-4x5.png
+    sha256 before  f47e689df346f4f434ba09f1c8f93bb117f28d4d85042751028117ea1f466bbc
+    sha256 after   f47e689df346f4f434ba09f1c8f93bb117f28d4d85042751028117ea1f466bbc
+    night master   IDENTICAL
+  variant 4x5  assets/it-01-005-daylight-4x5.png
+    sha256         013eab52876fd5260aba552f0b3b8aa5f67956fa16ef4ec95e8fb0fc3ddf85b9
+  derivative disclosure: daylight re-interpretation of the same viewpoint and composition; not a new scene; no weather claim; no scenario timestamp on the variant.
+
+========================================================================
+IT-01-006  Ponte Vecchio, Florence
+  night 16x9  assets/it-01-006-16x9.png
+    sha256 before  b642cea7524cb801a5c0b974997b0ecada01d08be665f7dcf03e2748dd6937a7
+    sha256 after   b642cea7524cb801a5c0b974997b0ecada01d08be665f7dcf03e2748dd6937a7
+    night master   IDENTICAL
+  variant 16x9  assets/it-01-006-daylight-16x9.png
+    sha256         e5d0babf04ca6d111738fed7c3e8e8bdb6c48670714ffd8a77b084710e5c85c5
+  night 4x5  assets/it-01-006-4x5.png
+    sha256 before  d8d380e81bd535e002f8f86ea22a0311bdc1e48af04017b1ac6d7588103e46d0
+    sha256 after   d8d380e81bd535e002f8f86ea22a0311bdc1e48af04017b1ac6d7588103e46d0
+    night master   IDENTICAL
+  variant 4x5  assets/it-01-006-daylight-4x5.png
+    sha256         05e0917e4296626d0f8385ff488396e590b224959ad76d78da8ff6621f71e6ef
+  derivative disclosure: daylight re-interpretation of the same viewpoint and composition; not a new scene; no weather claim; no scenario timestamp on the variant.
+
+========================================================================
+IT-01-007  Grand Canal from Rialto Bridge, Venice
+  night 16x9  assets/it-01-007-16x9.png
+    sha256 before  b965c539c4160a726a225c5aecba77829b416f8a39fbb64c3e9b6450799c2848
+    sha256 after   b965c539c4160a726a225c5aecba77829b416f8a39fbb64c3e9b6450799c2848
+    night master   IDENTICAL
+  variant 16x9  assets/it-01-007-daylight-16x9.png
+    sha256         f1ee441cc9cfcb03782a108eb5903503dcddebec79cd0c5948941ece4f9c0eb8
+  night 4x5  assets/it-01-007-4x5.png
+    sha256 before  2eb0387a9725e54413b114a758c334e6987e38f379a6e48eaabe6f37290fecdb
+    sha256 after   2eb0387a9725e54413b114a758c334e6987e38f379a6e48eaabe6f37290fecdb
+    night master   IDENTICAL
+  variant 4x5  assets/it-01-007-daylight-4x5.png
+    sha256         4efcb864a4222eecdb2ce10b6bd787733a27b2ac3e7ca68a822743b46c52a099
+  derivative disclosure: daylight re-interpretation of the same viewpoint and composition; not a new scene; no weather claim; no scenario timestamp on the variant.
+
+========================================================================
+IT-01-008  St. Mark's Basilica, Venice
+  night 16x9  assets/it-01-008-16x9.png
+    sha256 before  3e98506233e7bbfc7489e020f3f14938452bb345c47a10ae213716ab3b80c472
+    sha256 after   3e98506233e7bbfc7489e020f3f14938452bb345c47a10ae213716ab3b80c472
+    night master   IDENTICAL
+  variant 16x9  assets/it-01-008-daylight-16x9.png
+    sha256         7a65e823f9f822074e0446a496bd7677aa5346b9f0d08a6bebf40f6c493f528f
+  night 4x5  assets/it-01-008-4x5.png
+    sha256 before  1d784ff0353efdda3a10c572a498e58602aba0d626ea01d63b60d8df2a9634c0
+    sha256 after   1d784ff0353efdda3a10c572a498e58602aba0d626ea01d63b60d8df2a9634c0
+    night master   IDENTICAL
+  variant 4x5  assets/it-01-008-daylight-4x5.png
+    sha256         09a6ad78d9f5c8ee2b96e05aaf8a4c715a5095f4ad13ca82ad3e7ede7b15920c
+  derivative disclosure: daylight re-interpretation of the same viewpoint and composition; not a new scene; no weather claim; no scenario timestamp on the variant.
+
+========================================================================
+IT-01-009  Leaning Tower of Pisa, Pisa
+  night 16x9  assets/it-01-009-16x9.png
+    sha256 before  784247c05a4c78b1e8cfb5864f4e0e1a4d60faa40be535b91b91cb7baa1629ae
+    sha256 after   784247c05a4c78b1e8cfb5864f4e0e1a4d60faa40be535b91b91cb7baa1629ae
+    night master   IDENTICAL
+  variant 16x9  assets/it-01-009-daylight-16x9.png
+    sha256         95201e21ff9ad62fc3c0931dc8398036ba4ec59b7281aec8dc6031c4b10788b3
+  night 4x5  assets/it-01-009-4x5.png
+    sha256 before  83cfb7d992bc05ea5ecd132a921033fba75cf8bc0b6d3839011276ac565bd527
+    sha256 after   83cfb7d992bc05ea5ecd132a921033fba75cf8bc0b6d3839011276ac565bd527
+    night master   IDENTICAL
+  variant 4x5  assets/it-01-009-daylight-4x5.png
+    sha256         e7f37deb9c0571919b087167e3ec002c619f7179908bc1c1103304a940d2a9b0
+  derivative disclosure: daylight re-interpretation of the same viewpoint and composition; not a new scene; no weather claim; no scenario timestamp on the variant.
+
+========================================================================
+IT-01-010  Milan Cathedral (Duomo), Milan
+  night 16x9  assets/it-01-010-16x9.png
+    sha256 before  b8a7c403cc22f6c81d771e1f5d945289b090d703949ed255c7b98b54fadf5b32
+    sha256 after   b8a7c403cc22f6c81d771e1f5d945289b090d703949ed255c7b98b54fadf5b32
+    night master   IDENTICAL
+  variant 16x9  assets/it-01-010-daylight-16x9.png
+    sha256         fa55ccdeccfb69589ced8b363039be805f266149b23a2692e4cb3f66f72f5272
+  night 4x5  assets/it-01-010-4x5.png
+    sha256 before  6c236285f3c9cc8c689b5936fd286d942dae0195490cb637f634ebc6cfc75a43
+    sha256 after   6c236285f3c9cc8c689b5936fd286d942dae0195490cb637f634ebc6cfc75a43
+    night master   IDENTICAL
+  variant 4x5  assets/it-01-010-daylight-4x5.png
+    sha256         a4bd30f1e816b9fd84b25c16410ddbd9e4b7bfb942026ff4652d63a826878438
+  derivative disclosure: daylight re-interpretation of the same viewpoint and composition; not a new scene; no weather claim; no scenario timestamp on the variant.
+
+========================================================================
+IT-01-011  Forum of Pompeii, Pompeii
+  night 16x9  assets/it-01-011-16x9.png
+    sha256 before  13876df49aac1e2a183192668eaf16cf44880d2c762cf73771801bb5746911fb
+    sha256 after   13876df49aac1e2a183192668eaf16cf44880d2c762cf73771801bb5746911fb
+    night master   IDENTICAL
+  variant 16x9  assets/it-01-011-daylight-16x9.png
+    sha256         698441dfd903ee0ca4fde67a288cd5a25ea347e12542e97b43ee7fb9f6e76737
+  night 4x5  assets/it-01-011-4x5.png
+    sha256 before  5b0b65857c52d0129a11653dec7b15a630cb6cd12138bf2a17c33fd29ab0cdc2
+    sha256 after   5b0b65857c52d0129a11653dec7b15a630cb6cd12138bf2a17c33fd29ab0cdc2
+    night master   IDENTICAL
+  variant 4x5  assets/it-01-011-daylight-4x5.png
+    sha256         267fcb99234863191029579d1eadc469275a12313ae204c015e8cd1968cdf811
+  derivative disclosure: daylight re-interpretation of the same viewpoint and composition; not a new scene; no weather claim; no scenario timestamp on the variant.
+
+========================================================================
+IT-01-012  Positano, Amalfi Coast
+  night 16x9  assets/it-01-012-16x9.png
+    sha256 before  03f4082bdc82a4f630742b1b51630c1d1bf16358d09de0969e9f2b0e00b58c02
+    sha256 after   03f4082bdc82a4f630742b1b51630c1d1bf16358d09de0969e9f2b0e00b58c02
+    night master   IDENTICAL
+  variant 16x9  assets/it-01-012-daylight-16x9.png
+    sha256         9e8f0878d284389c2ad62d0a444ab08f4df94ff6c754208219004825409a013f
+  night 4x5  assets/it-01-012-4x5.png
+    sha256 before  07dd68bd3bee0ea7ed0b7df487062c9003e2a8919ab6aa15ef4a679cc44d419f
+    sha256 after   07dd68bd3bee0ea7ed0b7df487062c9003e2a8919ab6aa15ef4a679cc44d419f
+    night master   IDENTICAL
+  variant 4x5  assets/it-01-012-daylight-4x5.png
+    sha256         f83f30130a0144add225e6bc35e73a61e80741037e50b19bcb87ec1b8c38c557
+  derivative disclosure: daylight re-interpretation of the same viewpoint and composition; not a new scene; no weather claim; no scenario timestamp on the variant.
+
+========================================================================
+IT-01-013  Arena of Verona, Verona
+  night 16x9  assets/it-01-013-16x9.png
+    sha256 before  5f4cb1c56a273d131d25f91d938857d4dbf169047a6b1d472af8647cdb27699b
+    sha256 after   5f4cb1c56a273d131d25f91d938857d4dbf169047a6b1d472af8647cdb27699b
+    night master   IDENTICAL
+  variant 16x9  assets/it-01-013-daylight-16x9.png
+    sha256         21e4ad289119324704db8f4587e20e5b627862158fb89eef430851fa33b4fbd4
+  night 4x5  assets/it-01-013-4x5.png
+    sha256 before  5b1eae2725e1b3ee3730fb57e5e2f16fdfb400dca98cbf8e28f6790d4a8d43b4
+    sha256 after   5b1eae2725e1b3ee3730fb57e5e2f16fdfb400dca98cbf8e28f6790d4a8d43b4
+    night master   IDENTICAL
+  variant 4x5  assets/it-01-013-daylight-4x5.png
+    sha256         7cf82a323d1a6f34b0d071130753511c61d792c3f081d62cba4201bb4a4cfd3b
+  derivative disclosure: daylight re-interpretation of the same viewpoint and composition; not a new scene; no weather claim; no scenario timestamp on the variant.
+
+========================================================================
+IT-01-014  Mole Antonelliana, Turin
+  night 16x9  assets/it-01-014-16x9.png
+    sha256 before  d5f949953d87294ba99b948b5a632bdca45ebec4767aeed1bcb9b351a0f15b58
+    sha256 after   d5f949953d87294ba99b948b5a632bdca45ebec4767aeed1bcb9b351a0f15b58
+    night master   IDENTICAL
+  variant 16x9  assets/it-01-014-daylight-16x9.png
+    sha256         56c0d8080a68da8779177a11d271bdba5a4525990be9a9b2ee3ac31318fdaf92
+  night 4x5  assets/it-01-014-4x5.png
+    sha256 before  409905b7ab39409e3bb036b5f33bb9478f92f106b95b6074040bb5e9f3d8c187
+    sha256 after   409905b7ab39409e3bb036b5f33bb9478f92f106b95b6074040bb5e9f3d8c187
+    night master   IDENTICAL
+  variant 4x5  assets/it-01-014-daylight-4x5.png
+    sha256         ececdbc2f83908c88896ebd42799fb49abcd93cacc0c650a4f8d961ca1504e7b
+  derivative disclosure: daylight re-interpretation of the same viewpoint and composition; not a new scene; no weather claim; no scenario timestamp on the variant.
+
+========================================================================
+IT-01-015  Two Towers, Bologna
+  night 16x9  assets/it-01-015-16x9.png
+    sha256 before  c23a96554549628e5d3d9650d39dec8a8a14993891e588d8e4f78325d2e760ed
+    sha256 after   c23a96554549628e5d3d9650d39dec8a8a14993891e588d8e4f78325d2e760ed
+    night master   IDENTICAL
+  variant 16x9  assets/it-01-015-daylight-16x9.png
+    sha256         286f8a07728366c4b562b157612ac6d3e3cf99e6654d4a6833db3f25bd656b96
+  night 4x5  assets/it-01-015-4x5.png
+    sha256 before  cdd79a8a8f6ed442133bd03f4b4f7298f5d67b0524d96200e6ecc160347334c4
+    sha256 after   cdd79a8a8f6ed442133bd03f4b4f7298f5d67b0524d96200e6ecc160347334c4
+    night master   IDENTICAL
+  variant 4x5  assets/it-01-015-daylight-4x5.png
+    sha256         431655f3d37791de842fc213a84f6dc9116f68520ca05ace34d3ec849d22c49e
+  derivative disclosure: daylight re-interpretation of the same viewpoint and composition; not a new scene; no weather claim; no scenario timestamp on the variant.
+
+========================================================================
+IT-01-016  Manarola, Cinque Terre
+  night 16x9  assets/it-01-016-16x9.png
+    sha256 before  3c2e94075f1217f64ccb9f13da7f351d2bea4a5354c930aaf6ba56b94ee6fb9b
+    sha256 after   3c2e94075f1217f64ccb9f13da7f351d2bea4a5354c930aaf6ba56b94ee6fb9b
+    night master   IDENTICAL
+  variant 16x9  assets/it-01-016-daylight-16x9.png
+    sha256         c956fd0c0cc0c7f1dd19feba99f4e388c4d4c7691c18237fa6fce1eaf1f8663a
+  night 4x5  assets/it-01-016-4x5.png
+    sha256 before  506c33f567191dfdd932dea9054c522816a5f2c25d56e39b221862ae44113cdf
+    sha256 after   506c33f567191dfdd932dea9054c522816a5f2c25d56e39b221862ae44113cdf
+    night master   IDENTICAL
+  variant 4x5  assets/it-01-016-daylight-4x5.png
+    sha256         e8405ba5ec98192a14b0f416820999d768185d1063d0bd8f42bf8017152e6769
+  derivative disclosure: daylight re-interpretation of the same viewpoint and composition; not a new scene; no weather claim; no scenario timestamp on the variant.
+
+========================================================================
+IT-01-017  Palermo Cathedral, Palermo
+  night 16x9  assets/it-01-017-16x9.png
+    sha256 before  e565f8035934675b6b408c55b334d0550096607438807d8f4a2a1fc207a5c337
+    sha256 after   e565f8035934675b6b408c55b334d0550096607438807d8f4a2a1fc207a5c337
+    night master   IDENTICAL
+  variant 16x9  assets/it-01-017-daylight-16x9.png
+    sha256         cd92db7ea1160e63c9e10c3fc2dc7236232000d86182f955f33480ee8c689607
+  night 4x5  assets/it-01-017-4x5.png
+    sha256 before  ae3d9915f4240232611e69383d3514c4223502b11e897024aed15da2e94d85a0
+    sha256 after   ae3d9915f4240232611e69383d3514c4223502b11e897024aed15da2e94d85a0
+    night master   IDENTICAL
+  variant 4x5  assets/it-01-017-daylight-4x5.png
+    sha256         6aad7c8860d8f2632ec36de47cfdf854e2bc30e68875fc3155cfe00bc62b9f39
+  derivative disclosure: daylight re-interpretation of the same viewpoint and composition; not a new scene; no weather claim; no scenario timestamp on the variant.
+
+========================================================================
+IT-01-018  Temple of Concordia, Agrigento
+  night 16x9  assets/it-01-018-16x9.png
+    sha256 before  89630ebe40abb6e3051d55cf599d7b4d87040c2b37a4a1554fade7d6160c4d7f
+    sha256 after   89630ebe40abb6e3051d55cf599d7b4d87040c2b37a4a1554fade7d6160c4d7f
+    night master   IDENTICAL
+  variant 16x9  assets/it-01-018-daylight-16x9.png
+    sha256         c669afcf89e5a073dc02e9a33189e473387e370b94f1dd1fd9344c1232f5f5db
+  night 4x5  assets/it-01-018-4x5.png
+    sha256 before  8a07c52f6e9e9b4e368e656e297ac5a7b4aacb08ea6db8f67d97f8cc0ce9b190
+    sha256 after   8a07c52f6e9e9b4e368e656e297ac5a7b4aacb08ea6db8f67d97f8cc0ce9b190
+    night master   IDENTICAL
+  variant 4x5  assets/it-01-018-daylight-4x5.png
+    sha256         ed692c9d6154f2b89a41931ddad1d54d461eafacb4d4fb2cbf97e894cbad3a90
+  derivative disclosure: daylight re-interpretation of the same viewpoint and composition; not a new scene; no weather claim; no scenario timestamp on the variant.
+
+========================================================================
+ALL SELECTED NIGHT MASTERS BYTE-UNCHANGED: YES
+Variant scenes: 16. Variant masters: 32.

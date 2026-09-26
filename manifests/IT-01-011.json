@@ -1,0 +1,47 @@
+{
+  "entry_id": "IT-01-011",
+  "country": "Italy",
+  "region": "Campania",
+  "city": "Pompeii",
+  "caption": "Forum of Pompeii, Pompeii",
+  "scenario_label": "23 September 2026 · 05:03 Europe/Rome",
+  "composition": "Floodlit Roman forum ruins with Vesuvius beyond at night · AI-generated artistic interpretation",
+  "description": "The camera looks down the forum's stone paving from between the ruins. A long colonnade of floodlit columns runs up the left side, while the raised podium temple with its row of illuminated columns stands on the right. Beyond the scattered foundations the dark cone of Vesuvius closes the horizon, and the 05:03 scenario is true night with warm artificial light on the stone against a black sky.",
+  "alt_text": "AI-generated artistic interpretation of the Forum of Pompeii floodlit at night with Mount Vesuvius in the distance",
+  "file_16x9": "assets/it-01-011-16x9.png",
+  "file_4x5": "assets/it-01-011-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
+  "sha256_16x9": "13876df49aac1e2a183192668eaf16cf44880d2c762cf73771801bb5746911fb",
+  "sha256_4x5": "5b0b65857c52d0129a11653dec7b15a630cb6cd12138bf2a17c33fd29ab0cdc2",
+  "daylight_variant": {
+    "variant_of_entry_id": "IT-01-011",
+    "derived_from": "Approved night master assets/it-01-011-16x9.png (16:9) and assets/it-01-011-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
+    "source_night": {
+      "16x9": {
+        "path": "assets/it-01-011-16x9.png",
+        "sha256": "13876df49aac1e2a183192668eaf16cf44880d2c762cf73771801bb5746911fb"
+      },
+      "4x5": {
+        "path": "assets/it-01-011-4x5.png",
+        "sha256": "5b0b65857c52d0129a11653dec7b15a630cb6cd12138bf2a17c33fd29ab0cdc2"
+      },
+      "recorded": "SHA-256 of the night masters immediately before this daylight batch. Post-write hashes are identical; night masters were not rewritten."
+    },
+    "files": {
+      "16x9": "assets/it-01-011-daylight-16x9.png",
+      "4x5": "assets/it-01-011-daylight-4x5.png"
+    },
+    "sha256": {
+      "16x9": "698441dfd903ee0ca4fde67a288cd5a25ea347e12542e97b43ee7fb9f6e76737",
+      "4x5": "267fcb99234863191029579d1eadc469275a12313ae204c015e8cd1968cdf811"
+    },
+    "created_date": "2026-09-26",
+    "on_image_caption": "Forum of Pompeii, Pompeii",
+    "on_image_signature": "Jason D’s Vision",
+    "on_image_disclosure": "AI-generated artistic interpretation · Not a photograph.",
+    "on_image_marking": "☀ Daylight variant · derived from the night interpretation",
+    "derivative_disclosure": "Derivative of the approved night interpretation of this same viewpoint. Not an independently modelled weather or lighting scenario. No weather claim. No scenario timestamp on the variant.",
+    "note": "AI-generated daylight re-interpretation derived from the night master of the same viewpoint and composition. Not a new scene. Architecture and landscape preserved; lighting only was changed from night to daylight. No weather evidence invented. The variant image carries no weather claim and no scenario timestamp. The scene scenario_label remains the night scene's label and is not a daylight weather assertion."
+  }
+}

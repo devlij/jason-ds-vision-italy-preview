@@ -1,0 +1,47 @@
+{
+  "entry_id": "IT-01-009",
+  "country": "Italy",
+  "region": "Tuscany",
+  "city": "Pisa",
+  "caption": "Leaning Tower of Pisa, Pisa",
+  "scenario_label": "23 September 2026 · 05:01 Europe/Rome",
+  "composition": "Floodlit leaning campanile on Piazza dei Miracoli at night · AI-generated artistic interpretation",
+  "description": "The visitor faces the Piazza dei Miracoli at night, where the floodlit Leaning Tower rises left of center, its white arcaded tiers glowing against the dark sky. The cathedral stretches across the middle ground with its long nave and dome, and the baptistery's dome appears at the far right edge. Warm floodlights pick out every arch and column, with the green lawn dark in the foreground and a few clouds drifting overhead.",
+  "alt_text": "AI-generated artistic interpretation of the Leaning Tower of Pisa floodlit at night on Piazza dei Miracoli",
+  "file_16x9": "assets/it-01-009-16x9.png",
+  "file_4x5": "assets/it-01-009-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
+  "sha256_16x9": "784247c05a4c78b1e8cfb5864f4e0e1a4d60faa40be535b91b91cb7baa1629ae",
+  "sha256_4x5": "83cfb7d992bc05ea5ecd132a921033fba75cf8bc0b6d3839011276ac565bd527",
+  "daylight_variant": {
+    "variant_of_entry_id": "IT-01-009",
+    "derived_from": "Approved night master assets/it-01-009-16x9.png (16:9) and assets/it-01-009-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
+    "source_night": {
+      "16x9": {
+        "path": "assets/it-01-009-16x9.png",
+        "sha256": "784247c05a4c78b1e8cfb5864f4e0e1a4d60faa40be535b91b91cb7baa1629ae"
+      },
+      "4x5": {
+        "path": "assets/it-01-009-4x5.png",
+        "sha256": "83cfb7d992bc05ea5ecd132a921033fba75cf8bc0b6d3839011276ac565bd527"
+      },
+      "recorded": "SHA-256 of the night masters immediately before this daylight batch. Post-write hashes are identical; night masters were not rewritten."
+    },
+    "files": {
+      "16x9": "assets/it-01-009-daylight-16x9.png",
+      "4x5": "assets/it-01-009-daylight-4x5.png"
+    },
+    "sha256": {
+      "16x9": "95201e21ff9ad62fc3c0931dc8398036ba4ec59b7281aec8dc6031c4b10788b3",
+      "4x5": "e7f37deb9c0571919b087167e3ec002c619f7179908bc1c1103304a940d2a9b0"
+    },
+    "created_date": "2026-09-26",
+    "on_image_caption": "Leaning Tower of Pisa, Pisa",
+    "on_image_signature": "Jason D’s Vision",
+    "on_image_disclosure": "AI-generated artistic interpretation · Not a photograph.",
+    "on_image_marking": "☀ Daylight variant · derived from the night interpretation",
+    "derivative_disclosure": "Derivative of the approved night interpretation of this same viewpoint. Not an independently modelled weather or lighting scenario. No weather claim. No scenario timestamp on the variant.",
+    "note": "AI-generated daylight re-interpretation derived from the night master of the same viewpoint and composition. Not a new scene. Architecture and landscape preserved; lighting only was changed from night to daylight. No weather evidence invented. The variant image carries no weather claim and no scenario timestamp. The scene scenario_label remains the night scene's label and is not a daylight weather assertion."
+  }
+}

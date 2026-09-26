@@ -1,0 +1,47 @@
+{
+  "entry_id": "IT-01-008",
+  "country": "Italy",
+  "region": "Veneto",
+  "city": "Venice",
+  "caption": "St. Mark's Basilica, Venice",
+  "scenario_label": "23 September 2026 · 05:00 Europe/Rome",
+  "composition": "Floodlit basilica and campanile in Piazza San Marco at night · AI-generated artistic interpretation",
+  "description": "The camera stands in Piazza San Marco facing the floodlit west facade of St. Mark's Basilica, its five arched portals and gilded domes glowing warm against the night sky. The red-brick campanile rises at the left edge while the lamplit arcades of the Procuratie close both sides of the square. The modelled scenario is 23 September 2026 at 05:00 Europe/Rome: a pre-dawn night view over a nearly empty pavement, not a verified on-site observation.",
+  "alt_text": "AI-generated artistic interpretation of St. Mark's Basilica and Campanile floodlit at night in Venice",
+  "file_16x9": "assets/it-01-008-16x9.png",
+  "file_4x5": "assets/it-01-008-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
+  "sha256_16x9": "3e98506233e7bbfc7489e020f3f14938452bb345c47a10ae213716ab3b80c472",
+  "sha256_4x5": "1d784ff0353efdda3a10c572a498e58602aba0d626ea01d63b60d8df2a9634c0",
+  "daylight_variant": {
+    "variant_of_entry_id": "IT-01-008",
+    "derived_from": "Approved night master assets/it-01-008-16x9.png (16:9) and assets/it-01-008-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
+    "source_night": {
+      "16x9": {
+        "path": "assets/it-01-008-16x9.png",
+        "sha256": "3e98506233e7bbfc7489e020f3f14938452bb345c47a10ae213716ab3b80c472"
+      },
+      "4x5": {
+        "path": "assets/it-01-008-4x5.png",
+        "sha256": "1d784ff0353efdda3a10c572a498e58602aba0d626ea01d63b60d8df2a9634c0"
+      },
+      "recorded": "SHA-256 of the night masters immediately before this daylight batch. Post-write hashes are identical; night masters were not rewritten."
+    },
+    "files": {
+      "16x9": "assets/it-01-008-daylight-16x9.png",
+      "4x5": "assets/it-01-008-daylight-4x5.png"
+    },
+    "sha256": {
+      "16x9": "7a65e823f9f822074e0446a496bd7677aa5346b9f0d08a6bebf40f6c493f528f",
+      "4x5": "09a6ad78d9f5c8ee2b96e05aaf8a4c715a5095f4ad13ca82ad3e7ede7b15920c"
+    },
+    "created_date": "2026-09-26",
+    "on_image_caption": "St. Mark's Basilica, Venice",
+    "on_image_signature": "Jason D’s Vision",
+    "on_image_disclosure": "AI-generated artistic interpretation · Not a photograph.",
+    "on_image_marking": "☀ Daylight variant · derived from the night interpretation",
+    "derivative_disclosure": "Derivative of the approved night interpretation of this same viewpoint. Not an independently modelled weather or lighting scenario. No weather claim. No scenario timestamp on the variant.",
+    "note": "AI-generated daylight re-interpretation derived from the night master of the same viewpoint and composition. Not a new scene. Architecture and landscape preserved; lighting only was changed from night to daylight. No weather evidence invented. The variant image carries no weather claim and no scenario timestamp. The scene scenario_label remains the night scene's label and is not a daylight weather assertion."
+  }
+}

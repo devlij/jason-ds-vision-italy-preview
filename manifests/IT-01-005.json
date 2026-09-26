@@ -1,0 +1,47 @@
+{
+  "entry_id": "IT-01-005",
+  "country": "Italy",
+  "region": "Tuscany",
+  "city": "Florence",
+  "caption": "Florence Cathedral (Duomo), Florence",
+  "scenario_label": "23 September 2026 · 04:57 Europe/Rome",
+  "composition": "Floodlit cathedral and campanile at night · AI-generated artistic interpretation",
+  "description": "The camera stands in the empty Piazza del Duomo in the deep night, facing the floodlit cathedral from the southwest. Giotto's campanile rises at the left of the frame, Brunelleschi's great terracotta dome fills the center, and the marble-patterned flank of the nave runs to the right. Warm floodlighting picks out the green, white, and rose marble facing against the black sky of the modelled 23 September 2026, 04:57 scenario, while the surrounding palazzi glow softly and the paving stones mirror the light.",
+  "alt_text": "AI-generated artistic interpretation of Florence Cathedral and Giotto’s Campanile floodlit at night in Piazza del Duomo",
+  "file_16x9": "assets/it-01-005-16x9.png",
+  "file_4x5": "assets/it-01-005-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
+  "sha256_16x9": "2fe0422183ce8824fc6cff4700456bd66d956d358d284372a0692777cf2d4d1d",
+  "sha256_4x5": "f47e689df346f4f434ba09f1c8f93bb117f28d4d85042751028117ea1f466bbc",
+  "daylight_variant": {
+    "variant_of_entry_id": "IT-01-005",
+    "derived_from": "Approved night master assets/it-01-005-16x9.png (16:9) and assets/it-01-005-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
+    "source_night": {
+      "16x9": {
+        "path": "assets/it-01-005-16x9.png",
+        "sha256": "2fe0422183ce8824fc6cff4700456bd66d956d358d284372a0692777cf2d4d1d"
+      },
+      "4x5": {
+        "path": "assets/it-01-005-4x5.png",
+        "sha256": "f47e689df346f4f434ba09f1c8f93bb117f28d4d85042751028117ea1f466bbc"
+      },
+      "recorded": "SHA-256 of the night masters immediately before this daylight batch. Post-write hashes are identical; night masters were not rewritten."
+    },
+    "files": {
+      "16x9": "assets/it-01-005-daylight-16x9.png",
+      "4x5": "assets/it-01-005-daylight-4x5.png"
+    },
+    "sha256": {
+      "16x9": "b061e10bf2d61c72fb1b43ce697a362a2a800823177b5c319f83b6c5b0cc4acc",
+      "4x5": "013eab52876fd5260aba552f0b3b8aa5f67956fa16ef4ec95e8fb0fc3ddf85b9"
+    },
+    "created_date": "2026-09-26",
+    "on_image_caption": "Florence Cathedral (Duomo), Florence",
+    "on_image_signature": "Jason D’s Vision",
+    "on_image_disclosure": "AI-generated artistic interpretation · Not a photograph.",
+    "on_image_marking": "☀ Daylight variant · derived from the night interpretation",
+    "derivative_disclosure": "Derivative of the approved night interpretation of this same viewpoint. Not an independently modelled weather or lighting scenario. No weather claim. No scenario timestamp on the variant.",
+    "note": "AI-generated daylight re-interpretation derived from the night master of the same viewpoint and composition. Not a new scene. Architecture and landscape preserved; lighting only was changed from night to daylight. No weather evidence invented. The variant image carries no weather claim and no scenario timestamp. The scene scenario_label remains the night scene's label and is not a daylight weather assertion."
+  }
+}
