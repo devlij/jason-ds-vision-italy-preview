@@ -196,7 +196,8 @@
 .flag-chip.flag-fr{background:linear-gradient(to right,#0055A4 0 33.34%,#fff 0 66.67%,#EF4135 0)}
 .flag-chip.flag-es{background:linear-gradient(to bottom,#AA151B 0 25%,#F1BF00 0 75%,#AA151B 0)}
 .flag-chip.flag-gr{background:repeating-linear-gradient(to bottom,#0D5EAF 0 3px,#fff 0 6px)}
-.flag-chip.flag-ch{background:linear-gradient(#fff,#fff) center/45% 22% no-repeat,linear-gradient(#fff,#fff) center/22% 65% no-repeat,#DA291C}.flag-chip.flag-dk,.flag-dk{background:linear-gradient(to bottom,transparent 38%,#fff 38%,#fff 62%,transparent 62%),linear-gradient(to right,transparent 28%,#fff 28%,#fff 44%,transparent 44%),#C8102E}.flag-no{background:linear-gradient(#00205B,#00205B) center/100% 20% no-repeat,linear-gradient(#00205B,#00205B) center/22% 100% no-repeat,linear-gradient(#fff,#fff) center/100% 38% no-repeat,linear-gradient(#fff,#fff) center/40% 100% no-repeat,#BA0C2F}
+.flag-chip.flag-ch{background:linear-gradient(#fff,#fff) center/45% 22% no-repeat,linear-gradient(#fff,#fff) center/22% 65% no-repeat,#DA291C}.flag-chip.flag-dk,.flag-dk
+.flag-chip.flag-nl{background:linear-gradient(to bottom,#AE1C28 0 33.34%,#fff 0 66.67%,#21468B 0)}{background:linear-gradient(to bottom,transparent 38%,#fff 38%,#fff 62%,transparent 62%),linear-gradient(to right,transparent 28%,#fff 28%,#fff 44%,transparent 44%),#C8102E}.flag-no{background:linear-gradient(#00205B,#00205B) center/100% 20% no-repeat,linear-gradient(#00205B,#00205B) center/22% 100% no-repeat,linear-gradient(#fff,#fff) center/100% 38% no-repeat,linear-gradient(#fff,#fff) center/40% 100% no-repeat,#BA0C2F}
 .lb{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;background:rgba(8,10,9,.93)}
 .lb.open{display:flex;flex-direction:column;gap:14px;padding:20px 0}
 .lb figure{margin:0;max-width:94vw}.lb img{max-width:94vw;max-height:70vh;display:block;border-radius:6px}
@@ -206,6 +207,16 @@
 .lb-close,.lb-prev,.lb-next,.lb-play{background:rgba(12,20,17,.85);color:#eef4f0;border:1px solid #26402f;border-radius:999px;width:46px;height:46px;font-size:20px;cursor:pointer;line-height:1;flex:0 0 auto}
 .lb-close{position:absolute;top:14px;right:14px}
 .lb-play.is-playing{color:#f6c344;border-color:#f6c344;box-shadow:0 0 12px rgba(246,195,68,.5)}
+
+.wotd{border-top:1px solid #e6e1d5;border-bottom:1px solid #e6e1d5;background:#faf8f3;padding:10px 24px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;font-size:14px;line-height:1.5}
+.wotd .kicker{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8a8578;font-weight:600;white-space:nowrap}
+.wotd .word{font-weight:700;font-size:15px}
+.wotd .gloss{color:#55555c}
+.wotd .sep{color:#c9c3b4}
+.wotd .phrase{font-style:italic}
+.wotd .day{margin-left:auto;font-size:11px;color:#a09a89;white-space:nowrap}
+.wotd .translit{color:#8a8578;font-size:12.5px}
+@media (max-width:520px){.wotd .day{margin-left:0;width:100%}}
 </style>
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="Jason D's Vision"/>
@@ -234,9 +245,2268 @@
   <header>
     <p class="pointer">Every image is free to use — no credit required. See <a href="#license">license</a> below.</p>
     <h1><span class="flag" aria-hidden="true"></span>Jason D’s Vision — Italy</h1>
-    <nav class="country-switch" aria-label="Country galleries"><a href="https://germany.jdvision.org/"><span class="flag-chip flag-de" aria-hidden="true"></span>Germany</a><span class="sep" aria-hidden="true">|</span><span aria-current="page"><span class="flag-chip flag-it" aria-hidden="true"></span>Italy</span><span class="sep" aria-hidden="true">|</span><a href="https://france.jdvision.org/"><span class="flag-chip flag-fr" aria-hidden="true"></span>France</a><span class="sep" aria-hidden="true">|</span><a href="https://greece.jdvision.org/"><span class="flag-chip flag-gr" aria-hidden="true"></span>Greece</a><span class="sep" aria-hidden="true">|</span><a href="https://spain.jdvision.org/"><span class="flag-chip flag-es" aria-hidden="true"></span>Spain</a><span class="sep" aria-hidden="true">|</span><a href="https://devlij.github.io/jason-ds-vision-norway-preview/"><span class="flag-chip flag-no" aria-hidden="true"></span>Norway</a><span class="sep" aria-hidden="true">|</span><a href="https://devlij.github.io/jason-ds-vision-denmark-preview/"><span class="flag-chip flag-dk" aria-hidden="true"></span>Denmark</a><span class="sep" aria-hidden="true">|</span><a href="https://devlij.github.io/jason-ds-vision-switzerland-preview/"><span class="flag-chip flag-ch" aria-hidden="true"></span>Switzerland</a></nav>
+    <nav class="country-switch" aria-label="Country galleries"><a href="https://germany.jdvision.org/"><span class="flag-chip flag-de" aria-hidden="true"></span>Germany</a><span class="sep" aria-hidden="true">|</span><span aria-current="page"><span class="flag-chip flag-it" aria-hidden="true"></span>Italy</span><span class="sep" aria-hidden="true">|</span><a href="https://france.jdvision.org/"><span class="flag-chip flag-fr" aria-hidden="true"></span>France</a><span class="sep" aria-hidden="true">|</span><a href="https://greece.jdvision.org/"><span class="flag-chip flag-gr" aria-hidden="true"></span>Greece</a><span class="sep" aria-hidden="true">|</span><a href="https://spain.jdvision.org/"><span class="flag-chip flag-es" aria-hidden="true"></span>Spain</a><span class="sep" aria-hidden="true">|</span><a href="https://devlij.github.io/jason-ds-vision-norway-preview/"><span class="flag-chip flag-no" aria-hidden="true"></span>Norway</a><span class="sep" aria-hidden="true">|</span><a href="https://devlij.github.io/jason-ds-vision-denmark-preview/"><span class="flag-chip flag-dk" aria-hidden="true"></span>Denmark</a><span class="sep" aria-hidden="true">|</span><a href="https://devlij.github.io/jason-ds-vision-switzerland-preview/"><span class="flag-chip flag-ch" aria-hidden="true"></span>Switzerland</a><span class="sep" aria-hidden="true">|</span><a href="https://devlij.github.io/jason-ds-vision-netherlands-preview/"><span class="flag-chip flag-nl" aria-hidden="true"></span>Netherlands</a></nav>
     <p class="sub">Preview gallery · Country → Region → City · Merge-ready for the canonical library</p>
   </header>
+<div class="wotd" id="wotd" lang="it">
+  <span class="kicker">Parola del giorno · Word of the day</span>
+  <span class="wotd-body" aria-live="polite"></span>
+  <span class="day" id="wotd-day"></span>
+</div>
+<script type="application/json" id="wotd-data">[
+  {
+    "phrase": "Buongiorno!",
+    "phrase_en": "Good morning! / Good day!",
+    "word": "il saluto",
+    "word_en": "the greeting"
+  },
+  {
+    "phrase": "Buonasera!",
+    "phrase_en": "Good evening!",
+    "word": "la mattina",
+    "word_en": "the morning"
+  },
+  {
+    "phrase": "Buonanotte!",
+    "phrase_en": "Good night!",
+    "word": "la sera",
+    "word_en": "the evening"
+  },
+  {
+    "phrase": "Arrivederci!",
+    "phrase_en": "Goodbye! (until we meet again)",
+    "word": "la notte",
+    "word_en": "the night"
+  },
+  {
+    "phrase": "A presto!",
+    "phrase_en": "See you soon!",
+    "word": "il giorno",
+    "word_en": "the day"
+  },
+  {
+    "phrase": "A domani!",
+    "phrase_en": "See you tomorrow!",
+    "word": "l'addio",
+    "word_en": "the farewell"
+  },
+  {
+    "phrase": "Benvenuto!",
+    "phrase_en": "Welcome!",
+    "word": "l'ospite",
+    "word_en": "the guest"
+  },
+  {
+    "phrase": "Piacere di conoscerti!",
+    "phrase_en": "Pleased to meet you!",
+    "word": "il sorriso",
+    "word_en": "the smile"
+  },
+  {
+    "phrase": "Come stai?",
+    "phrase_en": "How are you?",
+    "word": "la gentilezza",
+    "word_en": "the kindness"
+  },
+  {
+    "phrase": "Come va?",
+    "phrase_en": "How's it going?",
+    "word": "la cortesia",
+    "word_en": "the courtesy"
+  },
+  {
+    "phrase": "Salute!",
+    "phrase_en": "Cheers! (to your health)",
+    "word": "il brindisi",
+    "word_en": "the toast"
+  },
+  {
+    "phrase": "Buona fortuna!",
+    "phrase_en": "Good luck!",
+    "word": "la fortuna",
+    "word_en": "the luck"
+  },
+  {
+    "phrase": "Auguri!",
+    "phrase_en": "Best wishes!",
+    "word": "l'augurio",
+    "word_en": "the good wish"
+  },
+  {
+    "phrase": "Buon viaggio!",
+    "phrase_en": "Have a good trip!",
+    "word": "la festa",
+    "word_en": "the celebration"
+  },
+  {
+    "phrase": "Buon compleanno!",
+    "phrase_en": "Happy birthday!",
+    "word": "il compleanno",
+    "word_en": "the birthday"
+  },
+  {
+    "note": "Traditional birthday wish: 'may you see a hundred more of these days'",
+    "phrase": "Cento di questi giorni!",
+    "phrase_en": "Many happy returns!",
+    "word": "il regalo",
+    "word_en": "the gift"
+  },
+  {
+    "phrase": "Buon appetito!",
+    "phrase_en": "Enjoy your meal!",
+    "word": "l'invito",
+    "word_en": "the invitation"
+  },
+  {
+    "note": "Said to wish luck; the classic reply is 'Crepi!'",
+    "phrase": "In bocca al lupo!",
+    "phrase_en": "Break a leg! (good luck)",
+    "word": "la compagnia",
+    "word_en": "the company"
+  },
+  {
+    "phrase": "Complimenti!",
+    "phrase_en": "Congratulations!",
+    "word": "l'allegria",
+    "word_en": "the cheerfulness"
+  },
+  {
+    "phrase": "Grazie mille!",
+    "phrase_en": "Thank you very much!",
+    "word": "il piacere",
+    "word_en": "the pleasure"
+  },
+  {
+    "phrase": "Prego!",
+    "phrase_en": "You're welcome!",
+    "word": "la conoscenza",
+    "word_en": "the acquaintance"
+  },
+  {
+    "phrase": "Mi scusi!",
+    "phrase_en": "Pardon me! / I'm sorry!",
+    "word": "la conversazione",
+    "word_en": "the conversation"
+  },
+  {
+    "phrase": "Permesso!",
+    "phrase_en": "Excuse me (let me pass)!",
+    "word": "la parola",
+    "word_en": "the word"
+  },
+  {
+    "phrase": "Cin cin!",
+    "phrase_en": "Chin-chin! (cheers)",
+    "word": "la domanda",
+    "word_en": "the question"
+  },
+  {
+    "phrase": "Buone feste!",
+    "phrase_en": "Happy holidays!",
+    "word": "la risposta",
+    "word_en": "the answer"
+  },
+  {
+    "phrase": "Felice anno nuovo!",
+    "phrase_en": "Happy New Year!",
+    "word": "il ringraziamento",
+    "word_en": "the thanks"
+  },
+  {
+    "phrase": "Buona Pasqua!",
+    "phrase_en": "Happy Easter!",
+    "word": "le scuse",
+    "word_en": "the apology"
+  },
+  {
+    "phrase": "Mamma mia!",
+    "phrase_en": "Oh my goodness!",
+    "word": "il permesso",
+    "word_en": "the permission"
+  },
+  {
+    "phrase": "Che bello!",
+    "phrase_en": "How beautiful!",
+    "word": "l'arrivo",
+    "word_en": "the arrival"
+  },
+  {
+    "phrase": "Che meraviglia!",
+    "phrase_en": "How wonderful!",
+    "word": "la partenza",
+    "word_en": "the departure"
+  },
+  {
+    "phrase": "A buon intenditor poche parole.",
+    "phrase_en": "A word to the wise is sufficient.",
+    "word": "la saggezza",
+    "word_en": "the wisdom"
+  },
+  {
+    "phrase": "A caval donato non si guarda in bocca.",
+    "phrase_en": "Don't look a gift horse in the mouth.",
+    "word": "il proverbio",
+    "word_en": "the proverb"
+  },
+  {
+    "phrase": "A chi dai il dito si prende anche il braccio.",
+    "phrase_en": "Give them an inch and they'll take a mile.",
+    "word": "il detto",
+    "word_en": "the saying"
+  },
+  {
+    "phrase": "A ciascuno il suo.",
+    "phrase_en": "To each his own.",
+    "word": "il consiglio",
+    "word_en": "the advice"
+  },
+  {
+    "phrase": "A mali estremi, estremi rimedi.",
+    "phrase_en": "Desperate times call for desperate measures.",
+    "word": "l'errore",
+    "word_en": "the mistake"
+  },
+  {
+    "phrase": "A nemico che fugge, ponti d'oro.",
+    "phrase_en": "Build golden bridges for a fleeing enemy.",
+    "word": "la verità",
+    "word_en": "the truth"
+  },
+  {
+    "phrase": "A ogni uccello il suo nido è bello.",
+    "phrase_en": "There's no place like home.",
+    "word": "la bugia",
+    "word_en": "the lie"
+  },
+  {
+    "phrase": "A tutto c'è rimedio, fuorché alla morte.",
+    "phrase_en": "There's a remedy for everything except death.",
+    "word": "la giustizia",
+    "word_en": "the justice"
+  },
+  {
+    "phrase": "Acqua cheta rompe i ponti.",
+    "phrase_en": "Still waters run deep.",
+    "word": "il torto",
+    "word_en": "the wrong"
+  },
+  {
+    "phrase": "Acqua passata non macina più.",
+    "phrase_en": "That's water under the bridge.",
+    "word": "la ragione",
+    "word_en": "the reason"
+  },
+  {
+    "phrase": "Al bisogno si conosce l'amico.",
+    "phrase_en": "A friend in need is a friend indeed.",
+    "word": "il rimedio",
+    "word_en": "the remedy"
+  },
+  {
+    "phrase": "Al contadino non far sapere quanto è buono il formaggio con le pere.",
+    "phrase_en": "Don't tell the farmer how good cheese is with pears.",
+    "word": "il pericolo",
+    "word_en": "the danger"
+  },
+  {
+    "phrase": "Ama il prossimo tuo come te stesso.",
+    "phrase_en": "Love thy neighbor as thyself.",
+    "word": "il rischio",
+    "word_en": "the risk"
+  },
+  {
+    "phrase": "Ambasciator non porta pena.",
+    "phrase_en": "Don't shoot the messenger.",
+    "word": "il coraggio",
+    "word_en": "the courage"
+  },
+  {
+    "phrase": "Amico di tutti e di nessuno è tutt'uno.",
+    "phrase_en": "A friend to all is a friend to none.",
+    "word": "la paura",
+    "word_en": "the fear"
+  },
+  {
+    "phrase": "Mal comune, mezzo gaudio.",
+    "phrase_en": "Trouble shared is trouble halved.",
+    "word": "la pazienza",
+    "word_en": "the patience"
+  },
+  {
+    "phrase": "Il meglio è nemico del bene.",
+    "phrase_en": "The perfect is the enemy of the good.",
+    "word": "la fretta",
+    "word_en": "the haste"
+  },
+  {
+    "phrase": "Meglio tardi che mai.",
+    "phrase_en": "Better late than never.",
+    "word": "la calma",
+    "word_en": "the calm"
+  },
+  {
+    "phrase": "L'abito non fa il monaco.",
+    "phrase_en": "Clothes don't make the man.",
+    "word": "l'ira",
+    "word_en": "the anger"
+  },
+  {
+    "phrase": "In un mondo di ciechi, un orbo è re.",
+    "phrase_en": "In the land of the blind, the one-eyed man is king.",
+    "word": "l'orgoglio",
+    "word_en": "the pride"
+  },
+  {
+    "note": "Literally: the hasty she-cat had blind kittens",
+    "phrase": "La gatta frettolosa ha fatto i gattini ciechi.",
+    "phrase_en": "Haste makes waste.",
+    "word": "l'umiltà",
+    "word_en": "the humility"
+  },
+  {
+    "phrase": "Chi dice Siena, dice Palio.",
+    "phrase_en": "To mention Siena is to mention the Palio.",
+    "word": "la generosità",
+    "word_en": "the generosity"
+  },
+  {
+    "phrase": "Se non è vero, è ben trovato.",
+    "phrase_en": "If it's not true, it's a good story.",
+    "word": "l'avarizia",
+    "word_en": "the avarice"
+  },
+  {
+    "phrase": "Traduttore, traditore.",
+    "phrase_en": "Translator, traitor.",
+    "word": "l'invidia",
+    "word_en": "the envy"
+  },
+  {
+    "note": "Literally: speak as you eat — keep it plain",
+    "phrase": "Parla come mangi.",
+    "phrase_en": "Speak plainly.",
+    "word": "la speranza",
+    "word_en": "the hope"
+  },
+  {
+    "note": "Literally: not all doughnuts come out with a hole",
+    "phrase": "Non tutte le ciambelle escono col buco.",
+    "phrase_en": "Not everything turns out perfectly.",
+    "word": "la fede",
+    "word_en": "the faith"
+  },
+  {
+    "note": "Parsley turns up in every dish — said of someone who is always around",
+    "phrase": "Essere come il prezzemolo.",
+    "phrase_en": "To turn up everywhere.",
+    "word": "il dubbio",
+    "word_en": "the doubt"
+  },
+  {
+    "note": "Literally: everything makes broth",
+    "phrase": "Tutto fa brodo.",
+    "phrase_en": "Everything comes in handy.",
+    "word": "la certezza",
+    "word_en": "the certainty"
+  },
+  {
+    "note": "Literally: what's boiling in the pot?",
+    "phrase": "Cosa bolle in pentola?",
+    "phrase_en": "What's cooking? (what's going on)",
+    "word": "il destino",
+    "word_en": "the destiny"
+  },
+  {
+    "note": "Literally: the mother of idiots is always pregnant",
+    "phrase": "La madre degli idioti è sempre incinta.",
+    "phrase_en": "There's never a shortage of fools.",
+    "word": "il caso",
+    "word_en": "the chance"
+  },
+  {
+    "phrase": "Cambiano i suonatori, ma la musica è sempre quella.",
+    "phrase_en": "The players change, but the tune stays the same.",
+    "word": "il cane",
+    "word_en": "the dog"
+  },
+  {
+    "phrase": "Chi più sa, meno crede.",
+    "phrase_en": "The more you know, the less you believe.",
+    "word": "il gatto",
+    "word_en": "the cat"
+  },
+  {
+    "phrase": "Chi prima non pensa, in ultimo sospira.",
+    "phrase_en": "Look before you leap.",
+    "word": "il lupo",
+    "word_en": "the wolf"
+  },
+  {
+    "phrase": "Chi sa fa, e chi non sa insegna.",
+    "phrase_en": "Those who can, do; those who can't, teach.",
+    "word": "la pecora",
+    "word_en": "the sheep"
+  },
+  {
+    "phrase": "Chi s'aiuta, Dio l'aiuta.",
+    "phrase_en": "God helps those who help themselves.",
+    "word": "il cavallo",
+    "word_en": "the horse"
+  },
+  {
+    "phrase": "Chi tace acconsente.",
+    "phrase_en": "Silence is consent.",
+    "word": "l'asino",
+    "word_en": "the donkey"
+  },
+  {
+    "phrase": "Chi tardi arriva, male alloggia.",
+    "phrase_en": "Latecomers get the worst of it.",
+    "word": "il pesce",
+    "word_en": "the fish"
+  },
+  {
+    "phrase": "Chi trova un amico, trova un tesoro.",
+    "phrase_en": "Who finds a friend finds a treasure.",
+    "word": "l'uccello",
+    "word_en": "the bird"
+  },
+  {
+    "phrase": "Chi va piano, va sano e va lontano.",
+    "phrase_en": "Slow and steady wins the race.",
+    "word": "il nido",
+    "word_en": "the nest"
+  },
+  {
+    "phrase": "Chi vince ha sempre ragione.",
+    "phrase_en": "Might makes right.",
+    "word": "la gallina",
+    "word_en": "the hen"
+  },
+  {
+    "note": "Literally: one nail drives out another",
+    "phrase": "Chiodo scaccia chiodo.",
+    "phrase_en": "Out with the old, in with the new.",
+    "word": "il gallo",
+    "word_en": "the rooster"
+  },
+  {
+    "phrase": "Con niente non si fa niente.",
+    "phrase_en": "You can't make something from nothing.",
+    "word": "il topo",
+    "word_en": "the mouse"
+  },
+  {
+    "note": "Literally: my home, however tiny, seems an abbey to me",
+    "phrase": "Casa mia, casa mia, per piccina che tu sia, tu mi sembri una badia.",
+    "phrase_en": "East or west, home is best.",
+    "word": "la volpe",
+    "word_en": "the fox"
+  },
+  {
+    "phrase": "Chi ben comincia è a metà dell'opera.",
+    "phrase_en": "A good start is half the battle.",
+    "word": "l'orso",
+    "word_en": "the bear"
+  },
+  {
+    "phrase": "Chi cento ne fa, una ne aspetti.",
+    "phrase_en": "What goes around comes around.",
+    "word": "il cervo",
+    "word_en": "the deer"
+  },
+  {
+    "phrase": "Chi cerca trova.",
+    "phrase_en": "Seek and you shall find.",
+    "word": "il cinghiale",
+    "word_en": "the wild boar"
+  },
+  {
+    "phrase": "Chi di spada ferisce, di spada perisce.",
+    "phrase_en": "Who lives by the sword dies by the sword.",
+    "word": "la lepre",
+    "word_en": "the hare"
+  },
+  {
+    "phrase": "Chi è causa del suo male, piange se stesso.",
+    "phrase_en": "You've made your bed, now lie in it.",
+    "word": "il riccio",
+    "word_en": "the hedgehog"
+  },
+  {
+    "phrase": "Chi fa da sé, fa per tre.",
+    "phrase_en": "If you want it done right, do it yourself.",
+    "word": "la farfalla",
+    "word_en": "the butterfly"
+  },
+  {
+    "phrase": "Chi fa falla, e chi non fa sfarfalla.",
+    "phrase_en": "Those who act err; those who don't, blunder.",
+    "word": "l'ape",
+    "word_en": "the bee"
+  },
+  {
+    "phrase": "Chi ha avuto, ha avuto, e chi ha dato, ha dato.",
+    "phrase_en": "What's done is done.",
+    "word": "la formica",
+    "word_en": "the ant"
+  },
+  {
+    "phrase": "Chi ha fretta, vada piano.",
+    "phrase_en": "Make haste slowly.",
+    "word": "il ragno",
+    "word_en": "the spider"
+  },
+  {
+    "phrase": "Chi non fa, non falla.",
+    "phrase_en": "Those who do nothing make no mistakes.",
+    "word": "la lumaca",
+    "word_en": "the snail"
+  },
+  {
+    "phrase": "Chi non risica, non rosica.",
+    "phrase_en": "Nothing ventured, nothing gained.",
+    "word": "il grillo",
+    "word_en": "the cricket"
+  },
+  {
+    "phrase": "Chi lascia la strada vecchia per la nuova, sa quel che lascia ma non sa quel che trova.",
+    "phrase_en": "Better the devil you know.",
+    "word": "la cicala",
+    "word_en": "the cicada"
+  },
+  {
+    "phrase": "Cane che abbaia non morde.",
+    "phrase_en": "His bark is worse than his bite.",
+    "word": "il gufo",
+    "word_en": "the owl"
+  },
+  {
+    "phrase": "Chi dorme non piglia pesci.",
+    "phrase_en": "The early bird catches the worm.",
+    "word": "il corvo",
+    "word_en": "the crow"
+  },
+  {
+    "phrase": "Chi pecora si fa, il lupo se la mangia.",
+    "phrase_en": "Don't play the sheep, or the wolf will eat you.",
+    "word": "il passero",
+    "word_en": "the sparrow"
+  },
+  {
+    "note": "Literally: live, horse, while the grass grows",
+    "phrase": "Campa cavallo, che l'erba cresce!",
+    "phrase_en": "Fat chance! (don't hold your breath)",
+    "word": "la rondine",
+    "word_en": "the swallow"
+  },
+  {
+    "note": "Literally: trusting is good, not trusting is better",
+    "phrase": "Fidarsi è bene, non fidarsi è meglio.",
+    "phrase_en": "Trust, but verify.",
+    "word": "il gabbiano",
+    "word_en": "the seagull"
+  },
+  {
+    "phrase": "Rosso di sera, bel tempo si spera.",
+    "phrase_en": "Red sky at night, shepherd's delight.",
+    "word": "la luce",
+    "word_en": "the light"
+  },
+  {
+    "note": "Literally: the morning has gold in its mouth",
+    "phrase": "Il mattino ha l'oro in bocca.",
+    "phrase_en": "The morning hours are golden.",
+    "word": "il sole",
+    "word_en": "the sun"
+  },
+  {
+    "phrase": "Aprile, dolce dormire.",
+    "phrase_en": "April is for sweet slumber.",
+    "word": "la luna",
+    "word_en": "the moon"
+  },
+  {
+    "phrase": "Natale con i tuoi, Pasqua con chi vuoi.",
+    "phrase_en": "Christmas with family, Easter with whomever you like.",
+    "word": "la stella",
+    "word_en": "the star"
+  },
+  {
+    "phrase": "Sposa bagnata, sposa fortunata.",
+    "phrase_en": "A wet bride is a lucky bride.",
+    "word": "l'alba",
+    "word_en": "the dawn"
+  },
+  {
+    "phrase": "Cielo a pecorelle, acqua a catinelle.",
+    "phrase_en": "Mackerel sky, rain in buckets.",
+    "word": "il tramonto",
+    "word_en": "the sunset"
+  },
+  {
+    "note": "Literally: the wise don't set sail without biscuits",
+    "phrase": "Il savio non s'imbarca senza biscotto.",
+    "phrase_en": "Be prepared.",
+    "word": "l'aurora",
+    "word_en": "the daybreak"
+  },
+  {
+    "phrase": "Dopo la tempesta, la quiete.",
+    "phrase_en": "After the storm comes the calm.",
+    "word": "il crepuscolo",
+    "word_en": "the dusk"
+  },
+  {
+    "note": "Literally: so much thunder that it rained",
+    "phrase": "Tanto tuonò che piovve.",
+    "phrase_en": "After much anticipation, it finally happened.",
+    "word": "il bagliore",
+    "word_en": "the glare"
+  },
+  {
+    "note": "Literally: it rains on what's already wet",
+    "phrase": "Piove sul bagnato.",
+    "phrase_en": "It never rains but it pours.",
+    "word": "il raggio",
+    "word_en": "the ray"
+  },
+  {
+    "phrase": "La notte porta consiglio.",
+    "phrase_en": "Sleep on it. (the night brings counsel)",
+    "word": "l'ombra",
+    "word_en": "the shadow"
+  },
+  {
+    "phrase": "All'alba.",
+    "phrase_en": "At dawn.",
+    "word": "la penombra",
+    "word_en": "the half-light"
+  },
+  {
+    "phrase": "Al tramonto.",
+    "phrase_en": "At sunset.",
+    "word": "il chiarore",
+    "word_en": "the brightness"
+  },
+  {
+    "phrase": "A notte fonda.",
+    "phrase_en": "In the dead of night.",
+    "word": "il lume",
+    "word_en": "the lamp-light"
+  },
+  {
+    "phrase": "Al chiaro di luna.",
+    "phrase_en": "In the moonlight.",
+    "word": "la lanterna",
+    "word_en": "the lantern"
+  },
+  {
+    "phrase": "Sotto un cielo stellato.",
+    "phrase_en": "Under a starry sky.",
+    "word": "il faro",
+    "word_en": "the lighthouse"
+  },
+  {
+    "phrase": "Con il sole a picco.",
+    "phrase_en": "With the sun at its zenith.",
+    "word": "la candela",
+    "word_en": "the candle"
+  },
+  {
+    "phrase": "All'ora dorata.",
+    "phrase_en": "At golden hour.",
+    "word": "la scintilla",
+    "word_en": "the spark"
+  },
+  {
+    "phrase": "L'ora blu.",
+    "phrase_en": "The blue hour.",
+    "word": "il riflesso",
+    "word_en": "the reflection"
+  },
+  {
+    "phrase": "Un cielo terso.",
+    "phrase_en": "A clear sky.",
+    "word": "lo splendore",
+    "word_en": "the splendor"
+  },
+  {
+    "phrase": "Un temporale estivo.",
+    "phrase_en": "A summer storm.",
+    "word": "il cielo",
+    "word_en": "the sky"
+  },
+  {
+    "phrase": "Dopo il temporale.",
+    "phrase_en": "After the storm.",
+    "word": "l'orizzonte",
+    "word_en": "the horizon"
+  },
+  {
+    "phrase": "L'arcobaleno dopo la pioggia.",
+    "phrase_en": "The rainbow after the rain.",
+    "word": "l'arcobaleno",
+    "word_en": "the rainbow"
+  },
+  {
+    "phrase": "Una giornata di sole.",
+    "phrase_en": "A sunny day.",
+    "word": "il fulmine",
+    "word_en": "the lightning"
+  },
+  {
+    "phrase": "Una nottata di luna piena.",
+    "phrase_en": "A full-moon night.",
+    "word": "il tuono",
+    "word_en": "the thunder"
+  },
+  {
+    "phrase": "Le stelle cadenti.",
+    "phrase_en": "The shooting stars.",
+    "word": "la nuvola",
+    "word_en": "the cloud"
+  },
+  {
+    "phrase": "La via lattea.",
+    "phrase_en": "The Milky Way.",
+    "word": "la foschia",
+    "word_en": "the haze"
+  },
+  {
+    "phrase": "L'alba rosata.",
+    "phrase_en": "The rosy dawn.",
+    "word": "la nebbia",
+    "word_en": "the fog"
+  },
+  {
+    "phrase": "Il tramonto infuocato.",
+    "phrase_en": "The fiery sunset.",
+    "word": "la pioggia",
+    "word_en": "the rain"
+  },
+  {
+    "phrase": "La foschia del mattino.",
+    "phrase_en": "The morning haze.",
+    "word": "la neve",
+    "word_en": "the snow"
+  },
+  {
+    "phrase": "Essere in alto mare.",
+    "phrase_en": "To be all at sea. (far from a solution)",
+    "word": "il mare",
+    "word_en": "the sea"
+  },
+  {
+    "note": "Literally: with sails swollen",
+    "phrase": "Andare a gonfie vele.",
+    "phrase_en": "To go swimmingly.",
+    "word": "l'onda",
+    "word_en": "the wave"
+  },
+  {
+    "note": "Literally: to pull the oars into the boat",
+    "phrase": "Tirare i remi in barca.",
+    "phrase_en": "To give up; to rest on one's oars.",
+    "word": "la spiaggia",
+    "word_en": "the beach"
+  },
+  {
+    "phrase": "Gettare l'ancora.",
+    "phrase_en": "To drop anchor. (to settle down)",
+    "word": "la scogliera",
+    "word_en": "the cliff"
+  },
+  {
+    "phrase": "Una goccia nel mare.",
+    "phrase_en": "A drop in the ocean.",
+    "word": "il porto",
+    "word_en": "the harbor"
+  },
+  {
+    "note": "Literally: water in the mouth",
+    "phrase": "Acqua in bocca!",
+    "phrase_en": "Mum's the word!",
+    "word": "la baia",
+    "word_en": "the bay"
+  },
+  {
+    "phrase": "Avere il vento in poppa.",
+    "phrase_en": "To have the wind at one's back.",
+    "word": "il golfo",
+    "word_en": "the gulf"
+  },
+  {
+    "phrase": "Perdere la bussola.",
+    "phrase_en": "To lose one's bearings.",
+    "word": "l'isola",
+    "word_en": "the island"
+  },
+  {
+    "phrase": "Ritrovare la rotta.",
+    "phrase_en": "To get back on course.",
+    "word": "la penisola",
+    "word_en": "the peninsula"
+  },
+  {
+    "phrase": "Navigare in buone acque.",
+    "phrase_en": "To be in good shape. (sailing in good waters)",
+    "word": "la costa",
+    "word_en": "the coast"
+  },
+  {
+    "phrase": "Il richiamo del mare.",
+    "phrase_en": "The call of the sea.",
+    "word": "la riva",
+    "word_en": "the shore"
+  },
+  {
+    "phrase": "Piedi nella sabbia.",
+    "phrase_en": "Feet in the sand.",
+    "word": "il molo",
+    "word_en": "the pier"
+  },
+  {
+    "phrase": "Il profumo del mare.",
+    "phrase_en": "The scent of the sea.",
+    "word": "la banchina",
+    "word_en": "the quay"
+  },
+  {
+    "phrase": "L'orizzonte sul mare.",
+    "phrase_en": "The horizon over the sea.",
+    "word": "la nave",
+    "word_en": "the ship"
+  },
+  {
+    "phrase": "Il sole si tuffa nel mare.",
+    "phrase_en": "The sun plunges into the sea.",
+    "word": "la barca",
+    "word_en": "the boat"
+  },
+  {
+    "phrase": "Una barca a vela all'orizzonte.",
+    "phrase_en": "A sailboat on the horizon.",
+    "word": "la vela",
+    "word_en": "the sail"
+  },
+  {
+    "phrase": "Il porto all'alba.",
+    "phrase_en": "The harbor at dawn.",
+    "word": "il remo",
+    "word_en": "the oar"
+  },
+  {
+    "phrase": "Le onde sugli scogli.",
+    "phrase_en": "The waves on the rocks.",
+    "word": "l'ancora",
+    "word_en": "the anchor"
+  },
+  {
+    "phrase": "Il faro nella notte.",
+    "phrase_en": "The lighthouse in the night.",
+    "word": "il pescatore",
+    "word_en": "the fisherman"
+  },
+  {
+    "phrase": "Una giornata in barca.",
+    "phrase_en": "A day out on a boat.",
+    "word": "la conchiglia",
+    "word_en": "the seashell"
+  },
+  {
+    "phrase": "Il sale sulla pelle.",
+    "phrase_en": "Salt on the skin.",
+    "word": "la sabbia",
+    "word_en": "the sand"
+  },
+  {
+    "phrase": "Il vento tra le vele.",
+    "phrase_en": "The wind in the sails.",
+    "word": "la duna",
+    "word_en": "the dune"
+  },
+  {
+    "phrase": "Andare per mare.",
+    "phrase_en": "To go by sea.",
+    "word": "la brezza",
+    "word_en": "the breeze"
+  },
+  {
+    "phrase": "Prendere il largo.",
+    "phrase_en": "To head out to open sea.",
+    "word": "il marinaio",
+    "word_en": "the sailor"
+  },
+  {
+    "phrase": "In mare aperto.",
+    "phrase_en": "In the open sea.",
+    "word": "il faraglione",
+    "word_en": "the sea stack"
+  },
+  {
+    "phrase": "La calma piatta.",
+    "phrase_en": "The dead calm. (flat calm sea)",
+    "word": "la cala",
+    "word_en": "the cove"
+  },
+  {
+    "phrase": "Cavalcare le onde.",
+    "phrase_en": "To ride the waves.",
+    "word": "la laguna",
+    "word_en": "the lagoon"
+  },
+  {
+    "note": "Literally: on the crest of the wave",
+    "phrase": "Sulla cresta dell'onda.",
+    "phrase_en": "To be riding high.",
+    "word": "lo scoglio",
+    "word_en": "the sea rock"
+  },
+  {
+    "phrase": "Fare il bagno al largo.",
+    "phrase_en": "To swim out in the deep.",
+    "word": "la marea",
+    "word_en": "the tide"
+  },
+  {
+    "phrase": "Il blu profondo.",
+    "phrase_en": "The deep blue.",
+    "word": "la corrente",
+    "word_en": "the current"
+  },
+  {
+    "phrase": "Fra i due litiganti, il terzo gode.",
+    "phrase_en": "When two quarrel, a third rejoices.",
+    "word": "la montagna",
+    "word_en": "the mountain"
+  },
+  {
+    "note": "Literally: old hen makes good broth",
+    "phrase": "Gallina vecchia fa buon brodo.",
+    "phrase_en": "Old age has its virtues.",
+    "word": "la vetta",
+    "word_en": "the summit"
+  },
+  {
+    "phrase": "Gli assenti hanno sempre torto.",
+    "phrase_en": "The absent are always in the wrong.",
+    "word": "la cima",
+    "word_en": "the mountaintop"
+  },
+  {
+    "note": "Literally: you wanted the bike? Now pedal!",
+    "phrase": "Hai voluto la bicicletta e adesso pedala.",
+    "phrase_en": "You've made your choice, now live with it.",
+    "word": "la valle",
+    "word_en": "the valley"
+  },
+  {
+    "phrase": "I panni sporchi si lavano in famiglia.",
+    "phrase_en": "Don't wash your dirty laundry in public.",
+    "word": "la collina",
+    "word_en": "the hill"
+  },
+  {
+    "phrase": "I soldi non crescono sugli alberi.",
+    "phrase_en": "Money doesn't grow on trees.",
+    "word": "la pianura",
+    "word_en": "the plain"
+  },
+  {
+    "phrase": "Chi non semina, non raccoglie.",
+    "phrase_en": "Who doesn't sow, doesn't reap.",
+    "word": "il bosco",
+    "word_en": "the woods"
+  },
+  {
+    "phrase": "Chi semina vento, raccoglie tempesta.",
+    "phrase_en": "Sow the wind, reap the whirlwind.",
+    "word": "la foresta",
+    "word_en": "the forest"
+  },
+  {
+    "phrase": "Chi si accontenta, gode.",
+    "phrase_en": "Who is content, enjoys life.",
+    "word": "l'albero",
+    "word_en": "the tree"
+  },
+  {
+    "phrase": "Chi si ferma è perduto.",
+    "phrase_en": "Who hesitates is lost.",
+    "word": "la quercia",
+    "word_en": "the oak"
+  },
+  {
+    "phrase": "Chi troppo vuole, nulla stringe.",
+    "phrase_en": "Grasp all, lose all.",
+    "word": "il pino",
+    "word_en": "the pine"
+  },
+  {
+    "note": "Literally: God makes them, then pairs them",
+    "phrase": "Dio li fa e poi li accoppia.",
+    "phrase_en": "Birds of a feather flock together.",
+    "word": "l'ulivo",
+    "word_en": "the olive tree"
+  },
+  {
+    "phrase": "Errare è umano.",
+    "phrase_en": "To err is human.",
+    "word": "il cipresso",
+    "word_en": "the cypress"
+  },
+  {
+    "note": "Literally: to make a good face at a bad game",
+    "phrase": "Fare buon viso a cattivo gioco.",
+    "phrase_en": "To put on a brave face.",
+    "word": "il fiore",
+    "word_en": "the flower"
+  },
+  {
+    "note": "Literally: the game isn't worth the candle",
+    "phrase": "Il gioco non vale la candela.",
+    "phrase_en": "The prize isn't worth the effort.",
+    "word": "il prato",
+    "word_en": "the meadow"
+  },
+  {
+    "note": "Literally: the wolf loses its fur but not its vice",
+    "phrase": "Il lupo perde il pelo ma non il vizio.",
+    "phrase_en": "A leopard can't change its spots.",
+    "word": "il campo",
+    "word_en": "the field"
+  },
+  {
+    "phrase": "L'erba del vicino è sempre più verde.",
+    "phrase_en": "The grass is always greener on the other side.",
+    "word": "il sentiero",
+    "word_en": "the trail"
+  },
+  {
+    "phrase": "L'unione fa la forza.",
+    "phrase_en": "Unity is strength.",
+    "word": "il ponte",
+    "word_en": "the bridge"
+  },
+  {
+    "note": "Literally: better an egg today than a hen tomorrow",
+    "phrase": "Meglio un uovo oggi che una gallina domani.",
+    "phrase_en": "A bird in the hand is worth two in the bush.",
+    "word": "il fiume",
+    "word_en": "the river"
+  },
+  {
+    "phrase": "Non è tutto oro quel che luccica.",
+    "phrase_en": "All that glitters is not gold.",
+    "word": "il lago",
+    "word_en": "the lake"
+  },
+  {
+    "phrase": "Non svegliare il can che dorme.",
+    "phrase_en": "Let sleeping dogs lie.",
+    "word": "il torrente",
+    "word_en": "the stream"
+  },
+  {
+    "note": "Literally: either eat this soup or jump out the window",
+    "phrase": "O mangi questa minestra o salti dalla finestra.",
+    "phrase_en": "Take it or leave it.",
+    "word": "la cascata",
+    "word_en": "the waterfall"
+  },
+  {
+    "note": "Literally: the country you go to, the custom you find",
+    "phrase": "Paese che vai, usanza che trovi.",
+    "phrase_en": "When in Rome, do as the Romans do.",
+    "word": "la sorgente",
+    "word_en": "the spring (of water)"
+  },
+  {
+    "phrase": "Quando il gatto non c'è, i topi ballano.",
+    "phrase_en": "When the cat's away, the mice will play.",
+    "word": "la grotta",
+    "word_en": "the cave"
+  },
+  {
+    "phrase": "Ride bene chi ride ultimo.",
+    "phrase_en": "He who laughs last laughs best.",
+    "word": "la roccia",
+    "word_en": "the rock"
+  },
+  {
+    "phrase": "Roma non fu fatta in un giorno.",
+    "phrase_en": "Rome wasn't built in a day.",
+    "word": "la pietra",
+    "word_en": "the stone"
+  },
+  {
+    "note": "Literally: by erring one learns",
+    "phrase": "Sbagliando s'impara.",
+    "phrase_en": "We learn by making mistakes.",
+    "word": "il sasso",
+    "word_en": "the pebble"
+  },
+  {
+    "note": "Literally: if they are roses, they will bloom",
+    "phrase": "Se son rose, fioriranno.",
+    "phrase_en": "What will be, will be.",
+    "word": "la radura",
+    "word_en": "the clearing"
+  },
+  {
+    "note": "Literally: the cat goes so often to the lard it leaves a paw",
+    "phrase": "Tanto va la gatta al lardo che ci lascia lo zampino.",
+    "phrase_en": "The pitcher goes once too often to the well.",
+    "word": "il pendio",
+    "word_en": "the slope"
+  },
+  {
+    "phrase": "Tentar non nuoce.",
+    "phrase_en": "It doesn't hurt to try.",
+    "word": "il belvedere",
+    "word_en": "the scenic overlook"
+  },
+  {
+    "phrase": "Il cuore della città.",
+    "phrase_en": "The heart of the city.",
+    "word": "la città",
+    "word_en": "the city"
+  },
+  {
+    "phrase": "Una passeggiata in centro.",
+    "phrase_en": "A stroll downtown.",
+    "word": "il paese",
+    "word_en": "the town"
+  },
+  {
+    "phrase": "I vicoli del centro storico.",
+    "phrase_en": "The alleys of the old town.",
+    "word": "il borgo",
+    "word_en": "the village"
+  },
+  {
+    "phrase": "La piazza al tramonto.",
+    "phrase_en": "The square at sunset.",
+    "word": "la piazza",
+    "word_en": "the square"
+  },
+  {
+    "phrase": "Il mercato del mattino.",
+    "phrase_en": "The morning market.",
+    "word": "la via",
+    "word_en": "the street"
+  },
+  {
+    "phrase": "Un caffè al banco.",
+    "phrase_en": "An espresso at the counter.",
+    "word": "il vicolo",
+    "word_en": "the alley"
+  },
+  {
+    "phrase": "L'aperitivo in piazza.",
+    "phrase_en": "Aperitivo in the square.",
+    "word": "il corso",
+    "word_en": "the main street"
+  },
+  {
+    "phrase": "I tetti della città.",
+    "phrase_en": "The rooftops of the city.",
+    "word": "il viale",
+    "word_en": "the avenue"
+  },
+  {
+    "phrase": "Le luci della sera.",
+    "phrase_en": "The evening lights.",
+    "word": "il palazzo",
+    "word_en": "the palace"
+  },
+  {
+    "phrase": "Una città da scoprire.",
+    "phrase_en": "A city to discover.",
+    "word": "la casa",
+    "word_en": "the house"
+  },
+  {
+    "phrase": "Perdersi tra i vicoli.",
+    "phrase_en": "Getting lost among the alleys.",
+    "word": "il tetto",
+    "word_en": "the roof"
+  },
+  {
+    "phrase": "Il fascino del borgo.",
+    "phrase_en": "The charm of the village.",
+    "word": "la finestra",
+    "word_en": "the window"
+  },
+  {
+    "phrase": "Una vista dai tetti.",
+    "phrase_en": "A view from the rooftops.",
+    "word": "la porta",
+    "word_en": "the door"
+  },
+  {
+    "phrase": "La fontana della piazza.",
+    "phrase_en": "The fountain in the square.",
+    "word": "il balcone",
+    "word_en": "the balcony"
+  },
+  {
+    "phrase": "Il campanile del duomo.",
+    "phrase_en": "The cathedral's bell tower.",
+    "word": "la terrazza",
+    "word_en": "the terrace"
+  },
+  {
+    "phrase": "Le mura antiche.",
+    "phrase_en": "The ancient walls.",
+    "word": "la scalinata",
+    "word_en": "the staircase"
+  },
+  {
+    "phrase": "Il castello sulla collina.",
+    "phrase_en": "The castle on the hill.",
+    "word": "la fontana",
+    "word_en": "the fountain"
+  },
+  {
+    "phrase": "Una gelateria artigianale.",
+    "phrase_en": "An artisan gelato shop.",
+    "word": "la chiesa",
+    "word_en": "the church"
+  },
+  {
+    "phrase": "La bottega del fornaio.",
+    "phrase_en": "The baker's shop.",
+    "word": "il duomo",
+    "word_en": "the cathedral"
+  },
+  {
+    "phrase": "Il profumo del pane fresco.",
+    "phrase_en": "The smell of fresh bread.",
+    "word": "il campanile",
+    "word_en": "the bell tower"
+  },
+  {
+    "phrase": "La stazione centrale.",
+    "phrase_en": "The central station.",
+    "word": "la torre",
+    "word_en": "the tower"
+  },
+  {
+    "phrase": "Il quartiere degli artisti.",
+    "phrase_en": "The artists' quarter.",
+    "word": "le mura",
+    "word_en": "the city walls"
+  },
+  {
+    "phrase": "Vita di quartiere.",
+    "phrase_en": "Neighborhood life.",
+    "word": "il castello",
+    "word_en": "the castle"
+  },
+  {
+    "phrase": "Il balcone fiorito.",
+    "phrase_en": "The flower-filled balcony.",
+    "word": "il mercato",
+    "word_en": "the market"
+  },
+  {
+    "phrase": "Le scale di pietra.",
+    "phrase_en": "The stone steps.",
+    "word": "la bottega",
+    "word_en": "the workshop"
+  },
+  {
+    "phrase": "Un cortile nascosto.",
+    "phrase_en": "A hidden courtyard.",
+    "word": "il ristorante",
+    "word_en": "the restaurant"
+  },
+  {
+    "phrase": "La chiesa del paese.",
+    "phrase_en": "The village church.",
+    "word": "l'albergo",
+    "word_en": "the hotel"
+  },
+  {
+    "phrase": "Il sagrato assolato.",
+    "phrase_en": "The sunlit church square.",
+    "word": "la stazione",
+    "word_en": "the station"
+  },
+  {
+    "phrase": "L'ombra del campanile.",
+    "phrase_en": "The shadow of the bell tower.",
+    "word": "la gelateria",
+    "word_en": "the ice-cream shop"
+  },
+  {
+    "note": "The piazza as the city's living room — a classic Italian expression",
+    "phrase": "La piazza, salotto della città.",
+    "phrase_en": "The square, the city's living room.",
+    "word": "il quartiere",
+    "word_en": "the neighborhood"
+  },
+  {
+    "phrase": "Il tempo vola.",
+    "phrase_en": "Time flies.",
+    "word": "il tempo",
+    "word_en": "the time"
+  },
+  {
+    "phrase": "Il tempo è denaro.",
+    "phrase_en": "Time is money.",
+    "word": "l'ora",
+    "word_en": "the hour"
+  },
+  {
+    "note": "Literally: who has time should not wait for time",
+    "phrase": "Chi ha tempo non aspetti tempo.",
+    "phrase_en": "Don't put off what you can do now.",
+    "word": "il minuto",
+    "word_en": "the minute"
+  },
+  {
+    "phrase": "L'ora di punta.",
+    "phrase_en": "Rush hour.",
+    "word": "il secondo",
+    "word_en": "the second"
+  },
+  {
+    "phrase": "All'ora di pranzo.",
+    "phrase_en": "At lunchtime.",
+    "word": "il pomeriggio",
+    "word_en": "the afternoon"
+  },
+  {
+    "phrase": "L'ora dell'aperitivo.",
+    "phrase_en": "Aperitivo hour.",
+    "word": "la mezzanotte",
+    "word_en": "the midnight"
+  },
+  {
+    "phrase": "Di buon mattino.",
+    "phrase_en": "Early in the morning.",
+    "word": "il mezzogiorno",
+    "word_en": "the midday"
+  },
+  {
+    "phrase": "Sul far della sera.",
+    "phrase_en": "At nightfall.",
+    "word": "la settimana",
+    "word_en": "the week"
+  },
+  {
+    "phrase": "La primavera è arrivata.",
+    "phrase_en": "Spring has arrived.",
+    "word": "il mese",
+    "word_en": "the month"
+  },
+  {
+    "phrase": "I colori dell'autunno.",
+    "phrase_en": "The colors of autumn.",
+    "word": "l'anno",
+    "word_en": "the year"
+  },
+  {
+    "phrase": "Il caldo dell'estate.",
+    "phrase_en": "The summer heat.",
+    "word": "la stagione",
+    "word_en": "the season"
+  },
+  {
+    "phrase": "Il freddo dell'inverno.",
+    "phrase_en": "The winter cold.",
+    "word": "la primavera",
+    "word_en": "the spring (season)"
+  },
+  {
+    "phrase": "Le foglie d'autunno.",
+    "phrase_en": "The autumn leaves.",
+    "word": "l'estate",
+    "word_en": "the summer"
+  },
+  {
+    "phrase": "I fiori di primavera.",
+    "phrase_en": "The spring flowers.",
+    "word": "l'autunno",
+    "word_en": "the autumn"
+  },
+  {
+    "phrase": "La neve d'inverno.",
+    "phrase_en": "The winter snow.",
+    "word": "l'inverno",
+    "word_en": "the winter"
+  },
+  {
+    "phrase": "Il sole d'estate.",
+    "phrase_en": "The summer sun.",
+    "word": "lunedì",
+    "word_en": "Monday"
+  },
+  {
+    "phrase": "Una giornata d'autunno.",
+    "phrase_en": "An autumn day.",
+    "word": "martedì",
+    "word_en": "Tuesday"
+  },
+  {
+    "phrase": "Le sere d'estate.",
+    "phrase_en": "The summer evenings.",
+    "word": "mercoledì",
+    "word_en": "Wednesday"
+  },
+  {
+    "phrase": "Le mattine d'inverno.",
+    "phrase_en": "The winter mornings.",
+    "word": "giovedì",
+    "word_en": "Thursday"
+  },
+  {
+    "phrase": "Il cambio di stagione.",
+    "phrase_en": "The change of season.",
+    "word": "venerdì",
+    "word_en": "Friday"
+  },
+  {
+    "note": "The warm spell in November — Italy's 'Indian summer'",
+    "phrase": "L'estate di San Martino.",
+    "phrase_en": "Indian summer. (St. Martin's summer)",
+    "word": "sabato",
+    "word_en": "Saturday"
+  },
+  {
+    "note": "August 10th, night of the shooting stars",
+    "phrase": "La notte di San Lorenzo.",
+    "phrase_en": "The night of the shooting stars.",
+    "word": "domenica",
+    "word_en": "Sunday"
+  },
+  {
+    "phrase": "Il primo giorno di primavera.",
+    "phrase_en": "The first day of spring.",
+    "word": "gennaio",
+    "word_en": "January"
+  },
+  {
+    "phrase": "L'ultimo sole d'autunno.",
+    "phrase_en": "The last autumn sun.",
+    "word": "febbraio",
+    "word_en": "February"
+  },
+  {
+    "phrase": "Aspettare con ansia.",
+    "phrase_en": "To wait eagerly.",
+    "word": "marzo",
+    "word_en": "March"
+  },
+  {
+    "note": "Literally: the time of cherries",
+    "phrase": "Il tempo delle ciliegie.",
+    "phrase_en": "Cherry season.",
+    "word": "aprile",
+    "word_en": "April"
+  },
+  {
+    "phrase": "Prendere tempo.",
+    "phrase_en": "To buy time.",
+    "word": "maggio",
+    "word_en": "May"
+  },
+  {
+    "phrase": "Fuori tempo.",
+    "phrase_en": "Out of time; off-beat.",
+    "word": "giugno",
+    "word_en": "June"
+  },
+  {
+    "phrase": "A tempo debito.",
+    "phrase_en": "In due course.",
+    "word": "luglio",
+    "word_en": "July"
+  },
+  {
+    "phrase": "Il tempo delle fragole.",
+    "phrase_en": "Strawberry season.",
+    "word": "agosto",
+    "word_en": "August"
+  },
+  {
+    "phrase": "L'appetito vien mangiando.",
+    "phrase_en": "Appetite comes with eating.",
+    "word": "il pane",
+    "word_en": "the bread"
+  },
+  {
+    "phrase": "Il pranzo della domenica.",
+    "phrase_en": "Sunday lunch.",
+    "word": "la pasta",
+    "word_en": "the pasta"
+  },
+  {
+    "phrase": "La cena in famiglia.",
+    "phrase_en": "Family dinner.",
+    "word": "la pizza",
+    "word_en": "the pizza"
+  },
+  {
+    "phrase": "Una pizza margherita.",
+    "phrase_en": "A margherita pizza.",
+    "word": "il formaggio",
+    "word_en": "the cheese"
+  },
+  {
+    "phrase": "La pasta al dente.",
+    "phrase_en": "Pasta cooked al dente.",
+    "word": "il vino",
+    "word_en": "the wine"
+  },
+  {
+    "phrase": "Il sugo della nonna.",
+    "phrase_en": "Grandma's sauce.",
+    "word": "il gelato",
+    "word_en": "the ice cream"
+  },
+  {
+    "phrase": "L'olio nuovo.",
+    "phrase_en": "The new olive oil.",
+    "word": "il dolce",
+    "word_en": "the dessert"
+  },
+  {
+    "phrase": "Il vino della casa.",
+    "phrase_en": "The house wine.",
+    "word": "la frutta",
+    "word_en": "the fruit"
+  },
+  {
+    "phrase": "Un bicchiere di vino rosso.",
+    "phrase_en": "A glass of red wine.",
+    "word": "la mela",
+    "word_en": "the apple"
+  },
+  {
+    "phrase": "Il caffè del mattino.",
+    "phrase_en": "The morning coffee.",
+    "word": "l'uva",
+    "word_en": "the grapes"
+  },
+  {
+    "phrase": "Un gelato artigianale.",
+    "phrase_en": "An artisan gelato.",
+    "word": "l'arancia",
+    "word_en": "the orange"
+  },
+  {
+    "phrase": "La torta della domenica.",
+    "phrase_en": "The Sunday cake.",
+    "word": "il limone",
+    "word_en": "the lemon"
+  },
+  {
+    "phrase": "Il pane fresco del forno.",
+    "phrase_en": "Fresh bread from the oven.",
+    "word": "l'olio",
+    "word_en": "the oil"
+  },
+  {
+    "phrase": "I sapori della tradizione.",
+    "phrase_en": "Traditional flavors.",
+    "word": "le olive",
+    "word_en": "the olives"
+  },
+  {
+    "phrase": "La cucina di casa.",
+    "phrase_en": "Home cooking.",
+    "word": "il pomodoro",
+    "word_en": "the tomato"
+  },
+  {
+    "note": "Literally: to eat with one's eyes",
+    "phrase": "Mangiare con gli occhi.",
+    "phrase_en": "To feast with one's eyes.",
+    "word": "il basilico",
+    "word_en": "the basil"
+  },
+  {
+    "note": "Literally: to lick one's mustache",
+    "phrase": "Leccarsi i baffi.",
+    "phrase_en": "To lick one's lips in delight.",
+    "word": "l'aglio",
+    "word_en": "the garlic"
+  },
+  {
+    "note": "Eyes bigger than one's stomach",
+    "phrase": "Avere gli occhi più grandi della pancia.",
+    "phrase_en": "To have eyes bigger than one's stomach.",
+    "word": "la cipolla",
+    "word_en": "the onion"
+  },
+  {
+    "note": "Literally: good as bread — attested idiom",
+    "phrase": "Buono come il pane.",
+    "phrase_en": "Good as gold; kind-hearted.",
+    "word": "il sale",
+    "word_en": "the salt"
+  },
+  {
+    "phrase": "Il formaggio con le pere.",
+    "phrase_en": "Cheese with pears. (a perfect pairing)",
+    "word": "il pepe",
+    "word_en": "the pepper"
+  },
+  {
+    "phrase": "L'ora di cena.",
+    "phrase_en": "Dinner time.",
+    "word": "lo zucchero",
+    "word_en": "the sugar"
+  },
+  {
+    "note": "Literally: to the table!",
+    "phrase": "A tavola!",
+    "phrase_en": "Dinner's ready!",
+    "word": "il miele",
+    "word_en": "the honey"
+  },
+  {
+    "phrase": "Il dolce della casa.",
+    "phrase_en": "The house dessert.",
+    "word": "il latte",
+    "word_en": "the milk"
+  },
+  {
+    "phrase": "Una fetta di torta.",
+    "phrase_en": "A slice of cake.",
+    "word": "il burro",
+    "word_en": "the butter"
+  },
+  {
+    "phrase": "Il profumo del basilico.",
+    "phrase_en": "The scent of basil.",
+    "word": "l'uovo",
+    "word_en": "the egg"
+  },
+  {
+    "phrase": "Pomodori maturi.",
+    "phrase_en": "Ripe tomatoes.",
+    "word": "la torta",
+    "word_en": "the cake"
+  },
+  {
+    "phrase": "L'aperitivo italiano.",
+    "phrase_en": "The Italian aperitivo.",
+    "word": "il pranzo",
+    "word_en": "the lunch"
+  },
+  {
+    "phrase": "Uno spritz al tramonto.",
+    "phrase_en": "A spritz at sunset.",
+    "word": "la cena",
+    "word_en": "the dinner"
+  },
+  {
+    "phrase": "La ricetta segreta.",
+    "phrase_en": "The secret recipe.",
+    "word": "la colazione",
+    "word_en": "the breakfast"
+  },
+  {
+    "phrase": "Fatto in casa.",
+    "phrase_en": "Homemade.",
+    "word": "l'antipasto",
+    "word_en": "the appetizer"
+  },
+  {
+    "phrase": "Fare le valigie.",
+    "phrase_en": "To pack one's bags.",
+    "word": "il viaggio",
+    "word_en": "the journey"
+  },
+  {
+    "phrase": "Partire all'avventura.",
+    "phrase_en": "To set off on an adventure.",
+    "word": "il viaggiatore",
+    "word_en": "the traveler"
+  },
+  {
+    "phrase": "Il viaggio di una vita.",
+    "phrase_en": "The trip of a lifetime.",
+    "word": "il turista",
+    "word_en": "the tourist"
+  },
+  {
+    "phrase": "La meta del viaggio.",
+    "phrase_en": "The journey's destination.",
+    "word": "la guida",
+    "word_en": "the guide"
+  },
+  {
+    "phrase": "Un viaggio indimenticabile.",
+    "phrase_en": "An unforgettable journey.",
+    "word": "la mappa",
+    "word_en": "the map"
+  },
+  {
+    "phrase": "Ricordi di viaggio.",
+    "phrase_en": "Travel memories.",
+    "word": "la cartina",
+    "word_en": "the road map"
+  },
+  {
+    "phrase": "Lo spirito d'avventura.",
+    "phrase_en": "The spirit of adventure.",
+    "word": "la valigia",
+    "word_en": "the suitcase"
+  },
+  {
+    "phrase": "Viaggiare leggeri.",
+    "phrase_en": "To travel light.",
+    "word": "lo zaino",
+    "word_en": "the backpack"
+  },
+  {
+    "phrase": "Il piacere di viaggiare.",
+    "phrase_en": "The joy of traveling.",
+    "word": "il biglietto",
+    "word_en": "the ticket"
+  },
+  {
+    "phrase": "Scoprire nuovi luoghi.",
+    "phrase_en": "To discover new places.",
+    "word": "il passaporto",
+    "word_en": "the passport"
+  },
+  {
+    "phrase": "Esplorare l'ignoto.",
+    "phrase_en": "To explore the unknown.",
+    "word": "il treno",
+    "word_en": "the train"
+  },
+  {
+    "phrase": "Lontano da casa.",
+    "phrase_en": "Far from home.",
+    "word": "il binario",
+    "word_en": "the platform"
+  },
+  {
+    "phrase": "Il richiamo dell'avventura.",
+    "phrase_en": "The call of adventure.",
+    "word": "l'aereo",
+    "word_en": "the airplane"
+  },
+  {
+    "phrase": "Una tappa obbligata.",
+    "phrase_en": "A must-see stop.",
+    "word": "l'aeroporto",
+    "word_en": "the airport"
+  },
+  {
+    "phrase": "Fuori dai sentieri battuti.",
+    "phrase_en": "Off the beaten track.",
+    "word": "il traghetto",
+    "word_en": "the ferry"
+  },
+  {
+    "phrase": "Da non perdere.",
+    "phrase_en": "Not to be missed.",
+    "word": "l'autobus",
+    "word_en": "the bus"
+  },
+  {
+    "phrase": "Vale la pena.",
+    "phrase_en": "It's worth it.",
+    "word": "la macchina",
+    "word_en": "the car"
+  },
+  {
+    "phrase": "Il bello del viaggio.",
+    "phrase_en": "The beauty of the journey.",
+    "word": "la bicicletta",
+    "word_en": "the bicycle"
+  },
+  {
+    "phrase": "Godersi il viaggio.",
+    "phrase_en": "To enjoy the journey.",
+    "word": "la moto",
+    "word_en": "the motorbike"
+  },
+  {
+    "phrase": "Il viaggio è la meta.",
+    "phrase_en": "The journey is the destination.",
+    "word": "il taxi",
+    "word_en": "the taxi"
+  },
+  {
+    "phrase": "Dov'è la stazione?",
+    "phrase_en": "Where is the station?",
+    "word": "la destinazione",
+    "word_en": "the destination"
+  },
+  {
+    "phrase": "Quanto costa il biglietto?",
+    "phrase_en": "How much is the ticket?",
+    "word": "l'itinerario",
+    "word_en": "the itinerary"
+  },
+  {
+    "phrase": "Un biglietto di andata e ritorno.",
+    "phrase_en": "A round-trip ticket.",
+    "word": "la tappa",
+    "word_en": "the stop"
+  },
+  {
+    "phrase": "A che ora parte il treno?",
+    "phrase_en": "What time does the train leave?",
+    "word": "la sosta",
+    "word_en": "the rest stop"
+  },
+  {
+    "phrase": "Mi sono perso.",
+    "phrase_en": "I'm lost.",
+    "word": "l'escursione",
+    "word_en": "the excursion"
+  },
+  {
+    "phrase": "Parla inglese?",
+    "phrase_en": "Do you speak English?",
+    "word": "la passeggiata",
+    "word_en": "the stroll"
+  },
+  {
+    "phrase": "Dov'è il bagno?",
+    "phrase_en": "Where is the bathroom?",
+    "word": "il cammino",
+    "word_en": "the way"
+  },
+  {
+    "phrase": "Il conto, per favore.",
+    "phrase_en": "The bill, please.",
+    "word": "l'avventura",
+    "word_en": "the adventure"
+  },
+  {
+    "phrase": "Un caffè, per favore.",
+    "phrase_en": "A coffee, please.",
+    "word": "l'esplorazione",
+    "word_en": "the exploration"
+  },
+  {
+    "phrase": "Che ora è?",
+    "phrase_en": "What time is it?",
+    "word": "la scoperta",
+    "word_en": "the discovery"
+  },
+  {
+    "phrase": "Ti voglio bene.",
+    "phrase_en": "I love you. (with affection)",
+    "word": "l'uomo",
+    "word_en": "the man"
+  },
+  {
+    "phrase": "L'amore vince tutto.",
+    "phrase_en": "Love conquers all.",
+    "word": "la donna",
+    "word_en": "the woman"
+  },
+  {
+    "phrase": "Il cuore non mente.",
+    "phrase_en": "The heart doesn't lie.",
+    "word": "il bambino",
+    "word_en": "the child"
+  },
+  {
+    "phrase": "Segui il tuo cuore.",
+    "phrase_en": "Follow your heart.",
+    "word": "il ragazzo",
+    "word_en": "the young man"
+  },
+  {
+    "phrase": "Un abbraccio forte.",
+    "phrase_en": "A big hug.",
+    "word": "l'amico",
+    "word_en": "the friend"
+  },
+  {
+    "phrase": "Gli amici veri.",
+    "phrase_en": "True friends.",
+    "word": "la famiglia",
+    "word_en": "the family"
+  },
+  {
+    "phrase": "La famiglia prima di tutto.",
+    "phrase_en": "Family first.",
+    "word": "la madre",
+    "word_en": "the mother"
+  },
+  {
+    "phrase": "I ricordi d'infanzia.",
+    "phrase_en": "Childhood memories.",
+    "word": "il padre",
+    "word_en": "the father"
+  },
+  {
+    "phrase": "La gioia di vivere.",
+    "phrase_en": "The joy of living.",
+    "word": "il figlio",
+    "word_en": "the son"
+  },
+  {
+    "phrase": "Un sorriso al giorno.",
+    "phrase_en": "A smile a day.",
+    "word": "il fratello",
+    "word_en": "the brother"
+  },
+  {
+    "phrase": "Ridere di gusto.",
+    "phrase_en": "To laugh heartily.",
+    "word": "la sorella",
+    "word_en": "the sister"
+  },
+  {
+    "phrase": "Le lacrime di gioia.",
+    "phrase_en": "Tears of joy.",
+    "word": "il nonno",
+    "word_en": "the grandfather"
+  },
+  {
+    "note": "Literally: to dream with open eyes",
+    "phrase": "Sognare a occhi aperti.",
+    "phrase_en": "To daydream.",
+    "word": "il vicino",
+    "word_en": "the neighbor"
+  },
+  {
+    "note": "A cherished, unrealized dream",
+    "phrase": "Il sogno nel cassetto.",
+    "phrase_en": "The long-cherished dream.",
+    "word": "lo straniero",
+    "word_en": "the stranger"
+  },
+  {
+    "note": "Literally: to have one's heart in one's hand",
+    "phrase": "Avere il cuore in mano.",
+    "phrase_en": "To wear one's heart on one's sleeve.",
+    "word": "l'amore",
+    "word_en": "the love"
+  },
+  {
+    "phrase": "Stare a cuore a qualcuno.",
+    "phrase_en": "To be dear to someone.",
+    "word": "l'amicizia",
+    "word_en": "the friendship"
+  },
+  {
+    "phrase": "Prendere a cuore.",
+    "phrase_en": "To take to heart.",
+    "word": "la felicità",
+    "word_en": "the happiness"
+  },
+  {
+    "note": "Literally: with a light heart",
+    "phrase": "A cuor leggero.",
+    "phrase_en": "Lightheartedly.",
+    "word": "la gioia",
+    "word_en": "the joy"
+  },
+  {
+    "note": "Literally: with one's heart in one's throat",
+    "phrase": "Con il cuore in gola.",
+    "phrase_en": "With one's heart in one's throat.",
+    "word": "la risata",
+    "word_en": "the laughter"
+  },
+  {
+    "phrase": "Il nodo alla gola.",
+    "phrase_en": "A lump in the throat.",
+    "word": "la lacrima",
+    "word_en": "the tear"
+  },
+  {
+    "note": "Literally: to be a fish out of water",
+    "phrase": "Essere un pesce fuor d’acqua.",
+    "phrase_en": "To be a fish out of water.",
+    "word": "l'abbraccio",
+    "word_en": "the embrace"
+  },
+  {
+    "phrase": "Essere al settimo cielo.",
+    "phrase_en": "To be in seventh heaven.",
+    "word": "il bacio",
+    "word_en": "the kiss"
+  },
+  {
+    "phrase": "Avere la testa tra le nuvole.",
+    "phrase_en": "To have one's head in the clouds.",
+    "word": "il cuore",
+    "word_en": "the heart"
+  },
+  {
+    "phrase": "Con i piedi per terra.",
+    "phrase_en": "With one's feet on the ground.",
+    "word": "l'anima",
+    "word_en": "the soul"
+  },
+  {
+    "phrase": "La nostalgia di casa.",
+    "phrase_en": "Homesickness.",
+    "word": "il sogno",
+    "word_en": "the dream"
+  },
+  {
+    "note": "Specifically the longing to return to Africa felt by someone who has visited or lived there.",
+    "phrase": "Il mal d'Africa.",
+    "phrase_en": "Nostalgia for Africa.",
+    "word": "il desiderio",
+    "word_en": "the desire"
+  },
+  {
+    "phrase": "L'amore per la bellezza.",
+    "phrase_en": "The love of beauty.",
+    "word": "la nostalgia",
+    "word_en": "the nostalgia"
+  },
+  {
+    "phrase": "La passione per l'arte.",
+    "phrase_en": "A passion for art.",
+    "word": "la malinconia",
+    "word_en": "the melancholy"
+  },
+  {
+    "phrase": "Vivere con passione.",
+    "phrase_en": "To live with passion.",
+    "word": "la tenerezza",
+    "word_en": "the tenderness"
+  },
+  {
+    "phrase": "La dolcezza dei ricordi.",
+    "phrase_en": "The sweetness of memories.",
+    "word": "la passione",
+    "word_en": "the passion"
+  },
+  {
+    "phrase": "Nel mezzo del cammin di nostra vita mi ritrovai per una selva oscura.",
+    "phrase_en": "In the middle of our life's journey I found myself in a dark wood. (Dante)",
+    "word": "settembre",
+    "word_en": "September"
+  },
+  {
+    "phrase": "Lasciate ogni speranza, voi ch'entrate.",
+    "phrase_en": "Abandon all hope, you who enter. (Dante)",
+    "word": "ottobre",
+    "word_en": "October"
+  },
+  {
+    "phrase": "L'amor che move il sole e l'altre stelle.",
+    "phrase_en": "The love that moves the sun and the other stars. (Dante)",
+    "word": "novembre",
+    "word_en": "November"
+  },
+  {
+    "phrase": "Eppur si muove.",
+    "phrase_en": "And yet it moves. (Galileo)",
+    "word": "dicembre",
+    "word_en": "December"
+  },
+  {
+    "phrase": "Il fine giustifica i mezzi.",
+    "phrase_en": "The end justifies the means.",
+    "word": "andare",
+    "word_en": "to go",
+    "note": "Commonly — but wrongly — attributed to Machiavelli; the phrase was coined by the critic Francesco de Sanctis."
+  },
+  {
+    "phrase": "Tra il dire e il fare c'è di mezzo il mare.",
+    "phrase_en": "Easier said than done.",
+    "word": "venire",
+    "word_en": "to come"
+  },
+  {
+    "phrase": "Volere è potere.",
+    "phrase_en": "Where there's a will, there's a way.",
+    "word": "partire",
+    "word_en": "to leave"
+  },
+  {
+    "phrase": "Chi la dura, la vince.",
+    "phrase_en": "Perseverance wins the day.",
+    "word": "arrivare",
+    "word_en": "to arrive"
+  },
+  {
+    "phrase": "Tutto il mondo è paese.",
+    "phrase_en": "The whole world is one village.",
+    "word": "tornare",
+    "word_en": "to return"
+  },
+  {
+    "phrase": "Dolce far niente.",
+    "phrase_en": "The sweetness of doing nothing.",
+    "word": "restare",
+    "word_en": "to stay"
+  },
+  {
+    "phrase": "La dolce vita.",
+    "phrase_en": "The sweet life.",
+    "word": "camminare",
+    "word_en": "to walk"
+  },
+  {
+    "phrase": "La speranza è l'ultima a morire.",
+    "phrase_en": "Hope dies last.",
+    "word": "correre",
+    "word_en": "to run"
+  },
+  {
+    "phrase": "Una rondine non fa primavera.",
+    "phrase_en": "One swallow doesn't make a summer.",
+    "word": "volare",
+    "word_en": "to fly",
+    "note": "After Aristotle: a single sign is not enough to draw conclusions."
+  },
+  {
+    "phrase": "Il tempo guarisce tutto.",
+    "phrase_en": "Time heals all wounds.",
+    "word": "nuotare",
+    "word_en": "to swim"
+  },
+  {
+    "phrase": "Chi va con lo zoppo impara a zoppicare.",
+    "phrase_en": "You pick up the habits of the company you keep.",
+    "word": "salire",
+    "word_en": "to go up",
+    "note": "Literally: whoever walks with the lame learns to limp."
+  },
+  {
+    "phrase": "Anche questo passerà.",
+    "phrase_en": "This too shall pass.",
+    "word": "scendere",
+    "word_en": "to go down"
+  },
+  {
+    "phrase": "Il meglio deve ancora venire.",
+    "phrase_en": "The best is yet to come.",
+    "word": "entrare",
+    "word_en": "to enter"
+  },
+  {
+    "phrase": "Domani è un altro giorno.",
+    "phrase_en": "Tomorrow is another day.",
+    "word": "uscire",
+    "word_en": "to go out"
+  },
+  {
+    "phrase": "Tutto fumo e niente arrosto.",
+    "phrase_en": "All smoke and no fire.",
+    "word": "guardare",
+    "word_en": "to look at",
+    "note": "Said of something that promises much but delivers little."
+  },
+  {
+    "phrase": "Cogli l'attimo.",
+    "phrase_en": "Seize the day.",
+    "word": "vedere",
+    "word_en": "to see"
+  },
+  {
+    "phrase": "Marzo pazzerello, guarda il sole e prendi l'ombrello.",
+    "phrase_en": "Fickle March: look at the sun, take the umbrella.",
+    "word": "osservare",
+    "word_en": "to observe",
+    "note": "Weather proverb on March's changeable skies."
+  },
+  {
+    "phrase": "La vita è un viaggio.",
+    "phrase_en": "Life is a journey.",
+    "word": "ammirare",
+    "word_en": "to admire"
+  },
+  {
+    "note": "Long misattributed to St. Augustine; the earliest certain source is Fougeret de Monbron’s Le Cosmopolite (1750).",
+    "phrase": "Il mondo è un libro, e quelli che non viaggiano ne leggono solo una pagina.",
+    "phrase_en": "The world is a book, and those who do not travel read only one page.",
+    "word": "ascoltare",
+    "word_en": "to listen to"
+  },
+  {
+    "phrase": "La vita è bella.",
+    "phrase_en": "Life is beautiful.",
+    "word": "parlare",
+    "word_en": "to speak"
+  },
+  {
+    "phrase": "Nulla è impossibile.",
+    "phrase_en": "Nothing is impossible.",
+    "word": "raccontare",
+    "word_en": "to tell"
+  },
+  {
+    "note": "After Hippocrates",
+    "phrase": "L'arte è lunga, la vita è breve.",
+    "phrase_en": "Art is long, life is short.",
+    "word": "mangiare",
+    "word_en": "to eat"
+  },
+  {
+    "phrase": "Il buongiorno si vede dal mattino.",
+    "phrase_en": "The morning shows the day.",
+    "word": "bere",
+    "word_en": "to drink"
+  },
+  {
+    "note": "Literally: laughter makes good blood",
+    "phrase": "Il riso fa buon sangue.",
+    "phrase_en": "Laughter is the best medicine.",
+    "word": "dormire",
+    "word_en": "to sleep"
+  },
+  {
+    "phrase": "Chi si loda s'imbroda.",
+    "phrase_en": "Self-praise is no recommendation.",
+    "word": "sognare",
+    "word_en": "to dream",
+    "note": "Literally: whoever praises himself gets himself dirty (with broth)."
+  },
+  {
+    "phrase": "La musica è un linguaggio universale.",
+    "phrase_en": "Music is a universal language.",
+    "word": "svegliarsi",
+    "word_en": "to wake up"
+  },
+  {
+    "phrase": "L'arte nutre l'anima.",
+    "phrase_en": "Art nourishes the soul.",
+    "word": "ridere",
+    "word_en": "to laugh"
+  },
+  {
+    "note": "After Dostoevsky",
+    "phrase": "La bellezza salverà il mondo.",
+    "phrase_en": "Beauty will save the world.",
+    "word": "amare",
+    "word_en": "to love"
+  },
+  {
+    "phrase": "Tutte le strade portano a Roma.",
+    "phrase_en": "All roads lead to Rome.",
+    "word": "scoprire",
+    "word_en": "to discover"
+  },
+  {
+    "phrase": "Vedi Napoli e poi muori.",
+    "phrase_en": "See Naples and die. (it's that beautiful)",
+    "word": "esplorare",
+    "word_en": "to explore",
+    "note": "Popular saying Goethe reported hearing from Neapolitans in 1787; he did not coin it."
+  },
+  {
+    "note": "Neapolitan tradition: paying for a stranger's coffee in advance",
+    "phrase": "Il caffè sospeso.",
+    "phrase_en": "The suspended coffee. (a coffee paid forward)",
+    "word": "ricordare",
+    "word_en": "to remember"
+  }
+]</script>
 
   <section class="promise">
     <h2>Our promise to creators</h2>
@@ -5395,6 +7665,25 @@ el.innerHTML = `
     else if(e.key==='ArrowRight')nav(1);
     else if(e.key===' '){e.preventDefault();setPlaying(!playing);}
   });
+})();
+</script>
+<script>
+(function(){
+  try{
+    var data=JSON.parse(document.getElementById('wotd-data').textContent);
+    if(!data||!data.length)return;
+    var now=new Date();
+    var doy=Math.floor((now-new Date(now.getFullYear(),0,0))/864e5); /* Jan 1 -> 1 */
+    var e=data[(doy-1)%data.length];
+    var esc=function(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});};
+    var h='<span class="word">'+esc(e.word)+'</span>';
+    if(e.translit)h+=' <span class="translit">('+esc(e.translit)+')</span>';
+    h+=' <span class="gloss">&ldquo;'+esc(e.word_en)+'&rdquo;</span> <span class="sep">&middot;</span> <span class="phrase">&ldquo;'+esc(e.phrase)+'&rdquo;</span>';
+    if(e.phrase_translit)h+=' <span class="translit">('+esc(e.phrase_translit)+')</span>';
+    h+=' <span class="gloss">&ldquo;'+esc(e.phrase_en)+'&rdquo;</span>';
+    document.querySelector('#wotd .wotd-body').innerHTML=h;
+    document.getElementById('wotd-day').textContent='Day '+doy+' of 365';
+  }catch(err){}
 })();
 </script>
 </body>
