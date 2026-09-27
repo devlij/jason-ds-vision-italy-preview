@@ -81,8 +81,15 @@ RELATED_JS = """      /* PHASE1-ITALY-RELATED-START */
           + p1rids.map(function(rid){
               var m = ITALY_META[rid];
               if (!m || !m[3] || (typeof masterOk === "function" && !masterOk(m[3]))) return "";
+              var relScene = null;
+              if (typeof SCENES !== "undefined") {
+                for (var si = 0; si < SCENES.length; si++) {
+                  if (SCENES[si].entry_id === rid) { relScene = SCENES[si]; break; }
+                }
+              }
+              var relAlt = (relScene && typeof sceneAlt === "function") ? sceneAlt(relScene) : (m[4] + "");
               return '<a class="related-link" href="#' + rid + '">'
-                + '<img loading="lazy" src="' + m[3] + '" alt="' + escapeHtml(m[4]) + '">'
+                + '<img loading="lazy" src="' + m[3] + '" alt="' + escapeHtml(relAlt) + '">'
                 + '<span>' + escapeHtml(m[4]) + '</span></a>';
             }).join("")
           + '</div></div>'

@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Sitemap: https://italy.jdvision.org/sitemap.xml
+Sitemap: https://italy.jdvision.org/image-sitemap.xml
