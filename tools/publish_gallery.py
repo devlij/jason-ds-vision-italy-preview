@@ -9,7 +9,7 @@ rebuild cannot drop the Cosmo one-off patch.
 
 Italy standing order: there is no 9:16 option. This publisher never
 emits a 9:16 tab or download, and it re-applies the A7 head (canonical
-OG/Twitter image, WebSite + Organization JSON-LD, title without
+OG/Twitter image, ImageGallery JSON-LD, title without
 "(preview)") so a rebuild cannot drop them. Scene catalogues, word-of-day
 entries, and approval fields are copied through unchanged.
 
@@ -508,20 +508,15 @@ def apply_a7(html: str) -> str:
     )
     payload = {
         "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "WebSite",
-                "name": "Jason D\u2019s Vision \u2014 Italy",
-                "url": CANONICAL,
-                "description": description,
-                "inLanguage": "en",
-            },
-            {
-                "@type": "Organization",
-                "name": "Jason D's Vision",
-                "url": "https://jdvision.org/",
-            },
-        ],
+        "@type": "ImageGallery",
+        "name": "Jason D's Vision \u2014 Italy",
+        "url": CANONICAL,
+        "description": description,
+        "inLanguage": "en",
+        "creator": {
+            "@type": "Organization",
+            "name": "Jason D's Vision",
+        },
     }
     block = (
         '<script type="application/ld+json">\n'
@@ -792,7 +787,7 @@ def prove(html: str) -> None:
         "PHASE1-ITALY-DEEP",
         "How our images are made",
         "https://italy.jdvision.org/assets/it-01-001-16x9.png",
-        '"@type": "WebSite"',
+        '"@type": "ImageGallery"',
         '"@type": "Organization"',
         'name="twitter:image"',
         'getAttribute("data-src-45")',
@@ -808,7 +803,6 @@ def prove(html: str) -> None:
         "data-src-916",
         "data-format=\"9x16\"",
         "tall916",
-        "ImageGallery",
         "(preview)</title>",
         "dataset.format",
         "dataset.src45",
