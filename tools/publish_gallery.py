@@ -7,6 +7,12 @@ live count, clear-all, four related thumbs, copy-link, entry-id deep
 links, and no controls for missing masters) is applied here, so a
 rebuild cannot drop the Cosmo one-off patch.
 
+Italy standing order: there is no 9:16 option. This publisher never
+emits a 9:16 tab or download, and it re-applies the A7 head (canonical
+OG/Twitter image, ImageGallery JSON-LD, title without
+"(preview)") so a rebuild cannot drop them. Scene catalogues, word-of-day
+entries, and approval fields are copied through unchanged.
+
 Usage:
   python3 tools/publish_gallery.py          # write index.html
   python3 tools/publish_gallery.py --prove  # clobber + regenerate check
@@ -26,10 +32,8 @@ MOOD_NAMES = ("coastal", "mountain", "urban", "historic")
 IMAGE_FIELDS = (
     "file_16x9",
     "file_4x5",
-    "file_9x16",
     "file_16x9_day",
     "file_4x5_day",
-    "file_9x16_day",
 )
 
 CSS = """<!-- PHASE1-ITALY-CSS-START -->
@@ -92,36 +96,32 @@ RELATED_JS = """      /* PHASE1-ITALY-RELATED-START */
 
 F_LINES_BASE = """      const f16 = escapeHtml(scene.file_16x9);
       const f45 = escapeHtml(scene.file_4x5);
-      const f916 = scene.file_9x16 ? escapeHtml(scene.file_9x16) : "";
 """
 
 F_LINES = """      const f16 = masterOk(scene.file_16x9) ? escapeHtml(scene.file_16x9) : "";
       const f45 = masterOk(scene.file_4x5) ? escapeHtml(scene.file_4x5) : "";
-      const f916 = masterOk(scene.file_9x16) ? escapeHtml(scene.file_9x16) : "";
 """
 
 PREVIEW_BASE = """        <div class="preview">
             <a class="thumb" href="${f16}" target="_blank" rel="noopener">
-            <img src="${f16}" data-src-16="${f16}" data-src-45="${f45}"${scene.file_16x9_day ? ` data-src-16-day="${escapeHtml(scene.file_16x9_day)}" data-src-45-day="${escapeHtml(scene.file_4x5_day)}"` : ""}${f916 ? ` data-src-916="${f916}"` : ""}${scene.file_9x16_day ? ` data-src-916-day="${escapeHtml(scene.file_9x16_day)}"` : ""} alt="${alt}" loading="lazy" />
+            <img src="${f16}" data-src-16="${f16}" data-src-45="${f45}"${scene.file_16x9_day ? ` data-src-16-day="${escapeHtml(scene.file_16x9_day)}" data-src-45-day="${escapeHtml(scene.file_4x5_day)}"` : ""} alt="${alt}" loading="lazy" />
           </a>
         </div>
         <div class="fmt-tabs" role="group" aria-label="Image size">
             <button type="button" class="fmt-tab is-active" data-format="16x9">16:9</button>
             <button type="button" class="fmt-tab" data-format="4x5">4:5</button>
-            ${f916 ? `<button type="button" class="fmt-tab" data-format="9x16">9:16</button>` : ""}
           </div>
         ${scene.file_16x9_day ? `<div class="day-row"><button type="button" class="day-tab" data-daynight="night" aria-pressed="false" title="Toggle the daylight variant">\\u2600 Daylight</button></div>` : ""}
 """
 
 PREVIEW = """        <div class="preview">
             ${f16 ? `<a class="thumb" href="${f16}" target="_blank" rel="noopener">
-            <img src="${f16}" data-src-16="${f16}" data-src-45="${f45}"${scene.file_16x9_day && masterOk(scene.file_16x9_day) ? ` data-src-16-day="${escapeHtml(scene.file_16x9_day)}" data-src-45-day="${escapeHtml(scene.file_4x5_day)}"` : ""}${f916 ? ` data-src-916="${f916}"` : ""}${scene.file_9x16_day && masterOk(scene.file_9x16_day) ? ` data-src-916-day="${escapeHtml(scene.file_9x16_day)}"` : ""} alt="${alt}" loading="lazy" />
+            <img src="${f16}" data-src-16="${f16}" data-src-45="${f45}"${scene.file_16x9_day && masterOk(scene.file_16x9_day) ? ` data-src-16-day="${escapeHtml(scene.file_16x9_day)}" data-src-45-day="${escapeHtml(scene.file_4x5_day)}"` : ""} alt="${alt}" loading="lazy" />
           </a>` : ""}
         </div>
         <div class="fmt-tabs" role="group" aria-label="Image size">
             ${f16 ? `<button type="button" class="fmt-tab is-active" data-format="16x9">16:9</button>` : ""}
             ${f45 ? `<button type="button" class="fmt-tab" data-format="4x5">4:5</button>` : ""}
-            ${f916 ? `<button type="button" class="fmt-tab" data-format="9x16">9:16</button>` : ""}
           </div>
         ${scene.file_16x9_day && masterOk(scene.file_16x9_day) ? `<div class="day-row"><button type="button" class="day-tab" data-daynight="night" aria-pressed="false" title="Toggle the daylight variant">\\u2600 Daylight</button></div>` : ""}
 """
@@ -358,6 +358,185 @@ function relatedFor(id){{
 """
 
 
+CANONICAL = "https://italy.jdvision.org/"
+# First published scene (IT-01-001). Confirmed on disk and on the live host.
+OG_IMAGE = CANONICAL + "assets/it-01-001-16x9.png"
+
+
+def _between(html: str, start: str, end: str) -> str:
+    s = html.find(start)
+    if s < 0:
+        raise SystemExit(f"missing {start!r}")
+    e = html.find(end, s + len(start))
+    if e < 0:
+        raise SystemExit(f"missing {end!r} after {start!r}")
+    return html[s:e]
+
+
+def remove_916_ui(html: str) -> str:
+    """Italy standing order: no 9:16 tab, download, or format branch."""
+    replacements = (
+        ('${f916 ? ` data-src-916="${f916}"` : ""}', ""),
+        (
+            '${scene.file_9x16_day ? ` data-src-916-day="${escapeHtml(scene.file_9x16_day)}"` : ""}',
+            "",
+        ),
+        (
+            '${scene.file_9x16_day && masterOk(scene.file_9x16_day) ? ` data-src-916-day="${escapeHtml(scene.file_9x16_day)}"` : ""}',
+            "",
+        ),
+        (
+            '            ${f916 ? `<button type="button" class="fmt-tab" data-format="9x16">9:16</button>` : ""}\n',
+            "",
+        ),
+        (
+            '            <button type="button" class="fmt-tab" data-format="4x5">4:5</button>\n'
+            '            ${f916 ? `<button type="button" class="fmt-tab" data-format="9x16">9:16</button>` : ""}\n',
+            '            <button type="button" class="fmt-tab" data-format="4x5">4:5</button>\n',
+        ),
+        ('      const f916 = scene.file_9x16 ? escapeHtml(scene.file_9x16) : "";\n', ""),
+        ('      const f916 = masterOk(scene.file_9x16) ? escapeHtml(scene.file_9x16) : "";\n', ""),
+        (
+            '            ${f916 ? `<a class="download" data-dl="9x16" href="${f916}" download="${basename(scene.file_9x16)}">Download 9:16</a>` : ""}\n',
+            "",
+        ),
+        ("    .thumb.tall916 { aspect-ratio: 9 / 16; }\n", ""),
+        ('      const fmt = tab.dataset.format;\n', '      const fmt = tab.getAttribute("data-format");\n'),
+        (
+            ' : dfmt === "9x16" ? (isDay ? "data-src-916-day" : "data-src-916")',
+            "",
+        ),
+        (
+            ' : f === "9x16" ? (isDay ? "data-src-916-day" : "data-src-916")',
+            "",
+        ),
+        (
+            '        : fmt === "9x16"\n'
+            '        ? (useDay && img.getAttribute("data-src-916-day")) || img.getAttribute("data-src-916")\n',
+            "",
+        ),
+        (' link.classList.toggle("tall916", fmt === "9x16");', ""),
+        (
+            "lbFormat==='4x5'?'data-src-45':lbFormat==='9x16'?'data-src-916':'data-src-16'",
+            "lbFormat==='4x5'?'data-src-45':'data-src-16'",
+        ),
+        (
+            "lbFormat==='4x5'?'data-src-45-day':lbFormat==='9x16'?'data-src-916-day':'data-src-16-day'",
+            "lbFormat==='4x5'?'data-src-45-day':'data-src-16-day'",
+        ),
+        (
+            "(tab&&tab.getAttribute('data-format')==='9x16')?'9x16':(tab&&tab.getAttribute('data-format')==='4x5')?'4x5':'16x9'",
+            "(tab&&tab.getAttribute('data-format')==='4x5')?'4x5':'16x9'",
+        ),
+    )
+    for old, new in replacements:
+        html = html.replace(old, new)
+    return html
+
+
+def apply_a7(html: str) -> str:
+    """Lock the A7 head onto the Italy canonical URL. Idempotent."""
+    html = remove_916_ui(html)
+    html = re.sub(
+        r"(<title>Jason D\u2019s Vision \u2014 Italy) \(preview\)(</title>)",
+        r"\1\2",
+        html,
+        count=1,
+    )
+    html = re.sub(
+        r'<link rel="canonical" href="[^"]*"\s*/>',
+        f'<link rel="canonical" href="{CANONICAL}" />',
+        html,
+        count=1,
+    )
+    html = re.sub(
+        r'<meta property="og:image" content="[^"]*"/>',
+        f'<meta property="og:image" content="{OG_IMAGE}"/>',
+        html,
+        count=1,
+    )
+    html = re.sub(
+        r'<meta property="og:url" content="[^"]*"/>',
+        f'<meta property="og:url" content="{CANONICAL}"/>',
+        html,
+        count=1,
+    )
+    og_title = "Jason D's Vision — Italy"
+    og_desc = "AI-generated artistic interpretations of Italy. Free to use, no credit required."
+    found_title = re.search(r'<meta property="og:title" content="([^"]*)"', html)
+    found_desc = re.search(r'<meta property="og:description" content="([^"]*)"', html)
+    if found_title:
+        og_title = found_title.group(1)
+    if found_desc:
+        og_desc = found_desc.group(1)
+    twitter = (
+        '<meta name="twitter:card" content="summary_large_image"/>\n'
+        f'<meta name="twitter:title" content="{og_title}"/>\n'
+        f'<meta name="twitter:description" content="{og_desc}"/>\n'
+        f'<meta name="twitter:image" content="{OG_IMAGE}"/>'
+    )
+    if 'name="twitter:title"' not in html:
+        html = html.replace(
+            '<meta name="twitter:card" content="summary_large_image"/>',
+            twitter,
+            1,
+        )
+    else:
+        html = re.sub(
+            r'<meta name="twitter:title" content="[^"]*"/>',
+            f'<meta name="twitter:title" content="{og_title}"/>',
+            html,
+            count=1,
+        )
+        html = re.sub(
+            r'<meta name="twitter:description" content="[^"]*"/>',
+            f'<meta name="twitter:description" content="{og_desc}"/>',
+            html,
+            count=1,
+        )
+        html = re.sub(
+            r'<meta name="twitter:image" content="[^"]*"/>',
+            f'<meta name="twitter:image" content="{OG_IMAGE}"/>',
+            html,
+            count=1,
+        )
+    meta_desc = re.search(r'<meta name="description" content="([^"]*)"', html)
+    description = (
+        meta_desc.group(1)
+        if meta_desc
+        else "AI-generated artistic interpretations of Italy. Free to use, no credit required."
+    )
+    payload = {
+        "@context": "https://schema.org",
+        "@type": "ImageGallery",
+        "name": "Jason D's Vision \u2014 Italy",
+        "url": CANONICAL,
+        "description": description,
+        "inLanguage": "en",
+        "creator": {
+            "@type": "Organization",
+            "name": "Jason D's Vision",
+        },
+    }
+    block = (
+        '<script type="application/ld+json">\n'
+        + json.dumps(payload, ensure_ascii=False, indent=2)
+        + "\n</script>"
+    )
+    html, n = re.subn(
+        r'<script type="application/ld\+json">.*?</script>',
+        lambda _m: block,
+        html,
+        count=1,
+        flags=re.S,
+    )
+    if n != 1:
+        raise SystemExit(f"JSON-LD block: expected 1, found {n}")
+    if not (ROOT / "assets/it-01-001-16x9.png").is_file():
+        raise SystemExit("first-scene 16:9 master missing: assets/it-01-001-16x9.png")
+    return html
+
+
 def _replace_once(html: str, old: str, new: str, label: str) -> str:
     count = html.count(old)
     if count != 1:
@@ -367,6 +546,7 @@ def _replace_once(html: str, old: str, new: str, label: str) -> str:
 
 def strip_phase1(html: str) -> str:
     """Return the gallery page without Phase-1, matching the pre-rollout shell."""
+    html = remove_916_ui(html)
     html = re.sub(
         r"<!-- PHASE1-ITALY-CSS-START -->.*?<!-- PHASE1-ITALY-CSS-END -->\n",
         "",
@@ -509,6 +689,8 @@ def insert_phase1(html: str, meta: dict, missing: dict[str, int]) -> str:
 
 def publish(html: str, moods: dict | None = None) -> str:
     moods = moods if moods is not None else load_moods()
+    scenes_blob = _between(html, "const SCENES = [", "\n    ];")
+    wotd_blob = _between(html, 'id="wotd-data">', "</script>")
     base = strip_phase1(html)
     scenes = parse_scenes(base)
     missing = missing_masters(scenes)
@@ -516,7 +698,12 @@ def publish(html: str, moods: dict | None = None) -> str:
     unknown = [s["entry_id"] for s in scenes if s["entry_id"] not in moods]
     if unknown:
         print(f"warning: {len(unknown)} scenes have no mood row; filters will not match them", file=sys.stderr)
-    return insert_phase1(base, meta, missing)
+    out = apply_a7(insert_phase1(base, meta, missing))
+    if _between(out, "const SCENES = [", "\n    ];") != scenes_blob:
+        raise SystemExit("publisher changed the SCENES catalogue")
+    if _between(out, 'id="wotd-data">', "</script>") != wotd_blob:
+        raise SystemExit("publisher changed the word-of-day dataset")
+    return out
 
 
 def related_ids(meta: dict, entry_id: str, missing: dict[str, int] | None = None) -> list[str]:
@@ -599,10 +786,35 @@ def prove(html: str) -> None:
         "masterOk",
         "PHASE1-ITALY-DEEP",
         "How our images are made",
+        "https://italy.jdvision.org/assets/it-01-001-16x9.png",
+        '"@type": "ImageGallery"',
+        '"@type": "Organization"',
+        'name="twitter:image"',
+        'getAttribute("data-src-45")',
+        'getAttribute("data-format")',
+        "Day '+doy+' of 365",
     ]
     for needle in identity:
         if needle not in second:
             raise SystemExit(f"regenerated index lost {needle}")
+    banned = (
+        ">9:16<",
+        "Download 9:16",
+        "data-src-916",
+        "data-format=\"9x16\"",
+        "tall916",
+        "(preview)</title>",
+        "dataset.format",
+        "dataset.src45",
+    )
+    for needle in banned:
+        if needle in second:
+            raise SystemExit(f"regenerated index still has {needle}")
+    ga = set(re.findall(r"G-[A-Z0-9]+", second))
+    if ga != {"G-PDJ4WSS725"}:
+        raise SystemExit(f"GA4 ids {ga}")
+    if "https://devlij.github.io/" in re.search(r'property="og:image"[^>]*>', second).group(0):
+        raise SystemExit("og:image is not the canonical host")
     print("prove ok")
     print(f"scenes {len(scenes)}")
     print(f"missing masters in live catalogue {len(missing)}")
