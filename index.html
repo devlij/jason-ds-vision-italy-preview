@@ -7591,6 +7591,11 @@ function relatedFor(id){
         .replace(/'/g, "&#39;");
     }
 
+    function sceneAlt(scene) {
+      /* {caption} — {site}, {City}: card description, then the scene caption. */
+      return scene.description + " \u2014 " + scene.caption;
+    }
+
     function masterOk(path) {
       if (!path) return false;
       var bare = String(path).split("?")[0];
@@ -7612,7 +7617,7 @@ function relatedFor(id){
       const scenario = escapeHtml(scene.scenario_label);
       const composition = escapeHtml(scene.composition);
       const description = escapeHtml(scene.description);
-      const alt = escapeHtml(scene.alt_text);
+      const alt = escapeHtml(sceneAlt(scene));
       const f16 = masterOk(scene.file_16x9) ? escapeHtml(scene.file_16x9) : "";
       const f45 = masterOk(scene.file_4x5) ? escapeHtml(scene.file_4x5) : "";
       /* PHASE1-ITALY-RELATED-START */
@@ -7622,8 +7627,15 @@ function relatedFor(id){
           + p1rids.map(function(rid){
               var m = ITALY_META[rid];
               if (!m || !m[3] || (typeof masterOk === "function" && !masterOk(m[3]))) return "";
+              var relScene = null;
+              if (typeof SCENES !== "undefined") {
+                for (var si = 0; si < SCENES.length; si++) {
+                  if (SCENES[si].entry_id === rid) { relScene = SCENES[si]; break; }
+                }
+              }
+              var relAlt = (relScene && typeof sceneAlt === "function") ? sceneAlt(relScene) : (m[4] + "");
               return '<a class="related-link" href="#' + rid + '">'
-                + '<img loading="lazy" src="' + m[3] + '" alt="' + escapeHtml(m[4]) + '">'
+                + '<img loading="lazy" src="' + m[3] + '" alt="' + escapeHtml(relAlt) + '">'
                 + '<span>' + escapeHtml(m[4]) + '</span></a>';
             }).join("")
           + '</div></div>'
@@ -7821,11 +7833,14 @@ el.innerHTML = `
     +'<div class="lb-nav"><button class="lb-prev" aria-label="Previous image">&#8592;</button>'
     +'<span class="lb-count"></span>'
     +'<button class="lb-next" aria-label="Next image">&#8594;</button></div>'
-    +'<figure><img alt=""><figcaption><span class="lb-cap"></span></figcaption></figure>'
+    +'<figure><img><figcaption><span class="lb-cap"></span></figcaption></figure>'
     +'<div class="lb-controls"><button class="lb-play" aria-label="Play slideshow">&#9654;</button>'
     +'<button class="lb-narrate" aria-label="Play scene narration" style="display:none">&#128266;</button></div>';
   document.body.appendChild(overlay);
   var img=overlay.querySelector('img'),cap=overlay.querySelector('.lb-cap'),count=overlay.querySelector('.lb-count');
+  if (typeof SCENES !== "undefined" && SCENES.length) {
+    img.alt = SCENES[0].description + " \u2014 " + SCENES[0].caption;
+  }
   var playBtn=overlay.querySelector('.lb-play');
   var narrBtn=overlay.querySelector('.lb-narrate');
   var narrAudio=null;
@@ -7866,13 +7881,17 @@ el.innerHTML = `
       if(im){var nk=lbFormat==='4x5'?'data-src-45':'data-src-16',dk=lbFormat==='4x5'?'data-src-45-day':'data-src-16-day';if(lbDay==='day'){daySrc=im.getAttribute(dk)||'';}src=daySrc||im.getAttribute(nk);}
       if(!src){var a=c.querySelector('a.thumb');src=a?a.href:'';}
       var t=c.querySelector('.caption');
-      var capT=t?t.textContent:'';if(daySrc)capT=capT+' \u2014 \u2600 Daylight variant';
-      return{src:src,cap:capT};
+      var capBase=t?t.textContent:'';
+      var descEl=c.querySelector('.description');
+      var descT=descEl?descEl.textContent:'';
+      var capT=capBase;if(daySrc)capT=capT+' \u2014 \u2600 Daylight variant';
+      var altT=descT+' \u2014 '+capBase;if(daySrc)altT=altT+' \u2014 \u2600 Daylight variant';
+      return{src:src,cap:capT,alt:altT};
     }).filter(function(x){return x.src;});
     if(!items.length)return;
     idx=(i+items.length)%items.length;
     stopAllLbNarr();
-    img.src=items[idx].src;img.alt=items[idx].cap;cap.textContent=items[idx].cap;
+    img.src=items[idx].src;img.alt=items[idx].alt||items[idx].cap;cap.textContent=items[idx].cap;
     var curCard=visibleCards()[idx];var hasA=!!(curCard&&curCard.getAttribute('data-audio'));
     narrBtn.style.display=hasA?'':'none';
     count.textContent=(idx+1)+' / '+items.length;
