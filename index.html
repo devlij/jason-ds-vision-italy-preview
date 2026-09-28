@@ -7863,7 +7863,7 @@ el.innerHTML = `
   var items=[],idx=0;
   var lbFormat='16x9';/* lightbox-session format: seeded from the opening card's active tab; persists across prev/next + slideshow, never reset to 16:9 */
   var lbDay='night';/* lightbox-session day/night: seeded from the opening card's active day tab; persists across prev/next and slideshow navigation */
-  var playing=false,timer=null,SLIDE_MS=6000;
+  var playing=false,timer=null,SLIDE_MS=4000;
   var PLAY_LABEL='Play slideshow',PAUSE_LABEL='Pause slideshow';
   function visibleCards(){return Array.prototype.filter.call(document.querySelectorAll('.card'),function(c){return c.style.display!=='none';});}
   function setPlaying(p){
