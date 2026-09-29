@@ -12,29 +12,29 @@
   "file_4x5": "assets/it-01-024-4x5.png",
   "approval_status": "Approved",
   "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "d70b0f018225e6d2ba77ca52a12d6f1b8928a18c424b35cfb396c64846524183",
-  "sha256_4x5": "ad1757a0e01b87bfd2dc01f4228ba791cba276459b61a9f2f33e1be19910a14b",
+  "sha256_16x9": "67ede0a579430e969aecc3067517249159dfcc4c23e403e7565eb86cd37d35e8",
+  "sha256_4x5": "5e619b6f3cf831ae404a83999dfd7d4e796093943e73613237d5d4219242e079",
   "daylight_variant": {
     "variant_of_entry_id": "IT-01-024",
     "derived_from": "Approved night master assets/it-01-024-16x9.png (16:9) and assets/it-01-024-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
     "source_night": {
       "16x9": {
         "path": "assets/it-01-024-16x9.png",
-        "sha256": "d798370891f9a4e04bb0fdcdb1556330aa2f8443a90513dd91b5e485ae96356e"
+        "sha256": "67ede0a579430e969aecc3067517249159dfcc4c23e403e7565eb86cd37d35e8"
       },
       "4x5": {
         "path": "assets/it-01-024-4x5.png",
-        "sha256": "eeb5383f557628d5650b9e0fccd3cc5cf76f604d31c9c6ddd03224d1555a60dd"
+        "sha256": "5e619b6f3cf831ae404a83999dfd7d4e796093943e73613237d5d4219242e079"
       },
-      "recorded": "SHA-256 of the night masters immediately before this daylight batch. Post-write hashes are identical; night masters were not rewritten."
+      "recorded": "SHA-256 of the pure-photo night masters of the same site and composition. Night and daylight files are full-bleed photographs with no label bar."
     },
     "files": {
       "16x9": "assets/it-01-024-daylight-16x9.png",
       "4x5": "assets/it-01-024-daylight-4x5.png"
     },
     "sha256": {
-      "16x9": "de3e7ce21c1e7cff24dbca3a45a73141482fa4cdd1e9370434cf2ee732c5d337",
-      "4x5": "d1514f0f6e2f72da98e8ba8df07854536b0c604b0d1137634802306fbd752e1a"
+      "16x9": "2bfb9d27d0d8039545fc1f9c6c9ab90989d747e360073b424c567b9759fc5629",
+      "4x5": "2a6379f36f1c1ffe8f392eea00c9c297400ce8c294c7d524f580a2e27ca5d18b"
     },
     "created_date": "2026-09-26",
     "on_image_caption": "Costa Smeralda coast, Arzachena",

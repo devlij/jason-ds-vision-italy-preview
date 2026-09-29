@@ -12,29 +12,29 @@
   "file_4x5": "assets/it-01-023-4x5.png",
   "approval_status": "Approved",
   "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "5e458a3a53668ae8ce02ac370188458e59324533b4db49d59466a3942fb85762",
-  "sha256_4x5": "1891fc76569d48fdf34a7154257f2dfdf6e3f69eac4e38d3de106fb7696902aa",
+  "sha256_16x9": "605c794c3d46b284f78d6e2f3fa46d0b1c732d1aca0d1c5608c18467cd719d16",
+  "sha256_4x5": "f40541b14cf2385a11810ed8b345590d3ce37d32bcc8d86e1e5236ef17bb1d46",
   "daylight_variant": {
     "variant_of_entry_id": "IT-01-023",
     "derived_from": "Approved night master assets/it-01-023-16x9.png (16:9) and assets/it-01-023-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
     "source_night": {
       "16x9": {
         "path": "assets/it-01-023-16x9.png",
-        "sha256": "3d4d78ed41bfd392648530b6a001eb27c07fd5f6362282c27680314f8b46cfed"
+        "sha256": "605c794c3d46b284f78d6e2f3fa46d0b1c732d1aca0d1c5608c18467cd719d16"
       },
       "4x5": {
         "path": "assets/it-01-023-4x5.png",
-        "sha256": "09b8019671dd6ece3c144dc02d710cc03ea299ab580eeaf9196b5c41603c361b"
+        "sha256": "f40541b14cf2385a11810ed8b345590d3ce37d32bcc8d86e1e5236ef17bb1d46"
       },
-      "recorded": "SHA-256 of the night masters immediately before this daylight batch. Post-write hashes are identical; night masters were not rewritten."
+      "recorded": "SHA-256 of the pure-photo night masters of the same site and composition. Night and daylight files are full-bleed photographs with no label bar."
     },
     "files": {
       "16x9": "assets/it-01-023-daylight-16x9.png",
       "4x5": "assets/it-01-023-daylight-4x5.png"
     },
     "sha256": {
-      "16x9": "d72b1033967d0038022e1f3d4528647bc4a24ae9b5536f229c6c474ddaeaf5b8",
-      "4x5": "daba16db504ff4f2c33210cd62df3381e532e6a9f5430bac43bcd64448d0d18d"
+      "16x9": "c8c0677256f4c9d82ff196df1be6f03add77bbcc62a3bf8950696f8686819b7b",
+      "4x5": "7f78f6d4ce56ea9cbf1fd3d36b4d8f629f6cd78db46e74b630044eafa63dc302"
     },
     "created_date": "2026-09-26",
     "on_image_caption": "Su Nuraxi, Barumini",
