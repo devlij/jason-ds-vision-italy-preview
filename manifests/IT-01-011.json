@@ -4,15 +4,21 @@
   "region": "Campania",
   "city": "Pompeii",
   "caption": "Forum of Pompeii, Pompeii",
-  "scenario_label": "23 September 2026 · 05:03 Europe/Rome",
-  "composition": "Floodlit Roman forum ruins with Vesuvius beyond at night · AI-generated artistic interpretation",
+  "scenario_label": "23 September 2026 \u00b7 05:03 Europe/Rome",
+  "composition": "Floodlit Roman forum ruins with Vesuvius beyond at night \u00b7 AI-generated artistic interpretation",
   "description": "The camera looks down the forum's stone paving from between the ruins. A long colonnade of floodlit columns runs up the left side, while the raised podium temple with its row of illuminated columns stands on the right. Beyond the scattered foundations the dark cone of Vesuvius closes the horizon, and the 05:03 scenario is true night with warm artificial light on the stone against a black sky.",
   "alt_text": "AI-generated artistic interpretation of the Forum of Pompeii floodlit at night with Mount Vesuvius in the distance",
   "file_16x9": "assets/it-01-011-16x9.png",
   "file_4x5": "assets/it-01-011-4x5.png",
-  "approval_status": "Approved",
-  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #13 (tip b3306bd, merged b3306bd0d41151b7c72b03565ffc78515fa73c4d): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: content PASS: dims/photo-identity/bar/Art.50 verified on stratified sample. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "approval_status": "Candidate",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #13 (tip b3306bd, merged b3306bd0d41151b7c72b03565ffc78515fa73c4d): Gate 1 visual/location \u2014 pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical \u2014 exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance \u2014 photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial \u2014 'AI-generated artistic interpretation \u00b7 Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication \u2014 masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: content PASS: dims/photo-identity/bar/Art.50 verified on stratified sample. Full file-count verification: every scene in range holds both finished masters, correctly named.",
   "git_blob_sha1_16x9": "8c43c4394d9716475c0e3c5bae0e4dd76d55eeaf",
   "git_blob_sha1_4x5": "c6467dde9ca94e3008163c23d802a53930576227",
-  "approved_at": "2026-09-29"
+  "qc_notes": [
+    {
+      "date": "2026-09-29",
+      "author": "Cosmo",
+      "note": "Gate 1 HOLD (Cosmo 2026-09-29): Pompeii Forum Temple of Jupiter rendered with substantially intact colonnade; the real temple stands as a ruined few-column condition."
+    }
+  ]
 }

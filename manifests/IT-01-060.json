@@ -4,15 +4,21 @@
   "region": "Campania",
   "city": "Sorrento",
   "caption": "Marina Grande, Sorrento",
-  "scenario_label": "23 September 2026 · 07:14 Europe/Rome",
-  "composition": "Cliffside harbor toward the Bay of Naples · AI-generated artistic interpretation",
+  "scenario_label": "23 September 2026 \u00b7 07:14 Europe/Rome",
+  "composition": "Cliffside harbor toward the Bay of Naples \u00b7 AI-generated artistic interpretation",
   "description": "From above the harbor, the camera takes in Marina Grande with Sorrento's pastel houses climbing the cliff on the left and the small boat harbor curving below at center. Fishing boats lie moored along the stone quay in the soft light of the 07:14 morning, while the calm sea stretches right toward the hazy blue silhouette of Vesuvius on the horizon. The pink and ochre facades catch the first gentle daylight above the shadowed rock face.",
   "alt_text": "AI-generated artistic interpretation of Sorrento Marina Grande at clear dawn",
   "file_16x9": "assets/it-01-060-16x9.png",
   "file_4x5": "assets/it-01-060-4x5.png",
-  "approval_status": "Approved",
-  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #28 (tip 1a05a75, merged 8ee561218beb): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 8 scenes x both formats (043,052,064,077,088,096,108,117), zero defects. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "approval_status": "Candidate",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #28 (tip 1a05a75, merged 8ee561218beb): Gate 1 visual/location \u2014 pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical \u2014 exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance \u2014 photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial \u2014 'AI-generated artistic interpretation \u00b7 Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication \u2014 masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 8 scenes x both formats (043,052,064,077,088,096,108,117), zero defects. Full file-count verification: every scene in range holds both finished masters, correctly named.",
   "git_blob_sha1_16x9": "c7fd7612a5afa3192c89898b76d62c9407ab0177",
   "git_blob_sha1_4x5": "cc3d8752724db682cdedeecfb2f36dbf8b0d0bf6",
-  "approved_at": "2026-09-29"
+  "qc_notes": [
+    {
+      "date": "2026-09-29",
+      "author": "Cosmo",
+      "note": "Gate 1 HOLD (Cosmo 2026-09-29): Marina Grande rendered as Positano-style cascading town; the real Marina Grande is a small fishing harbor with Sorrento on the plateau above, not a cascade of houses."
+    }
+  ]
 }

@@ -4,15 +4,21 @@
   "region": "Lazio",
   "city": "Rome",
   "caption": "Trevi Fountain, Rome",
-  "scenario_label": "23 September 2026 · 03:42 Europe/Rome",
-  "composition": "Floodlit Baroque fountain at night · AI-generated artistic interpretation",
+  "scenario_label": "23 September 2026 \u00b7 03:42 Europe/Rome",
+  "composition": "Floodlit Baroque fountain at night \u00b7 AI-generated artistic interpretation",
   "description": "The camera stands at the piazza edge facing the Trevi Fountain head on. The floodlit travertine facade fills the frame: Corinthian columns frame the central triumphal arch with its figure above the cascade, a niche and statue to either side. Palazzi with lamplit windows close in on left and right, and the rippling basin spreads across the foreground under the deep 03:42 night.",
   "alt_text": "AI-generated artistic interpretation of the Trevi Fountain in Rome floodlit at night",
   "file_16x9": "assets/it-01-003-16x9.png",
   "file_4x5": "assets/it-01-003-4x5.png",
-  "approval_status": "Approved",
-  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #13 (tip b3306bd, merged b3306bd0d41151b7c72b03565ffc78515fa73c4d): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: content PASS: dims/photo-identity/bar/Art.50 verified on stratified sample. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "approval_status": "Candidate",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #13 (tip b3306bd, merged b3306bd0d41151b7c72b03565ffc78515fa73c4d): Gate 1 visual/location \u2014 pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical \u2014 exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance \u2014 photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial \u2014 'AI-generated artistic interpretation \u00b7 Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication \u2014 masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: content PASS: dims/photo-identity/bar/Art.50 verified on stratified sample. Full file-count verification: every scene in range holds both finished masters, correctly named.",
   "git_blob_sha1_16x9": "b3f95fcd2f54fab63d0658abe9b9e8bbd665f0d8",
   "git_blob_sha1_4x5": "f5a408a776b8bb1ea0b27a8d427fb298a212e577",
-  "approved_at": "2026-09-29"
+  "qc_notes": [
+    {
+      "date": "2026-09-29",
+      "author": "Cosmo",
+      "note": "Gate 1 HOLD (Cosmo 2026-09-29): Trevi Fountain attic inscription is pseudo-text, not the CLEMENS XII dedication. A person who knows the Trevi would spot the fake Latin."
+    }
+  ]
 }
