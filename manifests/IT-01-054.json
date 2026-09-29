@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-054",
+  "country": "Italy",
+  "region": "Lombardy",
+  "city": "Milan",
+  "caption": "Galleria Vittorio Emanuele II, Milan",
+  "scenario_label": "23 September 2026 · 07:07 Europe/Rome",
+  "composition": "Glass-vaulted arcade under overcast dawn light · AI-generated artistic interpretation",
+  "description": "The camera stands at the center of the crossing, looking down one arm of the arcade toward the far dome, with the glass-and-iron vault rising overhead and the ornate stone facades lining both sides. The marble floor's great circular mosaic spreads across the foreground, and the shops stand shuttered and dark at 07:07. Overcast dawn light filters grey and even through the glass roof, leaving the gallery empty and hushed.",
+  "alt_text": "AI-generated artistic interpretation of Galleria Vittorio Emanuele II in Milan under overcast dawn light",
+  "file_16x9": "assets/it-01-054-16x9.png",
+  "file_4x5": "assets/it-01-054-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #28 (tip 1a05a75, merged 8ee561218beb): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 8 scenes x both formats (043,052,064,077,088,096,108,117), zero defects. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "3c6786a32d68dc1c82a7605a909c37e1dbfcd8ce",
+  "git_blob_sha1_4x5": "f8377ef4af822e55c0b4369c03286da9b6182ee4",
+  "approved_at": "2026-09-29"
+}

@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-209",
+  "country": "Italy",
+  "region": "Valle d'Aosta",
+  "city": "Bard",
+  "caption": "Forte di Bard, Bard",
+  "scenario_label": "23 September 2026 · 11:20 Europe/Rome",
+  "composition": "Terraced Alpine fortress climbing a gorge cliff above the Dora Baltea · AI-generated artistic interpretation",
+  "description": "From across the gorge, the tourist faces the Forte di Bard climbing the cliff in terraced stone ramparts, its long barracks blocks stepping up the rock face to the summit. Bare cliffs and dark forest fill the right, while the Dora Baltea glints at the lower left and hazy mountains rise behind. The 11:20 sun is strong and direct, casting short shadows across the pale stonework.",
+  "alt_text": "AI-generated artistic interpretation of Forte di Bard under morning light",
+  "file_16x9": "assets/it-01-209-16x9.png",
+  "file_4x5": "assets/it-01-209-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #30 (tip 09cb4b3, merged cc2d6bf146fc): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 12 scenes / 20 files (143,150,155,165,168,177,189,195,198,209,215,217), zero defects. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "dc110c1833381390b7c1422fea9882211e390b56",
+  "git_blob_sha1_4x5": "eaca4d91bb6b1dea616acab8779f2956fda76c2f",
+  "approved_at": "2026-09-29"
+}

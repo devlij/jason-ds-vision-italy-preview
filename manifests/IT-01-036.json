@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-036",
+  "country": "Italy",
+  "region": "Apulia",
+  "city": "Alberobello",
+  "caption": "Trulli of Alberobello, Alberobello",
+  "scenario_label": "23 September 2026 · 06:33 Europe/Rome",
+  "composition": "White conical-roofed houses on a limestone lane · AI-generated artistic interpretation",
+  "description": "The camera stands at street level on a cobbled lane in Alberobello, looking down the row of whitewashed trulli as the 06:33 dawn breaks. Conical stone roofs crowd the frame left and right, their pinnacles silhouetted against a pale blue-pink sky, while warm uplights still glow at the arched doorways on the left. Potted plants sit by the thresholds, a dry-stone wall runs along the lower right, and the empty lane draws the eye toward the distant cluster of cones.",
+  "alt_text": "AI-generated artistic interpretation of the trulli of Alberobello at twilight",
+  "file_16x9": "assets/it-01-036-16x9.png",
+  "file_4x5": "assets/it-01-036-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #13 (tip b3306bd, merged b3306bd0d41151b7c72b03565ffc78515fa73c4d): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: content PASS: dims/photo-identity/bar/Art.50 verified on stratified sample. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "a297a14ba4d8bc66a88069f66b2ccae1a850ef98",
+  "git_blob_sha1_4x5": "83bc82152af00c1a367cc0e4bfd8abc239565581",
+  "approved_at": "2026-09-29"
+}

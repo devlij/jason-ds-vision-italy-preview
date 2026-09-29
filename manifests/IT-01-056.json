@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-056",
+  "country": "Italy",
+  "region": "Lombardy",
+  "city": "Bellagio",
+  "caption": "Bellagio waterfront, Bellagio",
+  "scenario_label": "23 September 2026 · 07:09 Europe/Rome",
+  "composition": "Lakeside village and campanile reflected at dawn · AI-generated artistic interpretation",
+  "description": "Across glassy water, the Bellagio promontory sits center frame: the slender campanile rising among pastel houses at the left, grand pink and cream villas at the right, all mirrored almost perfectly in the lake. A wooded hill closes the background under a dawn sky streaked pink and grey. The modelled scenario is 23 September 2026 at 07:09 Europe/Rome: calm early-morning light, not a verified on-site observation.",
+  "alt_text": "AI-generated artistic interpretation of Bellagio on Lake Como at soft dawn",
+  "file_16x9": "assets/it-01-056-16x9.png",
+  "file_4x5": "assets/it-01-056-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #28 (tip 1a05a75, merged 8ee561218beb): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 8 scenes x both formats (043,052,064,077,088,096,108,117), zero defects. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "bc53219fdd9a273ed87ffd475c75d1d5c82be59c",
+  "git_blob_sha1_4x5": "6530a50b73045a2e3b833a2a8fca87573c0387df",
+  "approved_at": "2026-09-29"
+}

@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-305",
+  "country": "Italy",
+  "region": "Liguria",
+  "city": "Sanremo",
+  "caption": "Sanremo Casino and lungomare, Sanremo",
+  "scenario_label": "23 September 2026 · 12:11 Europe/Rome",
+  "composition": "Belle Époque Casino cupolas on the palm-lined Riviera lungomare · AI-generated artistic interpretation",
+  "description": "From the lungomare, the tourist looks along the palm-lined promenade toward the white Belle Epoque Casino, its silvered cupolas rising center-frame above the sea wall. Tall palms stand in the right foreground with pastel palazzi behind them, while the green hillside town climbs to the left and the blue sea fills the far left. The 12:11 sun is bright and high under a clear blue sky, and strollers dot the shady walkway.",
+  "alt_text": "AI-generated artistic interpretation of Sanremo under midday light",
+  "file_16x9": "assets/it-01-305-16x9.png",
+  "file_4x5": "assets/it-01-305-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #25 (tip 718998d, merged fc3eaf0): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 9-scene stratified sample, zero defects; 120/120 files confirmed via paginated reads. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "3d1c882136230c354c4becb33b6fffd955b778d0",
+  "git_blob_sha1_4x5": "e1eae78a7c6ae929791b3fc3d1a0b91ef002e52f",
+  "approved_at": "2026-09-29"
+}

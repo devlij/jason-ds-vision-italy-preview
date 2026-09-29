@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-025",
+  "country": "Italy",
+  "region": "Sardinia",
+  "city": "La Maddalena",
+  "caption": "La Maddalena harbor, La Maddalena",
+  "scenario_label": "23 September 2026 · 06:10 Europe/Rome",
+  "composition": "Pastel waterfront and fishing boats at blue hour · AI-generated artistic interpretation",
+  "description": "The tourist looks along the waterfront at blue hour, with pastel pink, ochre and sky-blue houses lining the quay to the right, their windows glowing. Fishing boats in blue and white bob in the glassy foreground water, throwing long amber reflections, while dark hills close the horizon to the left. The sky holds the last lavender-pink of dawn at 06:10, and the harbor lamps are still lit.",
+  "alt_text": "AI-generated artistic interpretation of La Maddalena harbor at blue hour",
+  "file_16x9": "assets/it-01-025-16x9.png",
+  "file_4x5": "assets/it-01-025-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #13 (tip b3306bd, merged b3306bd0d41151b7c72b03565ffc78515fa73c4d): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: content PASS: dims/photo-identity/bar/Art.50 verified on stratified sample. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "0fc12fd07b823a1f64434b35bf06c006504470b5",
+  "git_blob_sha1_4x5": "651d89e819cb51877585747960a4c9b5cad9dc8c",
+  "approved_at": "2026-09-29"
+}

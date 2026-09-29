@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-319",
+  "country": "Italy",
+  "region": "Tuscany",
+  "city": "Orbetello",
+  "caption": "Spanish Mill, Orbetello",
+  "scenario_label": "23 September 2026 · 12:25 Europe/Rome",
+  "composition": "Mulino Spagnolo standing in Orbetello lagoon with Argentario across the water · AI-generated artistic interpretation",
+  "description": "The stone windmill with its lattice sails stands at center-right in the shallow lagoon, a narrow causeway leading left toward the rooftops of Orbetello. Monte Argentario's mountains rise behind the calm water, sandbars and reeds patterning the foreground. Bright 12:25 midday light under a clear blue sky.",
+  "alt_text": "AI-generated artistic interpretation of Orbetello under midday light",
+  "file_16x9": "assets/it-01-319-16x9.png",
+  "file_4x5": "assets/it-01-319-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #25 (tip 718998d, merged fc3eaf0): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 9-scene stratified sample, zero defects; 120/120 files confirmed via paginated reads. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "f3cb6e8307bacaa792d1a667563d36e2bdee8f02",
+  "git_blob_sha1_4x5": "007706df6fe8aa6cfbeae69645364fb9a251961f",
+  "approved_at": "2026-09-29"
+}

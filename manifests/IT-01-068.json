@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-068",
+  "country": "Italy",
+  "region": "Umbria",
+  "city": "Orvieto",
+  "caption": "Orvieto Cathedral, Orvieto",
+  "scenario_label": "23 September 2026 · 07:21 Europe/Rome",
+  "composition": "Gothic mosaic façade on the hilltop piazza · AI-generated artistic interpretation",
+  "description": "The camera stands on the piazza facing Orvieto Cathedral's soaring Gothic facade in the soft light of the 07:21 morning. Gilded mosaics glitter across the gabled panels between the slender pinnacled towers, the great rose window glowing at center, while the striped black-and-white masonry of the side wall shows at the right edge. Modest town rooftops and cypress trees fill the lower left, and the pale dawn sky warms to pink behind the hilltop silhouette.",
+  "alt_text": "AI-generated artistic interpretation of Orvieto Cathedral under clear dawn light",
+  "file_16x9": "assets/it-01-068-16x9.png",
+  "file_4x5": "assets/it-01-068-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #28 (tip 1a05a75, merged 8ee561218beb): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 8 scenes x both formats (043,052,064,077,088,096,108,117), zero defects. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "6c3b7481a8c081ad24076c59ce26f9e1a16f4387",
+  "git_blob_sha1_4x5": "01ba8f8431b25ae83a6eaf8516dfe2872faf6be3",
+  "approved_at": "2026-09-29"
+}

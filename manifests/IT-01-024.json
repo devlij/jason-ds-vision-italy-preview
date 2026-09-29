@@ -11,37 +11,8 @@
   "file_16x9": "assets/it-01-024-16x9.png",
   "file_4x5": "assets/it-01-024-4x5.png",
   "approval_status": "Approved",
-  "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "20fc46c73b77152dd4b0531eb49ce7d9bd2cfd69a77e0e5831553f70dceffe23",
-  "sha256_4x5": "e1383227a39596187391026a8dc24f9f5f16f24c8164dbe6c014dd5790a3285c",
-  "daylight_variant": {
-    "variant_of_entry_id": "IT-01-024",
-    "derived_from": "Approved night master assets/it-01-024-16x9.png (16:9) and assets/it-01-024-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
-    "source_night": {
-      "16x9": {
-        "path": "assets/it-01-024-16x9.png",
-        "sha256": "d798370891f9a4e04bb0fdcdb1556330aa2f8443a90513dd91b5e485ae96356e"
-      },
-      "4x5": {
-        "path": "assets/it-01-024-4x5.png",
-        "sha256": "eeb5383f557628d5650b9e0fccd3cc5cf76f604d31c9c6ddd03224d1555a60dd"
-      },
-      "recorded": "SHA-256 of the night masters immediately before this daylight batch. Post-write hashes are identical; night masters were not rewritten."
-    },
-    "files": {
-      "16x9": "assets/it-01-024-daylight-16x9.png",
-      "4x5": "assets/it-01-024-daylight-4x5.png"
-    },
-    "sha256": {
-      "16x9": "9ac06d907cd77b0386b6d3d73dc2a48063d492f9518eb341e6c3fcddda02c9f6",
-      "4x5": "6b37fa3539eb6bd28c127ce95d27e32239ff2cffa4d4c9a87ca2d533c2d22f82"
-    },
-    "created_date": "2026-09-26",
-    "on_image_caption": "Costa Smeralda coast, Arzachena",
-    "on_image_signature": "Jason D’s Vision",
-    "on_image_disclosure": "AI-generated artistic interpretation · Not a photograph.",
-    "on_image_marking": "☀ Daylight variant · derived from the night interpretation",
-    "derivative_disclosure": "Derivative of the approved night interpretation of this same viewpoint. Not an independently modelled weather or lighting scenario. No weather claim. No scenario timestamp on the variant.",
-    "note": "AI-generated daylight re-interpretation derived from the night master of the same viewpoint and composition. Not a new scene. Architecture and landscape preserved; lighting only was changed from night to daylight. No weather evidence invented. The variant image carries no weather claim and no scenario timestamp. The scene scenario_label remains the night scene's label and is not a daylight weather assertion."
-  }
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #13 (tip b3306bd, merged b3306bd0d41151b7c72b03565ffc78515fa73c4d): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: content PASS: dims/photo-identity/bar/Art.50 verified on stratified sample. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "e533025885d83933fae538e4b1689480612ca5f2",
+  "git_blob_sha1_4x5": "af13947f4de1efd7139939bc24a9918b6f07ee45",
+  "approved_at": "2026-09-29"
 }

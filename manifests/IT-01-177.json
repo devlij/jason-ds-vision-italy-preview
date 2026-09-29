@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-177",
+  "country": "Italy",
+  "region": "Umbria",
+  "city": "Terni",
+  "caption": "Cascata delle Marmore, Terni",
+  "scenario_label": "23 September 2026 · 10:00 Europe/Rome",
+  "composition": "Multi-tiered Marmore waterfall in forested cliffs · AI-generated artistic interpretation",
+  "description": "From the viewing terrace, the tourist faces the Marmore falls plunging in white tiers down the cliff right of center, mist rising where the water strikes. Steep forested walls close in on both sides, with the sky a strip of blue above. At 10:00 the sun is high and strong, sparkling on the falling water, and the railing of the overlook runs along the lower right of the frame.",
+  "alt_text": "AI-generated artistic interpretation of Cascata delle Marmore under morning light",
+  "file_16x9": "assets/it-01-177-16x9.png",
+  "file_4x5": "assets/it-01-177-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #30 (tip 09cb4b3, merged cc2d6bf146fc): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 12 scenes / 20 files (143,150,155,165,168,177,189,195,198,209,215,217), zero defects. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "d9154a3cfc3d6290f1f033d0e85ad2f679573555",
+  "git_blob_sha1_4x5": "593a02eb8d3ebd6e77462ca378e9a387253bba33",
+  "approved_at": "2026-09-29"
+}

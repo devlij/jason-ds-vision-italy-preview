@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-145",
+  "country": "Italy",
+  "region": "Tuscany",
+  "city": "Giglio Castello",
+  "caption": "Giglio Castello walls, Giglio Castello",
+  "scenario_label": "23 September 2026 · 08:44 Europe/Rome",
+  "composition": "Walled medieval hilltown crowning Isola del Giglio · AI-generated artistic interpretation",
+  "description": "From the sea side, the tourist faces Giglio Castello crowning its rocky peak, the medieval walls and round towers wrapping the hillside center-frame above the clustered stone houses. Bare granite crags rise behind the rooftops, while the open sea fills the left under a bright, partly cloudy sky. The 08:44 sun lights the old walls and terracotta roofs, with green scrub clinging to the rocks below.",
+  "alt_text": "AI-generated artistic interpretation of Giglio Castello under morning light",
+  "file_16x9": "assets/it-01-145-16x9.png",
+  "file_4x5": "assets/it-01-145-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #30 (tip 09cb4b3, merged cc2d6bf146fc): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 12 scenes / 20 files (143,150,155,165,168,177,189,195,198,209,215,217), zero defects. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "679a298ea843252bdc323581d2d90f80d6f0f70b",
+  "git_blob_sha1_4x5": "318f0084483f8a373602bdf1355eb18ba310b6ed",
+  "approved_at": "2026-09-29"
+}

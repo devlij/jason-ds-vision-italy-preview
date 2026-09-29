@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-076",
+  "country": "Italy",
+  "region": "Campania",
+  "city": "Paestum",
+  "caption": "Temples of Paestum, Paestum",
+  "scenario_label": "23 September 2026 · 07:27 Europe/Rome",
+  "composition": "Doric Greek temple on the archaeological plain · AI-generated artistic interpretation",
+  "description": "The camera rests low on the grassy plain beside one of Paestum's great Doric temples in the golden light of the 07:27 morning. Massive fluted columns march along the right side of the frame, carrying the weathered entablature, with scattered fallen blocks strewn at the base and morning mist hanging behind the umbrella pines at the left. The low sun warms the honey-colored stone while the long shadows stretch across the dew-covered grass.",
+  "alt_text": "AI-generated artistic interpretation of the temples of Paestum under clear dawn light",
+  "file_16x9": "assets/it-01-076-16x9.png",
+  "file_4x5": "assets/it-01-076-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #28 (tip 1a05a75, merged 8ee561218beb): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 8 scenes x both formats (043,052,064,077,088,096,108,117), zero defects. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "c0deccfeadd811d34e523df9657c399b1fb04a45",
+  "git_blob_sha1_4x5": "6e17059e8fb5210c0f65b04e1d0ffdb35e35aa95",
+  "approved_at": "2026-09-29"
+}

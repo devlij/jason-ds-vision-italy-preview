@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-296",
+  "country": "Italy",
+  "region": "Veneto",
+  "city": "Feltre",
+  "caption": "Feltre, Veneto",
+  "scenario_label": "23 September 2026 · 12:02 Europe/Rome",
+  "composition": "Arcaded Feltre center with Castello di Alboino above Dolomite foothills · AI-generated artistic interpretation",
+  "description": "Above the town's arcaded houses in the foreground, the Castello di Alboino crowns the wooded hilltop at center, with the pale Dolomite peaks rising behind to the right. The terracotta rooftops spread across the frame under a clear blue midday sky. The modelled scenario is 23 September 2026 at 12:02 Europe/Rome: bright midday light, not a verified on-site observation.",
+  "alt_text": "AI-generated artistic interpretation of Feltre under midday light",
+  "file_16x9": "assets/it-01-296-16x9.png",
+  "file_4x5": "assets/it-01-296-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #27 (tip 3cc9eaf): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 7-scene stratified sample, zero defects; 40/40 files confirmed. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "7880f83fcdef8c072ddde7096a8a4f9104aebbe9",
+  "git_blob_sha1_4x5": "9297276cc3641cd3026810d0e468633eeb8defdc",
+  "approved_at": "2026-09-29"
+}

@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-041",
+  "country": "Italy",
+  "region": "Molise",
+  "city": "Termoli",
+  "caption": "Termoli old town and Swabian Castle, Termoli",
+  "scenario_label": "23 September 2026 · 06:50 Europe/Rome",
+  "composition": "Adriatic promontory castle and seafront walls · AI-generated artistic interpretation",
+  "description": "The viewpoint looks along the Adriatic coast at dawn, where the Swabian Castle crowns the rocky promontory center-frame above the clustered old town. Pale stone houses climb to the right along the lit seafront wall, while open sea fills the left under a pink-and-blue streaked sky. At 06:50 the town's windows still glow warm against the first daylight on the cliffs.",
+  "alt_text": "AI-generated artistic interpretation of Termoli old town and Swabian Castle at twilight",
+  "file_16x9": "assets/it-01-041-16x9.png",
+  "file_4x5": "assets/it-01-041-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #28 (tip 1a05a75, merged 8ee561218beb): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 8 scenes x both formats (043,052,064,077,088,096,108,117), zero defects. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "7827aee396402574b7fa9ef60ea6364e163633e8",
+  "git_blob_sha1_4x5": "5788d5bc750ece3801a25f670a6dbba7a529bf88",
+  "approved_at": "2026-09-29"
+}

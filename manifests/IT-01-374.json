@@ -11,37 +11,8 @@
   "file_16x9": "assets/it-01-374-16x9.png",
   "file_4x5": "assets/it-01-374-4x5.png",
   "approval_status": "Approved",
-  "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "9ffdb535d55184677be43e5003f258fe6d1ffe59812f99162f306148625e5147",
-  "sha256_4x5": "3fd5e04b27ff773b72a022c9efc67b17c40bd95a347c753a33eee3ee6d98f5fa",
-  "daylight_variant": {
-    "variant_of_entry_id": "IT-01-374",
-    "derived_from": "Approved night master assets/it-01-374-16x9.png (16:9) and assets/it-01-374-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
-    "source_night": {
-      "16x9": {
-        "path": "assets/it-01-374-16x9.png",
-        "sha256": "5d847ce477f71a726b8906b53bea2a0741d2052599a3337cc39eaea840070bde"
-      },
-      "4x5": {
-        "path": "assets/it-01-374-4x5.png",
-        "sha256": "a778d73c03302c3dd87c4beb2db0cb61764a8ca9797ba91068719c9e191847fd"
-      },
-      "recorded": "SHA-256 of the night masters immediately before this daylight batch. Post-write hashes are identical; night masters were not rewritten."
-    },
-    "files": {
-      "16x9": "assets/it-01-374-daylight-16x9.png",
-      "4x5": "assets/it-01-374-daylight-4x5.png"
-    },
-    "sha256": {
-      "16x9": "a29912bba387a934e65051c0649934dc2fcaba5d1c530f08f13e8a68de098068",
-      "4x5": "a7783d9ffc2d938570a7965e42395ada43258784f86becc3f7b8f21ee6d7173b"
-    },
-    "created_date": "2026-09-26",
-    "on_image_caption": "Coastline toward Isola delle Femmine, Capaci",
-    "on_image_signature": "Jason D’s Vision",
-    "on_image_disclosure": "AI-generated artistic interpretation · Not a photograph.",
-    "on_image_marking": "☀ Daylight variant · derived from the night interpretation",
-    "derivative_disclosure": "Derivative of the approved night interpretation of this same viewpoint. Not an independently modelled weather or lighting scenario. No weather claim. No scenario timestamp on the variant.",
-    "note": "AI-generated daylight re-interpretation derived from the night master of the same viewpoint and composition. Not a new scene. Architecture and landscape preserved; lighting only was changed from night to daylight. No weather evidence invented. The variant image carries no weather claim and no scenario timestamp. The scene scenario_label remains the night scene's label and is not a daylight weather assertion."
-  }
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #26 (tip a591898): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 8-scene stratified sample incl. Capaci daylight variants, zero defects; 50/50 files confirmed. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "a62769cc0ba890019c811f2a7553bffa037551cc",
+  "git_blob_sha1_4x5": "5833fc05c163abb08e2cb739c79f9f7c0c4efaca",
+  "approved_at": "2026-09-29"
 }

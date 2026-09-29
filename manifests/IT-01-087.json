@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-087",
+  "country": "Italy",
+  "region": "Veneto",
+  "city": "Chioggia",
+  "caption": "Chioggia canals, Chioggia",
+  "scenario_label": "23 September 2026 · 07:40 Europe/Rome",
+  "composition": "Pastel waterfront and fishing boats on the canal · AI-generated artistic interpretation",
+  "description": "Pastel canal houses in pink, yellow and green line the left bank, their shuttered windows reflected in the still water. Blue fishing boats crowd the moorings in the foreground while a stone arched bridge with a cross-crowned tower spans the canal to the right. Soft cloudy light fills this 07:40 morning scene.",
+  "alt_text": "AI-generated artistic interpretation of Chioggia canals under partly cloudy morning light",
+  "file_16x9": "assets/it-01-087-16x9.png",
+  "file_4x5": "assets/it-01-087-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #28 (tip 1a05a75, merged 8ee561218beb): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 8 scenes x both formats (043,052,064,077,088,096,108,117), zero defects. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "fcb7ac6b5484dabee597f9ed65e901f897d1ddd4",
+  "git_blob_sha1_4x5": "67d8495aeeba1ed62409d3c86d120f6459a5d010",
+  "approved_at": "2026-09-29"
+}

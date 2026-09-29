@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-261",
+  "country": "Italy",
+  "region": "Lazio",
+  "city": "Rome",
+  "caption": "Ara Pacis, Rome",
+  "scenario_label": "23 September 2026 · 13:30 Europe/Rome",
+  "composition": "Meier glass pavilion enclosing the white marble Ara Pacis Augustae · AI-generated artistic interpretation",
+  "description": "The camera stands before the Ara Pacis museum at early afternoon, the stark white modernist pavilion filling the frame. Its long glass wall runs across the center, the carved white marble of the ancient altar clearly visible inside, while the solid stone end of the building closes the right side. The modelled 23 September 2026, 13:30 sun is hard and high, sharpening the clean geometry of the pavilion against a bright blue sky, with umbrella pines and the Tiber embankment at the far left.",
+  "alt_text": "AI-generated artistic interpretation of Ara Pacis under midday light",
+  "file_16x9": "assets/it-01-261-16x9.png",
+  "file_4x5": "assets/it-01-261-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #31 (tip 67d7f2d, merged a58dc023bb7a): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 8 scenes x both formats (223,231,239,247,255,263,271,278), zero defects. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "690f8030f616f470e5d7615bd204b583664dee70",
+  "git_blob_sha1_4x5": "022e36ef364d17f9f04dee29cad8ce9f7d9fc2bc",
+  "approved_at": "2026-09-29"
+}

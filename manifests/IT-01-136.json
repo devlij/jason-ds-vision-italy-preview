@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-136",
+  "country": "Italy",
+  "region": "Umbria",
+  "city": "Spello",
+  "caption": "Porta Venere, Spello",
+  "scenario_label": "23 September 2026 · 08:33 Europe/Rome",
+  "composition": "Twin-towered Roman gate and pink-stone hilltown above the Umbrian valley · AI-generated artistic interpretation",
+  "description": "The twin round towers of Porta Venere stand center frame, flower-filled balconies of the pink-stone houses crowding the left edge beside a tall cypress. To the right the Umbrian valley hills roll away in soft morning haze. The modelled scenario is 23 September 2026 at 08:33 Europe/Rome: warm morning light, not a verified on-site observation.",
+  "alt_text": "AI-generated artistic interpretation of Spello Porta Venere under clear morning light",
+  "file_16x9": "assets/it-01-136-16x9.png",
+  "file_4x5": "assets/it-01-136-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #29 (tip ef47410, merged ed75625c0285): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 8 scenes x both formats (122,125,128,131,134,136,138,140), zero defects. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "dc9841bce2cdde32e5c4a519f3e859b31ce1add5",
+  "git_blob_sha1_4x5": "f72a142f3ca01fe9234a2f6eb6f69c8a2af69edf",
+  "approved_at": "2026-09-29"
+}

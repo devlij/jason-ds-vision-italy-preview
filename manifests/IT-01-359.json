@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-359",
+  "country": "Italy",
+  "region": "Abruzzo",
+  "city": "Ortona",
+  "caption": "Aragonese castle on the cliff, Ortona",
+  "scenario_label": "23 September 2026 · 14:42 Europe/Rome",
+  "composition": "Cliff-top castle and cathedral campanile above turquoise Adriatic water · AI-generated artistic interpretation",
+  "description": "Seen from the sea, the long stone castle crowns the green cliff at center-right above the rocky shore. To the left the town stretches along the headland with its cathedral campanile rising above the houses. Turquoise water fills the foreground under the bright 14:42 afternoon sky with small clouds.",
+  "alt_text": "AI-generated artistic interpretation of Ortona under afternoon light",
+  "file_16x9": "assets/it-01-359-16x9.png",
+  "file_4x5": "assets/it-01-359-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #25 (tip 718998d, merged fc3eaf0): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 9-scene stratified sample, zero defects; 120/120 files confirmed via paginated reads. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "4303d1a2f4ce36d54301cf9236e7f63f52913618",
+  "git_blob_sha1_4x5": "8182d92c973fb4be1019ab27691375c9650c5484",
+  "approved_at": "2026-09-29"
+}

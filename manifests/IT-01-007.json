@@ -11,37 +11,8 @@
   "file_16x9": "assets/it-01-007-16x9.png",
   "file_4x5": "assets/it-01-007-4x5.png",
   "approval_status": "Approved",
-  "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "897a2d336baf8f3bc97ff7604d25f85f527ebdda8a2bc4dc9e0e45b8d40f6852",
-  "sha256_4x5": "a6ea1064e5f61fd9b7bd0013f399f49ebdb28ae5afc8b308b4e1d794796ab1ec",
-  "daylight_variant": {
-    "variant_of_entry_id": "IT-01-007",
-    "derived_from": "Approved night master assets/it-01-007-16x9.png (16:9) and assets/it-01-007-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
-    "source_night": {
-      "16x9": {
-        "path": "assets/it-01-007-16x9.png",
-        "sha256": "b965c539c4160a726a225c5aecba77829b416f8a39fbb64c3e9b6450799c2848"
-      },
-      "4x5": {
-        "path": "assets/it-01-007-4x5.png",
-        "sha256": "2eb0387a9725e54413b114a758c334e6987e38f379a6e48eaabe6f37290fecdb"
-      },
-      "recorded": "SHA-256 of the night masters immediately before this daylight batch. Post-write hashes are identical; night masters were not rewritten."
-    },
-    "files": {
-      "16x9": "assets/it-01-007-daylight-16x9.png",
-      "4x5": "assets/it-01-007-daylight-4x5.png"
-    },
-    "sha256": {
-      "16x9": "e35941770a2eff8e920c4d6e6705faec43bcd3ff93e09690917de8cf1ef5aacf",
-      "4x5": "d54d086cc2a1e7fab588588bd209291f2f6f93cfd9305686822334c5b6bae0b8"
-    },
-    "created_date": "2026-09-26",
-    "on_image_caption": "Grand Canal from Rialto Bridge, Venice",
-    "on_image_signature": "Jason D’s Vision",
-    "on_image_disclosure": "AI-generated artistic interpretation · Not a photograph.",
-    "on_image_marking": "☀ Daylight variant · derived from the night interpretation",
-    "derivative_disclosure": "Derivative of the approved night interpretation of this same viewpoint. Not an independently modelled weather or lighting scenario. No weather claim. No scenario timestamp on the variant.",
-    "note": "AI-generated daylight re-interpretation derived from the night master of the same viewpoint and composition. Not a new scene. Architecture and landscape preserved; lighting only was changed from night to daylight. No weather evidence invented. The variant image carries no weather claim and no scenario timestamp. The scene scenario_label remains the night scene's label and is not a daylight weather assertion."
-  }
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #13 (tip b3306bd, merged b3306bd0d41151b7c72b03565ffc78515fa73c4d): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: content PASS: dims/photo-identity/bar/Art.50 verified on stratified sample. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "3ef577a8f6ece75a605c58f15d092e2f64c94ecd",
+  "git_blob_sha1_4x5": "aba55cb93e470dea9b0cd996a827c0847c6ee112",
+  "approved_at": "2026-09-29"
 }

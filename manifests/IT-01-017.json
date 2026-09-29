@@ -11,37 +11,8 @@
   "file_16x9": "assets/it-01-017-16x9.png",
   "file_4x5": "assets/it-01-017-4x5.png",
   "approval_status": "Approved",
-  "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "1ed4c32f14cbae39f87271ff89afd59f6f7d5747ee6c2f42a82fa67da74912f3",
-  "sha256_4x5": "4696399e2679ac7700ac5d60a52ce6da7b985b8592a04e5a49cabc9f83881526",
-  "daylight_variant": {
-    "variant_of_entry_id": "IT-01-017",
-    "derived_from": "Approved night master assets/it-01-017-16x9.png (16:9) and assets/it-01-017-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
-    "source_night": {
-      "16x9": {
-        "path": "assets/it-01-017-16x9.png",
-        "sha256": "e565f8035934675b6b408c55b334d0550096607438807d8f4a2a1fc207a5c337"
-      },
-      "4x5": {
-        "path": "assets/it-01-017-4x5.png",
-        "sha256": "ae3d9915f4240232611e69383d3514c4223502b11e897024aed15da2e94d85a0"
-      },
-      "recorded": "SHA-256 of the night masters immediately before this daylight batch. Post-write hashes are identical; night masters were not rewritten."
-    },
-    "files": {
-      "16x9": "assets/it-01-017-daylight-16x9.png",
-      "4x5": "assets/it-01-017-daylight-4x5.png"
-    },
-    "sha256": {
-      "16x9": "c61d760aec59247a3d30662ec544da408f6b12374d5fc94acd0bad4aa2ea207c",
-      "4x5": "ce9f5edf03e745f293dc9e8334f5be6bdc5d1e35876ec0ed05f37d3e12b939ff"
-    },
-    "created_date": "2026-09-26",
-    "on_image_caption": "Palermo Cathedral, Palermo",
-    "on_image_signature": "Jason D’s Vision",
-    "on_image_disclosure": "AI-generated artistic interpretation · Not a photograph.",
-    "on_image_marking": "☀ Daylight variant · derived from the night interpretation",
-    "derivative_disclosure": "Derivative of the approved night interpretation of this same viewpoint. Not an independently modelled weather or lighting scenario. No weather claim. No scenario timestamp on the variant.",
-    "note": "AI-generated daylight re-interpretation derived from the night master of the same viewpoint and composition. Not a new scene. Architecture and landscape preserved; lighting only was changed from night to daylight. No weather evidence invented. The variant image carries no weather claim and no scenario timestamp. The scene scenario_label remains the night scene's label and is not a daylight weather assertion."
-  }
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #13 (tip b3306bd, merged b3306bd0d41151b7c72b03565ffc78515fa73c4d): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: content PASS: dims/photo-identity/bar/Art.50 verified on stratified sample. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "7d54b7b83e4c2d5c658838e154624ce5e7286306",
+  "git_blob_sha1_4x5": "9256ce38704a55ea652d58ea47dd20266e4cbe7e",
+  "approved_at": "2026-09-29"
 }

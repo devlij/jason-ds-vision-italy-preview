@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-299",
+  "country": "Italy",
+  "region": "Lazio",
+  "city": "Gaeta",
+  "caption": "Gaeta harbor, Gaeta",
+  "scenario_label": "23 September 2026 · 12:05 Europe/Rome",
+  "composition": "Angevin castle crowning Gaeta’s rocky peninsula above the Tyrrhenian harbor · AI-generated artistic interpretation",
+  "description": "From the sea the camera takes in the rocky peninsula of Gaeta: colorful houses fill the center slopes, the ruined Angevin castle crowns the crag above them, and sheer cliffs drop on the right with a dark sea cave at the waterline. Boats dot the deep blue water. The 12:05 midday sun is bright and clear.",
+  "alt_text": "AI-generated artistic interpretation of Gaeta harbor under midday light",
+  "file_16x9": "assets/it-01-299-16x9.png",
+  "file_4x5": "assets/it-01-299-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #27 (tip 3cc9eaf): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 7-scene stratified sample, zero defects; 40/40 files confirmed. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "ad6b3ac239715a2de1053454ccb4e43f111b576b",
+  "git_blob_sha1_4x5": "9c951f1d2bc16d717098a455b36e35182fec31e4",
+  "approved_at": "2026-09-29"
+}

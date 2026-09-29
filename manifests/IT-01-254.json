@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-254",
+  "country": "Italy",
+  "region": "Lazio",
+  "city": "Rome",
+  "caption": "Circus Maximus, Rome",
+  "scenario_label": "23 September 2026 · 13:11 Europe/Rome",
+  "composition": "Vast grassy oval of the ancient chariot stadium below the Palatine · AI-generated artistic interpretation",
+  "description": "The great grassy oval of the ancient stadium stretches away from the camera, its running track curving around the central green with the Palatine ruins rising along the right. Rows of umbrella pines line the left edge, and Rome's rooftops close the far distance under a cloudless blue sky. At 13:11 the light is hard midday sun, and the long shadows of the pines stripe the grass.",
+  "alt_text": "AI-generated artistic interpretation of Circus Maximus under midday light",
+  "file_16x9": "assets/it-01-254-16x9.png",
+  "file_4x5": "assets/it-01-254-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #31 (tip 67d7f2d, merged a58dc023bb7a): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 8 scenes x both formats (223,231,239,247,255,263,271,278), zero defects. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "7176005d25cc538e1415ce6b139e5e528a529780",
+  "git_blob_sha1_4x5": "47029826423d5fd5c2c8938d3fb8c5f662561044",
+  "approved_at": "2026-09-29"
+}

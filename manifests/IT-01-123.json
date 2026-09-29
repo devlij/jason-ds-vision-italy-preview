@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-123",
+  "country": "Italy",
+  "region": "Liguria",
+  "city": "Corniglia",
+  "caption": "Corniglia clifftop, Corniglia",
+  "scenario_label": "23 September 2026 · 08:20 Europe/Rome",
+  "composition": "Clifftop village above terraced vineyards and the Lardarina staircase · AI-generated artistic interpretation",
+  "description": "From the sea side the camera faces the clifftop village on the right, its church and bell tower rising above the houses. The long Lardarina staircase zigzags down the cliff at center-left, terraced vineyards step down the right slopes, and the calm blue sea fills the left. The 08:20 morning sun warms the stone and the green.",
+  "alt_text": "AI-generated artistic interpretation of Corniglia on its cliff under mainly clear morning light",
+  "file_16x9": "assets/it-01-123-16x9.png",
+  "file_4x5": "assets/it-01-123-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #29 (tip ef47410, merged ed75625c0285): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 8 scenes x both formats (122,125,128,131,134,136,138,140), zero defects. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "c198e374bcfada08091e54549986112e8cd0eb10",
+  "git_blob_sha1_4x5": "c0203d1fbdd287568aa4156b68772fe2575bf477",
+  "approved_at": "2026-09-29"
+}

@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-274",
+  "country": "Italy",
+  "region": "Lazio",
+  "city": "Castel Gandolfo",
+  "caption": "Castel Gandolfo, Castel Gandolfo",
+  "scenario_label": "23 September 2026 · 11:36 Europe/Rome",
+  "composition": "Papal palace and dome on the crater rim above Lake Albano · AI-generated artistic interpretation",
+  "description": "The viewpoint looks along the crater rim, the papal palace standing at the left above its cliff-edge gardens. Beside it a domed chapel rises among cypresses and umbrella pines. To the right the deep blue water of Lake Albano sweeps across the frame, with the wooded crater rim curving away in the distance. The modelled scenario is 23 September 2026 at 11:36 Europe/Rome: bright late-morning sun under a clear blue sky.",
+  "alt_text": "AI-generated artistic interpretation of Castel Gandolfo under late-morning light",
+  "file_16x9": "assets/it-01-274-16x9.png",
+  "file_4x5": "assets/it-01-274-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #31 (tip 67d7f2d, merged a58dc023bb7a): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 8 scenes x both formats (223,231,239,247,255,263,271,278), zero defects. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "2d2940f11b4f2c76183acfa58a7b1ce27e12a7eb",
+  "git_blob_sha1_4x5": "648a4aea4b0d1ad2ab7785bc9caf5626b89cd036",
+  "approved_at": "2026-09-29"
+}

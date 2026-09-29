@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-078",
+  "country": "Italy",
+  "region": "Veneto",
+  "city": "Vicenza",
+  "caption": "Basilica Palladiana, Vicenza",
+  "scenario_label": "23 September 2026 · 07:29 Europe/Rome",
+  "composition": "Palladian loggia and green copper roof on Piazza dei Signori · AI-generated artistic interpretation",
+  "description": "Seen from across the empty piazza, the basilica's two-tiered white loggia runs the full length of the frame, its green copper roof and small domed bell tower rising behind. A red-brick palazzo anchors the left edge and a row of ochre houses the right, under a flat overcast sky. At 07:29 the light is soft and shadowless, and the wet-looking stones of the square give the pale building its full presence.",
+  "alt_text": "AI-generated artistic interpretation of the Basilica Palladiana in Vicenza under overcast morning light",
+  "file_16x9": "assets/it-01-078-16x9.png",
+  "file_4x5": "assets/it-01-078-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #28 (tip 1a05a75, merged 8ee561218beb): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 8 scenes x both formats (043,052,064,077,088,096,108,117), zero defects. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "df42ee93f521e13e360d1f992ad4b340161678ce",
+  "git_blob_sha1_4x5": "4bc726c97208ace763d558e8d3aca38656399f69",
+  "approved_at": "2026-09-29"
+}

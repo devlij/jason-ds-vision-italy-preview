@@ -11,37 +11,8 @@
   "file_16x9": "assets/it-01-366-16x9.png",
   "file_4x5": "assets/it-01-366-4x5.png",
   "approval_status": "Approved",
-  "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "0a4f8e6f08c6f404159a85539add5c4eba680a64472cf00fa4e4be89e19d717e",
-  "sha256_4x5": "e6ba8d0688d08fa62679ece7772762b65506319b8acfb7861d0b1d4d3e6a1ba8",
-  "daylight_variant": {
-    "variant_of_entry_id": "IT-01-366",
-    "derived_from": "Approved night master assets/it-01-366-16x9.png (16:9) and assets/it-01-366-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
-    "source_night": {
-      "16x9": {
-        "path": "assets/it-01-366-16x9.png",
-        "sha256": "03f47a9b1c314b1e0f66b44c8e7e01ead809a823d6708e9ec5509c7d163d7268"
-      },
-      "4x5": {
-        "path": "assets/it-01-366-4x5.png",
-        "sha256": "286bb04d2ffffe11306f77b4171ca277ee4a4ac2d82eca3464b73afcd98182fb"
-      },
-      "recorded": "SHA-256 of the night masters immediately before this daylight batch. Post-write hashes are identical; night masters were not rewritten."
-    },
-    "files": {
-      "16x9": "assets/it-01-366-daylight-16x9.png",
-      "4x5": "assets/it-01-366-daylight-4x5.png"
-    },
-    "sha256": {
-      "16x9": "341d6f2309e8caec37b615826ecd3fd6bac902c676394887e4b82f80e1dcb97c",
-      "4x5": "f380d23ffc1dcd9cdc1b397c130770eb6f4048a91ea3d195bb51514b6f259b67"
-    },
-    "created_date": "2026-09-26",
-    "on_image_caption": "Chiesa di Sant'Erasmo, Capaci",
-    "on_image_signature": "Jason D’s Vision",
-    "on_image_disclosure": "AI-generated artistic interpretation · Not a photograph.",
-    "on_image_marking": "☀ Daylight variant · derived from the night interpretation",
-    "derivative_disclosure": "Derivative of the approved night interpretation of this same viewpoint. Not an independently modelled weather or lighting scenario. No weather claim. No scenario timestamp on the variant.",
-    "note": "AI-generated daylight re-interpretation derived from the night master of the same viewpoint and composition. Not a new scene. Architecture and landscape preserved; lighting only was changed from night to daylight. No weather evidence invented. The variant image carries no weather claim and no scenario timestamp. The scene scenario_label remains the night scene's label and is not a daylight weather assertion."
-  }
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #26 (tip a591898): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 8-scene stratified sample incl. Capaci daylight variants, zero defects; 50/50 files confirmed. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "7de71ae9c02a83a0e2673acdafca88b23fd6c137",
+  "git_blob_sha1_4x5": "5065c29856d22e453ae64c24000a9e6b2d172f0c",
+  "approved_at": "2026-09-29"
 }

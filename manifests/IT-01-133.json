@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-133",
+  "country": "Italy",
+  "region": "Basilicata",
+  "city": "Castelmezzano",
+  "caption": "Castelmezzano village, Castelmezzano",
+  "scenario_label": "23 September 2026 · 08:30 Europe/Rome",
+  "composition": "Stone houses stacked under the Lucanian Dolomite spires · AI-generated artistic interpretation",
+  "description": "The camera faces Castelmezzano from the valley below on a bright morning, the whole village climbing the slope beneath the jagged Lucanian Dolomite spires. The stone houses cluster across the center and right of the frame, their tiled roofs stepping upward, while the pale rock towers rear above them against a deep blue sky. The modelled 23 September 2026, 08:30 sun strikes the spires from the side, and the green forested flanks of the valley fill the left of the picture.",
+  "alt_text": "AI-generated artistic interpretation of Castelmezzano under clear morning light",
+  "file_16x9": "assets/it-01-133-16x9.png",
+  "file_4x5": "assets/it-01-133-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #29 (tip ef47410, merged ed75625c0285): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 8 scenes x both formats (122,125,128,131,134,136,138,140), zero defects. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "cb86623d39ef0b38c3fd3f1f95900ffc1c3cfc63",
+  "git_blob_sha1_4x5": "f566fb8863fceaadb67ad0ba8d7f0360333f04d3",
+  "approved_at": "2026-09-29"
+}

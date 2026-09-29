@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-310",
+  "country": "Italy",
+  "region": "Tuscany",
+  "city": "Bagno Vignoni",
+  "caption": "Bagno Vignoni thermal square, Bagno Vignoni",
+  "scenario_label": "23 September 2026 · 12:16 Europe/Rome",
+  "composition": "Steaming rectangular thermal pool filling the village piazza above Val d’Orcia · AI-generated artistic interpretation",
+  "description": "The great rectangular thermal pool fills the center of the frame, its turquoise water steaming gently in the midday air, with the stone arcade of the old bathhouse running along the left and the village houses closing the right. Beyond, the rolling Tuscan hills of the Val d'Orcia stretch to the horizon under a clear 12:16 sky. The rising vapor off the warm water is the scene's quiet signature.",
+  "alt_text": "AI-generated artistic interpretation of Bagno Vignoni under midday light",
+  "file_16x9": "assets/it-01-310-16x9.png",
+  "file_4x5": "assets/it-01-310-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #25 (tip 718998d, merged fc3eaf0): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 9-scene stratified sample, zero defects; 120/120 files confirmed via paginated reads. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "4471baca69ae808ccfef64c9fd05137723590016",
+  "git_blob_sha1_4x5": "99af8fa97b99e68a7bb1e42956f2a7154feab3fb",
+  "approved_at": "2026-09-29"
+}

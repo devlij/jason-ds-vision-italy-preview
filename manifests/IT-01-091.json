@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-091",
+  "country": "Italy",
+  "region": "Emilia-Romagna",
+  "city": "Parma",
+  "caption": "Parma Baptistery, Parma",
+  "scenario_label": "23 September 2026 · 07:44 Europe/Rome",
+  "composition": "Pink-and-white octagonal baptistery by the Duomo · AI-generated artistic interpretation",
+  "description": "From the empty piazza the camera faces the octagonal baptistery, its pink-and-white marble with arcaded galleries standing center-left. The Duomo with its rose window and bell tower rises on the right. The 07:44 sky is pale and soft, the square deserted in the morning quiet.",
+  "alt_text": "AI-generated artistic interpretation of Parma Baptistery in Parma under clear dawn light",
+  "file_16x9": "assets/it-01-091-16x9.png",
+  "file_4x5": "assets/it-01-091-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #28 (tip 1a05a75, merged 8ee561218beb): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 8 scenes x both formats (043,052,064,077,088,096,108,117), zero defects. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "f5b61ac13011f639290f19b83bbd67b997d5960d",
+  "git_blob_sha1_4x5": "1acf2ed256d1e1c26fdde7527e0f645fb2848197",
+  "approved_at": "2026-09-29"
+}

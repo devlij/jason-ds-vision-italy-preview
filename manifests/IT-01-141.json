@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-141",
+  "country": "Italy",
+  "region": "Apulia",
+  "city": "Cisternino",
+  "caption": "Centro storico, Cisternino",
+  "scenario_label": "23 September 2026 · 08:40 Europe/Rome",
+  "composition": "Whitewashed alleys and San Nicola campanile in the Valle d’Itria · AI-generated artistic interpretation",
+  "description": "The viewpoint is at street level in one of Cisternino's whitewashed alleys, looking toward the old town center. White lime-washed houses close in on both sides, their iron balconies heavy with potted flowers, while a broad stone arch spans the lane at the center of the frame. Beyond it rises the slender campanile of San Nicola against a softly clouded sky, and the modelled 23 September 2026, 08:40 morning light glows on the white walls.",
+  "alt_text": "AI-generated artistic interpretation of Cisternino under partly cloudy morning light",
+  "file_16x9": "assets/it-01-141-16x9.png",
+  "file_4x5": "assets/it-01-141-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #30 (tip 09cb4b3, merged cc2d6bf146fc): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 12 scenes / 20 files (143,150,155,165,168,177,189,195,198,209,215,217), zero defects. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "6a53273cb74f8e430e3c1dd25b94b23d10616cb5",
+  "git_blob_sha1_4x5": "70e29f7cb80d5904b0364a292d2d29009edc3911",
+  "approved_at": "2026-09-29"
+}

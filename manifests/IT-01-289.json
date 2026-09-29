@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-289",
+  "country": "Italy",
+  "region": "Lazio",
+  "city": "Rome",
+  "caption": "Aventine Keyhole, Rome",
+  "scenario_label": "23 September 2026 · 11:55 Europe/Rome",
+  "composition": "Priory gate keyhole framing St. Peter’s dome down a cypress alley · AI-generated artistic interpretation",
+  "description": "The tourist bends to the famous keyhole in the priory's green door, and through the round opening appears the dome of St. Peter's, perfectly framed at the end of a cypress-lined alley. The stone portal fills the center of the frame, flanked by weathered walls with a small green side door on the left, and cobblestones in the foreground. The 11:55 sun is bright under a clear blue sky, and the tiny revealed view glows at the end of the dark green avenue.",
+  "alt_text": "AI-generated artistic interpretation of the Aventine Keyhole under late-morning light",
+  "file_16x9": "assets/it-01-289-16x9.png",
+  "file_4x5": "assets/it-01-289-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #27 (tip 3cc9eaf): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 7-scene stratified sample, zero defects; 40/40 files confirmed. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "011e3648b1a91fd276d6ab01fe479bdf707b3e3a",
+  "git_blob_sha1_4x5": "88b6031131d6e38c9c18667c5a7bf0f1bd200267",
+  "approved_at": "2026-09-29"
+}

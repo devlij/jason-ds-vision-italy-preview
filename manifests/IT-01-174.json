@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-174",
+  "country": "Italy",
+  "region": "Veneto",
+  "city": "Venice",
+  "caption": "Santa Maria della Salute, Venice",
+  "scenario_label": "23 September 2026 · 09:51 Europe/Rome",
+  "composition": "Baroque dome of La Salute on the Grand Canal · AI-generated artistic interpretation",
+  "description": "Seen from the Grand Canal, the great white dome of La Salute dominates the right of the frame, its scrolls and twin smaller domes catching the 09:51 morning light, with the palazzi of the canal stretching away to the left. Gondolas lie moored along the far bank at the lower left, and the water is calm and green-grey. The church's pale stone glows against a soft blue sky.",
+  "alt_text": "AI-generated artistic interpretation of Santa Maria della Salute under morning light",
+  "file_16x9": "assets/it-01-174-16x9.png",
+  "file_4x5": "assets/it-01-174-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #30 (tip 09cb4b3, merged cc2d6bf146fc): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 12 scenes / 20 files (143,150,155,165,168,177,189,195,198,209,215,217), zero defects. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "10c93f2940170611c0ee3a0b6b97860fbd98c0c8",
+  "git_blob_sha1_4x5": "a0b4c1f53b20262077c4c3d558b8b11b03c63a1a",
+  "approved_at": "2026-09-29"
+}

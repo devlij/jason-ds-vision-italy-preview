@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-094",
+  "country": "Italy",
+  "region": "Veneto",
+  "city": "Burano",
+  "caption": "Burano canals, Burano",
+  "scenario_label": "23 September 2026 · 07:47 Europe/Rome",
+  "composition": "Bright canal houses with leaning campanile · AI-generated artistic interpretation",
+  "description": "Standing on the canal bridge, the view runs straight down the water between two rows of brightly painted houses — pink, yellow, red, and blue on the left, coral, turquoise, and pink on the right — their colors doubling softly in the still canal. The leaning brick campanile rises at the center distance above the rooftops, and a small footbridge crosses the canal midway. Under the 07:47 overcast sky the light is flat and gentle, and the street is empty.",
+  "alt_text": "AI-generated artistic interpretation of Burano canals under overcast morning light",
+  "file_16x9": "assets/it-01-094-16x9.png",
+  "file_4x5": "assets/it-01-094-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #28 (tip 1a05a75, merged 8ee561218beb): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 8 scenes x both formats (043,052,064,077,088,096,108,117), zero defects. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "22ddfb9cf28fe5cbcb5cc9544c7cb08322ef0a18",
+  "git_blob_sha1_4x5": "f28073ab90bbb19e864f67a76e385f0baa33c082",
+  "approved_at": "2026-09-29"
+}

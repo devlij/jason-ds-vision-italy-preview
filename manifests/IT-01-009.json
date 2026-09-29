@@ -11,37 +11,8 @@
   "file_16x9": "assets/it-01-009-16x9.png",
   "file_4x5": "assets/it-01-009-4x5.png",
   "approval_status": "Approved",
-  "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "6a45ae588273ce6d820dae631f2e6a0313006360d1cc9509165f6615063acf73",
-  "sha256_4x5": "d55deca4ef58f78de82a764918f50690ce152a6b383185068491aa8907a94719",
-  "daylight_variant": {
-    "variant_of_entry_id": "IT-01-009",
-    "derived_from": "Approved night master assets/it-01-009-16x9.png (16:9) and assets/it-01-009-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
-    "source_night": {
-      "16x9": {
-        "path": "assets/it-01-009-16x9.png",
-        "sha256": "784247c05a4c78b1e8cfb5864f4e0e1a4d60faa40be535b91b91cb7baa1629ae"
-      },
-      "4x5": {
-        "path": "assets/it-01-009-4x5.png",
-        "sha256": "83cfb7d992bc05ea5ecd132a921033fba75cf8bc0b6d3839011276ac565bd527"
-      },
-      "recorded": "SHA-256 of the night masters immediately before this daylight batch. Post-write hashes are identical; night masters were not rewritten."
-    },
-    "files": {
-      "16x9": "assets/it-01-009-daylight-16x9.png",
-      "4x5": "assets/it-01-009-daylight-4x5.png"
-    },
-    "sha256": {
-      "16x9": "b3bd4876e0f7a402381f96e26a60bc5cae43416b948c753a198e6ad5278cacc7",
-      "4x5": "88a31812707e5b154c0610e91e44b3cbe27f250282659d41f45b265ed94fbef5"
-    },
-    "created_date": "2026-09-26",
-    "on_image_caption": "Leaning Tower of Pisa, Pisa",
-    "on_image_signature": "Jason D’s Vision",
-    "on_image_disclosure": "AI-generated artistic interpretation · Not a photograph.",
-    "on_image_marking": "☀ Daylight variant · derived from the night interpretation",
-    "derivative_disclosure": "Derivative of the approved night interpretation of this same viewpoint. Not an independently modelled weather or lighting scenario. No weather claim. No scenario timestamp on the variant.",
-    "note": "AI-generated daylight re-interpretation derived from the night master of the same viewpoint and composition. Not a new scene. Architecture and landscape preserved; lighting only was changed from night to daylight. No weather evidence invented. The variant image carries no weather claim and no scenario timestamp. The scene scenario_label remains the night scene's label and is not a daylight weather assertion."
-  }
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #13 (tip b3306bd, merged b3306bd0d41151b7c72b03565ffc78515fa73c4d): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: content PASS: dims/photo-identity/bar/Art.50 verified on stratified sample. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "7fd1497b2a821671470905698f554cbed6fc4405",
+  "git_blob_sha1_4x5": "de2f64b2377264716022f70953199a52d63a0f27",
+  "approved_at": "2026-09-29"
 }

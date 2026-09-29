@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-148",
+  "country": "Italy",
+  "region": "Apulia",
+  "city": "Galatina",
+  "caption": "Basilica of Santa Caterina, Galatina",
+  "scenario_label": "23 September 2026 · 08:47 Europe/Rome",
+  "composition": "Ornate Romanesque-Gothic portal and rose window in pale limestone · AI-generated artistic interpretation",
+  "description": "The camera stands on the cobbled square facing the Basilica of Santa Caterina's pale limestone facade in the bright 08:47 morning. The deeply carved Romanesque-Gothic portal fills the left of the frame, its concentric arches and sculpted columns glowing in the sun, while the enormous rose window dominates the right, its stone tracery radiating like a wheel. Weathered town buildings close in at the far left, and the clear blue sky sets off the warm honey tones of the stone.",
+  "alt_text": "AI-generated artistic interpretation of Santa Caterina in Galatina under morning light",
+  "file_16x9": "assets/it-01-148-16x9.png",
+  "file_4x5": "assets/it-01-148-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #30 (tip 09cb4b3, merged cc2d6bf146fc): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 12 scenes / 20 files (143,150,155,165,168,177,189,195,198,209,215,217), zero defects. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "c2ae2221a21c9599ab1a4f542daac6a3dc1bd315",
+  "git_blob_sha1_4x5": "86ead3d54b36bc543e308066254801728a599ac1",
+  "approved_at": "2026-09-29"
+}

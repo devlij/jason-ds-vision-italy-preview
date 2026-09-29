@@ -11,37 +11,8 @@
   "file_16x9": "assets/it-01-006-16x9.png",
   "file_4x5": "assets/it-01-006-4x5.png",
   "approval_status": "Approved",
-  "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "8d627dcfe6805a9f2a5cf72ff47b7dc1f027ccec403eeef10e0bcea328ebd6cf",
-  "sha256_4x5": "705e62bd47d1c006f441a21becb7c440b833db8041f4b3d2ac6b4094fe53bdf6",
-  "daylight_variant": {
-    "variant_of_entry_id": "IT-01-006",
-    "derived_from": "Approved night master assets/it-01-006-16x9.png (16:9) and assets/it-01-006-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
-    "source_night": {
-      "16x9": {
-        "path": "assets/it-01-006-16x9.png",
-        "sha256": "b642cea7524cb801a5c0b974997b0ecada01d08be665f7dcf03e2748dd6937a7"
-      },
-      "4x5": {
-        "path": "assets/it-01-006-4x5.png",
-        "sha256": "d8d380e81bd535e002f8f86ea22a0311bdc1e48af04017b1ac6d7588103e46d0"
-      },
-      "recorded": "SHA-256 of the night masters immediately before this daylight batch. Post-write hashes are identical; night masters were not rewritten."
-    },
-    "files": {
-      "16x9": "assets/it-01-006-daylight-16x9.png",
-      "4x5": "assets/it-01-006-daylight-4x5.png"
-    },
-    "sha256": {
-      "16x9": "29df0f305bcc468f4d965f7325ee4c566299f56576e10fb41da09effdd7766b1",
-      "4x5": "554b47d7d8ee1dbeefd85e8566f9e1f1ba57e6fb335b0ababf075f86958770c6"
-    },
-    "created_date": "2026-09-26",
-    "on_image_caption": "Ponte Vecchio, Florence",
-    "on_image_signature": "Jason D’s Vision",
-    "on_image_disclosure": "AI-generated artistic interpretation · Not a photograph.",
-    "on_image_marking": "☀ Daylight variant · derived from the night interpretation",
-    "derivative_disclosure": "Derivative of the approved night interpretation of this same viewpoint. Not an independently modelled weather or lighting scenario. No weather claim. No scenario timestamp on the variant.",
-    "note": "AI-generated daylight re-interpretation derived from the night master of the same viewpoint and composition. Not a new scene. Architecture and landscape preserved; lighting only was changed from night to daylight. No weather evidence invented. The variant image carries no weather claim and no scenario timestamp. The scene scenario_label remains the night scene's label and is not a daylight weather assertion."
-  }
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #13 (tip b3306bd, merged b3306bd0d41151b7c72b03565ffc78515fa73c4d): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: content PASS: dims/photo-identity/bar/Art.50 verified on stratified sample. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "ed7380c7ec764a7af9c97b42fa520f66c50d84dd",
+  "git_blob_sha1_4x5": "2af8ef082d7e65d5619248ae464fa9002417cf37",
+  "approved_at": "2026-09-29"
 }

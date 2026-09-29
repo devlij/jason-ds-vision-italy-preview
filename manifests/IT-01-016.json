@@ -11,37 +11,8 @@
   "file_16x9": "assets/it-01-016-16x9.png",
   "file_4x5": "assets/it-01-016-4x5.png",
   "approval_status": "Approved",
-  "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "cda793914b59ada5ae03284dfdc3944da7b39e6ffa0972d4cfae2fe4d29e500d",
-  "sha256_4x5": "8b939645fe330563579ebb3140d75efa7ad1e3efb45a55ca84132bdef79649dc",
-  "daylight_variant": {
-    "variant_of_entry_id": "IT-01-016",
-    "derived_from": "Approved night master assets/it-01-016-16x9.png (16:9) and assets/it-01-016-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
-    "source_night": {
-      "16x9": {
-        "path": "assets/it-01-016-16x9.png",
-        "sha256": "3c2e94075f1217f64ccb9f13da7f351d2bea4a5354c930aaf6ba56b94ee6fb9b"
-      },
-      "4x5": {
-        "path": "assets/it-01-016-4x5.png",
-        "sha256": "506c33f567191dfdd932dea9054c522816a5f2c25d56e39b221862ae44113cdf"
-      },
-      "recorded": "SHA-256 of the night masters immediately before this daylight batch. Post-write hashes are identical; night masters were not rewritten."
-    },
-    "files": {
-      "16x9": "assets/it-01-016-daylight-16x9.png",
-      "4x5": "assets/it-01-016-daylight-4x5.png"
-    },
-    "sha256": {
-      "16x9": "3f4f002f7a98e4a3c6428a5c81dcfec4c922c7faeee241a3db728a23b9abdbae",
-      "4x5": "6ebe54c4121e000b49b7ab367df6cd0be9e5f5dc748ff25e09797e916681c38f"
-    },
-    "created_date": "2026-09-26",
-    "on_image_caption": "Manarola, Cinque Terre",
-    "on_image_signature": "Jason D’s Vision",
-    "on_image_disclosure": "AI-generated artistic interpretation · Not a photograph.",
-    "on_image_marking": "☀ Daylight variant · derived from the night interpretation",
-    "derivative_disclosure": "Derivative of the approved night interpretation of this same viewpoint. Not an independently modelled weather or lighting scenario. No weather claim. No scenario timestamp on the variant.",
-    "note": "AI-generated daylight re-interpretation derived from the night master of the same viewpoint and composition. Not a new scene. Architecture and landscape preserved; lighting only was changed from night to daylight. No weather evidence invented. The variant image carries no weather claim and no scenario timestamp. The scene scenario_label remains the night scene's label and is not a daylight weather assertion."
-  }
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #13 (tip b3306bd, merged b3306bd0d41151b7c72b03565ffc78515fa73c4d): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: content PASS: dims/photo-identity/bar/Art.50 verified on stratified sample. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "7ab182c59c8b941fd5e4c122c96e415ed51fc484",
+  "git_blob_sha1_4x5": "dc998d054558051c2a143bd120b79b77df8d96dc",
+  "approved_at": "2026-09-29"
 }

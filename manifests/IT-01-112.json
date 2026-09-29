@@ -1,0 +1,18 @@
+{
+  "entry_id": "IT-01-112",
+  "country": "Italy",
+  "region": "Abruzzo",
+  "city": "Sulmona",
+  "caption": "Piazza Garibaldi, Sulmona",
+  "scenario_label": "23 September 2026 · 08:09 Europe/Rome",
+  "composition": "Medieval aqueduct arches with mountain backdrop · AI-generated artistic interpretation",
+  "description": "Across the vast empty cobbles of Piazza Garibaldi, the stone arches of the medieval aqueduct run the full width of the left and center frame, with hazy mountains rising behind. Ochre houses with green shutters close the right side under a cloudy morning sky. The modelled scenario is 23 September 2026 at 08:09 Europe/Rome: soft overcast morning light, not a verified on-site observation.",
+  "alt_text": "AI-generated artistic interpretation of Piazza Garibaldi in Sulmona under partly cloudy morning light",
+  "file_16x9": "assets/it-01-112-16x9.png",
+  "file_4x5": "assets/it-01-112-4x5.png",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #28 (tip 1a05a75, merged 8ee561218beb): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 8 scenes x both formats (043,052,064,077,088,096,108,117), zero defects. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "git_blob_sha1_16x9": "94246f0be4c4e412cfc1a43fa620e6505aa27227",
+  "git_blob_sha1_4x5": "38af31a840c932fb807dc0b0a31eda683ea779b8",
+  "approved_at": "2026-09-29"
+}
