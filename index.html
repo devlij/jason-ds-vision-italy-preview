@@ -125,6 +125,8 @@
     }
     .card-body { padding: 1rem 1rem 1.15rem; display: flex; flex-direction: column; gap: 0.35rem; flex: 1; }
     .entry-id { font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+    .status-row { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+    .status { font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 20px; background: #1a2e1a; color: #7ee787; border: 1px solid #2ea043; white-space: nowrap; }
     .caption { font-size: 1.05rem; font-weight: 600; margin: 0; }
     .scenario, .composition { font-size: 0.85rem; color: var(--muted); margin: 0; }
     .meta { font-size: 0.85rem; color: var(--accent); font-weight: 500; letter-spacing: 0.01em; }
@@ -7653,7 +7655,7 @@ el.innerHTML = `
           </div>
         ${scene.file_16x9_day && masterOk(scene.file_16x9_day) ? `<div class="day-row"><button type="button" class="day-tab" data-daynight="night" aria-pressed="false" title="Toggle the daylight variant">\u2600 Daylight</button></div>` : ""}
         <div class="card-body">
-          <div class="entry-id">${id}</div>
+          <div class="status-row"><div class="entry-id">${id}</div><span class="status">Approved</span></div>
           <p class="meta">${meta}</p>
           <h3 class="caption">${caption}</h3>
           <p class="scenario" data-scenario="${scenario}">${scenario}</p>
