@@ -12,8 +12,8 @@
   "file_4x5": "assets/it-01-367-4x5.png",
   "approval_status": "Approved",
   "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "c7e2c69e515d58628cbfdd78b039ebfecd2e7393f5f9efc3eb52fa79e4f96966",
-  "sha256_4x5": "f76d20b2971b4a3d41890913a6b92012f170f453b39d265c6a4a6dba130e716a",
+  "sha256_16x9": "2145f6f57fb1126feb88ea59cdc399bbc10e371950cced3b032819b8f7ee3e70",
+  "sha256_4x5": "48e73135ba49b42a0c212d2633da5dc0256dff4241c1e9d8d7406d5802e0c991",
   "daylight_variant": {
     "variant_of_entry_id": "IT-01-367",
     "derived_from": "Approved night master assets/it-01-367-16x9.png (16:9) and assets/it-01-367-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
@@ -33,8 +33,8 @@
       "4x5": "assets/it-01-367-daylight-4x5.png"
     },
     "sha256": {
-      "16x9": "cb8f1f53f0dacc67f163e9c6b957ca7531981ca0452b35e69be8f90edcf0fa04",
-      "4x5": "79080bfc9f701597aaf45369f6eeadb613261fa5c766b6137c5039741627f9dc"
+      "16x9": "af2e2cf30b881c7760f802f91f883a143eb2ee65a7507a7f782f29b49dec8f01",
+      "4x5": "e9e2e197a585d0706a1894c33735b766419c98aec8f9669a1c8c64cfdeb5d663"
     },
     "created_date": "2026-09-26",
     "on_image_caption": "Giardino della Memoria, Capaci",

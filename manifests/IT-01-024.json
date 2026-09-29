@@ -12,8 +12,8 @@
   "file_4x5": "assets/it-01-024-4x5.png",
   "approval_status": "Approved",
   "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "d70b0f018225e6d2ba77ca52a12d6f1b8928a18c424b35cfb396c64846524183",
-  "sha256_4x5": "ad1757a0e01b87bfd2dc01f4228ba791cba276459b61a9f2f33e1be19910a14b",
+  "sha256_16x9": "20fc46c73b77152dd4b0531eb49ce7d9bd2cfd69a77e0e5831553f70dceffe23",
+  "sha256_4x5": "e1383227a39596187391026a8dc24f9f5f16f24c8164dbe6c014dd5790a3285c",
   "daylight_variant": {
     "variant_of_entry_id": "IT-01-024",
     "derived_from": "Approved night master assets/it-01-024-16x9.png (16:9) and assets/it-01-024-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
@@ -33,8 +33,8 @@
       "4x5": "assets/it-01-024-daylight-4x5.png"
     },
     "sha256": {
-      "16x9": "de3e7ce21c1e7cff24dbca3a45a73141482fa4cdd1e9370434cf2ee732c5d337",
-      "4x5": "d1514f0f6e2f72da98e8ba8df07854536b0c604b0d1137634802306fbd752e1a"
+      "16x9": "9ac06d907cd77b0386b6d3d73dc2a48063d492f9518eb341e6c3fcddda02c9f6",
+      "4x5": "6b37fa3539eb6bd28c127ce95d27e32239ff2cffa4d4c9a87ca2d533c2d22f82"
     },
     "created_date": "2026-09-26",
     "on_image_caption": "Costa Smeralda coast, Arzachena",

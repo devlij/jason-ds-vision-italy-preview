@@ -12,8 +12,8 @@
   "file_4x5": "assets/it-01-012-4x5.png",
   "approval_status": "Approved",
   "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "fc373a55d9715cd3b81a914f069a9d02e126a487d18ed0c7ccda521062c6f753",
-  "sha256_4x5": "c7ec220d4ebfe1a40317453a3f8f44164ae6e32cf7648d87d30d79d8bfed7f2b",
+  "sha256_16x9": "648a7630dd5c6cbedcaf4c6916f4f57c4b294d15fae52795331424e562e5bfae",
+  "sha256_4x5": "d71250d3e78f0e94b1f74b132614b219c2aceae0580881b50c8d7dc396c5dc8a",
   "daylight_variant": {
     "variant_of_entry_id": "IT-01-012",
     "derived_from": "Approved night master assets/it-01-012-16x9.png (16:9) and assets/it-01-012-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
@@ -33,8 +33,8 @@
       "4x5": "assets/it-01-012-daylight-4x5.png"
     },
     "sha256": {
-      "16x9": "c3ad552ae50068ed125be249d1028c0888e628de1439b59ec9f6e807bfcf5d6f",
-      "4x5": "9883a62260b207e0853777e01e3e84805f1f6b6d30facc0c1c83c2535aefb854"
+      "16x9": "cf48c3b87c4f9014a55fab625d83fd303acba014d6c83c9cfd1c6f48546c9344",
+      "4x5": "48e9693b28403e44e5ed8b25eda38249efecacf26a6163bb7bca3449e85a2372"
     },
     "created_date": "2026-09-26",
     "on_image_caption": "Positano, Amalfi Coast",

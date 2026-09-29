@@ -12,8 +12,8 @@
   "file_4x5": "assets/it-01-015-4x5.png",
   "approval_status": "Approved",
   "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "9bc2b82128c682dcd2056b984a8ed935b00f4653bac6b27a6f3dc1b996f168bb",
-  "sha256_4x5": "ce0ffaff10eed32c647536a206fcc72f6219370f6bf368cf84bc4987bf4de932",
+  "sha256_16x9": "4832bfa2b595f63ea1451c7bd627e4a35ec45bdcc3e575e4af84dbbc07ddd58c",
+  "sha256_4x5": "f87478fec6e7a353d3808db5a82b603bed7f249bf58d7cbb3c88eb1709d78d72",
   "daylight_variant": {
     "variant_of_entry_id": "IT-01-015",
     "derived_from": "Approved night master assets/it-01-015-16x9.png (16:9) and assets/it-01-015-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
@@ -33,8 +33,8 @@
       "4x5": "assets/it-01-015-daylight-4x5.png"
     },
     "sha256": {
-      "16x9": "359193ee265e91867447585a7646de683a1daaf68a07d4e1e53af1afc18fbef2",
-      "4x5": "ca910d7843e27ee5f300034b0eb37b14f5eedfde8ab28ae9363db8cb10da45fc"
+      "16x9": "d4dcc46e1147b1084d1c4dc024fc16d0c3c0b408ccaf5238e43b2aa2b0e599d2",
+      "4x5": "938c881d96fd0d1c1aff5584cdcd4e19a564031d3b6f5266c23798d40a841dc1"
     },
     "created_date": "2026-09-26",
     "on_image_caption": "Two Towers, Bologna",

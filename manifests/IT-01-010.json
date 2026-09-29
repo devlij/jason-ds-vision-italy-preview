@@ -12,8 +12,8 @@
   "file_4x5": "assets/it-01-010-4x5.png",
   "approval_status": "Approved",
   "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "683bc1970a2613bbbc11579a1ec4e89c5fec43af48fad401d556b6fc51c3b082",
-  "sha256_4x5": "e65d2e6685324f3c8d4adde8403d86b1ed93aadbd36ce45652e139bf19e24133",
+  "sha256_16x9": "dad87bb38e505f585cf2eea986f2d3123dbb23bed72e9095dfaa688ed635ed99",
+  "sha256_4x5": "95ee3ff58e3de70c0d7c982fbe840518a5e6ac582c6b1ffba4929bb160fb14bd",
   "daylight_variant": {
     "variant_of_entry_id": "IT-01-010",
     "derived_from": "Approved night master assets/it-01-010-16x9.png (16:9) and assets/it-01-010-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
@@ -33,8 +33,8 @@
       "4x5": "assets/it-01-010-daylight-4x5.png"
     },
     "sha256": {
-      "16x9": "d29cd4838017e1cfdbd41cd26efd730e68b99ee2f7ca277a2a708a8d4df5a10e",
-      "4x5": "a282b64696a8897e6a65f51ee8721a63de2d647bb6d334c1e119fab081ff2db2"
+      "16x9": "ebe48111a44c1180012e865dbb0a3621513b871280ecaa8412dd24c62ebe4d72",
+      "4x5": "65d5cf73b4dd37564f2f5621c731f4fc18a62cfe713336f47b5a5eefe36d5e5a"
     },
     "created_date": "2026-09-26",
     "on_image_caption": "Milan Cathedral (Duomo), Milan",

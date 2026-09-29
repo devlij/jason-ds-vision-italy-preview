@@ -12,8 +12,8 @@
   "file_4x5": "assets/it-01-019-4x5.png",
   "approval_status": "Approved",
   "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "4fdea22afd3d10243d52b45df76dee4bb886a022e1964dcdcadc68a27aa87204",
-  "sha256_4x5": "e1ebe668a57d6f7124cce1cf94d57b2aaec453b3b71587711a092179aec8909d",
+  "sha256_16x9": "3ae0d9b7a83ac6cf5a9d220ac888312fc39a065d59b66c8860eaa90049501398",
+  "sha256_4x5": "40a2e70149141220a9708bfee6e3ddd56fa69988c472f9e5abb2026757492bbf",
   "daylight_variant": {
     "variant_of_entry_id": "IT-01-019",
     "derived_from": "Approved night master assets/it-01-019-16x9.png (16:9) and assets/it-01-019-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
@@ -33,8 +33,8 @@
       "4x5": "assets/it-01-019-daylight-4x5.png"
     },
     "sha256": {
-      "16x9": "055835b2ab9b8f76b217f289c4ec490c49e7f7af1b611f2a91c9132b28e79409",
-      "4x5": "f7a5ab817722eab27ea9d1893a6b82caa4d0f44c25755349b6eaedd5e28d2ea7"
+      "16x9": "ac645f15a2a70cd2820327599b969facbc65b7fcd101e1fb11e18eacdbb8c699",
+      "4x5": "d791f72f69a65f29512373993f4068b7ef3940b3cf801ef290581d86f7c2b0cf"
     },
     "created_date": "2026-09-26",
     "on_image_caption": "Ancient Theatre of Taormina, Taormina",

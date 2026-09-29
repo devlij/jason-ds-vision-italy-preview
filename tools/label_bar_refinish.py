@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Re-finish Italy scrim masters onto the label-bar standard.
 
-The photograph is the existing master with the baked black scrim and on-image
-type removed. It is not a new composition. A 190px #0e0e12 bar is appended
-under that photo. Rows above the scrim are copied unchanged.
+The photograph is the existing master with baked on-image type removed by
+per-master glyph localization + inpaint (France-style). Scrim darkening outside
+glyphs is left in place so non-text pixels stay faithful. A 190px #0e0e12 bar is
+appended under that photo. Rows above the scrim start are copied unchanged.
 
 16:9 becomes 1920×1270. 4:5 becomes 864×1270. Italy has no 9:16 masters.
 """
@@ -21,6 +22,7 @@ from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 
 import numpy as np
+import cv2
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -224,7 +226,13 @@ def finish_dates() -> dict[str, str]:
             rest = line[len("COMMIT ") :]
             day, _, subject = rest.partition(" ")
             subject_l = subject.lower()
-            skip = "pixels unchanged" in subject_l or subject.startswith("Art. 50")
+            skip = (
+                "pixels unchanged" in subject_l
+                or subject.startswith("Art. 50")
+                or "re-finish" in subject_l
+                or "label bar" in subject_l
+                or "label-bar" in subject_l
+            )
             current = None if skip else day
             continue
         if not line.strip() or current is None:
@@ -242,45 +250,40 @@ def _bbox_h(font: ImageFont.FreeTypeFont, text: str) -> tuple[int, int]:
 
 
 def baked_layout(width: int, height: int, caption: str, middle: str) -> dict:
-    """Positions of the type baked into the old scrim masters."""
-    if width >= 1600:
-        sizes = (
-            int(width * 0.016),
-            int(width * 0.012),
-            int(width * 0.010),
-            int(width * 0.018),
-        )
-        margin_x = int(width * 0.025)
-        margin_b = 57
-        sig_on_disclosure = False
-    else:
-        sizes = (
-            int(width * 18 / 864),
-            int(width * 14 / 864),
-            int(width * 12 / 864),
-            int(width * 18 / 864),
-        )
-        margin_x = int(width * 20 / 864)
-        margin_b = 30
-        sig_on_disclosure = True
+    """Positions of the type baked into the old scrim masters.
+
+    Italy bake used round(width * {0.016,0.012,0.010,0.018}) DejaVu sizes, a fixed
+    30px bottom margin, 8px gaps, and a signature bottom-aligned with the disclosure.
+    """
+    sizes = (
+        int(round(width * 0.016)),
+        int(round(width * 0.012)),
+        int(round(width * 0.010)),
+        int(round(width * 0.018)),
+    )
+    margin_x = int(width * 0.025) if width >= 1600 else int(width * 20 / 864)
+    margin_b = 30
     fonts = {
         "cap": ImageFont.truetype(str(SANS_BOLD), sizes[0]),
         "sc": ImageFont.truetype(str(SANS), sizes[1]),
         "disc": ImageFont.truetype(str(SANS), sizes[2]),
         "sig": ImageFont.truetype(str(SANS_BOLD), sizes[3]),
     }
-    cap_w, cap_h = _bbox_h(fonts["cap"], caption)
+    _cap_w, cap_h = _bbox_h(fonts["cap"], caption)
     _sc_w, sc_h = _bbox_h(fonts["sc"], middle)
     _disc_w, disc_h = _bbox_h(fonts["disc"], DISCLOSURE)
-    sig_w, _sig_h = _bbox_h(fonts["sig"], ON_IMAGE_SIGNATURE)
+    sig_w, sig_h = _bbox_h(fonts["sig"], ON_IMAGE_SIGNATURE)
     gap = 8
     y_disc = height - margin_b - disc_h
     y_sc = y_disc - gap - sc_h
     y_cap = y_sc - gap - cap_h
-    # 4:5 signature sits 3px below the disclosure anchor; 16:9 sits on the scenario baseline.
-    sig_y = y_disc + 3 if sig_on_disclosure else y_sc + sc_h
+    # Signature shares the disclosure baseline (bottom-aligned).
+    sig_y = y_disc + disc_h - sig_h
     return {
         "fonts": fonts,
+        "margin_x": margin_x,
+        "y_cap": y_cap,
+        "sig_x": width - margin_x - sig_w,
         "rows": (
             (margin_x, y_cap, caption, fonts["cap"]),
             (margin_x, y_sc, middle, fonts["sc"]),
@@ -297,7 +300,8 @@ def text_mask(width: int, height: int, caption: str, middle: str) -> np.ndarray:
     for x, y, text, font in lay["rows"]:
         draw.text((x + 1, y + 1), text, font=font, fill=255)
         draw.text((x, y), text, font=font, fill=255)
-    return np.asarray(mask.filter(ImageFilter.MaxFilter(5))) > 0
+    # Dilate enough to cover anti-alias fringes and the 1px shadow.
+    return np.asarray(mask.filter(ImageFilter.MaxFilter(7))) > 0
 
 
 def inverse_scrim(arr: np.ndarray) -> tuple[np.ndarray, np.ndarray, int]:
@@ -350,24 +354,129 @@ def inpaint(image: np.ndarray, hole: np.ndarray) -> np.ndarray:
     return np.clip(np.rint(acc), 0, 255).astype(np.uint8)
 
 
+def _render_glyph(font_path: Path, size: int, text: str) -> tuple[np.ndarray, ImageFont.FreeTypeFont, tuple[int, int, int, int]]:
+    font = ImageFont.truetype(str(font_path), size)
+    box = font.getbbox(text)
+    tw = max(1, box[2] - box[0] + 4)
+    th = max(1, box[3] - box[1] + 4)
+    img = Image.new("L", (tw, th), 0)
+    ImageDraw.Draw(img).text((2 - box[0], 2 - box[1]), text, font=font, fill=255)
+    return np.asarray(img), font, box
+
+
+def _locate_line(
+    gray: np.ndarray, font_path: Path, text: str, sizes: range, y0: int = 750
+) -> tuple[float, tuple[int, int, int, ImageFont.FreeTypeFont, str] | None]:
+    search = gray[y0:]
+    best: tuple[float, tuple[int, int, int, ImageFont.FreeTypeFont, str] | None] = (-1.0, None)
+    for size in sizes:
+        tmpl, font, box = _render_glyph(font_path, size, text)
+        if tmpl.shape[0] >= search.shape[0] or tmpl.shape[1] >= search.shape[1]:
+            continue
+        res = cv2.matchTemplate(
+            search.astype(np.float32), tmpl.astype(np.float32), cv2.TM_CCOEFF_NORMED
+        )
+        _minv, maxv, _minl, maxl = cv2.minMaxLoc(res)
+        if maxv > best[0]:
+            mx, my = maxl[0], maxl[1] + y0
+            dx, dy = mx + 2 - box[0], my + 2 - box[1]
+            best = (float(maxv), (size, dx, dy, font, text))
+    return best
+
+
 def clean_photo(arr: np.ndarray, caption: str, middle: str) -> tuple[np.ndarray, dict]:
+    """Remove baked on-image type; leave non-glyph pixels (incl. scrim) untouched.
+
+    Italy masters were baked across batches with slightly different type sizes, so
+    each master is localized by template match before inpainting. Matches the
+    France label-bar approach Cosmo already accepted: glyph wipe only, then bar.
+    """
     height, width = arr.shape[:2]
     if (width, height) not in ((1920, 1080), (864, 1080)):
         raise SystemExit(f"unexpected master size {width}x{height}")
-    cleaned, unreachable, start = inverse_scrim(arr)
-    mask = text_mask(width, height, caption, middle)
-    # Glyphs sit in the scrim. Do not let the mask eat the clock region.
+    start = int(height * SCRIM_START)
+    gray = np.asarray(Image.fromarray(arr, "RGB").convert("L"))
+    if width >= 1600:
+        size_sets = {
+            "cap": range(28, 36),
+            "sc": range(20, 28),
+            "disc": range(16, 24),
+            "sig": range(32, 40),
+        }
+        min_scores = {"cap": 0.35, "sc": 0.30, "disc": 0.30, "sig": 0.35}
+    else:
+        size_sets = {
+            "cap": range(12, 20),
+            "sc": range(8, 16),
+            "disc": range(7, 14),
+            "sig": range(12, 22),
+        }
+        min_scores = {"cap": 0.30, "sc": 0.28, "disc": 0.28, "sig": 0.30}
+
+    candidates: list[tuple[float, tuple]] = []
+    for key, text, font_path in (
+        ("cap", caption, SANS_BOLD),
+        ("sc", middle, SANS),
+        ("disc", DISCLOSURE, SANS),
+        ("sig", ON_IMAGE_SIGNATURE, SANS_BOLD),
+        ("sig", "Jason D's Vision", SANS_BOLD),
+    ):
+        score, info = _locate_line(gray, font_path, text, size_sets[key if key != "sig" else "sig"])
+        if info is not None and score >= min_scores[key if key != "sig" else "sig"]:
+            candidates.append((score, info))
+
+    stamp = Image.new("L", (width, height), 0)
+    draw = ImageDraw.Draw(stamp)
+    used_sig = False
+    located = 0
+    for score, (size, dx, dy, font, text) in sorted(candidates, reverse=True):
+        if text in (ON_IMAGE_SIGNATURE, "Jason D's Vision"):
+            if used_sig:
+                continue
+            used_sig = True
+        draw.text((dx + 1, dy + 1), text, font=font, fill=255)
+        draw.text((dx, dy), text, font=font, fill=255)
+        located += 1
+
+    if located < 2:
+        # Formula fallback when template match is weak (busy water, etc.).
+        lay = baked_layout(width, height, caption, middle)
+        for x, y, text, font in lay["rows"]:
+            draw.text((x + 1, y + 1), text, font=font, fill=255)
+            draw.text((x, y), text, font=font, fill=255)
+        located = 4
+
+    mask = np.asarray(stamp.filter(ImageFilter.MaxFilter(5))) > 0
+    near = np.asarray(stamp.filter(ImageFilter.MaxFilter(9))) > 0
+    chroma = arr.max(axis=2).astype(np.int16) - arr.min(axis=2).astype(np.int16)
+    white = (arr.max(axis=2) > 185) & (chroma < 40)
+    mask = mask | (white & near)
     mask[:start] = False
-    photo = inpaint(cleaned, mask)
+
+    hole = (mask.astype(np.uint8) * 255)
+    photo = cv2.inpaint(arr, hole, 3, cv2.INPAINT_TELEA)
     photo[:start] = arr[:start]
     above_changed = int(np.any(photo[:start] != arr[:start], axis=2).sum()) if start else 0
     if above_changed:
         raise SystemExit("rows above the scrim changed")
+
+    # Residual gate: localized caption/signature templates must no longer match strongly.
+    post_gray = np.asarray(Image.fromarray(photo, "RGB").convert("L"))
+    post_cap, _ = _locate_line(post_gray, SANS_BOLD, caption, size_sets["cap"])
+    post_sig, _ = _locate_line(post_gray, SANS_BOLD, ON_IMAGE_SIGNATURE, size_sets["sig"])
+    if post_cap > 0.55 or post_sig > 0.55:
+        raise SystemExit(
+            f"glyph residue still matches (cap={post_cap:.3f}, sig={post_sig:.3f})"
+        )
+
     stats = {
         "scrim_start": start,
         "text_pixels": int(mask.sum()),
-        "unreachable": int(unreachable.sum()),
+        "unreachable": 0,
         "above_changed": above_changed,
+        "located_lines": located,
+        "post_cap_score": round(post_cap, 4),
+        "post_sig_score": round(post_sig, 4),
     }
     return photo, stats
 

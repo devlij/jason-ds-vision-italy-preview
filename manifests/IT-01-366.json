@@ -12,8 +12,8 @@
   "file_4x5": "assets/it-01-366-4x5.png",
   "approval_status": "Approved",
   "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "392ff7a0c8df4906311adbbc18f527e41d58d73aa417a1bbd82a83289daf0d98",
-  "sha256_4x5": "e0af9b098de47ddd8f025a990f2689f925e34ec7f9cfda6f77c80ac75c3f614c",
+  "sha256_16x9": "0a4f8e6f08c6f404159a85539add5c4eba680a64472cf00fa4e4be89e19d717e",
+  "sha256_4x5": "e6ba8d0688d08fa62679ece7772762b65506319b8acfb7861d0b1d4d3e6a1ba8",
   "daylight_variant": {
     "variant_of_entry_id": "IT-01-366",
     "derived_from": "Approved night master assets/it-01-366-16x9.png (16:9) and assets/it-01-366-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
@@ -33,8 +33,8 @@
       "4x5": "assets/it-01-366-daylight-4x5.png"
     },
     "sha256": {
-      "16x9": "c44b97b6e5748ab6182cc1360ef0dbfd1d546fd9fc83f7a49299de6ab71408fe",
-      "4x5": "9f05ce718ccde32b599c8c8ac6391eaf02c4ac802ccc80e5f42d1981baba0bc6"
+      "16x9": "341d6f2309e8caec37b615826ecd3fd6bac902c676394887e4b82f80e1dcb97c",
+      "4x5": "f380d23ffc1dcd9cdc1b397c130770eb6f4048a91ea3d195bb51514b6f259b67"
     },
     "created_date": "2026-09-26",
     "on_image_caption": "Chiesa di Sant'Erasmo, Capaci",

@@ -12,8 +12,8 @@
   "file_4x5": "assets/it-01-005-4x5.png",
   "approval_status": "Approved",
   "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "facffeba08c1f4aea4f4a66145f87868728bc34054a7248d96a463b8a611e3fa",
-  "sha256_4x5": "bbbf645ff75a9c1e211cb1655280ca95800bb2d4c7806d609270be60fdabaf46",
+  "sha256_16x9": "89608630a0d6ea7c2f11aeca0527f7c04e7f3c49505ff447a8ab5bb59fd3df86",
+  "sha256_4x5": "a94d446b1ae96744f024ff188ea2f4c0ee0bd3acf3a343fedec50b351ea63f84",
   "daylight_variant": {
     "variant_of_entry_id": "IT-01-005",
     "derived_from": "Approved night master assets/it-01-005-16x9.png (16:9) and assets/it-01-005-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
@@ -33,8 +33,8 @@
       "4x5": "assets/it-01-005-daylight-4x5.png"
     },
     "sha256": {
-      "16x9": "0174b61077c539328a9ba539fbb12d6036ec7440ca252f25431ff2d542a678d7",
-      "4x5": "4872fac4dea6b13ddd70e33228660d6b9141796a4934f12f2d5103167e1b832d"
+      "16x9": "3517fa87f1b21be47b79aac9a97dea507ce0275c2879efeeeefd00eff6d60ac7",
+      "4x5": "b1c41349c715e8c06eca840b7247b239b5d8a7b14824992cd1bc1d88cba463a0"
     },
     "created_date": "2026-09-26",
     "on_image_caption": "Florence Cathedral (Duomo), Florence",

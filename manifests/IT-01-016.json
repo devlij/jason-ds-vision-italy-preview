@@ -12,8 +12,8 @@
   "file_4x5": "assets/it-01-016-4x5.png",
   "approval_status": "Approved",
   "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "bca404668d0b10d8382af87dfa2f4887dcae649b51c91dadb2588cb919166a2b",
-  "sha256_4x5": "d831b9932db534bab4930ddaacc65b98bcbc4cead6e9775f28c41ee70e479437",
+  "sha256_16x9": "cda793914b59ada5ae03284dfdc3944da7b39e6ffa0972d4cfae2fe4d29e500d",
+  "sha256_4x5": "8b939645fe330563579ebb3140d75efa7ad1e3efb45a55ca84132bdef79649dc",
   "daylight_variant": {
     "variant_of_entry_id": "IT-01-016",
     "derived_from": "Approved night master assets/it-01-016-16x9.png (16:9) and assets/it-01-016-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
@@ -33,8 +33,8 @@
       "4x5": "assets/it-01-016-daylight-4x5.png"
     },
     "sha256": {
-      "16x9": "a3e0bd040acb744d3264b714d6ab576994c2e82187ab52ca71053239ab8e0d5d",
-      "4x5": "8b974d4ce0d383fed20fa46802ab887159340bdf23689926e02f1ab520e433eb"
+      "16x9": "3f4f002f7a98e4a3c6428a5c81dcfec4c922c7faeee241a3db728a23b9abdbae",
+      "4x5": "6ebe54c4121e000b49b7ab367df6cd0be9e5f5dc748ff25e09797e916681c38f"
     },
     "created_date": "2026-09-26",
     "on_image_caption": "Manarola, Cinque Terre",

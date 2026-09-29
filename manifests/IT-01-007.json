@@ -12,8 +12,8 @@
   "file_4x5": "assets/it-01-007-4x5.png",
   "approval_status": "Approved",
   "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "e0cab69f8fb5689fcc8001eb96a0039683aad1ec506c69364885bae7dba35310",
-  "sha256_4x5": "e9a848cd87a76504f956db96aa07829642566307bc8817d89c2ccd0df000bfff",
+  "sha256_16x9": "897a2d336baf8f3bc97ff7604d25f85f527ebdda8a2bc4dc9e0e45b8d40f6852",
+  "sha256_4x5": "a6ea1064e5f61fd9b7bd0013f399f49ebdb28ae5afc8b308b4e1d794796ab1ec",
   "daylight_variant": {
     "variant_of_entry_id": "IT-01-007",
     "derived_from": "Approved night master assets/it-01-007-16x9.png (16:9) and assets/it-01-007-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
@@ -33,8 +33,8 @@
       "4x5": "assets/it-01-007-daylight-4x5.png"
     },
     "sha256": {
-      "16x9": "701d3582de9e3e0679ad17e23101f0433edb95909566c3f9f4af47754dd875a6",
-      "4x5": "fcc83bf8d1584a01148c641c04d7c8ae2e51b6b5026778ba929c4eee9725bdef"
+      "16x9": "e35941770a2eff8e920c4d6e6705faec43bcd3ff93e09690917de8cf1ef5aacf",
+      "4x5": "d54d086cc2a1e7fab588588bd209291f2f6f93cfd9305686822334c5b6bae0b8"
     },
     "created_date": "2026-09-26",
     "on_image_caption": "Grand Canal from Rialto Bridge, Venice",

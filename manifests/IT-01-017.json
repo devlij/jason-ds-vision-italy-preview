@@ -12,8 +12,8 @@
   "file_4x5": "assets/it-01-017-4x5.png",
   "approval_status": "Approved",
   "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "14e7897a01c6c489dae7d480cef0680f80820a133bccb51637ee7003a3581306",
-  "sha256_4x5": "edf0a3246cccf105d2d230bd44233f9db48ecb7b012d7b37e6c485a574c6a780",
+  "sha256_16x9": "1ed4c32f14cbae39f87271ff89afd59f6f7d5747ee6c2f42a82fa67da74912f3",
+  "sha256_4x5": "4696399e2679ac7700ac5d60a52ce6da7b985b8592a04e5a49cabc9f83881526",
   "daylight_variant": {
     "variant_of_entry_id": "IT-01-017",
     "derived_from": "Approved night master assets/it-01-017-16x9.png (16:9) and assets/it-01-017-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
@@ -33,8 +33,8 @@
       "4x5": "assets/it-01-017-daylight-4x5.png"
     },
     "sha256": {
-      "16x9": "5abdba7053fc9849b8f47c47bc41ff0e4f16f4db9349ef404e0894dd760574ad",
-      "4x5": "8d95d689409c390e311c1efeaeaba8bf730bd2e9067dd14b565b856f8a4b7910"
+      "16x9": "c61d760aec59247a3d30662ec544da408f6b12374d5fc94acd0bad4aa2ea207c",
+      "4x5": "ce9f5edf03e745f293dc9e8334f5be6bdc5d1e35876ec0ed05f37d3e12b939ff"
     },
     "created_date": "2026-09-26",
     "on_image_caption": "Palermo Cathedral, Palermo",

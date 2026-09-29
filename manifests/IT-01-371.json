@@ -12,8 +12,8 @@
   "file_4x5": "assets/it-01-371-4x5.png",
   "approval_status": "Approved",
   "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "4cedeea0ae5fa675d23d3634477731400556c9eeb87d71cd68f6c3aa5a6c9412",
-  "sha256_4x5": "da64364d527f925f72f99d4f1ecf4c95ade2ec8341587f2baea27e69a155631b",
+  "sha256_16x9": "2b1c8046cade7ff18c97ad34b1a82c09e2476de90e93a630d9f45a1cbb5077ae",
+  "sha256_4x5": "6a97ba8486fd322c48ec78a3fb2189ca8a0a5fcd7d1fdbe85b9c609237a7fc57",
   "daylight_variant": {
     "variant_of_entry_id": "IT-01-371",
     "derived_from": "Approved night master assets/it-01-371-16x9.png (16:9) and assets/it-01-371-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
@@ -33,8 +33,8 @@
       "4x5": "assets/it-01-371-daylight-4x5.png"
     },
     "sha256": {
-      "16x9": "163be5e558d59656ee6ab49566761de8db746a0f18c9af85af5a7ec6eb6ded34",
-      "4x5": "597d1a1acfb40a59d29cee93cf78f4a50e31801380b3c4ad6576fbf625df9385"
+      "16x9": "0371fadec4db51a1355bbed078fbc625757fb0bedcb4c39157d65439e96721fc",
+      "4x5": "ed00b8ab55ca4c0186b17f2a62427ddd8d8c4daf0a3e86c92be9de21e808ceb7"
     },
     "created_date": "2026-09-26",
     "on_image_caption": "Chiesa di San Rocco, Capaci",

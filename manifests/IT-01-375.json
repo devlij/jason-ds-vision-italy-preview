@@ -12,8 +12,8 @@
   "file_4x5": "assets/it-01-375-4x5.png",
   "approval_status": "Approved",
   "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "c414ba15c661a76d3963ebd8aa0e1d48c6d5a5c1afef92cdc3ee66d9b5a2a4c0",
-  "sha256_4x5": "e02953aedd5ded304f6780ad0f9400ab04d7d2ef4b21bc42a44cc13cfdb148e2",
+  "sha256_16x9": "4c00fa07152dd1d0e429d2a43e69599c442af90bffad14488ae350b6492df63a",
+  "sha256_4x5": "7c1dcc0fe425b6849604610a8f1c31b83520b60066805fb815244b7bdfa43e30",
   "daylight_variant": {
     "variant_of_entry_id": "IT-01-375",
     "derived_from": "Approved night master assets/it-01-375-16x9.png (16:9) and assets/it-01-375-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
@@ -33,8 +33,8 @@
       "4x5": "assets/it-01-375-daylight-4x5.png"
     },
     "sha256": {
-      "16x9": "1f5ec9a403679d0fe7531f70ae0c9739ae2d5da7b209f366ed945cda4828e7da",
-      "4x5": "3b1a6e2a09ec3aa138b05ddfb93f7ae42a066976ddff223bd3e7304b8948c176"
+      "16x9": "6459e074419b046c04fccfd73d7db92738bc191a19fe22c6a6c18f664c1f98b2",
+      "4x5": "9fc35bbd2d9bc392780ace365f271bfc3eb8d79349b69d81e79eb1e9cb997395"
     },
     "created_date": "2026-09-26",
     "on_image_caption": "Citrus groves, Capaci",

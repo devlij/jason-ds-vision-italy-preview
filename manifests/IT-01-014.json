@@ -12,8 +12,8 @@
   "file_4x5": "assets/it-01-014-4x5.png",
   "approval_status": "Approved",
   "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "8528c8732f3c8a71aa40ac29005990fa2aa87fd206900f1bafb6fb5006a2147d",
-  "sha256_4x5": "39d02defd3600ea395fb22c863eda81166d625f64dcde6cc0d21de0c26e848dd",
+  "sha256_16x9": "e9e87a182ead433ba6393936fb2fbbcbe20e2b47dd86615b0a1b51c50ebd77c3",
+  "sha256_4x5": "f699a5c5f8c0b1d4c47e5e47504de5059699b2d96539501c465156edd4a553e1",
   "daylight_variant": {
     "variant_of_entry_id": "IT-01-014",
     "derived_from": "Approved night master assets/it-01-014-16x9.png (16:9) and assets/it-01-014-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
@@ -33,8 +33,8 @@
       "4x5": "assets/it-01-014-daylight-4x5.png"
     },
     "sha256": {
-      "16x9": "cb964b15ff7e79400a8cf327e77dd6a18db63fb39491e3e24f339a03c81661a2",
-      "4x5": "9e9bac3a549cff3fdde89b6542d2d7df16ee7516267a925f5152c60c4103f30f"
+      "16x9": "e394bef0483e74c076c50df5427716d9184a6ad4e5d51679067e9843b9837cb4",
+      "4x5": "1c348797570813812d8c456d93ed6f6b9ba060b31aefb95f7ae59abbf2d80513"
     },
     "created_date": "2026-09-26",
     "on_image_caption": "Mole Antonelliana, Turin",

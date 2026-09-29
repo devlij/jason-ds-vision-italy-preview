@@ -12,8 +12,8 @@
   "file_4x5": "assets/it-01-008-4x5.png",
   "approval_status": "Approved",
   "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "299fcd80f1cbce3c90213a18064db11c236cce8014a9743f1ff6a1e44164fe10",
-  "sha256_4x5": "185f27426cbe2b9d55024f75a3d5a0d49d5459bd9361742283e187aa4eaf8641",
+  "sha256_16x9": "d071404db795a982be3fc753e855acdac0828c2ee133a037c01d9ca32015706c",
+  "sha256_4x5": "834b6153211c3033c370d5b8cf07669ddc8ac4aaf0f9d3cc90646864052d95bc",
   "daylight_variant": {
     "variant_of_entry_id": "IT-01-008",
     "derived_from": "Approved night master assets/it-01-008-16x9.png (16:9) and assets/it-01-008-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
@@ -33,8 +33,8 @@
       "4x5": "assets/it-01-008-daylight-4x5.png"
     },
     "sha256": {
-      "16x9": "142194d969ed650ef2b6fb19b6022d696575b3ac235133db7a88f93b858f57fd",
-      "4x5": "e07c1efc7c24f93c9ed43e68a62d7c75d981bcc731277834334fd1dd65fb7364"
+      "16x9": "d87f35bda32e907b833a1aeeafba5434a8ffc3b0c6d246c71e71fabd0b0ab097",
+      "4x5": "c7e599196d16d34553d845e962ee581e47d0e39e49c9a0c6e8cf0ef563f863b1"
     },
     "created_date": "2026-09-26",
     "on_image_caption": "St. Mark's Basilica, Venice",
