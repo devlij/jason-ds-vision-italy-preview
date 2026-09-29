@@ -12,8 +12,8 @@
   "file_4x5": "assets/it-01-018-4x5.png",
   "approval_status": "Approved",
   "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "89630ebe40abb6e3051d55cf599d7b4d87040c2b37a4a1554fade7d6160c4d7f",
-  "sha256_4x5": "8a07c52f6e9e9b4e368e656e297ac5a7b4aacb08ea6db8f67d97f8cc0ce9b190",
+  "sha256_16x9": "deda7b8c98e7657d740cad8914f66b8876236731c1f00a6b1c6524662e95a442",
+  "sha256_4x5": "8e943cc68362caf2a25801e62d6e0377b978f2e8c4911ed5dd21a8ccb0da6a6d",
   "daylight_variant": {
     "variant_of_entry_id": "IT-01-018",
     "derived_from": "Approved night master assets/it-01-018-16x9.png (16:9) and assets/it-01-018-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
@@ -33,8 +33,8 @@
       "4x5": "assets/it-01-018-daylight-4x5.png"
     },
     "sha256": {
-      "16x9": "c669afcf89e5a073dc02e9a33189e473387e370b94f1dd1fd9344c1232f5f5db",
-      "4x5": "ed692c9d6154f2b89a41931ddad1d54d461eafacb4d4fb2cbf97e894cbad3a90"
+      "16x9": "41354491e2ffef276ab508e650ed3e870a0f64167986d41264f50837e4fbd4ba",
+      "4x5": "93092ed58289a49b7d33e648a11b0d1d10daacc56aaed4174bd69a4a32db14c2"
     },
     "created_date": "2026-09-26",
     "on_image_caption": "Temple of Concordia, Agrigento",

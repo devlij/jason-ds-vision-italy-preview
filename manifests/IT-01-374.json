@@ -12,8 +12,8 @@
   "file_4x5": "assets/it-01-374-4x5.png",
   "approval_status": "Approved",
   "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "5d847ce477f71a726b8906b53bea2a0741d2052599a3337cc39eaea840070bde",
-  "sha256_4x5": "a778d73c03302c3dd87c4beb2db0cb61764a8ca9797ba91068719c9e191847fd",
+  "sha256_16x9": "3d2f77d9a4bdfbf6df6a4dd1d133d27a12b9ce0b3d47596bf43da8e6c4c76e2d",
+  "sha256_4x5": "9b96de97b2a5f38a3e210f41a6a2280ad85fa588e32c14260a23a3b07902806d",
   "daylight_variant": {
     "variant_of_entry_id": "IT-01-374",
     "derived_from": "Approved night master assets/it-01-374-16x9.png (16:9) and assets/it-01-374-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
@@ -33,8 +33,8 @@
       "4x5": "assets/it-01-374-daylight-4x5.png"
     },
     "sha256": {
-      "16x9": "7bf5a74c743f4cea772aa350905fdfd950f55d95618da7fd7d42b23d23c35c22",
-      "4x5": "fe8c1f01c1b12fa15f5978a8915d05a42f777b7327e4073d12cf2ee8ab980ddb"
+      "16x9": "dc5e6a9b64228ffd91fdd46998c310253a4fda6138d6b5479810cb7022c057fe",
+      "4x5": "c0d1325787cb6ec0437ccdfadeac2f4c63339d0bd01371687261ba330338b536"
     },
     "created_date": "2026-09-26",
     "on_image_caption": "Coastline toward Isola delle Femmine, Capaci",

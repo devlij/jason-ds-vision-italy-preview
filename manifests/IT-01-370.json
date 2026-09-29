@@ -12,8 +12,8 @@
   "file_4x5": "assets/it-01-370-4x5.png",
   "approval_status": "Approved",
   "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "5c12e829a42b56fecebd50b3fbbaef607477ed6e2133690793e7c669daa523d7",
-  "sha256_4x5": "4925ea38ccdcf20006a212ff46d16130953475d50b1e2e9211273d562a1d54c4",
+  "sha256_16x9": "301a7ad989416468b9359cd8b03c30e1d4453a95c91ea16c10b2b8817019aaa0",
+  "sha256_4x5": "dce0df254bbe87451f9f62a211dfbbf27604c6ff02dd20ef91e685e3e3698ea8",
   "daylight_variant": {
     "variant_of_entry_id": "IT-01-370",
     "derived_from": "Approved night master assets/it-01-370-16x9.png (16:9) and assets/it-01-370-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
@@ -33,8 +33,8 @@
       "4x5": "assets/it-01-370-daylight-4x5.png"
     },
     "sha256": {
-      "16x9": "490e68c6e5f24e2afaa2dfb6ace02182efc6088731f5448739c5e7e9b78219b8",
-      "4x5": "128c9a17f9fc05d35110df00a3c167bb3e76fef32af906e5ca2ead696fb20490"
+      "16x9": "7dd2b8ef9481c718682a5197b2a38789cd400ac198b4c2e0afa232ff72674056",
+      "4x5": "8974b6a0a1f290ccd0d2e6dcddc0d4760f0846c97ab0c32bcf0c14ecb2006a72"
     },
     "created_date": "2026-09-26",
     "on_image_caption": "Palazzo Pilo, Capaci",

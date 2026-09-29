@@ -12,8 +12,8 @@
   "file_4x5": "assets/it-01-373-4x5.png",
   "approval_status": "Approved",
   "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "610a6e3d0b765bd4ecc66859fff550ac3a3982ece73a09c164a7a05f26d58d1d",
-  "sha256_4x5": "a5eab6ef17f70124cf3d9f6d39d840ca23cf71c6575328f4e8167c3d14f2c8cb",
+  "sha256_16x9": "957ad578c046a945aafb1a0fc0c36a514261b4bf1be57f0415c990f04702b9f1",
+  "sha256_4x5": "2ce0d854666dbf39b5b60dcda387ef4d19c3e6fe5c90db9cd2160db65b98e04e",
   "daylight_variant": {
     "variant_of_entry_id": "IT-01-373",
     "derived_from": "Approved night master assets/it-01-373-16x9.png (16:9) and assets/it-01-373-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
@@ -33,8 +33,8 @@
       "4x5": "assets/it-01-373-daylight-4x5.png"
     },
     "sha256": {
-      "16x9": "adfec606a8a11a862046f1eb1055f3dc249206c028968dd2922ddc2af7a7a72f",
-      "4x5": "39235be2fea017d54bee785d4320104e880d667f64d74a733a2c6c79debf0b2a"
+      "16x9": "c5996c6415e60a6a30e98464c4f468f524e2d77a4a3fb6da457c5018ee8b07e6",
+      "4x5": "ce4f7ed2fc7e6288e4aa3031e484161f702231526157da8da8f6faa13e63256c"
     },
     "created_date": "2026-09-26",
     "on_image_caption": "Piazza Troia, Capaci",

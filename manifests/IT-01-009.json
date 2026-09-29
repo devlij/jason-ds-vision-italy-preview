@@ -12,8 +12,8 @@
   "file_4x5": "assets/it-01-009-4x5.png",
   "approval_status": "Approved",
   "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "784247c05a4c78b1e8cfb5864f4e0e1a4d60faa40be535b91b91cb7baa1629ae",
-  "sha256_4x5": "83cfb7d992bc05ea5ecd132a921033fba75cf8bc0b6d3839011276ac565bd527",
+  "sha256_16x9": "8014b26f84a7a4bfc2e3bea3a2ec67d71b6da86bdf40808bb8b55746d4e9bf4b",
+  "sha256_4x5": "07af489743ad06b6fb5b895db02a19e71bd7eb51c4deff685bc669c3233c39b1",
   "daylight_variant": {
     "variant_of_entry_id": "IT-01-009",
     "derived_from": "Approved night master assets/it-01-009-16x9.png (16:9) and assets/it-01-009-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
@@ -33,8 +33,8 @@
       "4x5": "assets/it-01-009-daylight-4x5.png"
     },
     "sha256": {
-      "16x9": "95201e21ff9ad62fc3c0931dc8398036ba4ec59b7281aec8dc6031c4b10788b3",
-      "4x5": "e7f37deb9c0571919b087167e3ec002c619f7179908bc1c1103304a940d2a9b0"
+      "16x9": "9f5873b8cc8b47a9c810296ef0d9840678e4b7462417eae8958d276c4cebf85c",
+      "4x5": "8670f479c3466e17fb013638e595d3eadd7483e4d625424e3fb11aea331857c6"
     },
     "created_date": "2026-09-26",
     "on_image_caption": "Leaning Tower of Pisa, Pisa",

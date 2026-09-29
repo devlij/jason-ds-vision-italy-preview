@@ -12,8 +12,8 @@
   "file_4x5": "assets/it-01-006-4x5.png",
   "approval_status": "Approved",
   "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "b642cea7524cb801a5c0b974997b0ecada01d08be665f7dcf03e2748dd6937a7",
-  "sha256_4x5": "d8d380e81bd535e002f8f86ea22a0311bdc1e48af04017b1ac6d7588103e46d0",
+  "sha256_16x9": "169afc7536ba5873f72f0df1ef08b74757ae5bddb760f8d055921a2e3801d882",
+  "sha256_4x5": "41902ab4f4528eb3e16fe78387bed72d9ef7ec89ea338a4d1ded630eb7fea832",
   "daylight_variant": {
     "variant_of_entry_id": "IT-01-006",
     "derived_from": "Approved night master assets/it-01-006-16x9.png (16:9) and assets/it-01-006-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
@@ -33,8 +33,8 @@
       "4x5": "assets/it-01-006-daylight-4x5.png"
     },
     "sha256": {
-      "16x9": "e5d0babf04ca6d111738fed7c3e8e8bdb6c48670714ffd8a77b084710e5c85c5",
-      "4x5": "05e0917e4296626d0f8385ff488396e590b224959ad76d78da8ff6621f71e6ef"
+      "16x9": "1733dde201aa094959b844bcf786da53e247cfce789c92a8f80cb70106b9177b",
+      "4x5": "874ddad652bf3f3c06460a4067ad315f35111c9e1590e08452f749d6936d6188"
     },
     "created_date": "2026-09-26",
     "on_image_caption": "Ponte Vecchio, Florence",

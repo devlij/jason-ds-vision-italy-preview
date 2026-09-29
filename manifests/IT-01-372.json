@@ -12,8 +12,8 @@
   "file_4x5": "assets/it-01-372-4x5.png",
   "approval_status": "Approved",
   "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "05786d8493b93c08c397a49ca2b481aefda6fbee46f1e399f71c01a73323ccef",
-  "sha256_4x5": "cbd4e5455d6fc2237d693b2f66d9dfc79f509b5b9f51062b89bde88b358a5833",
+  "sha256_16x9": "0cb8931d342ff1ef55dd9f4fd4ff4841ea1525e41e115f29b471c37ce511a425",
+  "sha256_4x5": "99e07d7aef95dfd8207977f8f86457d44f4b0bc71fb1956f6755f14aa3a450ed",
   "daylight_variant": {
     "variant_of_entry_id": "IT-01-372",
     "derived_from": "Approved night master assets/it-01-372-16x9.png (16:9) and assets/it-01-372-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
@@ -33,8 +33,8 @@
       "4x5": "assets/it-01-372-daylight-4x5.png"
     },
     "sha256": {
-      "16x9": "0dea07ce60ef6cf36eaf8d366b67e5c8284f9c1240dbcb6d4d537f7e4a19473f",
-      "4x5": "4c871ffec17a5ebc18a4fe53eca2b39b31cd4778f31d9d31e7f6a4474ce184c7"
+      "16x9": "16de6801e97bd069033f1bb667fcb7531c0b4a3ec14c8fc4787088dc72e0c14b",
+      "4x5": "2750bd925ba0cdf2db2cd5a6c6d1aa3eec9bd1fc5eaf84ec4c293e38d33c1146"
     },
     "created_date": "2026-09-26",
     "on_image_caption": "Fontana Grande, Capaci",

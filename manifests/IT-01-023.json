@@ -12,8 +12,8 @@
   "file_4x5": "assets/it-01-023-4x5.png",
   "approval_status": "Approved",
   "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "3d4d78ed41bfd392648530b6a001eb27c07fd5f6362282c27680314f8b46cfed",
-  "sha256_4x5": "09b8019671dd6ece3c144dc02d710cc03ea299ab580eeaf9196b5c41603c361b",
+  "sha256_16x9": "5e458a3a53668ae8ce02ac370188458e59324533b4db49d59466a3942fb85762",
+  "sha256_4x5": "1891fc76569d48fdf34a7154257f2dfdf6e3f69eac4e38d3de106fb7696902aa",
   "daylight_variant": {
     "variant_of_entry_id": "IT-01-023",
     "derived_from": "Approved night master assets/it-01-023-16x9.png (16:9) and assets/it-01-023-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
@@ -33,8 +33,8 @@
       "4x5": "assets/it-01-023-daylight-4x5.png"
     },
     "sha256": {
-      "16x9": "183a55d076b0577f9fc8a8e57183ce13fd95f05c2543aa43c618649e8f56e1f2",
-      "4x5": "235ba561b72d7128537b427984a947fedc510d6a30306ab6e6c83c91c2e2778c"
+      "16x9": "d72b1033967d0038022e1f3d4528647bc4a24ae9b5536f229c6c474ddaeaf5b8",
+      "4x5": "daba16db504ff4f2c33210cd62df3381e532e6a9f5430bac43bcd64448d0d18d"
     },
     "created_date": "2026-09-26",
     "on_image_caption": "Su Nuraxi, Barumini",

@@ -12,8 +12,8 @@
   "file_4x5": "assets/it-01-003-4x5.png",
   "approval_status": "Approved",
   "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "0a340f756a1870946b3609cdbc3f35a690d7a15fa495aa6477de206ff7644638",
-  "sha256_4x5": "d3e4113a8b3738af8c03b1702561f843b2b8e78865ab4a08b4658a611bcab3d1",
+  "sha256_16x9": "53bc4406d5c7af2711278ad4fe4fac456deac9fb127678acf27731f4e04c1183",
+  "sha256_4x5": "b7f05fce8fba0f9c546ede27ffbd2d75e4186e9846106229a4acb282a239ddfc",
   "daylight_variant": {
     "variant_of_entry_id": "IT-01-003",
     "derived_from": "Approved night master assets/it-01-003-16x9.png (16:9) and assets/it-01-003-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
@@ -33,8 +33,8 @@
       "4x5": "assets/it-01-003-daylight-4x5.png"
     },
     "sha256": {
-      "16x9": "b307a35bb3bb452b2f82e0c1ebf4136ae6184daeaf69fe3474d75ad6831a179d",
-      "4x5": "9d411ba7eb1d10b179cf44b52d31591371b53881f54d26272a98d12a72dc52d5"
+      "16x9": "64100090e0d2f452188dab9bee6de7925d29d7a05640d6988665ebd999f8970f",
+      "4x5": "16cbfb74945851ac8fa4599cb0f1fe67a9ee2db7e1cf2fcb971b5b77db1aa881"
     },
     "created_date": "2026-09-26",
     "on_image_caption": "Trevi Fountain, Rome",

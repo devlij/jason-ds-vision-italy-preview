@@ -12,8 +12,8 @@
   "file_4x5": "assets/it-01-369-4x5.png",
   "approval_status": "Approved",
   "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "21ae09f9947bad2cf62099975c1a03ee21e2fda3639b31b9e8b82ac7bc4aa5e5",
-  "sha256_4x5": "ad74a098c1ba5450f1e5447696348f53a24b0cfc911c3b4856fb6dbbf6a4e542",
+  "sha256_16x9": "95802b6e1873a4af078baddf8ef315f756abf87dc50da261ddb0d207ed07eb5a",
+  "sha256_4x5": "ed610ea18cc2d64b9e172f8e42968d400d16808798f2af4c28c8ab598e539617",
   "daylight_variant": {
     "variant_of_entry_id": "IT-01-369",
     "derived_from": "Approved night master assets/it-01-369-16x9.png (16:9) and assets/it-01-369-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
@@ -33,8 +33,8 @@
       "4x5": "assets/it-01-369-daylight-4x5.png"
     },
     "sha256": {
-      "16x9": "453c03d82e94e25f55beabd44e017734cf276a0f0b7d4fdb27dd4e639fdf8e54",
-      "4x5": "e36e7cb65940b975aa25ef7f8406fecdcf11ca39f05b7a70a4ca231b645fad64"
+      "16x9": "25c496eefb8bc596c5083a2a6cce6db2ea91de1cc4bdc869d195b6301311fa77",
+      "4x5": "03757eda7c98859a2038d8c891aa7726dc6c862d08596089f785c43dc08cf45b"
     },
     "created_date": "2026-09-26",
     "on_image_caption": "Spiaggia di Capaci, Capaci",

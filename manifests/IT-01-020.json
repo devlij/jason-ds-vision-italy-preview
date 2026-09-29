@@ -12,8 +12,8 @@
   "file_4x5": "assets/it-01-020-4x5.png",
   "approval_status": "Approved",
   "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "f28fb7dbb77d20815c91a997e181e4df7e16d155f833722e9e5362193922ce06",
-  "sha256_4x5": "a3c80e47b31c235174d271059f9ca1444f8e017e63321c1d19a6aa5b3dbd3bd2",
+  "sha256_16x9": "103f4f92b04825f41814b11326ae56be8c66c452c3cd31209311c1b85aa889d1",
+  "sha256_4x5": "ca604af384556828a0f4ad761907931f8478a43eecb906c20a14f37fbe8c8194",
   "daylight_variant": {
     "variant_of_entry_id": "IT-01-020",
     "derived_from": "Approved night master assets/it-01-020-16x9.png (16:9) and assets/it-01-020-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
@@ -33,8 +33,8 @@
       "4x5": "assets/it-01-020-daylight-4x5.png"
     },
     "sha256": {
-      "16x9": "75aa937fb3dc9866a37dea6073404bba951f43a9053be038f73a241908d958e2",
-      "4x5": "1f6aa6ba40a65ecdc90daee9e845b1e2fdbe566c5d905632bfe4fae1c63517f1"
+      "16x9": "8a7b3e24eb081a4fa4a94fd3eccb740c892e47d766ef48fd849279fb00e8ff4c",
+      "4x5": "b65778b009516e2e686905dd73e43221075672e7957ae1cb87f893f14b6e772f"
     },
     "created_date": "2026-09-26",
     "on_image_caption": "Ortigia waterfront, Syracuse",

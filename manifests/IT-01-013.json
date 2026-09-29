@@ -12,8 +12,8 @@
   "file_4x5": "assets/it-01-013-4x5.png",
   "approval_status": "Approved",
   "approval_basis": "Live gallery master. index.html publishes approved scenes only.",
-  "sha256_16x9": "5f4cb1c56a273d131d25f91d938857d4dbf169047a6b1d472af8647cdb27699b",
-  "sha256_4x5": "5b1eae2725e1b3ee3730fb57e5e2f16fdfb400dca98cbf8e28f6790d4a8d43b4",
+  "sha256_16x9": "3c9e6d3699855ca97728b9273a7748d22cc0b727e51df090df0df7a43e9705ab",
+  "sha256_4x5": "9c8a56214b732d39f64eb79b9af1ea17d0a7f52f5e28c32ca183b9998bc2058e",
   "daylight_variant": {
     "variant_of_entry_id": "IT-01-013",
     "derived_from": "Approved night master assets/it-01-013-16x9.png (16:9) and assets/it-01-013-4x5.png (4:5) of the same scene; not an independently modelled weather/lighting scenario",
@@ -33,8 +33,8 @@
       "4x5": "assets/it-01-013-daylight-4x5.png"
     },
     "sha256": {
-      "16x9": "21e4ad289119324704db8f4587e20e5b627862158fb89eef430851fa33b4fbd4",
-      "4x5": "7cf82a323d1a6f34b0d071130753511c61d792c3f081d62cba4201bb4a4cfd3b"
+      "16x9": "36491dbe516bc9b1839329443977401ef53922aaa9711e5128526ab049c49835",
+      "4x5": "30ffd57681af67f8d606de8627ccbf1cdab5c741fd5bc837b260c1b11ae66e7e"
     },
     "created_date": "2026-09-26",
     "on_image_caption": "Arena of Verona, Verona",
