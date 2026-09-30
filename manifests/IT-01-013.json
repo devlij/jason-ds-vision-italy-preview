@@ -10,8 +10,8 @@
   "alt_text": "AI-generated artistic interpretation of the Arena of Verona on Piazza Bra in afternoon daylight, northern Ala only",
   "file_16x9": "assets/it-01-013-16x9.png",
   "file_4x5": "assets/it-01-013-4x5.png",
-  "approval_status": "Candidate",
-  "approval_basis": "FLAG-spec daytime recreate 2026-09-30, batch 1 of wo-italy-flag-specs-2026-09-30. Candidate only. Open-Meteo retrieval for 30 September 2026 at 14:25 Europe/Rome, is_day=1. Prior five-gate approval, where it existed, is superseded pending Cosmo QC. Not merged.",
+  "approval_status": "Approved",
+  "approval_basis": "Cosmo five-gate approval 2026-09-30 (independent; PR #32 tip 672fd22 merged 05c40c3 / PR #33 tip 4693c72 merged e7cc380; merge-conflict resolution verified: all 10 recreate scenes Candidate in both batches, sitemap restored to 375/375). Gate 1 visual/location: Verona Arena northern Ala: four arches in three orders; inner arcade wall elsewhere. Gate 2 weather: Open-Meteo retrieval 2026-09-30T12:25:09Z..12:25:17Z (batch1, 5 scenes), unique to the second across the 20-scene audit set; rendered clear sky matches. Gate 3 formats: 16:9/4:5/9:16 finished label-bar masters at exact dims, zero overlay on artwork; Art.50 PNG chunks present, comment date = true finish date 2026-09-30. Gate 4 originality/IP: AI-generated artistic interpretation, disclosure on label bar. Gate 5 captions/signature: scenario genuine real-time 30 Sep 2026 14:25/14:47 Europe/Rome; 'Jason D's Vision' + 'Jason A. Devlin' script signature present.",
   "git_blob_sha1_16x9": "23e905c0f6db74f9f79d403bf8053f9e7cf00212",
   "git_blob_sha1_4x5": "99ceee8177bec49814974aade96298e291982e94",
   "file_9x16": "assets/it-01-013-9x16.png",
@@ -57,6 +57,14 @@
       "date": "2026-09-30",
       "author": "Image Assistant",
       "note": "FLAG recreate supersedes prior approval pending Cosmo QC. Daytime 14:25 Europe/Rome masters replace the night primaries. approval_status set back to Candidate. Not merged."
+    },
+    {
+      "date": "2026-09-30",
+      "author": "Cosmo",
+      "gate": "five-gate approval",
+      "result": "PASS 5/5",
+      "note": "Independent Cosmo QC; see approval_basis."
     }
-  ]
+  ],
+  "approved_at": "2026-09-30"
 }
