@@ -1,0 +1,70 @@
+BATCH IT FLAG-spec recreates — batch 11
+Date finished: 2026-09-30
+Work order: wo-italy-flag-specs-2026-09-30 (batch 11)
+Superseded, ignored: wo-italy-recreate-flags-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: 873d1efc8777e746f0906a2b7a41c180ac08183d
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e / Telea wipe ghosts were not used as an image anchor. Existing masters were not passed in as pixels.)
+
+Scope: ONLY these five scenes. keep_current (IT-01-127, 128, 202, 217, 350) and hold (IT-01-037, 236, 373) were not touched. Draft PRs #34–#42 were not modified.
+  IT-01-152 Rocca di Asolo, Asolo
+  IT-01-156 Santa Maria dell'Isola, Tropea
+  IT-01-160 Duomo of Monreale, Monreale
+  IT-01-161 Lago di Braies, Braies
+  IT-01-165 Segesta temple, Calatafimi-Segesta
+
+Status: Candidate only. Not merged. Cosmo owns QC and merge.
+Approved → Candidate (prior Approved on the 2026-09-29 label-bar bake, PR #30, is superseded; not a new approval; no WOTD invented):
+  IT-01-152
+  IT-01-156
+  IT-01-160
+  IT-01-161
+  IT-01-165
+
+No WOTD was invented.
+
+Weather: Open-Meteo current, already retrieved. Not re-fetched. One retrieval per scene. All is_day=1. Model time 2026-09-30T18:00 Europe/Rome. Scenario label on every master: 30 September 2026 · 18:00 Europe/Rome. Retrieval seconds are unique.
+  IT-01-152  retrieval 2026-09-30T16:50:33Z  local 2026-09-30T18:50:33+0200  Partly cloudy  22.4°C  cloud 51%  code 2  wind 2.5 km/h  sunrise 07:09  sunset 18:54
+  IT-01-156  retrieval 2026-09-30T16:50:35Z  local 2026-09-30T18:50:35+0200  Mainly clear   24.4°C  cloud 35%  code 1  wind 9.8 km/h  sunrise 06:51  sunset 18:40
+  IT-01-160  retrieval 2026-09-30T16:50:36Z  local 2026-09-30T18:50:36+0200  Clear sky      21.5°C  cloud 0%   code 0  wind 14.8 km/h sunrise 07:01  sunset 18:51
+  IT-01-161  retrieval 2026-09-30T16:50:38Z  local 2026-09-30T18:50:38+0200  Partly cloudy  14.5°C  cloud 80%  code 2  wind 4.1 km/h  sunrise 07:08  sunset 18:53
+  IT-01-165  retrieval 2026-09-30T16:50:40Z  local 2026-09-30T18:50:40+0200  Overcast       23.1°C  cloud 84%  code 3  wind 16.2 km/h sunrise 07:03  sunset 18:53
+
+Masters: regenerated from text prompts plus reference URLs and each corrected_spec. Existing masters were not image-anchored. The Braies pin image showed an enclosed cabin, so it was not passed in as pixels; the open pier boathouse was generated to the corrected spec. The Tropea still and the Segesta Wikipedia page were not used as pixel anchors where they would have fought the corrected geometry. Asolo and Monreale commons frames were used only as geometry references.
+
+Formats: 16:9 plate per scene, Lanczos to the photo size, then the label bar. 4:5 is a centered crop of that 16:9 plate where the subject sits in the middle (152, 156, 165). Monreale and Braies use a tall plate so both towers, and the full open boathouse, survive the 4:5 frame. 9:16 is its own plate. Photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero overlay on the artwork. Label bar: bold site+city caption, Scenario line, disclosure; right side Jason D's Vision and Jason A. Devlin in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+9:16 is included on disk and in each manifest as file_9x16. The live gallery card still offers 16:9 and 4:5 only. Italy's image-sitemap standing order does not emit 9:16. These five scenes are Candidate, so their url blocks were removed from image-sitemap.xml. The rest of the sitemap was left as it stood on main, so other Candidate scenes that main still lists were not dropped by a full regen.
+
+Art.50 PNG chunks on every master: Title, Description, Copyright, Software, Comment.
+Comment date is the true finish date 2026-09-30.
+
+Files:
+  assets/it-01-152-16x9.png
+  assets/it-01-152-4x5.png
+  assets/it-01-152-9x16.png
+  assets/it-01-156-16x9.png
+  assets/it-01-156-4x5.png
+  assets/it-01-156-9x16.png
+  assets/it-01-160-16x9.png
+  assets/it-01-160-4x5.png
+  assets/it-01-160-9x16.png
+  assets/it-01-161-16x9.png
+  assets/it-01-161-4x5.png
+  assets/it-01-161-9x16.png
+  assets/it-01-165-16x9.png
+  assets/it-01-165-4x5.png
+  assets/it-01-165-9x16.png
+
+Gallery: index.html SCENES copy, scenario_label, and approval_status updated so the new masters show as Candidate. Cache-bust query strings for these five were removed in SCENES and ITALY_META. tools/phase1_mood.json already had daynight day for all five, so it was left unchanged.
+
+Corrected geometry aimed at in the plates:
+  IT-01-152 low irregular ruined enclosure with swallow-tail merlons spread along the ridge; no tall keep.
+  IT-01-156 banded facade, arched portico, small central bellcote; flat skyline, no dome or lantern.
+  IT-01-160 asymmetric towers (one taller, one unfinished and crenellated), white three-arch portico, interlacing blind arcading; no matching spires.
+  IT-01-161 large open wooden pier boathouse on stilts with boat stalls and rowboats; not an enclosed cabin.
+  IT-01-165 smooth unfluted Doric shafts on the unfinished temple.
