@@ -1,0 +1,94 @@
+BATCH IT FLAG-spec recreates — batch 5
+Date finished: 2026-09-30
+Work order: wo-italy-flag-specs-2026-09-30 (batch 5)
+Superseded, ignored: wo-italy-recreate-flags-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: 873d1efc8777e746f0906a2b7a41c180ac08183d
+Masters commit: ff25a3b769a2df28c76014391c677c05df817bdb
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e / Telea wipe ghosts were not used as an image anchor. Plates were generated from text prompts plus the packet reference URLs.)
+
+Scope: ONLY these five scenes. keep_current and hold IDs were not touched.
+Batch 1 (IT-01-003/011/012/013/017), batch 2 (IT-01-020/022/023/025/033), batch 3 (IT-01-040/043/050/055/056), batch 4 (IT-01-057/059/060/062/063), and the Cosmo rework of IT-01-003 and IT-01-017 were not modified.
+  IT-01-065 Roman Forum, Rome
+  IT-01-066 Doge's Palace, Venice
+  IT-01-071 Bari Vecchia waterfront, Bari
+  IT-01-073 Lecce Baroque center, Lecce
+  IT-01-074 Piazza IV Novembre, Perugia
+
+Status: Candidate only. Not merged. Cosmo owns QC and merge. Never self-approved. No WOTD was invented.
+IT-01-065 and IT-01-066 were Approved. This FLAG recreate sets them back to Candidate. The recreate supersedes that prior approval pending Cosmo QC.
+IT-01-071, IT-01-073, and IT-01-074 were already Candidate (Gate 1 holds). They stay Candidate.
+
+Weather: Open-Meteo current, already retrieved in the packet. Not re-fetched. All is_day=1. One retrieval per scene, unique to the second. Passed through into each manifest.
+
+  Scene      Retrieval UTC           Local                      Label   Temp   Cloud  Code
+  IT-01-065  2026-09-30T14:23:28Z    2026-09-30T16:23:28+0200   Clear   26.7°C  1%     0
+  IT-01-066  2026-09-30T14:23:29Z    2026-09-30T16:23:29+0200   Clear   24.2°C  0%     0
+  IT-01-071  2026-09-30T14:23:31Z    2026-09-30T16:23:31+0200   Clear   24.3°C  0%     0
+  IT-01-073  2026-09-30T14:23:33Z    2026-09-30T16:23:33+0200   Clear   24.2°C  0%     0
+  IT-01-074  2026-09-30T14:23:34Z    2026-09-30T16:23:34+0200   Clear   25.7°C  2%     0
+
+Scenario labels on the masters:
+  IT-01-065  30 September 2026 · 16:23 Europe/Rome
+  IT-01-066  30 September 2026 · 16:23 Europe/Rome
+  IT-01-071  30 September 2026 · 16:23 Europe/Rome
+  IT-01-073  30 September 2026 · 16:23 Europe/Rome
+  IT-01-074  30 September 2026 · 16:23 Europe/Rome
+
+Masters: regenerated from text prompts plus the packet reference URLs and corrected_spec. Existing masters were not image-anchored. The Perugia packet photo is the Piazza Danti rose-window front, so it was not passed in as pixels. The Bari waterfront plate was aimed at the sea apses, not a west-facade pair of towers. Each aspect is its own plate. 16:9 and 9:16 are Lanczos to the photo size. 4:5 keeps the top of a 3:4 plate and trims foreground, then lands at 864×1080, so the arch, campanili, rose window, apses, and skyline stay in frame.
+
+Formats: photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero overlay on the artwork. Label bar: bold site+city caption, Scenario line, disclosure "AI-generated artistic interpretation · Not a photograph."; right side "Jason D's Vision" and "Jason A. Devlin" in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+9:16 is included on disk and in each manifest as file_9x16. The live gallery card still offers 16:9 and 4:5 only. Italy's image-sitemap standing order does not emit 9:16, and these scenes are Candidate so their blocks were removed from image-sitemap.xml. Other rows were left in the sitemap.
+
+Art.50 PNG chunks on every master: Title, Description, Copyright, Software, Comment.
+Comment date is the true finish date 2026-09-30.
+
+Git blob SHA-1:
+  IT-01-065  16x9  191ecac07d33af1ad9a34cc120456a6ffb807a28
+  IT-01-065  4x5   8543cc8b064b97300ed39a64aee239938cf7bdc3
+  IT-01-065  9x16  caf20f01b0f769d0fb9b593ae694246ef09298d5
+  IT-01-066  16x9  60232f72e3f89331c3aa97bb3c4c4c34e4f622fb
+  IT-01-066  4x5   b7ab988de0fd56715f7931bcf06ec2d105e3fb63
+  IT-01-066  9x16  e68858aeae5dbc690310415b94a66c9f523b17a6
+  IT-01-071  16x9  22f4069e4ca7532dbdfec68c949645c1907f608d
+  IT-01-071  4x5   498ab9eec84e1c57e50f609c0efb9e722b7589be
+  IT-01-071  9x16  e1c86e863ed403cecafbb0038bf5dd0c79877256
+  IT-01-073  16x9  bd6d9ce69a9e8c796d0f6cde4f380e141f94b709
+  IT-01-073  4x5   67d589cbb7117e08237200de0e6e41f452d9c874
+  IT-01-073  9x16  fee52e900e5b76845989db9e728311980056d5df
+  IT-01-074  16x9  1397af54eb0a66e6a1910230a71bb1157f6e6e0e
+  IT-01-074  4x5   00ecd44608d77e4a9ccfb79422cbb80701e56859
+  IT-01-074  9x16  cd4332825c52bbadd13e466d4a1d51041b6a6111
+
+Files:
+  assets/it-01-065-16x9.png
+  assets/it-01-065-4x5.png
+  assets/it-01-065-9x16.png
+  assets/it-01-066-16x9.png
+  assets/it-01-066-4x5.png
+  assets/it-01-066-9x16.png
+  assets/it-01-071-16x9.png
+  assets/it-01-071-4x5.png
+  assets/it-01-071-9x16.png
+  assets/it-01-073-16x9.png
+  assets/it-01-073-4x5.png
+  assets/it-01-073-9x16.png
+  assets/it-01-074-16x9.png
+  assets/it-01-074-4x5.png
+  assets/it-01-074-9x16.png
+
+No *-daylight-* companions existed for these five IDs. None were added. The new primary is daytime.
+
+Gallery: index.html SCENES copy, scenario_label, and approval_status updated so the new masters show as Candidate. tools/phase1_mood.json was already day for all five and was not edited. A duplicated `const statusLabel` on main (a parse error left by the batch 1 / batch 2 merge) was removed so the Candidate badge can render. The duplicate CSS rule was left as it was.
+
+Corrected geometry aimed at in the plates:
+  IT-01-065 left side is the Basilica Julia as a ruined stump platform with no standing colonnade; the arch is the triple archway of Septimius Severus; the eight-column porch is the Temple of Saturn with Ionic capitals.
+  IT-01-066 island opposite is San Giorgio Maggiore: one dome, white temple front, tall green-spired campanile without a clock; St Mark's campanile stands beside the palace.
+  IT-01-071 San Nicola is one broad gabled Romanesque block with apses toward the sea; San Sabino is a single campanile; no two tall open bell towers over the sea wall.
+  IT-01-073 rose window at upper center; balcony carried by carved animals — dragon, eagle, lion.
+  IT-01-074 fountain-facing flank is an unfinished wall with Alessi's side portal and the external pulpit, no rose window; the rose window stays on the Piazza Danti front only.
