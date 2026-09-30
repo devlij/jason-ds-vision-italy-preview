@@ -1,0 +1,139 @@
+BATCH IT FLAG-spec recreates — batch 31
+Date finished: 2026-09-30
+Work order: wo-italy-flag-specs-2026-09-30 (batch 31)
+Superseded, ignored: wo-italy-recreate-flags-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: be64cf296feb50c4d6d6afb7461cb1a57be059ce
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e was not used as an image anchor. Plates were regenerated from text prompts plus the packet reference URLs and the packet weather. Existing masters were not image-anchored.)
+
+Scope: ONLY these five scenes. keep_current (IT-01-127, IT-01-128, IT-01-202, IT-01-217, IT-01-350) and hold (IT-01-037, IT-01-236, IT-01-373) were not touched. Historical Italy draft PRs were not modified. Batch 29 remains DRAFT PR #63 at tip 0547e31380d3449497e538fef951c318e0699eef. Batch 30 remains DRAFT PR #64 at tip 16ac19981583e6bf49fb3e1dc9148f9aef5b12cd. Spain and Ireland work were not touched.
+  IT-01-351 Castle and cathedral ridge, Conversano
+  IT-01-352 Palazzo della Signoria, Jesi
+  IT-01-353 Castelluccio on the Piano Grande, Castelluccio di Norcia
+  IT-01-354 Piazza del Popolo, Fermo
+  IT-01-355 Ducal Palace on the Metauro, Urbania
+
+Status: Candidate only. Not merged. Cosmo owns QC and merge.
+Not self-approved. approval_status was not set to Approved. No Cosmo QC was invented.
+
+Approved → Candidate (prior approval superseded, not self-approved):
+  IT-01-351
+  IT-01-352
+  IT-01-353
+  IT-01-354
+  IT-01-355
+
+No WOTD was invented.
+
+Weather: Open-Meteo, already retrieved in the packet. Not re-fetched. All is_day=1. Timezone Europe/Rome. One retrieval record per scene, copied from the packet. Each scene keeps its own model hour from the packet. No night weather was invented. Every model hour is before that site's sunset.
+  IT-01-351  retrieval 2026-09-30T23:02:42Z  local 2026-10-01T01:02:42+0200  model 18:00  Clear sky     21.2°C  cloud 0%   code 0  wind 9.0 km/h   sunset 18:33  scenario 1 October 2026 · 18:00 Europe/Rome
+  IT-01-352  retrieval 2026-09-30T23:02:44Z  local 2026-10-01T01:02:44+0200  model 17:00  Clear sky     23.8°C  cloud 0%   code 0  wind 9.9 km/h   sunset 18:48  scenario 1 October 2026 · 17:00 Europe/Rome
+  IT-01-353  retrieval 2026-09-30T23:02:46Z  local 2026-10-01T01:02:46+0200  model 16:00  Partly cloudy 17.5°C  cloud 51%  code 2  wind 7.7 km/h   sunset 18:48  scenario 1 October 2026 · 16:00 Europe/Rome
+  IT-01-354  retrieval 2026-09-30T23:02:48Z  local 2026-10-01T01:02:48+0200  model 15:00  Clear sky     23.5°C  cloud 0%   code 0  wind 10.5 km/h  sunset 18:46  scenario 1 October 2026 · 15:00 Europe/Rome
+  IT-01-355  retrieval 2026-09-30T23:02:50Z  local 2026-10-01T01:02:50+0200  model 14:00  Mainly clear  25.7°C  cloud 13%  code 1  wind 10.0 km/h  sunset 18:51  scenario 1 October 2026 · 14:00 Europe/Rome
+
+Masters: regenerated from text prompts plus the packet reference URLs. Existing masters were not image-anchored. Geometry follows each corrected_spec. Daytime only (is_day=1; each model hour is before sunset at that site).
+
+Reference handling where a packet URL contradicted the corrected spec or could not be used as pixels:
+  IT-01-351 the packet commons category URL is missing its closing parenthesis; it was read as the Conversano cathedral category, not passed in as pixels. Some photographs of the later campanile show a square shaft and a cap. The plate follows the written spec: a low truncated octagonal campanile, flat unfinished top, one small open bell arch, no spire. The white-stone facade keeps the large rose, the flanking oculi, and the carved portal with a Crucifixion tympanum. The castle's cylindrical towers stay on the same ridge in the wide and vertical frames.
+  IT-01-352 the commons file shows the palace; some descriptions call the windows Guelph-cross windows. The plate follows the written spec: simple stone-framed rectangles and no pediments. The unfinished brick tower is short, with an open bell arch and no roof or cross, on the left. The round clock is on the upper left. The white-stone lion relief stays above the entrance. The pages were not passed in as pixels.
+  IT-01-353 one packet URL is a reconstruction report PDF and the other is a village photograph. The plate follows the written spec for a post-2016 site: roofless shells and rubble, reconstruction and a seismic-isolation platform in progress, no intact standing campanile. The Piano Grande and snow-capped Sibillini stay as the setting. October light, not a summer flower carpet. The pages were not passed in as pixels.
+  IT-01-354 the visitfermo pages describe the long square and the south-side portico. The plate follows the written spec: the view runs along the length, continuous 16th-century brick porticoes line both long sides as two storeys of arches, and there is no central fountain. The pages were not passed in as pixels.
+  IT-01-355 the two commons photographs show the Metauro front. The plate follows the written spec: cylindrical torrioni with crenellated tops dominate, and a hanging loggia is framed between them so the river front reads tower–loggia–tower. It is not a long low arcade at the water. The photographs were not passed in as pixels.
+
+Formats: 16:9 plate per scene, 4:5 center-cropped from that plate (Lanczos to 1920×1080, then 864×1080). 9:16 is its own plate, Lanczos to 1080×1920. Photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero overlay and zero tint on the artwork. Label bar: bold caption, Scenario line, disclosure; right side Jason D's Vision and Jason A. Devlin in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+9:16 is on disk and in each manifest as file_9x16. The live gallery card still offers 16:9 and 4:5 only. These scenes are Candidate, so they are omitted from image-sitemap.xml. The omission is those five URL blocks only (375 → 370). Other scenes already Candidate on main were left in the sitemap so this batch does not republish the rest of the file.
+
+Art.50 PNG chunks on every master: Title, Description, Copyright, Software, Comment.
+Comment date is the true finish date 2026-09-30.
+
+Master git blob SHAs:
+  IT-01-351  16x9 b41693dee550d89d254344d8f7e363d76992f6f4
+  IT-01-351  4x5  a37242833ece8adc25d9c577591cdc1ce07090b2
+  IT-01-351  9x16 8ad39e05e9106744533f87ac290367fbcc706c78
+  IT-01-352  16x9 f203a96828996c3dea2c72da21142e5d7cc63bb1
+  IT-01-352  4x5  2bc675b910540cfc99d1690a53f5e979aaabc135
+  IT-01-352  9x16 20daf8cac388150ed8a87f61a8b7eb26dba910f4
+  IT-01-353  16x9 defdfec535c58bed3e9186a01ed47c348a8caa8c
+  IT-01-353  4x5  1e0712d51629b34ff41a9eff6713a5171e2fcc65
+  IT-01-353  9x16 5a550945efb896ccf4f04e267b6f26d3a53543a6
+  IT-01-354  16x9 cdb8fc23c0eedf939428f27d3395d8c17da910fd
+  IT-01-354  4x5  b462703c71369a39ecd5aa46d3a4aaaca30602fa
+  IT-01-354  9x16 cc839274371b8d96649453c070c8dd6256ef3702
+  IT-01-355  16x9 f200f9c45cd977634ef9d2389b0704944cceeade
+  IT-01-355  4x5  b3ceea832c3636430ee33a04dcc2b9383e3fbfd0
+  IT-01-355  9x16 9f34596f843bd15122fff988f56eb0830f2cbeaa
+
+Files:
+  assets/it-01-351-16x9.png
+  assets/it-01-351-4x5.png
+  assets/it-01-351-9x16.png
+  assets/it-01-352-16x9.png
+  assets/it-01-352-4x5.png
+  assets/it-01-352-9x16.png
+  assets/it-01-353-16x9.png
+  assets/it-01-353-4x5.png
+  assets/it-01-353-9x16.png
+  assets/it-01-354-16x9.png
+  assets/it-01-354-4x5.png
+  assets/it-01-354-9x16.png
+  assets/it-01-355-16x9.png
+  assets/it-01-355-4x5.png
+  assets/it-01-355-9x16.png
+
+No night-derived daylight companions existed for these five IDs. None were added.
+
+Gallery: index.html SCENES copy, scenario_label, and approval_status updated. Card status reads Candidate. tools/phase1_mood.json was already day for these five and was left unchanged. ITALY_META day/night was already day; only the cache-bust query on these five thumbs moved to ?v=flagb31.
+
+Per-scene evidence cards
+========================
+
+IT-01-351 Castle and cathedral ridge, Conversano
+References:
+  https://www.dizy.com/it/foto/1510746001
+  https://commons.wikimedia.org/wiki/Category:Cattedrale_di_Santa_Maria_Assunta_(Conversano)
+Geometry anchors:
+  1. White-stone cathedral facade with a large rose window and two smaller oculi flanking it.
+  2. Ornate carved portal with a Crucifixion in the tympanum.
+  3. Low truncated octagonal campanile: short unfinished tower barely clearing the rooftops, flat unfinished top, one small open bell arch, no spire. The castle's cylindrical towers remain on the same ridge.
+
+IT-01-352 Palazzo della Signoria, Jesi
+References:
+  https://commons.wikimedia.org/wiki/File:Jesi,_Palazzo_della_Signoria.JPG
+  https://pnrr.comune.jesi.an.it/web/guest/w/palazzo-della-signoria
+Geometry anchors:
+  1. Short unfinished brick tower with an open bell-arch belfry, no roof and no cross, rising just above the roofline.
+  2. Round facade clock on the upper left.
+  3. White-stone lion relief panel above the entrance portal. Facade windows are simple stone-framed rectangles, with no pediments.
+
+IT-01-353 Castelluccio on the Piano Grande, Castelluccio di Norcia
+References:
+  https://www.ingenio-web.it/files/rapporto-ricostruzione-sisma-2016-2026.pdf
+  https://www.vivereumbria.org/upload/2021_12/742476_CfakepathCastellucciodiNorcia_std.jpg
+Geometry anchors:
+  1. Roofless stone shells and rubble in the village center.
+  2. Reconstruction works and a seismic-platform engineering site in progress.
+  3. No intact standing campanile. The Piano Grande and the snow-capped Sibillini remain the setting.
+
+IT-01-354 Piazza del Popolo, Fermo
+References:
+  https://www.visitfermo.it/it/poi/piazza-del-popolo
+  https://www.visitfermo.it/wp-content/uploads/2018/02/Piazza-del-Popolo-Lato-sud-550x550.jpg
+Geometry anchors:
+  1. A long rectangular square, framed along its length.
+  2. Continuous 16th-century brick porticoes along both long sides; the arcades are the dominant feature.
+  3. No central fountain.
+
+IT-01-355 Ducal Palace on the Metauro, Urbania
+References:
+  https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Palazzo_Ducale_%28Urbania%29.jpg/1280px-Palazzo_Ducale_%28Urbania%29.jpg
+  https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Urbania_Palazzo_Ducale.JPG/1280px-Urbania_Palazzo_Ducale.JPG
+Geometry anchors:
+  1. Two cylindrical flanking torrioni dominate the silhouette.
+  2. A hanging loggia is framed between those two towers.
+  3. The river front reads tower–loggia–tower, not a long low arcade.
