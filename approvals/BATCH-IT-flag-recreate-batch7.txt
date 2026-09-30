@@ -1,0 +1,78 @@
+BATCH IT FLAG-spec recreates — batch 7
+Date finished: 2026-09-30
+Work order: wo-italy-flag-specs-2026-09-30 (batch 7)
+Superseded, ignored: wo-italy-recreate-flags-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: 873d1efc8777e746f0906a2b7a41c180ac08183d
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e / Telea wipe ghosts were not used as an image anchor. Plates were generated from text prompts and daytime reference photographs, not from the existing masters.)
+
+Scope: ONLY these five scenes. keep_current and hold IDs were not touched.
+Draft holds #34–#38 were not modified.
+  IT-01-092 Trani Cathedral, Trani
+  IT-01-097 Palazzo dei Consoli, Gubbio
+  IT-01-099 Noto Cathedral, Noto
+  IT-01-101 Palazzo dei Priori, Volterra
+  IT-01-103 Castello di San Giorgio, Lerici
+
+Status: Candidate only. Not merged. Cosmo owns QC and merge.
+Approved→Candidate: IT-01-092, IT-01-097, IT-01-099, IT-01-101, IT-01-103.
+All five were Approved. This FLAG recreate sets each back to Candidate. The recreate supersedes that prior approval pending Cosmo QC. Nothing in this batch is self-approved.
+
+No WOTD was invented.
+
+Weather: Open-Meteo current, already retrieved. Not re-fetched. All is_day=1. Model time 2026-09-30T17:15 Europe/Rome. Scenario label on every master: 30 September 2026 · 17:18 Europe/Rome. One retrieval per scene.
+  IT-01-092  retrieval 2026-09-30T15:18:29Z  local 2026-09-30T17:18:29+0200  Clear          23.8°C  cloud 0%   code 0  wind 11.2 km/h
+  IT-01-097  retrieval 2026-09-30T15:18:30Z  local 2026-09-30T17:18:30+0200  Clear          23.4°C  cloud 5%   code 0  wind 9.8 km/h
+  IT-01-099  retrieval 2026-09-30T15:18:31Z  local 2026-09-30T17:18:31+0200  Partly cloudy  24.1°C  cloud 46%  code 2  wind 17.4 km/h
+  IT-01-101  retrieval 2026-09-30T15:18:32Z  local 2026-09-30T17:18:32+0200  Partly cloudy  22.0°C  cloud 59%  code 2  wind 14.8 km/h
+  IT-01-103  retrieval 2026-09-30T15:18:33Z  local 2026-09-30T17:18:33+0200  Partly cloudy  24.5°C  cloud 31%  code 2  wind 8.1 km/h
+
+Masters: regenerated from text prompts plus daytime reference photographs for the packet sites. Existing gallery masters were not image-anchored. The Noto night reference frame was not passed in as pixels. Geometry follows each corrected_spec.
+
+Formats: one 16:9 plate per scene, Lanczos to 1920×1080; 4:5 is the center crop of that plate (864×1080). 9:16 is a separate vertical plate, Lanczos to 1080×1920. Photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero overlay on the artwork. Label bar: bold caption, Scenario line, disclosure; right side Jason D's Vision and Jason A. Devlin in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+9:16 is included on disk and in each manifest as file_9x16. The live gallery card still offers 16:9 and 4:5 only. These scenes are Candidate, so their 16:9 and 4:5 masters were removed from image-sitemap.xml. Other sitemap entries were left as they stood on main.
+
+Art.50 PNG chunks on every master: Title, Description, Copyright, Software, Comment.
+Comment date is the true finish date 2026-09-30.
+
+Git blob SHA-1 (masters):
+  IT-01-092  16x9 f8833a5525fab48c76345bcd2eb9f8a4b98d8e71  4x5 41ee8d16d8f88daeac0dd2f5aec07a812592b929  9x16 a73fd55af699d29c5fffa743ea1a2b1b6718b070
+  IT-01-097  16x9 ad3341f7513241755f22f38b0993639beb1ec1d7  4x5 a3ec6b603527580515445b32e0d33fd04f387460  9x16 a49d9b098713e8b4c7670d53fc5730678a32143b
+  IT-01-099  16x9 65818d8eededbea09dcb0175fbafb89edadeded7  4x5 866658e854a07c134aabc131ecd58392ba25f3fb  9x16 e308145534dbd369c4edc9cc6cf63efe15842acd
+  IT-01-101  16x9 5f017fed76d63c16c43803f8594f869b4fa739fd  4x5 368af4bf608bf3f7e2124139e5b29318f3ccf079  9x16 4d8480674671a52143d73f3531f4f5ae92c3830c
+  IT-01-103  16x9 1da81d1435838efc20ae5097f53ebf01fe03acda  4x5 680f66ff66a066d8341691e3b4344d8a2765cf87  9x16 fc404cab3751e261185026a1b2a554043e82147d
+
+Files:
+  assets/it-01-092-16x9.png
+  assets/it-01-092-4x5.png
+  assets/it-01-092-9x16.png
+  assets/it-01-097-16x9.png
+  assets/it-01-097-4x5.png
+  assets/it-01-097-9x16.png
+  assets/it-01-099-16x9.png
+  assets/it-01-099-4x5.png
+  assets/it-01-099-9x16.png
+  assets/it-01-101-16x9.png
+  assets/it-01-101-4x5.png
+  assets/it-01-101-9x16.png
+  assets/it-01-103-16x9.png
+  assets/it-01-103-4x5.png
+  assets/it-01-103-9x16.png
+
+No daylight-variant companions existed for these five IDs. The new primary is daytime, so none were added.
+
+Gallery: index.html SCENES copy, scenario_label, and approval_status updated so the new masters show as Candidate. tools/phase1_mood.json and ITALY_META already recorded these five as day; they were left unchanged.
+
+The gallery script had a duplicate `const statusLabel` (already on main) that was a syntax error, so no card rendered. The duplicate line was removed so the catalogue can run and these five cards show Candidate. No other gallery behavior was changed.
+
+Corrected geometry aimed at in the plates:
+  IT-01-092 west front: large wheel rose window with carved animals, above three separate tall windows, not a small oculus over a trifora. Campanile at the left. Clear late-afternoon light.
+  IT-01-097 campanile at the left corner; fan staircase to the main portal on the left, not a stair climbing the right side.
+  IT-01-099 bell tower left, clock tower right, civic coat of arms over the central door. Frieze left as carved stone molding. No invented Latin and no pseudo-text glyphs.
+  IT-01-101 asymmetric facade, portal offset left, rows of bifore and magistrate coats of arms, no central loggia, pentagonal tower on the right.
+  IT-01-103 castle on a rocky promontory contiguous with Lerici's houses, directly over the marina. No sandy beach between castle and town.
