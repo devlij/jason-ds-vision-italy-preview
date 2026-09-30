@@ -11,8 +11,17 @@
   "file_16x9": "assets/it-01-033-16x9.png",
   "file_4x5": "assets/it-01-033-4x5.png",
   "approval_status": "Approved",
-  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #13 (tip b3306bd, merged b3306bd0d41151b7c72b03565ffc78515fa73c4d): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: content PASS: dims/photo-identity/bar/Art.50 verified on stratified sample. Full file-count verification: every scene in range holds both finished masters, correctly named.",
+  "approval_basis": "Cosmo five-gate approval 2026-09-30 (independent; PR #32 tip 672fd22 merged 05c40c3 / PR #33 tip 4693c72 merged e7cc380; merge-conflict resolution verified: all 10 recreate scenes Candidate in both batches, sitemap restored to 375/375). Gate 1 visual/location: Assisi: upper/lower elevations unmerged, rose window, campanile. Gate 2 weather: Open-Meteo retrieval 2026-09-30T12:47:29Z..12:47:40Z (batch2, 5 scenes), unique to the second across the 20-scene audit set; rendered clear sky matches. Gate 3 formats: 16:9/4:5/9:16 finished label-bar masters at exact dims, zero overlay on artwork; Art.50 PNG chunks present, comment date = true finish date 2026-09-30. Gate 4 originality/IP: AI-generated artistic interpretation, disclosure on label bar. Gate 5 captions/signature: scenario genuine real-time 30 Sep 2026 14:25/14:47 Europe/Rome; 'Jason D's Vision' + 'Jason A. Devlin' script signature present.",
   "git_blob_sha1_16x9": "a6e16cf2cdb00fe9ba02b144f27a82bdc80444ff",
   "git_blob_sha1_4x5": "f32a40d6fa6c91eed5f5fac5f7a769f0b3a0351d",
-  "approved_at": "2026-09-29"
+  "approved_at": "2026-09-30",
+  "qc_notes": [
+    {
+      "date": "2026-09-30",
+      "author": "Cosmo",
+      "gate": "five-gate approval",
+      "result": "PASS 5/5",
+      "note": "Independent Cosmo QC; see approval_basis."
+    }
+  ]
 }
