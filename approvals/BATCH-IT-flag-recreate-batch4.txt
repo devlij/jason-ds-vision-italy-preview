@@ -5,6 +5,7 @@ Superseded, ignored: wo-italy-recreate-flags-2026-09-30
 Country: Italy
 Repo: devlij/jason-ds-vision-italy-preview
 Base tip before this batch: 873d1efc8777e746f0906a2b7a41c180ac08183d
+Masters commit: 5d4ba888438fdc4956a476ed5893e375a21f60e8
 Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
 (Italy tip 1e7881e / Telea wipe ghosts were not used as an image anchor. Plates were generated from text prompts plus the packet reference URLs.)
 
