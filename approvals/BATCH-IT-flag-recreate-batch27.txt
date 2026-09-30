@@ -1,0 +1,98 @@
+BATCH IT FLAG-spec recreates — batch 27
+Date finished: 2026-09-30
+Work order: wo-italy-flag-specs-2026-09-30 (batch 27)
+Superseded, ignored: wo-italy-recreate-flags-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: be64cf296feb50c4d6d6afb7461cb1a57be059ce
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e was not used as an image anchor. Plates were regenerated from text prompts plus the packet reference URLs and the packet weather. Existing masters were not image-anchored.)
+
+Scope: ONLY these five scenes. keep_current (IT-01-127, IT-01-128, IT-01-202, IT-01-217, IT-01-350) and hold (IT-01-037, IT-01-236, IT-01-373) were not touched. Historical Italy draft PRs were not modified. Batch 25 remains DRAFT PR #59 at tip 3bc1b3da0cbfd0c3d94f96c2a90841fb30f5b707. Batch 26 remains DRAFT PR #60 at tip b4e87a91c6e91a03980e06cc5ded504395b2ac31. Spain and Ireland work were not touched.
+  IT-01-324 Molfetta Cathedral, Molfetta
+  IT-01-326 Sanctuary of Fortuna Primigenia, Palestrina
+  IT-01-327 San Pietro, Tuscania
+  IT-01-328 Palm promenade, Bordighera
+  IT-01-329 Porto Ercole harbor and Forte Stella, Porto Ercole
+
+Status: Candidate only. Not merged. Cosmo owns QC and merge.
+Not self-approved. approval_status was not set to Approved. No Cosmo QC was invented.
+
+Approved → Candidate (prior approval superseded, not self-approved):
+  IT-01-324
+  IT-01-326
+  IT-01-327
+  IT-01-328
+  IT-01-329
+
+No WOTD was invented.
+
+Weather: Open-Meteo, already retrieved in the packet. Not re-fetched. All is_day=1. Timezone Europe/Rome. One retrieval record per scene, copied from the packet. Each scene keeps its own model hour from the packet. No night weather was invented. Every model hour is before that site's sunset.
+  IT-01-324  retrieval 2026-09-30T22:05:00Z  local 2026-10-01T00:05:00+0200  model 18:00  Mainly clear  23.2°C  cloud 21%  code 1  wind 6.1 km/h  sunset 18:35  scenario 1 October 2026 · 18:00 Europe/Rome
+  IT-01-326  retrieval 2026-09-30T22:05:01Z  local 2026-10-01T00:05:01+0200  model 17:00  Mainly clear  23.8°C  cloud 43%  code 1  wind 12.4 km/h  sunset 18:50  scenario 1 October 2026 · 17:00 Europe/Rome
+  IT-01-327  retrieval 2026-09-30T22:05:03Z  local 2026-10-01T00:05:03+0200  model 16:00  Mainly clear  25.8°C  cloud 47%  code 1  wind 12.4 km/h  sunset 18:54  scenario 1 October 2026 · 16:00 Europe/Rome
+  IT-01-328  retrieval 2026-09-30T22:05:05Z  local 2026-10-01T00:05:05+0200  model 19:00  Slight rain  22.2°C  cloud 100%  code 61  wind 3.6 km/h  sunset 19:10  scenario 1 October 2026 · 19:00 Europe/Rome
+  IT-01-329  retrieval 2026-09-30T22:05:07Z  local 2026-10-01T00:05:07+0200  model 15:00  Mainly clear  24.2°C  cloud 31%  code 1  wind 7.2 km/h  sunset 18:57  scenario 1 October 2026 · 15:00 Europe/Rome
+
+Masters: regenerated from text prompts plus the packet reference URLs. Existing masters were not image-anchored. Geometry follows each corrected_spec. Daytime only (is_day=1; each model hour is before sunset at that site).
+
+Reference handling where a packet URL contradicted the corrected spec:
+  IT-01-324 the Dreamstime harbor photo carries a stock watermark and was not used as an image anchor. The unwatermarked aerial reference was used for the three pyramidal cupolas and the flat square towers. The plate is a harbor view, not a copy of the watermarked frame.
+  IT-01-326 the second reference is a 19th-century reconstruction model of the intact sanctuary and was not used as an image anchor. The plate is the present site: curved Palazzo Barberini with an arcaded loggia and tiled roofs above fragmentary grey-brown rubble arches mixed into the town.
+  IT-01-327 the facade reference was used for the dark peperino, the cosmatesque rose in a white rectangular panel, the full-width columned gallery, and the triple portals. The plate has a plain tiled pitched roof and no crossing dome.
+  IT-01-328 the lungomare references were used for the asphalt road, white metal railing, stone pines, globe lamps, pebble beach, and set-back villas. The plate does not use a stone balustrade or a formal double palm allée against a continuous hotel wall. Weather is the packet's slight rain under full cloud, not the sunny reference frames.
+  IT-01-329 the harbor reference was used so Forte Stella reads as a low single-tier star fort on the scrub hill, not a tall stacked castle.
+
+Formats: 16:9 plate per scene, 4:5 center-cropped from that plate (Lanczos to 1920×1080, then 864×1080). 9:16 is its own plate, Lanczos to 1080×1920. Photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero overlay and zero tint on the artwork. Label bar: bold caption, Scenario line, disclosure; right side Jason D's Vision and Jason A. Devlin in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+9:16 is on disk and in each manifest as file_9x16. The live gallery card still offers 16:9 and 4:5 only. These scenes are Candidate, so they are omitted from image-sitemap.xml. The omission is those five URL blocks only (375 → 370). Other scenes already Candidate on main were left in the sitemap so this batch does not republish the rest of the file.
+
+Art.50 PNG chunks on every master: Title, Description, Copyright, Software, Comment.
+Comment date is the true finish date 2026-09-30.
+
+Master git blob SHAs:
+  IT-01-324  16x9 89125de2b7b9849ae9a37f91d027e92ba95393f3
+  IT-01-324  4x5  00f723de13443bb466a8edb567fde261977f601b
+  IT-01-324  9x16 dc79da7f63bc9cc282952d808bf66f72bd383db5
+  IT-01-326  16x9 abc59baac53c59cb74570ae6c5fdf16192f3d428
+  IT-01-326  4x5  76ae2103bb25ac30babcc9293414c05cd7dcb97b
+  IT-01-326  9x16 73a61aeef81a16e423c6153dcc29d1acbe345500
+  IT-01-327  16x9 59a627ba79e3445ab25410a8a1df7fb122f40353
+  IT-01-327  4x5  fa13adf05f06262a86ed19b19019e3db5ca000c7
+  IT-01-327  9x16 9131a9c637a31defd13fb4fab8e4e77c720f07cd
+  IT-01-328  16x9 d7ee5cfb071e8c736511f6b74ef861ab3e51a068
+  IT-01-328  4x5  9f071558f35d751c0d50040a7d3899adb5115ed8
+  IT-01-328  9x16 6d770d785b161d83f1abc1295a8aafbdf0dbf5be
+  IT-01-329  16x9 c57fc95e3a643d8a921ddf25dbc51e3f73ec4f67
+  IT-01-329  4x5  b4cf9d700a5972922f4eb7977aa1b5ff9d1765a3
+  IT-01-329  9x16 3971cad06a1c469cfd69ddae4751cfb571a6f346
+
+Files:
+  assets/it-01-324-16x9.png
+  assets/it-01-324-4x5.png
+  assets/it-01-324-9x16.png
+  assets/it-01-326-16x9.png
+  assets/it-01-326-4x5.png
+  assets/it-01-326-9x16.png
+  assets/it-01-327-16x9.png
+  assets/it-01-327-4x5.png
+  assets/it-01-327-9x16.png
+  assets/it-01-328-16x9.png
+  assets/it-01-328-4x5.png
+  assets/it-01-328-9x16.png
+  assets/it-01-329-16x9.png
+  assets/it-01-329-4x5.png
+  assets/it-01-329-9x16.png
+
+No night-derived daylight companions existed for these five IDs. None were added.
+
+Gallery: index.html SCENES copy, scenario_label, and approval_status updated. Card status reads Candidate. tools/phase1_mood.json was already day for these five and was left unchanged. ITALY_META day/night was already day; only the cache-bust query on these five thumbs moved to ?v=flagb27.
+
+Corrected geometry aimed at in the plates:
+  IT-01-324 twin campanili are plain square towers with flat corniced caps and paired/triple arched belfry openings; no spires and no corner turrets. Three aligned pyramidal stone cupolas in a stepped row, white limestone with blind-arcade cornices, seen from the harbor.
+  IT-01-326 present site, not a 19th-century reconstruction: ruined arched substructures in rough grey-brown rubble on the hillside, and Palazzo Barberini, a curved 17th-century palace with an arcaded loggia and tiled roofs, crowning the hemicycle. Lower terraces fragmentary and partly absorbed by the modern town.
+  IT-01-327 dark grey-brown peperino, not pale ashlar. Large cosmatesque rose window in a white sculpted rectangular panel, columned gallery across the full width, triple portals with a columned central porch. No crossing dome; plain tiled pitched roof. Tall square campanile to the side on the isolated hill.
+  IT-01-328 broad asphalt seafront road and promenade, simple white metal railing on the sea side, stone pines and globe lamps, pebbly beach with bathing kiosks. Landward villas and gardens set back. No stone balustrade and no formal double palm allée against grand hotels. Slight rain, full cloud, still daylight.
+  IT-01-329 low single-tier star fort spread horizontally on the scrub hill: low ramparts, small corner bastions, central low block, barely rising above the hilltop. From the harbor it is a low fortified silhouette behind the town, not a tall stacked castle.
