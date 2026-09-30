@@ -1,0 +1,91 @@
+BATCH IT FLAG-spec recreates — batch 10
+Date finished: 2026-09-30
+Work order: wo-italy-flag-specs-2026-09-30 (batch 10)
+Superseded, ignored: wo-italy-recreate-flags-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: 873d1efc8777e746f0906a2b7a41c180ac08183d
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e / Telea wipe ghosts were not used as an image anchor. Plates were generated from text prompts plus the packet reference URLs and corrected_spec. Existing masters were not passed in as pixels.)
+
+Scope: ONLY these five scenes. keep_current (IT-01-127, IT-01-128, IT-01-202, IT-01-217, IT-01-350) and hold (IT-01-037, IT-01-236, IT-01-373) were not touched.
+Draft PRs #34–#41, including the Cosmo rework, were not modified.
+  IT-01-136 Porta Venere, Spello
+  IT-01-147 Rocca Costanza, Pesaro
+  IT-01-148 Basilica of Santa Caterina, Galatina
+  IT-01-149 Rocca di San Leo, San Leo
+  IT-01-151 Castello Scaligero, Malcesine
+
+Status: Candidate only. Not merged. Cosmo owns QC and merge. Never self-approved. No WOTD was invented.
+
+Approved → Candidate:
+  IT-01-136 was Approved. This FLAG recreate sets it back to Candidate.
+  IT-01-148 was Approved. This FLAG recreate sets it back to Candidate.
+  IT-01-149 was Approved. This FLAG recreate sets it back to Candidate.
+  IT-01-151 was Approved. This FLAG recreate sets it back to Candidate.
+  IT-01-147 was already Candidate on main (Gate 1 hold, 2026-09-29). The packet listed it among the Approved→Candidate set. It stays Candidate. The new masters supersede that held plate pending Cosmo QC.
+
+Weather: Open-Meteo current, already retrieved in the packet. Not re-fetched. All is_day=1. One retrieval per scene, unique to the second. Passed through into each manifest. Scenario label on every master: 30 September 2026 · 18:30 Europe/Rome.
+
+  Scene      Retrieval UTC           Local                      Label          Temp   Cloud  Code  Sunset
+  IT-01-136  2026-09-30T16:31:38Z    2026-09-30T18:31:38+0200   Clear sky      23.3°C  1%     0     18:52
+  IT-01-147  2026-09-30T16:31:40Z    2026-09-30T18:31:40+0200   Clear sky      23.0°C  0%     0     18:51
+  IT-01-148  2026-09-30T16:31:42Z    2026-09-30T18:31:42+0200   Clear sky      21.5°C  0%     0     18:31
+  IT-01-149  2026-09-30T16:31:44Z    2026-09-30T18:31:44+0200   Mainly clear   19.0°C  15%    1     18:53
+  IT-01-151  2026-09-30T16:31:45Z    2026-09-30T18:31:45+0200   Mainly clear   22.9°C  55%    1     18:59
+
+Masters: regenerated from text prompts plus the packet reference URLs and corrected_spec. The Malcesine italyscapes frame reads as a roofed keep, so it was not passed in as pixels; the prompt holds the open swallow-tail crown. Each aspect is its own plate. 16:9 and 9:16 are Lanczos to the photo size. 4:5 keeps the top of a 3:4 plate and trims foreground, then lands at 864×1080.
+
+Formats: photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero overlay on the artwork. Label bar: bold site+city caption, Scenario line, disclosure "AI-generated artistic interpretation · Not a photograph."; right side "Jason D's Vision" and "Jason A. Devlin" in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+9:16 is included on disk and in each manifest as file_9x16. The live gallery card still offers 16:9 and 4:5 only. Italy's image-sitemap standing order does not emit 9:16, and these scenes are Candidate so their blocks were removed from image-sitemap.xml (375 urls → 370). Other rows were left in the sitemap.
+
+Art.50 PNG chunks on every master: Title, Description, Copyright, Software, Comment.
+Comment date is the true finish date 2026-09-30.
+
+Git blob SHA-1:
+  IT-01-136  16x9  3093e0983e18406a840b526ed3c07862db33f399
+  IT-01-136  4x5   9007809e6ab54871bb990c3cf7b97f40cbceb67e
+  IT-01-136  9x16  c0414a1bd3a53e283fc3cd5a4bbaa5afcfad0693
+  IT-01-147  16x9  b9dfbe9f6fd55b9b49e15c4499eeca4e83355271
+  IT-01-147  4x5   18349473cfd4f45a13eefc0737a52643b8e9ad8d
+  IT-01-147  9x16  e2e81008d022ca8c287358891b18148e5213caa3
+  IT-01-148  16x9  5c5f1d96570f62830989a38bfc147aab7dcc91b1
+  IT-01-148  4x5   525e57216ffb034e83ac2b17613c1d3d9bcd444b
+  IT-01-148  9x16  b01ed9f767414a790e0d00e770be4304988098fd
+  IT-01-149  16x9  6cca66efd2a9835ea948866c1966a2af054d4ef0
+  IT-01-149  4x5   89a16e85e12399c64fdd30135f389de2d7bf1bcf
+  IT-01-149  9x16  e007a8b2150b6a5bf5159d4c3e6ebe9293a5299e
+  IT-01-151  16x9  35cd7b004e5bcfca7429625805176a7f87f0902f
+  IT-01-151  4x5   f8223a750bd8ce517349c77c6457b994087d9e77
+  IT-01-151  9x16  37c89b2ebc6b3e8d6ad775085a670d3475c91792
+
+Files:
+  assets/it-01-136-16x9.png
+  assets/it-01-136-4x5.png
+  assets/it-01-136-9x16.png
+  assets/it-01-147-16x9.png
+  assets/it-01-147-4x5.png
+  assets/it-01-147-9x16.png
+  assets/it-01-148-16x9.png
+  assets/it-01-148-4x5.png
+  assets/it-01-148-9x16.png
+  assets/it-01-149-16x9.png
+  assets/it-01-149-4x5.png
+  assets/it-01-149-9x16.png
+  assets/it-01-151-16x9.png
+  assets/it-01-151-4x5.png
+  assets/it-01-151-9x16.png
+
+No daylight companion files existed for these five IDs. None were added.
+
+Gallery: index.html SCENES copy, scenario_label, and approval_status updated so the new masters show as Candidate. Cache query on these five cards is ?v=flagb10. tools/phase1_mood.json daynight was already day for these five and was left unchanged.
+
+Corrected geometry aimed at in the plates:
+  IT-01-136 triple arch (large center, two smaller sides) in white travertine with Doric pilasters, between the dodecagonal Torri di Properzio. Not a single arch.
+  IT-01-147 quadrilateral fortress with massive cylindrical corner towers. No angular or polygonal battered tower and no arcaded crown.
+  IT-01-148 tricuspid facade, three portals, twelve-spoke rose centered above the main portal. Not beside it.
+  IT-01-149 round Renaissance torrioni joined by a keel-shaped curtain with machicolations to the older keep with square turrets. The town sits on the same rock plateau.
+  IT-01-151 mastio with an open swallow-tail crown. No tiled hipped roof and no conical-roofed round turret.
