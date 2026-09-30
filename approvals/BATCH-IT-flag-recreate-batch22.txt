@@ -1,0 +1,91 @@
+BATCH IT FLAG-spec recreates — batch 22
+Date finished: 2026-09-30
+Work order: wo-italy-flag-specs-2026-09-30 (batch 22)
+Superseded, ignored: wo-italy-recreate-flags-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: 51c7e09cb0f5e01f8683c246579a4d2e959ec7d2
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e was not used as an image anchor. Plates were regenerated from text prompts plus the packet reference URLs and the packet weather. Existing masters were not image-anchored.)
+
+Scope: ONLY these five scenes. keep_current (IT-01-127, IT-01-128, IT-01-202, IT-01-217, IT-01-350) and hold (IT-01-037, IT-01-236, IT-01-373) were not touched. Draft PRs #34–#54 were not modified. PR #54 remains the batch 20 keeper (OPEN/DRAFT, tip 7b316c52d14ef5a29db7710f26458e1a11150237). Batch 21 (bc-1b4c4c7c-60c0-54ea-b05d-2158cd396984) was left running and was not modified. Spain pack3 was not touched.
+  IT-01-272 Rocca di Vignola, Vignola
+  IT-01-273 Camposanto Monumentale, Pisa
+  IT-01-276 Arch of Titus, Rome
+  IT-01-279 Castello di Stenico, Stenico
+  IT-01-281 Santa Maria Maggiore, Rome
+
+Status: Candidate only. Not merged. Cosmo owns QC and merge.
+Not self-approved. approval_status was not set to Approved.
+
+Approved → Candidate (prior approval superseded, not self-approved):
+  IT-01-272
+  IT-01-273
+  IT-01-276
+  IT-01-279
+  IT-01-281
+
+No WOTD was invented.
+
+Weather: Open-Meteo, already retrieved in the packet. Not re-fetched. All is_day=1. Timezone Europe/Rome. One retrieval record per scene. Each scene uses its own model hour from the packet. No night weather was invented.
+  IT-01-272  retrieval 2026-09-30T21:10:22Z  local 2026-09-30T23:10:22+02:00  model 18:00  Mainly clear   25.5°C  cloud 0%   code 1  wind 9.0 km/h  sunset 18:58  scenario 30 September 2026 · 18:00 Europe/Rome
+  IT-01-273  retrieval 2026-09-30T21:10:22Z  local 2026-09-30T23:10:22+02:00  model 19:00  Clear sky      23.6°C  cloud 0%   code 0  wind 6.4 km/h  sunset 19:01  scenario 30 September 2026 · 19:00 Europe/Rome
+  IT-01-276  retrieval 2026-09-30T21:10:22Z  local 2026-09-30T23:10:22+02:00  model 18:00  Partly cloudy  25.2°C  cloud 44%  code 2  wind 7.6 km/h  sunset 18:53  scenario 30 September 2026 · 18:00 Europe/Rome
+  IT-01-279  retrieval 2026-09-30T21:10:22Z  local 2026-09-30T23:10:22+02:00  model 18:00  Overcast       18.5°C  cloud 97%  code 3  wind 1.8 km/h  sunset 18:58  scenario 30 September 2026 · 18:00 Europe/Rome
+  IT-01-281  retrieval 2026-09-30T21:10:22Z  local 2026-09-30T23:10:22+02:00  model 18:00  Partly cloudy  25.0°C  cloud 44%  code 2  wind 7.6 km/h  sunset 18:53  scenario 30 September 2026 · 18:00 Europe/Rome
+
+Masters: regenerated from text prompts plus the packet reference URLs. Existing masters were not image-anchored. Geometry follows each corrected_spec. Daytime only (is_day=1 at every recorded hour; Pisa 19:00 is still before the 19:01 sunset).
+
+Formats: 16:9 plate per scene, 4:5 center-cropped from that plate (Lanczos to 1920×1080, then 864×1080). 9:16 is its own plate, Lanczos to 1080×1920. Photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero overlay and zero tint on the artwork. Label bar: bold caption, Scenario line, disclosure; right side Jason D's Vision and Jason A. Devlin in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+9:16 is on disk and in each manifest as file_9x16. The live gallery card still offers 16:9 and 4:5 only. These scenes are Candidate, so they are omitted from image-sitemap.xml. The omission is those five URL blocks only (375 → 370). Other scenes already Candidate on main were left in the sitemap so this batch does not republish the rest of the file.
+
+Art.50 PNG chunks on every master: Title, Description, Copyright, Software, Comment.
+Comment date is the true finish date 2026-09-30.
+
+Master git blob SHAs:
+  IT-01-272  16x9 ba8853900f4bb04819691927c0449e9e007f6eb1
+  IT-01-272  4x5  79a7cd4913548e19e5728d5ca7672759eab86aef
+  IT-01-272  9x16 d7aefa2a4548a5484d837ba66ba6546a19d1615e
+  IT-01-273  16x9 f6603f7452be4c208dd7f882e0325aa27c01e8de
+  IT-01-273  4x5  034caa0dda19ba5cb4bddff887c158d58c7c1cb6
+  IT-01-273  9x16 9108e20c15a33fe1617aec80bf1fc74cd9a358a1
+  IT-01-276  16x9 71ebb0dabf1b81e08d98c73d3980c1735671255f
+  IT-01-276  4x5  a316e1235c1f2d8ce6c37bbcd1a96bad9ea568d8
+  IT-01-276  9x16 dc88f97a633b63d3d9131f23d05cf3c6f0736319
+  IT-01-279  16x9 f7a12ff698051293e7fd0663ee63dce0a67a1703
+  IT-01-279  4x5  b4a9b138189a39b5fa73d2bca4c720fa90dd9735
+  IT-01-279  9x16 52d1491d62742302b74fc081a9429689964a7815
+  IT-01-281  16x9 87b9fafc720242490ac97c306047262228f66f81
+  IT-01-281  4x5  41997e72cbcd7fe4b838a77a8022deb8743c90ca
+  IT-01-281  9x16 2e82bd0859d2963d857a3595dfca2d90329ca406
+
+Files:
+  assets/it-01-272-16x9.png
+  assets/it-01-272-4x5.png
+  assets/it-01-272-9x16.png
+  assets/it-01-273-16x9.png
+  assets/it-01-273-4x5.png
+  assets/it-01-273-9x16.png
+  assets/it-01-276-16x9.png
+  assets/it-01-276-4x5.png
+  assets/it-01-276-9x16.png
+  assets/it-01-279-16x9.png
+  assets/it-01-279-4x5.png
+  assets/it-01-279-9x16.png
+  assets/it-01-281-16x9.png
+  assets/it-01-281-4x5.png
+  assets/it-01-281-9x16.png
+
+No night-derived daylight companions existed for these five IDs. None were added.
+
+Gallery: index.html SCENES copy, scenario_label, and approval_status updated. Card status reads Candidate. tools/phase1_mood.json was already day for these five and was left unchanged. ITALY_META day/night was already day; only the cache-bust query on these five thumbs moved to ?v=flagb22.
+
+Corrected geometry aimed at in the plates:
+  IT-01-272 square/polygonal brick towers with flared multi-tier machicolation crowns and shallow tiled roofs; no plain cylindrical towers on scarped bases.
+  IT-01-273 solid single-height outer wall of blind arches in white marble with oculi; no upper open loggia on the exterior; tracery galleries are not on the outside.
+  IT-01-276 attic inscription band SENATVS / POPVLVSQVE ROMANVS / DIVO TITO DIVI VESPASIANI F / VESPASIANO AVGVSTO; no figurative reliefs on the attic; procession reliefs, including the menorah, are inside the passageway.
+  IT-01-279 whitewashed residential palace with shuttered windows, pitched tile roofs, and a rounded bastion; no tall square keep silhouette.
+  IT-01-281 Fuga front facade: five arches on the lower loggia, three arches on the upper loggia, flanked by twin palace wings.
