@@ -441,6 +441,53 @@ def remove_916_ui(html: str) -> str:
     return html
 
 
+HOME_LINK = '<a class="home-link" href="https://jdvision.org/">&#8962; Home</a>'
+HOME_CSS = ".home-link{font-weight:700}"
+_HOME_SEP = '<span class="sep" aria-hidden="true">|</span>'
+_HOME_CSS_ANCHORS = (
+    "    .country-switch a {\n      color: var(--accent);\n      text-decoration: none;\n    }\n",
+    ".country-switch a { color: var(--accent); text-decoration: none; }\n",
+)
+
+
+def apply_home_link(html: str) -> str:
+    """Keep the hub Home link first in the country switcher.
+
+    Rebuilds re-apply this so a later publish cannot drop the nav chrome.
+    The link inherits .country-switch a color; only font-weight is added.
+    """
+    if HOME_CSS not in html:
+        placed = False
+        for anchor in _HOME_CSS_ANCHORS:
+            if anchor in html:
+                html = html.replace(anchor, anchor + "    " + HOME_CSS + "\n", 1)
+                placed = True
+                break
+        if not placed:
+            raise SystemExit("country-switch link rule missing; refusing to publish")
+    open_tag = '<nav class="country-switch" aria-label="Country galleries">'
+    start = html.find(open_tag)
+    if start < 0:
+        raise SystemExit("country switcher missing")
+    end = html.find("</nav>", start)
+    if end < 0:
+        raise SystemExit("country switcher unclosed")
+    body = html[start + len(open_tag):end]
+    if body.lstrip().startswith(HOME_LINK):
+        return html
+    body = body.replace(HOME_LINK, "")
+    if body.startswith("\n"):
+        indent = ""
+        i = 1
+        while i < len(body) and body[i] in " \t":
+            indent += body[i]
+            i += 1
+        body = "\n" + indent + HOME_LINK + "\n" + indent + _HOME_SEP + body
+    else:
+        body = HOME_LINK + _HOME_SEP + body
+    return html[:start] + open_tag + body + html[end:]
+
+
 def apply_a7(html: str) -> str:
     """Lock the A7 head onto the Italy canonical URL. Idempotent."""
     html = remove_916_ui(html)
@@ -705,7 +752,7 @@ def publish(html: str, moods: dict | None = None) -> str:
     unknown = [s["entry_id"] for s in scenes if s["entry_id"] not in moods]
     if unknown:
         print(f"warning: {len(unknown)} scenes have no mood row; filters will not match them", file=sys.stderr)
-    out = apply_a7(insert_phase1(base, meta, missing))
+    out = apply_home_link(apply_a7(insert_phase1(base, meta, missing)))
     if _between(out, "const SCENES = [", "\n    ];") != scenes_blob:
         raise SystemExit("publisher changed the SCENES catalogue")
     if _between(out, 'id="wotd-data">', "</script>") != wotd_blob:
@@ -777,6 +824,9 @@ def prove(html: str) -> None:
     identity = [
         "G-PDJ4WSS725",
         "flag-band",
+        'class="home-link" href="https://jdvision.org/"',
+        ".home-link{font-weight:700}",
+        "&#8962; Home",
         "Free · no credit needed",
         "lb-play",
         "fmt-tab",
