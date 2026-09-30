@@ -1,0 +1,139 @@
+BATCH IT FLAG-spec recreates — batch 32
+Date finished: 2026-09-30
+Work order: wo-italy-flag-specs-2026-09-30 (batch 32)
+Superseded, ignored: wo-italy-recreate-flags-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: be64cf296feb50c4d6d6afb7461cb1a57be059ce
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e was not used as an image anchor. Plates were regenerated from text prompts plus the packet reference URLs and the packet weather. Existing masters were not image-anchored.)
+
+Scope: ONLY these five scenes. keep_current (IT-01-127, IT-01-128, IT-01-202, IT-01-217, IT-01-350) and hold (IT-01-037, IT-01-236, IT-01-373) were not touched. Historical Italy draft PRs were not modified. Batch 29 remains DRAFT PR #63 at tip 0547e31380d3449497e538fef951c318e0699eef. Batch 30 remains DRAFT PR #64 at tip 16ac19981583e6bf49fb3e1dc9148f9aef5b12cd. Batch 31 remains DRAFT PR #65 at tip 42d470bf2872eb8bc55cd6f58995ba2a35d3e359. Spain and Ireland work were not touched.
+  IT-01-356 Roman bridge and hilltown, Fermignano
+  IT-01-357 Caldora towers above Pacentro, Pacentro
+  IT-01-359 Aragonese castle on the cliff, Ortona
+  IT-01-360 Santa Maria Maggiore and Maiella, Guardiagrele
+  IT-01-364 Medici tower village, Santo Stefano di Sessanio
+
+Status: Candidate only. Not merged. Cosmo owns QC and merge.
+Not self-approved. approval_status was not set to Approved. No Cosmo QC was invented.
+
+Approved → Candidate (prior approval superseded, not self-approved):
+  IT-01-356
+  IT-01-357
+  IT-01-359
+  IT-01-360
+  IT-01-364
+
+No WOTD was invented.
+
+Weather: Open-Meteo, already retrieved in the packet. Not re-fetched. All is_day=1. Timezone Europe/Rome. One retrieval record per scene, copied from the packet. Each scene keeps its own model hour from the packet. No night weather was invented. Every model hour is before that site's sunset.
+  IT-01-356  retrieval 2026-09-30T23:13:47Z  local 2026-10-01T01:13:47+0200  model 18:00  Mainly clear  22.7°C  cloud 17%  code 1  wind 9.8 km/h   sunset 18:50  scenario 1 October 2026 · 18:00 Europe/Rome
+  IT-01-357  retrieval 2026-09-30T23:13:49Z  local 2026-10-01T01:13:49+0200  model 17:00  Mainly clear  21.5°C  cloud 8%   code 1  wind 11.6 km/h  sunset 18:46  scenario 1 October 2026 · 17:00 Europe/Rome
+  IT-01-359  retrieval 2026-09-30T23:13:51Z  local 2026-10-01T01:13:51+0200  model 16:00  Clear sky     23.6°C  cloud 0%   code 0  wind 8.7 km/h   sunset 18:44  scenario 1 October 2026 · 16:00 Europe/Rome
+  IT-01-360  retrieval 2026-09-30T23:13:53Z  local 2026-10-01T01:13:53+0200  model 15:00  Clear sky     22.6°C  cloud 5%   code 0  wind 10.9 km/h  sunset 18:45  scenario 1 October 2026 · 15:00 Europe/Rome
+  IT-01-364  retrieval 2026-09-30T23:13:55Z  local 2026-10-01T01:13:55+0200  model 14:00  Partly cloudy 19.1°C  cloud 54%  code 2  wind 5.0 km/h   sunset 18:47  scenario 1 October 2026 · 14:00 Europe/Rome
+
+Masters: regenerated from text prompts plus the packet reference URLs. Existing masters were not image-anchored. Geometry follows each corrected_spec. Daytime only (is_day=1; each model hour is before sunset at that site).
+
+Reference handling where a packet URL contradicted the corrected spec or could not be used as pixels:
+  IT-01-356 both packet URLs are photographs of the in-town bridge. They were read for geometry and were not passed in as pixels. The plate follows the written spec: a low three-arch stone bridge, a small towered structure on the span, the Torre delle Milizie beside the bridge, and the houses of Fermignano immediately behind. There is no distant hilltown skyline.
+  IT-01-357 both commons photographs show the castle. Some views make the round works look tall. The plate follows the written spec: the tall silhouette is three square or polygonal towers, and the circular bastions stay low and squat at the base. The photographs were not passed in as pixels.
+  IT-01-359 both commons photographs show the castle on the sea cliff. The plate follows the written spec: cylindrical corner towers whose bases flare into battered scarps. There is no angular or square bastion. The photographs were not passed in as pixels.
+  IT-01-360 one packet URL is a night photograph of the campanile and the other is a Wikipedia article page. The night frame was not passed in as pixels and was not used as the lighting. The plate is daytime and follows the written spec: a square campanile rising from the center of the facade, an open bell cell with visible bells and pointed-arch openings, a flat open top, and no pyramidal stone spire. The Maiella stays behind the church.
+  IT-01-364 one packet URL is a photograph of the tower and the other is an itinerary page. The plate follows the written spec: a cylindrical tower with three rows of machicolated corbels alternating with loopholes, topped by Guelph merlons. The surrounding borgo is the intact Medici-era village with tiled roofs, not hollow ruined shells. The pages were not passed in as pixels.
+
+Formats: 16:9 plate per scene, 4:5 center-cropped from that plate (Lanczos to 1920×1080, then 864×1080). 9:16 is its own plate, Lanczos to 1080×1920. Photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero overlay and zero tint on the artwork. Label bar: bold caption, Scenario line, disclosure; right side Jason D's Vision and Jason A. Devlin in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+9:16 is on disk and in each manifest as file_9x16. The live gallery card still offers 16:9 and 4:5 only. These scenes are Candidate, so they are omitted from image-sitemap.xml. The omission is those five URL blocks only (375 → 370). Other scenes already Candidate on main were left in the sitemap so this batch does not republish the rest of the file.
+
+Art.50 PNG chunks on every master: Title, Description, Copyright, Software, Comment.
+Comment date is the true finish date 2026-09-30.
+
+Master git blob SHAs:
+  IT-01-356  16x9 10f137b0b711694d69662e0c6c58c286218e836f
+  IT-01-356  4x5  d3b7c556f390f9dc94538eb38ff5ce5eae5b1e9c
+  IT-01-356  9x16 80626ddd4e92f5746c904799944245168e1b9c90
+  IT-01-357  16x9 5017a92d1c6964b2190fab1c6780fce3c181b43d
+  IT-01-357  4x5  ae4fa07a3e335d6e1b2487a03cb722970d8696e2
+  IT-01-357  9x16 2bde7224ce97a94c1595078503df8eddf001605b
+  IT-01-359  16x9 84e094c95440c4c3f2649cccc3beccc8a55196e9
+  IT-01-359  4x5  4dbd101f0b50bfa2be0892c1ca6bca909d4848ee
+  IT-01-359  9x16 cd9adafe245820def5a4981f300735b31001725c
+  IT-01-360  16x9 fab6d94450a7b18571ab1ada99f8ffffc4c3a381
+  IT-01-360  4x5  edb6850d51a64353da1205ababa7d82530bb3c49
+  IT-01-360  9x16 70d40d5bf5c0f6918fbc95c186b159692936484b
+  IT-01-364  16x9 ce2a5629c7442240274506274ce878e0b6b7682a
+  IT-01-364  4x5  dbbf35cd9273ef369860a1fac66e6cf813722e83
+  IT-01-364  9x16 b43914206a4bebe60ee1e1313910b68da6e9a112
+
+Files:
+  assets/it-01-356-16x9.png
+  assets/it-01-356-4x5.png
+  assets/it-01-356-9x16.png
+  assets/it-01-357-16x9.png
+  assets/it-01-357-4x5.png
+  assets/it-01-357-9x16.png
+  assets/it-01-359-16x9.png
+  assets/it-01-359-4x5.png
+  assets/it-01-359-9x16.png
+  assets/it-01-360-16x9.png
+  assets/it-01-360-4x5.png
+  assets/it-01-360-9x16.png
+  assets/it-01-364-16x9.png
+  assets/it-01-364-4x5.png
+  assets/it-01-364-9x16.png
+
+No night-derived daylight companions existed for these five IDs. None were added.
+
+Gallery: index.html SCENES copy, scenario_label, and approval_status updated. Card status reads Candidate. tools/phase1_mood.json was already day for these five and was left unchanged. ITALY_META day/night was already day; only the cache-bust query on these five thumbs moved to ?v=flagb32.
+
+Per-scene evidence cards
+========================
+
+IT-01-356 Roman bridge and hilltown, Fermignano
+References:
+  https://weraigo.com/media/marche/fermignano/Ponte-Medioevale-o-Romano-a-Fermignano.jpg
+  https://www.museionline.info/images/monumenti/ponttorfermignano.jpg
+Geometry anchors:
+  1. Low stone bridge with exactly three arches over the Metauro.
+  2. A small towered structure at mid-bridge, and the Torre delle Milizie beside the bridge.
+  3. Houses of Fermignano rise immediately behind. No distant hilltown skyline.
+
+IT-01-357 Caldora towers above Pacentro, Pacentro
+References:
+  https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Castello_Caldora_di_Pacentro.jpg/1280px-Castello_Caldora_di_Pacentro.jpg
+  https://upload.wikimedia.org/wikipedia/commons/7/7d/Pacentro_AQ_-_Castello_Caldora_02.JPG
+Geometry anchors:
+  1. Tall silhouette formed by three square or polygonal towers.
+  2. Those tall towers are not cylinders.
+  3. Circular bastions are lower squat elements at the base.
+
+IT-01-359 Aragonese castle on the cliff, Ortona
+References:
+  https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Castello_Aragonese_Ortona_1.jpg/1280px-Castello_Aragonese_Ortona_1.jpg
+  https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Castello_aragonese_di_Ortona.jpg/1280px-Castello_aragonese_di_Ortona.jpg
+Geometry anchors:
+  1. Cylindrical corner towers.
+  2. Each tower base flares into a battered scarp.
+  3. No angular or square bastion forms. The castle sits on the cliff above the sea.
+
+IT-01-360 Santa Maria Maggiore and Maiella, Guardiagrele
+References:
+  https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Guardiagrele_Santa_Maria_Maggiore_Campanile_Notte.jpg/1280px-Guardiagrele_Santa_Maria_Maggiore_Campanile_Notte.jpg
+  https://en.wikipedia.org/wiki/Museo_del_duomo_di_Guardiagrele
+Geometry anchors:
+  1. Square campanile rising from the center of the facade.
+  2. Open bell cell with visible bells and lateral pointed-arch openings.
+  3. No pyramidal stone spire. The tower is flat and open-topped.
+
+IT-01-364 Medici tower village, Santo Stefano di Sessanio
+References:
+  https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Torre_Medicea%2C_Santo_Stefano_di_Sessanio.jpg/1280px-Torre_Medicea%2C_Santo_Stefano_di_Sessanio.jpg
+  https://www.italyheritage.com/visit-italy/itineraries/abruzzo/santo-stefano-di-sessanio/
+Geometry anchors:
+  1. Cylindrical tower.
+  2. Crown of three rows of machicolated corbels (beccatelli) alternating with loopholes.
+  3. Guelph-style merlons on top. The surrounding borgo is intact, with tiled roofs, not hollow ruined shells.
