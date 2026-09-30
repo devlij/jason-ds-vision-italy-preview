@@ -1,0 +1,139 @@
+BATCH IT FLAG-spec recreates — batch 28
+Date finished: 2026-09-30
+Work order: wo-italy-flag-specs-2026-09-30 (batch 28)
+Superseded, ignored: wo-italy-recreate-flags-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: be64cf296feb50c4d6d6afb7461cb1a57be059ce
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e was not used as an image anchor. Plates were regenerated from text prompts plus the packet reference URLs and the packet weather. Existing masters were not image-anchored.)
+
+Scope: ONLY these five scenes. keep_current (IT-01-127, IT-01-128, IT-01-202, IT-01-217, IT-01-350) and hold (IT-01-037, IT-01-236, IT-01-373) were not touched. Historical Italy draft PRs were not modified. Batch 26 remains DRAFT PR #60 at tip b4e87a91c6e91a03980e06cc5ded504395b2ac31. Batch 27 remains DRAFT PR #61 at tip 097610b8b1118e408753ebbac346e3724b04cc59. Spain and Ireland work were not touched.
+  IT-01-330 Piazza Silvestri, Bevagna
+  IT-01-331 Lungomare and Strait of Messina, Reggio Calabria
+  IT-01-332 Piombino promontory and fortress, Piombino
+  IT-01-333 Finale Ligure cliffs and Castel Gavone, Finale Ligure
+  IT-01-334 Cathedral village street, Sovana
+
+Status: Candidate only. Not merged. Cosmo owns QC and merge.
+Not self-approved. approval_status was not set to Approved. No Cosmo QC was invented.
+
+Approved → Candidate (prior approval superseded, not self-approved):
+  IT-01-330
+  IT-01-331
+  IT-01-332
+  IT-01-333
+  IT-01-334
+
+No WOTD was invented.
+
+Weather: Open-Meteo, already retrieved in the packet. Not re-fetched. All is_day=1. Timezone Europe/Rome. One retrieval record per scene, copied from the packet. Each scene keeps its own model hour from the packet. No night weather was invented. Every model hour is before that site's sunset.
+  IT-01-330  retrieval 2026-09-30T22:21:19Z  local 2026-10-01T00:21:19+0200  model 18:00  Partly cloudy  25.3°C  cloud 68%  code 2  wind 10.5 km/h  sunset 18:50  scenario 1 October 2026 · 18:00 Europe/Rome
+  IT-01-331  retrieval 2026-09-30T22:21:21Z  local 2026-10-01T00:21:21+0200  model 17:00  Mainly clear   24.5°C  cloud 44%  code 1  wind 10.1 km/h  sunset 18:40  scenario 1 October 2026 · 17:00 Europe/Rome
+  IT-01-332  retrieval 2026-09-30T22:21:23Z  local 2026-10-01T00:21:23+0200  model 16:00  Overcast       24.3°C  cloud 100% code 3  wind 7.3 km/h   sunset 18:59  scenario 1 October 2026 · 16:00 Europe/Rome
+  IT-01-333  retrieval 2026-09-30T22:21:25Z  local 2026-10-01T00:21:25+0200  model 19:00  Overcast       21.6°C  cloud 99%  code 3  wind 8.7 km/h   sunset 19:07  scenario 1 October 2026 · 19:00 Europe/Rome
+  IT-01-334  retrieval 2026-09-30T22:21:27Z  local 2026-10-01T00:21:27+0200  model 15:00  Partly cloudy  26.1°C  cloud 72%  code 2  wind 10.7 km/h  sunset 18:55  scenario 1 October 2026 · 15:00 Europe/Rome
+
+Masters: regenerated from text prompts plus the packet reference URLs. Existing masters were not image-anchored. Geometry follows each corrected_spec. Daytime only (is_day=1; each model hour is before sunset at that site).
+
+Reference handling where a packet URL contradicted the corrected spec or could not be used as pixels:
+  IT-01-330 both packet photographs show San Michele's square campanile on the viewer's right of the facade. The written spec says LEFT. The plate follows the written spec: the pyramidal campanile is bonded into the left side of the facade, immediately beside the rose window. The photographs were not passed in as pixels. The fountain in those frames reads rounder and possibly figural; the plate follows the spec (plain octagonal basin, stepped plinth, simple column, shallow bowl, no figural sculpture).
+  IT-01-331 the Wikimedia lungomare frame matches the spec (black iron railings on stone posts, globe lamps, geometric paving, palms, separate buildings, Etna). It was not passed in as pixels. The second packet URL (italia.it Abruzzo / Teramo) is a different region and was not used.
+  IT-01-332 the Marina Militare page did not return a usable photograph. The trekking page describes the open promontory. The plate is that open maquis headland with a slender lantern lighthouse, a small terrace, and low service buildings. It is not the fortified town, and it is not La Rocchetta's short crenellated tower in Piazza Bovio.
+  IT-01-333 the castle pages describe the Torre dei Diamanti above Finalborgo. The plate is the hillside view, not a sea-cliff beach.
+  IT-01-334 the cathedral pages describe a plain tuff mass and a sculpted portal, with the entrance on the flank. The plate has no rose window and no campanile.
+
+Formats: 16:9 plate per scene, 4:5 center-cropped from that plate (Lanczos to 1920×1080, then 864×1080). 9:16 is its own plate, Lanczos to 1080×1920. Photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero overlay and zero tint on the artwork. Label bar: bold caption, Scenario line, disclosure; right side Jason D's Vision and Jason A. Devlin in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+9:16 is on disk and in each manifest as file_9x16. The live gallery card still offers 16:9 and 4:5 only. These scenes are Candidate, so they are omitted from image-sitemap.xml. The omission is those five URL blocks only (375 → 370). Other scenes already Candidate on main were left in the sitemap so this batch does not republish the rest of the file.
+
+Art.50 PNG chunks on every master: Title, Description, Copyright, Software, Comment.
+Comment date is the true finish date 2026-09-30.
+
+Master git blob SHAs:
+  IT-01-330  16x9 65f636e3f11fd1323884d37a58d8c3c121c710b4
+  IT-01-330  4x5  21ffac22aae0caceff2054d8d53dff6793ed122b
+  IT-01-330  9x16 ad423d6947e236041d8789b5003235955cccc5a4
+  IT-01-331  16x9 001e272d0c95a00c2b06733faba181bccaa30695
+  IT-01-331  4x5  ecccb3a35f01b29e1f12d5f4c7e31680a6dd0e2f
+  IT-01-331  9x16 7ebc62e47a2dd0e7cb0f732831a57b3d7bc0334a
+  IT-01-332  16x9 772801b8736807311d56c623a5ba34e7ff4594de
+  IT-01-332  4x5  ce1f07061d46b20ad0f189369c22eb491dc18f0e
+  IT-01-332  9x16 e0197c8b039a7cfbfe562ba15853bf2ba95181c6
+  IT-01-333  16x9 4e9d3f5f470a47d3279bcb566f83e58efc2040cf
+  IT-01-333  4x5  7b384fc518769c745f55f1899de9b36a36b5e89d
+  IT-01-333  9x16 bc94ecf29a5950d876cd8b0841a29b41cf320416
+  IT-01-334  16x9 b693aaa007077fc36582587629a8e15c993e6573
+  IT-01-334  4x5  a47b32a07d2717acb5d381f35520666115c049c8
+  IT-01-334  9x16 a50614da379f88a314f94915d0da56cb6532c7da
+
+Files:
+  assets/it-01-330-16x9.png
+  assets/it-01-330-4x5.png
+  assets/it-01-330-9x16.png
+  assets/it-01-331-16x9.png
+  assets/it-01-331-4x5.png
+  assets/it-01-331-9x16.png
+  assets/it-01-332-16x9.png
+  assets/it-01-332-4x5.png
+  assets/it-01-332-9x16.png
+  assets/it-01-333-16x9.png
+  assets/it-01-333-4x5.png
+  assets/it-01-333-9x16.png
+  assets/it-01-334-16x9.png
+  assets/it-01-334-4x5.png
+  assets/it-01-334-9x16.png
+
+No night-derived daylight companions existed for these five IDs. None were added.
+
+Gallery: index.html SCENES copy, scenario_label, and approval_status updated. Card status reads Candidate. tools/phase1_mood.json was already day for these five and was left unchanged. ITALY_META day/night was already day; only the cache-bust query on these five thumbs moved to ?v=flagb28.
+
+Per-scene evidence cards
+========================
+
+IT-01-330 Piazza Silvestri, Bevagna
+References:
+  https://www.pictorem.com/uploads/collection/I/IL10ENF8UHN/600_Marco-Brivio_UMBRIA_00102.jpg
+  https://www.italyvacationspecialists.com/servimg/og/uploaded_files/location/2008-fac0d2bb07f76c2cb8eec49b4262f59a.jpg
+Geometry anchors:
+  1. Square stone campanile with pyramidal spire bonded into the LEFT side of the San Michele facade, immediately beside the large rose window.
+  2. No detached bifora bell-gable between the church and the palazzo.
+  3. Plain octagonal stone basin on a stepped plinth, simple central column, shallow upper bowl, no figural sculpture.
+
+IT-01-331 Lungomare and Strait of Messina, Reggio Calabria
+References:
+  https://commons.wikimedia.org/wiki/File:Reggio_Calabria_-_Lungomare_Falcomat%C3%A0_-_2.jpg
+  https://www.italia.it/es/abruzos/teramo/guia-historia-curiosidades
+Geometry anchors:
+  1. Black wrought-iron railings on short stone posts along the sea edge.
+  2. Rows of globe-topped lamp posts, wide stone paving in a geometric grid, palms and benches inland, separate buildings across the road.
+  3. Mount Etna across the Strait of Messina.
+
+IT-01-332 Piombino promontory and fortress, Piombino
+References:
+  https://www.marina.difesa.it/cosa-facciamo/per-la-difesa-sicurezza/fari/Pagine/1426.aspx
+  https://www.goodtrekking.it/percorsi/italia/trekking-toscana/alte-coste-rocciose-per-uno-dei-promontorio-piombino-piu-famosi-della-toscana-scopri-il-percorso-ad-anello-che-lo-circonda/
+Geometry anchors:
+  1. Slender stone Faro di Punta Falcone lighthouse with a lantern on the point.
+  2. Open rocky maquis: low scrub, bare rock shoreline, small paved panoramic terrace, one or two low service buildings.
+  3. No walls, no towers, no town — open promontory against the sea.
+
+IT-01-333 Finale Ligure cliffs and Castel Gavone, Finale Ligure
+References:
+  https://mudifinale.com/sito-monumento/monumenti/castelli-e-fortificazioni/castel-gavone/
+  https://visitfinaleligure.it/una-chef-in-cammino/
+Geometry anchors:
+  1. Round Torre dei Diamanti whose whole shaft is diamond-point ashlar, with a ragged crown of exposed red brick.
+  2. Attached ruined palace walls and a stair.
+  3. Wooded hillside above Finalborgo, town below, sea distant — not on the sea cliff.
+
+IT-01-334 Cathedral village street, Sovana
+References:
+  https://www.visittuscany.com/it/attrazioni/duomo-di-sovana/
+  https://borghipiubelliditalia.it/borgo/sovana/
+Geometry anchors:
+  1. Plain massive tuff ashlar church; the bare wall is pierced only by the white-marble portal (twisted colonnettes, crucifixion lintel, buttress-like pilasters).
+  2. Small high windows and polygonal apse buttresses on the flank.
+  3. No rose window and no campanile; the street leads to this sober stone mass.
