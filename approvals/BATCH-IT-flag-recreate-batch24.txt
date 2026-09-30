@@ -1,0 +1,91 @@
+BATCH IT FLAG-spec recreates — batch 24
+Date finished: 2026-09-30
+Work order: wo-italy-flag-specs-2026-09-30 (batch 24)
+Superseded, ignored: wo-italy-recreate-flags-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: 51c7e09cb0f5e01f8683c246579a4d2e959ec7d2
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e was not used as an image anchor. Plates were regenerated from text prompts plus the packet reference URLs and the packet weather. Existing masters were not image-anchored.)
+
+Scope: ONLY these five scenes. keep_current (IT-01-127, IT-01-128, IT-01-202, IT-01-217, IT-01-350) and hold (IT-01-037, IT-01-236, IT-01-373) were not touched. Draft PR #56 (batch 22, tip 76b3166d2cab41095759ef8f221fb640ed6df289) and draft PR #57 (batch 23, tip d0ea38a393ad5babe3e23dbadc1d95f164226adc) were not modified. Spain packs and Ireland batch2 were not touched.
+  IT-01-293 Santa Maria di Leuca lighthouse, Santa Maria di Leuca
+  IT-01-297 Temple of Portunus, Rome
+  IT-01-298 Capitolium of Brescia, Brescia
+  IT-01-300 Merano Kurhaus and Passerpromenade, Merano
+  IT-01-302 Praiano, Amalfi Coast
+
+Status: Candidate only. Not merged. Cosmo owns QC and merge.
+Not self-approved. approval_status was not set to Approved.
+
+Approved → Candidate (prior approval superseded, not self-approved):
+  IT-01-293
+  IT-01-297
+  IT-01-298
+  IT-01-300
+  IT-01-302
+
+No WOTD was invented.
+
+Weather: Open-Meteo, already retrieved in the packet. Not re-fetched. All is_day=1. Timezone Europe/Rome. One retrieval record per scene. Each scene uses its own model hour from the packet. No night weather was invented.
+  IT-01-293  retrieval 2026-09-30T21:27:28Z  local 2026-09-30T23:27:28+02:00  model 18:00  Clear sky      22.9°C  cloud 3%   code 0  wind 6.8 km/h  sunset 18:31  scenario 30 September 2026 · 18:00 Europe/Rome
+  IT-01-297  retrieval 2026-09-30T21:27:28Z  local 2026-09-30T23:27:28+02:00  model 18:00  Partly cloudy  25.2°C  cloud 44%  code 2  wind 7.6 km/h  sunset 18:53  scenario 30 September 2026 · 18:00 Europe/Rome
+  IT-01-298  retrieval 2026-09-30T21:27:28Z  local 2026-09-30T23:27:28+02:00  model 19:00  Partly cloudy  23.2°C  cloud 58%  code 2  wind 5.4 km/h  sunset 19:01  scenario 30 September 2026 · 19:00 Europe/Rome
+  IT-01-300  retrieval 2026-09-30T21:27:28Z  local 2026-09-30T23:27:28+02:00  model 18:00  Clear sky      23.0°C  cloud 0%   code 0  wind 3.2 km/h  sunset 18:57  scenario 30 September 2026 · 18:00 Europe/Rome
+  IT-01-302  retrieval 2026-09-30T21:27:28Z  local 2026-09-30T23:27:28+02:00  model 18:00  Clear sky      25.0°C  cloud 9%   code 0  wind 6.8 km/h  sunset 18:45  scenario 30 September 2026 · 18:00 Europe/Rome
+
+Masters: regenerated from text prompts plus the packet reference URLs. Existing masters were not image-anchored. Geometry follows each corrected_spec. Daytime only (is_day=1 at every recorded hour; Brescia 19:00 is still before the 19:01 sunset).
+
+Formats: 16:9 plate per scene, 4:5 center-cropped from that plate (Lanczos to 1920×1080, then 864×1080). 9:16 is its own plate, Lanczos to 1080×1920. Photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero overlay and zero tint on the artwork. Label bar: bold caption, Scenario line, disclosure; right side Jason D's Vision and Jason A. Devlin in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+9:16 is on disk and in each manifest as file_9x16. The live gallery card still offers 16:9 and 4:5 only. These scenes are Candidate, so they are omitted from image-sitemap.xml. The omission is those five URL blocks only (375 → 370). Other scenes already Candidate on main were left in the sitemap so this batch does not republish the rest of the file.
+
+Art.50 PNG chunks on every master: Title, Description, Copyright, Software, Comment.
+Comment date is the true finish date 2026-09-30.
+
+Master git blob SHAs:
+  IT-01-293  16x9 fbe58ce5c647b10a139a4651f9c97860f8b76316
+  IT-01-293  4x5  38fc6fd7918029abcf18d1e7d27dbdcdb0800cef
+  IT-01-293  9x16 4849b5327958282f8ba81a54e466c75c1504ec35
+  IT-01-297  16x9 4d90f228ffecb0355f5d99c637fe1116c429fbc1
+  IT-01-297  4x5  421d775f78e2c895a724007bb63da860c36e2998
+  IT-01-297  9x16 3d85bd7edafb5f5c4df12e7240d56474100a753d
+  IT-01-298  16x9 e24f532a6b80774c66553cce53d92d92a3616c93
+  IT-01-298  4x5  462d1e0d77a71c8339c1027ee9de2f27ff5b1e5d
+  IT-01-298  9x16 d77871721e38708a78d63e910c75f165025f282a
+  IT-01-300  16x9 830daae23cb55b69442f06ec3fd864a2e0896dcb
+  IT-01-300  4x5  0bb17c398fb8112fa66b40bbf1c8e727d1f91bca
+  IT-01-300  9x16 dcac7872d673ed94948630a78f2cecc2650f9be1
+  IT-01-302  16x9 842a86b1d0d31b92a239bfed0e37586a75f56742
+  IT-01-302  4x5  1ff2a866bdc31361da98f88939c8f8f26409f5c9
+  IT-01-302  9x16 6fcc176f7ff8e8811b181f46525b39f83c6d96c3
+
+Files:
+  assets/it-01-293-16x9.png
+  assets/it-01-293-4x5.png
+  assets/it-01-293-9x16.png
+  assets/it-01-297-16x9.png
+  assets/it-01-297-4x5.png
+  assets/it-01-297-9x16.png
+  assets/it-01-298-16x9.png
+  assets/it-01-298-4x5.png
+  assets/it-01-298-9x16.png
+  assets/it-01-300-16x9.png
+  assets/it-01-300-4x5.png
+  assets/it-01-300-9x16.png
+  assets/it-01-302-16x9.png
+  assets/it-01-302-4x5.png
+  assets/it-01-302-9x16.png
+
+No night-derived daylight companions existed for these five IDs. None were added.
+
+Gallery: index.html SCENES copy, scenario_label, and approval_status updated. Card status reads Candidate. tools/phase1_mood.json was already day for these five and was left unchanged. ITALY_META day/night was already day; only the cache-bust query on these five thumbs moved to ?v=flagb24.
+
+Corrected geometry aimed at in the plates:
+  IT-01-293 tall white octagonal tower rising from the two-storey keeper's house on the paved sanctuary plaza with the monumental arched loggia; no isolated cylindrical tower on scrub.
+  IT-01-297 Ionic pseudoperipteral Temple of Portunus; Santa Maria in Cosmedin campanile is a flat-topped Romanesque brick tower with paired arched openings and no conical or pyramidal spire.
+  IT-01-298 partial reconstruction: brick-faced column shafts with surviving Corinthian capitals, incomplete plain pediment, column stumps; no complete sculpted pediment and no fully intact marble hexastyle.
+  IT-01-300 reddish-brown tiled Kursaal dome with no verdigris ribbing and no tall lantern; Ionic-column portico under a triangular pediment on the promenade front; arcade only along the side loggia.
+  IT-01-302 campanile crowned by a tall conical green majolica steeple with a geometric tile pattern and a cross, beside a yellow majolica dome with a blue-and-white diamond band over gold ribs, on warm peach stucco; no rounded white dome cap.
