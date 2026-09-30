@@ -1,0 +1,77 @@
+BATCH IT FLAG-spec recreates — batch 9
+Date finished: 2026-09-30
+Work order: wo-italy-flag-specs-2026-09-30 (batch 9)
+Superseded, ignored: wo-italy-recreate-flags-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: 873d1efc8777e746f0906a2b7a41c180ac08183d
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e / Telea wipe ghosts were not used as an image anchor.)
+
+Scope: ONLY these five scenes. keep_current (IT-01-127, IT-01-128, IT-01-202, IT-01-217, IT-01-350) and hold (IT-01-037, IT-01-236, IT-01-373) were not touched. Draft holds #34–#40 and Cosmo rework #37 were not modified.
+
+  IT-01-124 Il Gigante and Fegina beach, Monterosso
+  IT-01-125 Terrace of Infinity, Ravello
+  IT-01-129 Barga Duomo, Barga
+  IT-01-134 Cristo Redentore, Maratea
+  IT-01-135 Castello Carlo V and harbor, Monopoli
+
+Status: Candidate only. Not merged. Cosmo owns QC and merge. Never self-approved.
+Approved → Candidate (all five; prior bake approval of 2026-09-29 is superseded pending Cosmo QC):
+  IT-01-124 Approved → Candidate
+  IT-01-125 Approved → Candidate
+  IT-01-129 Approved → Candidate
+  IT-01-134 Approved → Candidate
+  IT-01-135 Approved → Candidate
+
+No WOTD was invented.
+
+Weather: Open-Meteo current, already retrieved. Not re-fetched. All is_day=1. Model time 2026-09-30T18:00 Europe/Rome. Scenario label on every master: 30 September 2026 · 18:00 Europe/Rome. Retrieval seconds are unique per scene.
+
+  Scene      Retrieval UTC              Local                        Sky            Temp    Cloud   Code
+  IT-01-124  2026-09-30T16:01:28Z       2026-09-30T18:01:28+0200     Partly cloudy  23.5°C  83%     2
+  IT-01-125  2026-09-30T16:01:31Z       2026-09-30T18:01:31+0200     Clear sky      23.2°C  8%      0
+  IT-01-129  2026-09-30T16:01:33Z       2026-09-30T18:01:33+0200     Partly cloudy  23.8°C  24%     2
+  IT-01-134  2026-09-30T16:01:35Z       2026-09-30T18:01:35+0200     Mainly clear   24.2°C  32%     1
+  IT-01-135  2026-09-30T16:01:37Z       2026-09-30T18:01:37+0200     Clear sky      23.0°C  0%      0
+
+Sunrise/sunset (local) used only to keep the 18:00 frame in daylight: Monterosso 07:17–19:04, Ravello 06:57–18:45, Barga 07:14–19:00, Maratea 06:52–18:41, Monopoli 06:46–18:34. Sun is still up in every scene.
+
+Masters: regenerated from text prompts plus the packet reference URLs. Existing masters were not image-anchored. Watermarked reference frames were not passed in as pixels. Geometry follows each corrected_spec.
+
+Formats: one plate per aspect, Lanczos to the photo size, then the label bar. Photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero overlay on the artwork. Label bar: bold site+city caption, Scenario line, disclosure "AI-generated artistic interpretation · Not a photograph."; right side Jason D's Vision and Jason A. Devlin in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+9:16 is included on disk and in each manifest as file_9x16. The live gallery card still offers 16:9 and 4:5 only. Italy's image-sitemap standing order does not emit 9:16. These five scenes are Candidate, so their 16:9 and 4:5 masters were removed from image-sitemap.xml. Other scenes already listed on main were left as they were.
+
+Art.50 PNG chunks on every master: Title, Description, Copyright, Software, Comment.
+Comment date is the true finish date 2026-09-30.
+
+Files:
+  assets/it-01-124-16x9.png
+  assets/it-01-124-4x5.png
+  assets/it-01-124-9x16.png
+  assets/it-01-125-16x9.png
+  assets/it-01-125-4x5.png
+  assets/it-01-125-9x16.png
+  assets/it-01-129-16x9.png
+  assets/it-01-129-4x5.png
+  assets/it-01-129-9x16.png
+  assets/it-01-134-16x9.png
+  assets/it-01-134-4x5.png
+  assets/it-01-134-9x16.png
+  assets/it-01-135-16x9.png
+  assets/it-01-135-4x5.png
+  assets/it-01-135-9x16.png
+
+No daylight-variant companions existed for these five IDs. The new primary is daytime, so none were added.
+
+Gallery: index.html SCENES copy, scenario_label, and approval_status updated so the new masters show as Candidate. tools/phase1_mood.json and ITALY_META already recorded these five as day; that day/night meta was left in place. A duplicate `const statusLabel` in the card renderer (already on main) kept the gallery script from parsing; the extra declaration was removed so the catalogue renders and these cards show Candidate.
+
+Corrected geometry aimed at in the plates:
+  IT-01-124 broken concrete Neptune — torso and one shoulder, armless, no trident or shell — built into the rock at the end of Fegina beach; not a complete crowned colossus.
+  IT-01-125 belvedere terrace with a parapet row of marble busts and a small classical pavilion; no Gothic cloister, no church campanile.
+  IT-01-129 flat austere limestone west front (square wall) with a single Romanesque portal with lion capitals and a small bifora above; no rose window, no ornate gable; castle-like crenellated campanile.
+  IT-01-134 bare rocky summit with the ruins of the old city (ruderi) beside the statue; no intact white cubic houses clustered next to it.
+  IT-01-135 cathedral skyline of a single crossing dome and a tall pointed campanile; no twin identical ribbed domes. Harbor, fortress, and fishing boats retained.
