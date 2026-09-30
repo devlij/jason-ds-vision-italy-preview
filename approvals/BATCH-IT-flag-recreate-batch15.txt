@@ -1,0 +1,71 @@
+BATCH IT FLAG-spec recreates — batch 15
+Date finished: 2026-09-30
+Work order: wo-italy-flag-specs-2026-09-30 (batch 15)
+Superseded, ignored: wo-italy-recreate-flags-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: 51c7e09cb0f5e01f8683c246579a4d2e959ec7d2
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e / Telea wipe ghosts were not used as an image anchor. Existing masters were not passed in as pixels.)
+
+Scope: ONLY these five scenes. keep_current (IT-01-127, IT-01-128, IT-01-202, IT-01-217, IT-01-350) and hold (IT-01-037, IT-01-236, IT-01-373) were not touched. Draft PRs #34–#46 were not modified. Batch1 PR #32 and batch2 PR #33 stay as merged on main.
+  IT-01-204 Palazzo dei Papi, Viterbo
+  IT-01-205 Reggia di Caserta, Caserta
+  IT-01-207 Arena di Verona, Verona
+  IT-01-208 Castello di Lerici, Lerici
+  IT-01-210 Fontana Maggiore, Perugia
+
+Status: Candidate only. Not merged. Cosmo owns QC and merge. Not self-approved. No WOTD was invented.
+
+Approved → Candidate (packet list; FLAG recreate supersedes prior approval pending Cosmo QC):
+  IT-01-204
+  IT-01-205
+  IT-01-207
+  IT-01-208
+  IT-01-210
+All five were Approved on disk before this recreate. Each manifest is now Candidate. approved_at was removed with the superseded approval.
+
+Weather: Open-Meteo current, already retrieved in the packet. Not re-fetched. All is_day=1. Model time 16:00 Europe/Rome. Scenario label on every master: 30 September 2026 · 16:00 Europe/Rome.
+  IT-01-204  retrieval 2026-09-30T18:40:32Z  local 2026-09-30T20:40:32+0200  Partly cloudy  24.6°C  cloud 58%  code 2  sunset 18:54
+  IT-01-205  retrieval 2026-09-30T18:40:33Z  local 2026-09-30T20:40:33+0200  Clear sky     28.0°C  cloud 1%   code 0  sunset 18:46
+  IT-01-207  retrieval 2026-09-30T18:40:35Z  local 2026-09-30T20:40:35+0200  Mainly clear  26.0°C  cloud 40%  code 1  sunset 18:58
+  IT-01-208  retrieval 2026-09-30T18:40:37Z  local 2026-09-30T20:40:37+0200  Mainly clear  24.7°C  cloud 33%  code 1  sunset 19:03
+  IT-01-210  retrieval 2026-09-30T18:40:38Z  local 2026-09-30T20:40:38+0200  Clear sky     25.8°C  cloud 0%   code 0  sunset 18:53
+Retrieval seconds are unique. Sun is still up at 16:00 at every site (is_day=1; sunsets 18:46–19:03).
+
+Masters: regenerated from text prompts plus the packet reference URLs. Existing masters were not image-anchored. Geometry follows each corrected_spec. The Lerici riunet bitstream is a paper, so it was not passed in as pixels; the commons waterfront panorama was. Perugia plates are text-led on the unfinished facade (no rose window, no triple portals) with the Fontana Maggiore kept as the named subject. Caption on IT-01-210 stays Fontana Maggiore, Perugia.
+
+Formats: 16:9 and 9:16 generated for the frame; 4:5 is a centered crop of a 3:4 plate (Lanczos to exact photo size). Photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero overlay and zero tint on the artwork. Label bar: caption, Scenario line, disclosure; right side Jason D's Vision and Jason A. Devlin in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+9:16 is included on disk and in each manifest as file_9x16. The live gallery card still offers 16:9 and 4:5 only. Italy's image-sitemap standing order does not emit 9:16, and these scenes are Candidate so they are not in image-sitemap.xml. Sitemap URL count 375 → 370. A full image_sitemap.py regen was not run: it would also drop unrelated scenes whose manifests are already non-Approved while the committed sitemap still lists them. These five loc blocks were removed by hand.
+
+Art.50 PNG chunks on every master: Title, Description, Copyright, Software, Comment.
+Comment date is the true finish date 2026-09-30.
+
+Files:
+  assets/it-01-204-16x9.png
+  assets/it-01-204-4x5.png
+  assets/it-01-204-9x16.png
+  assets/it-01-205-16x9.png
+  assets/it-01-205-4x5.png
+  assets/it-01-205-9x16.png
+  assets/it-01-207-16x9.png
+  assets/it-01-207-4x5.png
+  assets/it-01-207-9x16.png
+  assets/it-01-208-16x9.png
+  assets/it-01-208-4x5.png
+  assets/it-01-208-9x16.png
+  assets/it-01-210-16x9.png
+  assets/it-01-210-4x5.png
+  assets/it-01-210-9x16.png
+
+Gallery: index.html SCENES copy, scenario_label, and approval_status updated so the new masters show as Candidate. ITALY_META thumbs cache-busted to ?v=flagb15. Day/night meta was already day for these five (ITALY_META and tools/phase1_mood.json) and stays day.
+
+Corrected geometry aimed at in the plates:
+  IT-01-204 Loggia with interlacing Gothic arches, quatrefoil piercings, and a heraldic-shield frieze.
+  IT-01-205 Four giant-order central columns, clock in the pediment, pinkish upper floors, rusticated base.
+  IT-01-207 Two-tier perimeter wall; only the small four-arch Ala fragment of the original outer ring survives.
+  IT-01-208 Irregular polygonal castle; access ramp on massive arches from the waterfront; keep with hanging pointed arches and bichrome stone bands.
+  IT-01-210 Unfinished facade with a white-and-pink marble lozenge trial section; no rose window, no triple portals. Caption remains Fontana Maggiore, Perugia.
