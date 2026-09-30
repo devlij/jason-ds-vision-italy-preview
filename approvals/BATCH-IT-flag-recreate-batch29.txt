@@ -1,0 +1,139 @@
+BATCH IT FLAG-spec recreates — batch 29
+Date finished: 2026-09-30
+Work order: wo-italy-flag-specs-2026-09-30 (batch 29)
+Superseded, ignored: wo-italy-recreate-flags-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: be64cf296feb50c4d6d6afb7461cb1a57be059ce
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e was not used as an image anchor. Plates were regenerated from text prompts plus the packet reference URLs and the packet weather. Existing masters were not image-anchored.)
+
+Scope: ONLY these five scenes. keep_current (IT-01-127, IT-01-128, IT-01-202, IT-01-217, IT-01-350) and hold (IT-01-037, IT-01-236, IT-01-373) were not touched. Historical Italy draft PRs were not modified. Batch 27 remains DRAFT PR #61 at tip 097610b8b1118e408753ebbac346e3724b04cc59. Batch 28 remains DRAFT PR #62 at tip aaed511c89eb209c0b99eb146182d182242bcfe3. Spain and Ireland work were not touched.
+  IT-01-335 Roman columns of Brindisi, Brindisi
+  IT-01-336 Ponte d'Augusto ruins, Narni
+  IT-01-337 Cosa ruins on Ansedonia headland, Ansedonia
+  IT-01-339 Ponte di Ariccia and Palazzo Chigi, Ariccia
+  IT-01-340 Rocca Monaldeschi above Lake Bolsena, Bolsena
+
+Status: Candidate only. Not merged. Cosmo owns QC and merge.
+Not self-approved. approval_status was not set to Approved. No Cosmo QC was invented.
+
+Approved → Candidate (prior approval superseded, not self-approved):
+  IT-01-335
+  IT-01-336
+  IT-01-337
+  IT-01-339
+  IT-01-340
+
+No WOTD was invented.
+
+Weather: Open-Meteo, already retrieved in the packet. Not re-fetched. All is_day=1. Timezone Europe/Rome. One retrieval record per scene, copied from the packet. Each scene keeps its own model hour from the packet. No night weather was invented. Every model hour is before that site's sunset.
+  IT-01-335  retrieval 2026-09-30T22:41:06Z  local 2026-10-01T00:41:06+0200  model 18:00  Clear sky      23.2°C  cloud 0%   code 0  wind 10.5 km/h  sunset 18:30  scenario 1 October 2026 · 18:00 Europe/Rome
+  IT-01-336  retrieval 2026-09-30T22:41:08Z  local 2026-10-01T00:41:08+0200  model 17:00  Mainly clear   28.1°C  cloud 39%  code 1  wind 10.5 km/h  sunset 18:51  scenario 1 October 2026 · 17:00 Europe/Rome
+  IT-01-337  retrieval 2026-09-30T22:41:10Z  local 2026-10-01T00:41:10+0200  model 16:00  Partly cloudy  25.9°C  cloud 60%  code 2  wind 8.4 km/h   sunset 18:56  scenario 1 October 2026 · 16:00 Europe/Rome
+  IT-01-339  retrieval 2026-09-30T22:41:12Z  local 2026-10-01T00:41:12+0200  model 15:00  Mainly clear   24.9°C  cloud 29%  code 1  wind 12.3 km/h  sunset 18:51  scenario 1 October 2026 · 15:00 Europe/Rome
+  IT-01-340  retrieval 2026-09-30T22:41:14Z  local 2026-10-01T00:41:14+0200  model 14:00  Mainly clear   25.2°C  cloud 44%  code 1  wind 5.7 km/h   sunset 18:53  scenario 1 October 2026 · 14:00 Europe/Rome
+
+Masters: regenerated from text prompts plus the packet reference URLs. Existing masters were not image-anchored. Geometry follows each corrected_spec. Daytime only (is_day=1; each model hour is before sunset at that site).
+
+Reference handling where a packet URL contradicted the corrected spec or could not be used as pixels:
+  IT-01-335 both packet pages describe the surviving column and the damaged companion at the head of the Virgil stair above the harbor. The plate follows the written spec: one full Corinthian column on a pedestal and one broken stump, enclosed by the pink palazzo and a stone balustrade. The pages were not passed in as pixels.
+  IT-01-336 the packet supplied one URL. That page describes the surviving masonry and also uses wording that can be read as more than one arched remnant. The plate follows the written spec: exactly one complete arch, with broken piers and abutments only. A second text reference, the Umbria tourism page, states that only the first and largest arch remains standing. Neither page was passed in as pixels.
+  IT-01-337 the colony pages describe a Capitolium that once had a columned front. The plate follows the written spec for the ruin as it stands: polygonal walls and a gate, a bare podium, fallen drums and foundation fragments, no intact temple and no standing colonnade. The pages were not passed in as pixels.
+  IT-01-339 the second packet page did not return a usable photograph. The plate follows the written spec: Bernini's circular white drum, dark grey-blue dome and lantern, three-arched portico, Chigi arms, inscription DEIPARAE IN COELVM ASSVMPTAE, no campanili, the two-tier brick viaduct, and Palazzo Chigi's colonnade on the Piazza di Corte.
+  IT-01-340 the packet pages place the rocca in the town above the lake. The plate follows the written spec: four square crenellated towers, a courtyard block, a square with a fountain, the lake behind and below the town. No round towers and no cliff of houses falling into the water. The pages were not passed in as pixels.
+
+Formats: 16:9 plate per scene, 4:5 center-cropped from that plate (Lanczos to 1920×1080, then 864×1080). 9:16 is its own plate, Lanczos to 1080×1920. Photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero overlay and zero tint on the artwork. Label bar: bold caption, Scenario line, disclosure; right side Jason D's Vision and Jason A. Devlin in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+9:16 is on disk and in each manifest as file_9x16. The live gallery card still offers 16:9 and 4:5 only. These scenes are Candidate, so they are omitted from image-sitemap.xml. The omission is those five URL blocks only (375 → 370). Other scenes already Candidate on main were left in the sitemap so this batch does not republish the rest of the file.
+
+Art.50 PNG chunks on every master: Title, Description, Copyright, Software, Comment.
+Comment date is the true finish date 2026-09-30.
+
+Master git blob SHAs:
+  IT-01-335  16x9 bc32eb627ea2cf30d434c2b725a07ff208effef2
+  IT-01-335  4x5  838fd9b8bf847ff3cab5687d6d5697034f0c1221
+  IT-01-335  9x16 92d24ef594c3d9a358c210fe23a24135442734ec
+  IT-01-336  16x9 990b3d566efe32bace0400d79cad21828058dbf3
+  IT-01-336  4x5  b3feac833b0019f39ee40d4de168b78f5ae5912a
+  IT-01-336  9x16 05853794dba995e9015d478e3ddbc66cde94a2fc
+  IT-01-337  16x9 d3b14972bebb12bed964cc23e5582c10f07d7a81
+  IT-01-337  4x5  0af5650f2331c5cf5f4434c38c69e98cd3b9b78c
+  IT-01-337  9x16 13aff39893fd3289f310ef208c164e491220531e
+  IT-01-339  16x9 523381d52ead7edb6eefed967b44e2e32533dfd1
+  IT-01-339  4x5  533f3e92f54197cedc895beb3e0049d808792f1c
+  IT-01-339  9x16 15b1af1aa479fd79950593a86972a6b31c3ac957
+  IT-01-340  16x9 7068ae74fb615220843a33bfc5dfd16407f4ed4d
+  IT-01-340  4x5  c2821695e1160a9beb2db70d40c90cf267595856
+  IT-01-340  9x16 8df6c3cee623e49f6d0c6c7626aff576bdeb4aa0
+
+Files:
+  assets/it-01-335-16x9.png
+  assets/it-01-335-4x5.png
+  assets/it-01-335-9x16.png
+  assets/it-01-336-16x9.png
+  assets/it-01-336-4x5.png
+  assets/it-01-336-9x16.png
+  assets/it-01-337-16x9.png
+  assets/it-01-337-4x5.png
+  assets/it-01-337-9x16.png
+  assets/it-01-339-16x9.png
+  assets/it-01-339-4x5.png
+  assets/it-01-339-9x16.png
+  assets/it-01-340-16x9.png
+  assets/it-01-340-4x5.png
+  assets/it-01-340-9x16.png
+
+No night-derived daylight companions existed for these five IDs. None were added.
+
+Gallery: index.html SCENES copy, scenario_label, and approval_status updated. Card status reads Candidate. tools/phase1_mood.json was already day for these five and was left unchanged. ITALY_META day/night was already day; only the cache-bust query on these five thumbs moved to ?v=flagb29.
+
+Per-scene evidence cards
+========================
+
+IT-01-335 Roman columns of Brindisi, Brindisi
+References:
+  https://www.nomads-travel-guide.com/places/roman-columns-of-brindisi/
+  https://www.apuliabiketours.com/antiche-strade-bicicletta-autoguidato-563991.html
+Geometry anchors:
+  1. One full Roman column with a Corinthian capital, standing on a pedestal.
+  2. One broken stump beside it, not a second matching column.
+  3. Both at the head of the wide ceremonial harbor stair, enclosed by town buildings: a pink palazzo facade and a stone balustrade. An urban square, not an open terrace.
+
+IT-01-336 Ponte d'Augusto ruins, Narni
+References:
+  https://www.romanoimpero.com/2019/07/ponte-daugusto-narni-umbria.html
+  https://www.umbriatourism.it/en/w/the-bridge-of-augustus-in-narni
+Geometry anchors:
+  1. Exactly one standing arch of large squared travertine blocks spanning the Nera gorge.
+  2. Broken ruined piers and abutments on the wooded banks, and no second complete arch.
+  3. Dense woodland around the gorge, with Narni's hill town above.
+
+IT-01-337 Cosa ruins on Ansedonia headland, Ansedonia
+References:
+  https://www.romanoimpero.com/2017/04/cosa-toscana.html?m=1&hl=en
+  https://robertharding.picfair.com/images/08757803-capitolium-ruins-of-main-temple-on-the-arx-roman-town-of-cosa-ansedonia
+Geometry anchors:
+  1. Massive polygonal-masonry city walls and a gate on the hillside.
+  2. Capitolium on the arx reduced to a bare podium, with scattered column drums and foundation fragments.
+  3. Low grassy ruins with pines and cypresses and the sea in the distance. No intact temple and no standing peripteral colonnade.
+
+IT-01-339 Ponte di Ariccia and Palazzo Chigi, Ariccia
+References:
+  https://fabulous.huopenair.com/nl/ervaringen/castelli-romani
+  https://www.artofit.org/ideas/ariccia
+Geometry anchors:
+  1. Bernini's rotunda: circular white-plastered drum, dark grey-blue dome and lantern, no campanili.
+  2. Temple-front portico of three arched openings under a triangular pediment with the Chigi arms and the inscription DEIPARAE IN COELVM ASSVMPTAE.
+  3. Two-tier brick Ponte di Ariccia viaduct, with Palazzo Chigi's long colonnaded front lining the Piazza di Corte beside the church.
+
+IT-01-340 Rocca Monaldeschi above Lake Bolsena, Bolsena
+References:
+  https://www.visitlazio.com/eventi-lazio/festivita-del-corpus-domini-a-bolsena/
+  https://destinazionevacanza.eurospin-viaggi.it/idee-vacanze/arte-e-cultura/guida-castelli-piu-belli-d-italia/
+Geometry anchors:
+  1. Brick quadrilateral fortress with four tall square crenellated towers and machicolated crowns at the corners.
+  2. A courtyard block fronting a town square with a fountain.
+  3. The fortress sits inside the medieval town above Lake Bolsena, with the lake visible behind and below the town. No round towers and no houses cascading down a cliff into the water.
