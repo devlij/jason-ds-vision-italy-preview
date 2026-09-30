@@ -1,0 +1,93 @@
+BATCH IT FLAG-spec recreates — batch 23
+Date finished: 2026-09-30
+Work order: wo-italy-flag-specs-2026-09-30 (batch 23)
+Superseded, ignored: wo-italy-recreate-flags-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: 51c7e09cb0f5e01f8683c246579a4d2e959ec7d2
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e was not used as an image anchor. Plates were regenerated from text prompts plus the packet reference URLs and the packet weather. Existing masters were not image-anchored.)
+
+Scope: ONLY these five scenes. keep_current (IT-01-127, IT-01-128, IT-01-202, IT-01-217, IT-01-350) and hold (IT-01-037, IT-01-236, IT-01-373) were not touched. Historical Italy draft PRs were not modified. Batch 21 remains DRAFT PR #55 at tip 29d73687204e2e42f9d2134688bbceab97f7ed5c. Batch 22 remains DRAFT PR #56 at tip 76b3166d2cab41095759ef8f221fb640ed6df289. Spain and Ireland work were not touched.
+  IT-01-284 Castello di Santa Severa, Santa Severa
+  IT-01-285 San Giovanni in Laterano, Rome
+  IT-01-286 Bocca della Verità, Rome
+  IT-01-287 Mausoleum of Augustus, Rome
+  IT-01-289 Aventine Keyhole, Rome
+
+Status: Candidate only. Not merged. Cosmo owns QC and merge.
+Not self-approved. approval_status was not set to Approved.
+
+Approved → Candidate (prior approval superseded, not self-approved):
+  IT-01-284
+  IT-01-285
+  IT-01-286
+  IT-01-287
+  IT-01-289
+
+No WOTD was invented.
+
+Weather: Open-Meteo, already retrieved in the packet. Not re-fetched. All is_day=1. Timezone Europe/Rome. One retrieval record per scene, copied from the packet. Each scene uses model hour 18:00 from the packet. No night weather was invented.
+  IT-01-284  retrieval 2026-09-30T21:19:38Z  local 2026-09-30T23:19:38+02:00  model 18:00  Mainly clear  23.9°C  cloud 41%  code 1  wind 8.7 km/h  sunset 18:55  scenario 30 September 2026 · 18:00 Europe/Rome
+  IT-01-285  retrieval 2026-09-30T21:19:38Z  local 2026-09-30T23:19:38+02:00  model 18:00  Partly cloudy  25.0°C  cloud 44%  code 2  wind 7.6 km/h  sunset 18:53  scenario 30 September 2026 · 18:00 Europe/Rome
+  IT-01-286  retrieval 2026-09-30T21:19:38Z  local 2026-09-30T23:19:38+02:00  model 18:00  Partly cloudy  25.3°C  cloud 44%  code 2  wind 7.6 km/h  sunset 18:53  scenario 30 September 2026 · 18:00 Europe/Rome
+  IT-01-287  retrieval 2026-09-30T21:19:38Z  local 2026-09-30T23:19:38+02:00  model 18:00  Mainly clear  25.0°C  cloud 37%  code 1  wind 8.0 km/h  sunset 18:53  scenario 30 September 2026 · 18:00 Europe/Rome
+  IT-01-289  retrieval 2026-09-30T21:19:38Z  local 2026-09-30T23:19:38+02:00  model 18:00  Partly cloudy  25.3°C  cloud 44%  code 2  wind 7.6 km/h  sunset 18:53  scenario 30 September 2026 · 18:00 Europe/Rome
+
+Masters: regenerated from text prompts plus the packet reference URLs. Existing masters were not image-anchored. Geometry follows each corrected_spec. Daytime only (is_day=1; 18:00 is before sunset at every site).
+
+Formats: 16:9 plate per scene, 4:5 center-cropped from that plate (Lanczos to 1920×1080, then 864×1080). 9:16 is its own plate, Lanczos to 1080×1920. Photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero overlay and zero tint on the artwork. Label bar: bold caption, Scenario line, disclosure; right side Jason D's Vision and Jason A. Devlin in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+9:16 is on disk and in each manifest as file_9x16. The live gallery card still offers 16:9 and 4:5 only. These scenes are Candidate, so they are omitted from image-sitemap.xml. The omission is those five URL blocks only (375 → 370). Other scenes already Candidate on main were left in the sitemap so this batch does not republish the rest of the file.
+
+Art.50 PNG chunks on every master: Title, Description, Copyright, Software, Comment.
+Comment date is the true finish date 2026-09-30.
+
+The Lateran frieze was set to the documented inscription CLEMENS XII PONT MAX ANNO V CHRISTO SALVATORI IN HON SS IOAN BAPT ET EVANG so the band would not carry pseudo-text.
+
+Master git blob SHAs:
+  IT-01-284  16x9 b0ae020ad86ed8e9dd49990befb3a30c68bf21d3
+  IT-01-284  4x5  3191a7061481cd0370a9e6e994bda3ec471065cc
+  IT-01-284  9x16 4d44ae268522060cd89079d360908e3f32680232
+  IT-01-285  16x9 880ebad27e8a3046e12dd4f37b9ee5dd4c974678
+  IT-01-285  4x5  ea62e5a72ae8e738f279b95237796e75defb8399
+  IT-01-285  9x16 884cc8af09dea3d0ce55771ad99f5b040f40514e
+  IT-01-286  16x9 ee0303fde941332f014adec9d0012b72cd84463e
+  IT-01-286  4x5  13e298d17d360a211785f34e75a987db3bdbfce5
+  IT-01-286  9x16 626e1effa6e28abbac1b2eda172d9e4d18910ee8
+  IT-01-287  16x9 a2a0d801486d7ebb12e05282217dfe074984c0d2
+  IT-01-287  4x5  1b1fa43541e20d7b942fabfaa87b7f433b21cd9f
+  IT-01-287  9x16 9a155f93932a4e28700a920f03d047c0b0a11ed4
+  IT-01-289  16x9 8fd30c5b38c0cead54aa97e0edc3f755604d50af
+  IT-01-289  4x5  4eb63939bf23cdd6749342c2ac63ce44a41db3fe
+  IT-01-289  9x16 1676b8c49065e23b729c5c8d1ff4443a3f339060
+
+Files:
+  assets/it-01-284-16x9.png
+  assets/it-01-284-4x5.png
+  assets/it-01-284-9x16.png
+  assets/it-01-285-16x9.png
+  assets/it-01-285-4x5.png
+  assets/it-01-285-9x16.png
+  assets/it-01-286-16x9.png
+  assets/it-01-286-4x5.png
+  assets/it-01-286-9x16.png
+  assets/it-01-287-16x9.png
+  assets/it-01-287-4x5.png
+  assets/it-01-287-9x16.png
+  assets/it-01-289-16x9.png
+  assets/it-01-289-4x5.png
+  assets/it-01-289-9x16.png
+
+No night-derived daylight companions existed for these five IDs. None were added.
+
+Gallery: index.html SCENES copy, scenario_label, and approval_status updated. Card status reads Candidate. tools/phase1_mood.json was already day for these five and was left unchanged. ITALY_META day/night was already day; only the cache-bust query on these five thumbs moved to ?v=flagb23.
+
+Corrected geometry aimed at in the plates:
+  IT-01-284 square tower with hipped roof and machicolation corbels; round towers with conical tiled roofs; ochre plaster walls; no flat square crenellations on cylindrical towers.
+  IT-01-285 two-story colossal five-bay Corinthian screen with triangular pediment and CLEMENS XII inscription band; no campanile on the main face; no pseudo-text.
+  IT-01-286 mask mounted in the street-facing portico wall of Santa Maria in Cosmedin; pyramidal-roofed Romanesque campanile beside it; no cloister courtyard.
+  IT-01-287 solid cylindrical brick drum (no concentric open arcade rings); restrained brick articulation kept.
+  IT-01-289 small brass keyhole in the green Priorato di Malta door; hedge-alley axis to St Peter's dome visible only through the tiny aperture; no porthole.
