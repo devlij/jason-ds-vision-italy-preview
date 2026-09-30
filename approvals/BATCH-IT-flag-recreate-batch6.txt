@@ -1,0 +1,93 @@
+BATCH IT FLAG-spec recreates — batch 6
+Date finished: 2026-09-30
+Work order: wo-italy-flag-specs-2026-09-30 (batch 6)
+Superseded, ignored: wo-italy-recreate-flags-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: 873d1efc8777e746f0906a2b7a41c180ac08183d
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e / Telea wipe ghosts were not used as an image anchor. Plates were generated from text prompts plus the packet reference URLs.)
+
+Scope: ONLY these five scenes. keep_current and hold IDs were not touched.
+Batch 1 (IT-01-003/011/012/013/017, PR #32, merged), batch 2 (IT-01-020/022/023/025/033, PR #33, merged), batch 3 (IT-01-040/043/050/055/056, draft PR #34), batch 4 (IT-01-057/059/060/062/063, draft PR #35), batch 5 (IT-01-065/066/071/073/074, draft PR #36), and the Cosmo rework of IT-01-003 and IT-01-017 were not modified.
+  IT-01-075 Roman theatre, Aosta
+  IT-01-077 Piazza Vecchia, Bergamo Alta
+  IT-01-081 Palazzo Ducale, Mantua
+  IT-01-086 Piazza Grande, Arezzo
+  IT-01-087 Chioggia canals, Chioggia
+
+Status: Candidate only. Not merged. Cosmo owns QC and merge. Never self-approved. No WOTD was invented.
+Approved→Candidate: IT-01-075 and IT-01-086 were Approved. This FLAG recreate sets them back to Candidate. The recreate supersedes that prior approval pending Cosmo QC.
+IT-01-077, IT-01-081, and IT-01-087 were already Candidate (Gate 1 holds). They stay Candidate.
+
+Weather: Open-Meteo current, already retrieved in the packet. Not re-fetched. All is_day=1. One retrieval per scene, unique to the second. Passed through into each manifest.
+
+  Scene      Retrieval UTC           Local                      Label           Temp    Cloud  Code
+  IT-01-075  2026-09-30T14:45:15Z    2026-09-30T16:45:15+0200   Overcast        20.6°C  100%   3
+  IT-01-077  2026-09-30T14:45:17Z    2026-09-30T16:45:17+0200   Partly cloudy   22.6°C   48%   2
+  IT-01-081  2026-09-30T14:45:18Z    2026-09-30T16:45:18+0200   Mainly clear    25.7°C   14%   1
+  IT-01-086  2026-09-30T14:45:20Z    2026-09-30T16:45:20+0200   Mainly clear    26.3°C    2%   1
+  IT-01-087  2026-09-30T14:45:22Z    2026-09-30T16:45:22+0200   Clear           23.3°C    0%   0
+
+Scenario labels on the masters:
+  IT-01-075  30 September 2026 · 16:45 Europe/Rome
+  IT-01-077  30 September 2026 · 16:45 Europe/Rome
+  IT-01-081  30 September 2026 · 16:45 Europe/Rome
+  IT-01-086  30 September 2026 · 16:45 Europe/Rome
+  IT-01-087  30 September 2026 · 16:45 Europe/Rome
+
+Masters: regenerated from text prompts plus the packet reference URLs and corrected_spec. Existing masters were not image-anchored. Each aspect is its own plate. 16:9 and 9:16 are Lanczos to the photo size. 4:5 keeps the top of a 3:4 plate and trims foreground, then lands at 864×1080, so the facade, three arches, Gothic arcade, frieze, and bridge stay in frame.
+
+Formats: photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero overlay on the artwork. Label bar: bold site+city caption, Scenario line, disclosure "AI-generated artistic interpretation · Not a photograph."; right side "Jason D's Vision" and "Jason A. Devlin" in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+9:16 is included on disk and in each manifest as file_9x16. The live gallery card still offers 16:9 and 4:5 only. Italy's image-sitemap standing order does not emit 9:16, and these scenes are Candidate so their blocks were removed from image-sitemap.xml. Other rows were left in the sitemap.
+
+Art.50 PNG chunks on every master: Title, Description, Copyright, Software, Comment.
+Comment date is the true finish date 2026-09-30.
+
+Git blob SHA-1:
+  IT-01-075  16x9  4dc8d8628f295ebfd6b6d1e38e4958c0e172d2a0
+  IT-01-075  4x5   51758311ded5ea1fd4c904b5109a2fd2fbfa778d
+  IT-01-075  9x16  3993c9920fbe10ff4d657402e8da95853f31e432
+  IT-01-077  16x9  377630d1099f4fc87de15f24c7dca8193098bbe9
+  IT-01-077  4x5   ba05fe62988e04a554f06836b79c04eded139355
+  IT-01-077  9x16  9605844576c31092582f62d69f28bb4a09ba6755
+  IT-01-081  16x9  ad4f369b41ec9f7afb940af4872470adfbfc9f69
+  IT-01-081  4x5   01a1c5141fba45603b1d92a0b034dcf44234eeac
+  IT-01-081  9x16  1846ea22be928c3d99e2f0be38e5a1ea70009a9c
+  IT-01-086  16x9  716a5af9341915cb95a80e480975a46f9575ba2d
+  IT-01-086  4x5   cbd7dee96f84b39dabd94c4cd12157245225b7b1
+  IT-01-086  9x16  167fa8105098addb7b581feab591ced5e21447be
+  IT-01-087  16x9  ebe1b00fa6a8e22161286f03cc20a9ba58f3f82a
+  IT-01-087  4x5   876eae686cbc19b45fcff3b008724cd0e4f0b299
+  IT-01-087  9x16  39956bee183f84f3e248c64f7c2094c4830332c5
+
+Files:
+  assets/it-01-075-16x9.png
+  assets/it-01-075-4x5.png
+  assets/it-01-075-9x16.png
+  assets/it-01-077-16x9.png
+  assets/it-01-077-4x5.png
+  assets/it-01-077-9x16.png
+  assets/it-01-081-16x9.png
+  assets/it-01-081-4x5.png
+  assets/it-01-081-9x16.png
+  assets/it-01-086-16x9.png
+  assets/it-01-086-4x5.png
+  assets/it-01-086-9x16.png
+  assets/it-01-087-16x9.png
+  assets/it-01-087-4x5.png
+  assets/it-01-087-9x16.png
+
+No *-daylight-* companions existed for these five IDs. None were added. The new primary is daytime.
+
+Gallery: index.html SCENES copy, scenario_label, and approval_status updated so the new masters show as Candidate. tools/phase1_mood.json was already day for all five and was not edited. A duplicated `const statusLabel` on main (a parse error left by the batch 1 / batch 2 merge) was removed so the Candidate badge can render.
+
+Corrected geometry aimed at in the plates:
+  IT-01-075 straight irregular scenic facade of massive blocks, partly collapsed, with one ground-level row of arches; no regular three-storey arcade and no cavea wall of equal arches. Alps behind, church tower to the right. Overcast afternoon.
+  IT-01-077 exactly three pointed ogival arches on the Palazzo della Ragione, with the Lion of Saint Mark relief above the center arch; Campanone to the left; Contarini fountain in the square. Not five arches.
+  IT-01-081 Palazzo del Capitano on Piazza Sordello: pointed Gothic arcade and Gothic trifora windows in brick, crenellated towers. No round arches and no pedimented rectangular windows.
+  IT-01-086 Vasari loggia on the sloping Piazza Grande. The frieze carries the dedication wording in Roman capitals: HONORATA E GRATIOSA ET PROPORTIONATA SECONDO IL LUOGO (the 1572 Fraternita dei Laici wording cited by the packet). No pseudo-glyph lettering.
+  IT-01-087 Ponte di Vigo is a low marble balustraded bridge with lion statues and no tower or spire. The nearby Colonna di Vigo is topped by the winged Lion of Venice.

@@ -1112,21 +1112,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://italy.jdvision.org/#IT-01-075</loc>
-    <image:image>
-      <image:loc>https://italy.jdvision.org/assets/it-01-075-16x9.png</image:loc>
-      <image:caption>The camera stands before the ruined facade of the Roman theatre, its tall arcade with three tiers of arches rising center-left. Alpine peaks close the horizon behind, while the modern town with its church tower spreads on the right. The 07:26 morning is overcast, the light flat and cool on the stone.</image:caption>
-      <image:title>Roman theatre, Aosta</image:title>
-      <image:geo_location>Aosta, Italy</image:geo_location>
-    </image:image>
-    <image:image>
-      <image:loc>https://italy.jdvision.org/assets/it-01-075-4x5.png</image:loc>
-      <image:caption>The camera stands before the ruined facade of the Roman theatre, its tall arcade with three tiers of arches rising center-left. Alpine peaks close the horizon behind, while the modern town with its church tower spreads on the right. The 07:26 morning is overcast, the light flat and cool on the stone.</image:caption>
-      <image:title>Roman theatre, Aosta</image:title>
-      <image:geo_location>Aosta, Italy</image:geo_location>
-    </image:image>
-  </url>
-  <url>
     <loc>https://italy.jdvision.org/#IT-01-076</loc>
     <image:image>
       <image:loc>https://italy.jdvision.org/assets/it-01-076-16x9.png</image:loc>
@@ -1139,21 +1124,6 @@
       <image:caption>The camera rests low on the grassy plain beside one of Paestum's great Doric temples in the golden light of the 07:27 morning. Massive fluted columns march along the right side of the frame, carrying the weathered entablature, with scattered fallen blocks strewn at the base and morning mist hanging behind the umbrella pines at the left. The low sun warms the honey-colored stone while the long shadows stretch across the dew-covered grass.</image:caption>
       <image:title>Temples of Paestum, Paestum</image:title>
       <image:geo_location>Paestum, Italy</image:geo_location>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://italy.jdvision.org/#IT-01-077</loc>
-    <image:image>
-      <image:loc>https://italy.jdvision.org/assets/it-01-077-16x9.png</image:loc>
-      <image:caption>The viewpoint is from the middle of the empty Piazza Vecchia on a grey morning, looking across at the civic heart of Bergamo Alta. The sculpted Contarini fountain stands in the left foreground, the tall civic tower rises at the center, and the arched loggia of the Palazzo della Ragione runs rightward beneath its crenellated crown. The modelled 23 September 2026, 07:28 sky is overcast and silvery, flattening the light so the pale stone of the square reads almost monochrome.</image:caption>
-      <image:title>Piazza Vecchia, Bergamo Alta</image:title>
-      <image:geo_location>Bergamo, Italy</image:geo_location>
-    </image:image>
-    <image:image>
-      <image:loc>https://italy.jdvision.org/assets/it-01-077-4x5.png</image:loc>
-      <image:caption>The viewpoint is from the middle of the empty Piazza Vecchia on a grey morning, looking across at the civic heart of Bergamo Alta. The sculpted Contarini fountain stands in the left foreground, the tall civic tower rises at the center, and the arched loggia of the Palazzo della Ragione runs rightward beneath its crenellated crown. The modelled 23 September 2026, 07:28 sky is overcast and silvery, flattening the light so the pale stone of the square reads almost monochrome.</image:caption>
-      <image:title>Piazza Vecchia, Bergamo Alta</image:title>
-      <image:geo_location>Bergamo, Italy</image:geo_location>
     </image:image>
   </url>
   <url>
@@ -1199,21 +1169,6 @@
       <image:caption>From the rocky shore, the fishermen's houses of Chianalea line the water at center-left, their shuttered facades running toward the headland where Castello Ruffo stands on the rock at the right. Dark volcanic islets break the calm sea in the foreground under a pale overcast sky. The modelled scenario is 23 September 2026 at 07:31 Europe/Rome: soft cloudy morning light, not a verified on-site observation.</image:caption>
       <image:title>Scilla and Castello Ruffo, Scilla</image:title>
       <image:geo_location>Scilla, Italy</image:geo_location>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://italy.jdvision.org/#IT-01-081</loc>
-    <image:image>
-      <image:loc>https://italy.jdvision.org/assets/it-01-081-16x9.png</image:loc>
-      <image:caption>Across the vast empty Piazza Sordello, the tourist faces the long brick mass of the Palazzo Ducale, its crenellated medieval towers punctuating the skyline left of center. Rows of tall windows march along the facade above a ground-floor arcade, with a paler stone wing and arched portal at the right edge. Soft 07:32 morning light filters through broken cloud, and the piazza's paving stretches quiet in the foreground.</image:caption>
-      <image:title>Palazzo Ducale, Mantua</image:title>
-      <image:geo_location>Mantua, Italy</image:geo_location>
-    </image:image>
-    <image:image>
-      <image:loc>https://italy.jdvision.org/assets/it-01-081-4x5.png</image:loc>
-      <image:caption>Across the vast empty Piazza Sordello, the tourist faces the long brick mass of the Palazzo Ducale, its crenellated medieval towers punctuating the skyline left of center. Rows of tall windows march along the facade above a ground-floor arcade, with a paler stone wing and arched portal at the right edge. Soft 07:32 morning light filters through broken cloud, and the piazza's paving stretches quiet in the foreground.</image:caption>
-      <image:title>Palazzo Ducale, Mantua</image:title>
-      <image:geo_location>Mantua, Italy</image:geo_location>
     </image:image>
   </url>
   <url>
@@ -1274,36 +1229,6 @@
       <image:caption>The camera stands on the stone piazza terrace at the edge of Pienza, looking out over the Val d'Orcia. The great travertine facade of the palazzo fills the left of the frame, the small piazza and its church tower sit at the center, and the misty hills roll away to the right in layer upon layer. The modelled 23 September 2026, 07:38 morning light is soft and golden on the stone, with thin haze settling in the far valleys below.</image:caption>
       <image:title>Pienza and Val d'Orcia, Pienza</image:title>
       <image:geo_location>Pienza, Italy</image:geo_location>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://italy.jdvision.org/#IT-01-086</loc>
-    <image:image>
-      <image:loc>https://italy.jdvision.org/assets/it-01-086-16x9.png</image:loc>
-      <image:caption>The camera looks up the sloping brick piazza from its lower end, the long arcaded facade of the loggia running along the right with its repeated stone arches, and the medieval brick houses with their bell tower massed at the left. Soft 07:39 morning light warms the brickwork while the square itself lies empty, the steep pitch of the paving drawing the eye uphill. The row of arches is the dominant rhythm, unbroken from foreground to the square's far end.</image:caption>
-      <image:title>Piazza Grande, Arezzo</image:title>
-      <image:geo_location>Arezzo, Italy</image:geo_location>
-    </image:image>
-    <image:image>
-      <image:loc>https://italy.jdvision.org/assets/it-01-086-4x5.png</image:loc>
-      <image:caption>The camera looks up the sloping brick piazza from its lower end, the long arcaded facade of the loggia running along the right with its repeated stone arches, and the medieval brick houses with their bell tower massed at the left. Soft 07:39 morning light warms the brickwork while the square itself lies empty, the steep pitch of the paving drawing the eye uphill. The row of arches is the dominant rhythm, unbroken from foreground to the square's far end.</image:caption>
-      <image:title>Piazza Grande, Arezzo</image:title>
-      <image:geo_location>Arezzo, Italy</image:geo_location>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://italy.jdvision.org/#IT-01-087</loc>
-    <image:image>
-      <image:loc>https://italy.jdvision.org/assets/it-01-087-16x9.png</image:loc>
-      <image:caption>Pastel canal houses in pink, yellow and green line the left bank, their shuttered windows reflected in the still water. Blue fishing boats crowd the moorings in the foreground while a stone arched bridge with a cross-crowned tower spans the canal to the right. Soft cloudy light fills this 07:40 morning scene.</image:caption>
-      <image:title>Chioggia canals, Chioggia</image:title>
-      <image:geo_location>Chioggia, Italy</image:geo_location>
-    </image:image>
-    <image:image>
-      <image:loc>https://italy.jdvision.org/assets/it-01-087-4x5.png</image:loc>
-      <image:caption>Pastel canal houses in pink, yellow and green line the left bank, their shuttered windows reflected in the still water. Blue fishing boats crowd the moorings in the foreground while a stone arched bridge with a cross-crowned tower spans the canal to the right. Soft cloudy light fills this 07:40 morning scene.</image:caption>
-      <image:title>Chioggia canals, Chioggia</image:title>
-      <image:geo_location>Chioggia, Italy</image:geo_location>
     </image:image>
   </url>
   <url>
