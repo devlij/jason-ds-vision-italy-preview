@@ -1,0 +1,89 @@
+BATCH IT FLAG-spec recreates — batch 12
+Date finished: 2026-09-30
+Work order: wo-italy-flag-specs-2026-09-30 (batch 12)
+Superseded, ignored: wo-italy-recreate-flags-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: 51c7e09cb0f5e01f8683c246579a4d2e959ec7d2
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e was not used as an image anchor. Plates were regenerated from text prompts plus the packet reference URLs.)
+
+Scope: ONLY these five scenes. keep_current (IT-01-127, IT-01-128, IT-01-202, IT-01-217, IT-01-350) and hold (IT-01-037, IT-01-236, IT-01-373) were not touched. Draft PRs #34–#43 were not modified.
+  IT-01-166 Castello di Dolceacqua, Dolceacqua
+  IT-01-168 Castello Maniace, Syracuse
+  IT-01-169 Villa Rotonda, Vicenza
+  IT-01-172 Castello Sforzesco, Milan
+  IT-01-173 Castello di Miramare, Trieste
+
+Status: Candidate only. Not merged. Cosmo owns QC and merge.
+Approved → Candidate (prior five-gate approval superseded, not self-approved):
+  IT-01-166
+  IT-01-168
+  IT-01-169
+  IT-01-172
+  IT-01-173
+
+No WOTD was invented.
+
+Weather: Open-Meteo current, already retrieved in the packet. Not re-fetched. All is_day=1. Model time 2026-09-30T18:00 Europe/Rome. Scenario label on every master: 30 September 2026 · 18:00 Europe/Rome. One retrieval per scene, unique to the second.
+  IT-01-166  retrieval 2026-09-30T17:22:30Z  local 2026-09-30T19:22:30+0200  Overcast       24.8°C  cloud 100%  code 3  wind 6.4 km/h
+  IT-01-168  retrieval 2026-09-30T17:22:31Z  local 2026-09-30T19:22:31+0200  Partly cloudy  24.4°C  cloud 45%   code 2  wind 10.7 km/h
+  IT-01-169  retrieval 2026-09-30T17:22:33Z  local 2026-09-30T19:22:33+0200  Mainly clear   24.4°C  cloud 30%   code 1  wind 7.1 km/h
+  IT-01-172  retrieval 2026-09-30T17:22:35Z  local 2026-09-30T19:22:35+0200  Partly cloudy  23.9°C  cloud 53%   code 2  wind 5.4 km/h
+  IT-01-173  retrieval 2026-09-30T17:22:36Z  local 2026-09-30T19:22:36+0200  Mainly clear   24.4°C  cloud 0%    code 1  wind 8.5 km/h
+
+Masters: regenerated from text prompts plus the packet reference URLs. Existing masters were not image-anchored. Geometry follows each corrected_spec. Daytime only (sun still up at 18:00 local; sunset is later at every site).
+
+Formats: 16:9 plate per scene, 4:5 center-cropped from that plate (Lanczos to 1920×1080, then 864×1080). 9:16 is its own plate, Lanczos to 1080×1920. Photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero overlay on the artwork. Label bar: bold caption, Scenario line, disclosure; right side Jason D's Vision and Jason A. Devlin in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+9:16 is on disk and in each manifest as file_9x16. The live gallery card still offers 16:9 and 4:5 only. These scenes are Candidate, so they are omitted from image-sitemap.xml. The omission is those five URL blocks only. Other scenes already Candidate on main were left in the sitemap so this batch does not republish the rest of the file.
+
+Art.50 PNG chunks on every master: Title, Description, Copyright, Software, Comment.
+Comment date is the true finish date 2026-09-30.
+
+Master git blob SHAs:
+  IT-01-166  16x9 192cf2ff21ae79d6d1953651dfbaa67bbf42f6b1
+  IT-01-166  4x5  db14bb006d5da50d6621d363c47e2359eb48ef14
+  IT-01-166  9x16 e6a68d219ada20c43be47f67c90c429808c04c0c
+  IT-01-168  16x9 6006c57121fc4b3aff4e745afc166ba53d292bfd
+  IT-01-168  4x5  62cfcf3a5d02ab8c1c6054fd8719785c6b3e7f2a
+  IT-01-168  9x16 d9bbb543a6a36f57ee96418e2ed94ccb310e984b
+  IT-01-169  16x9 c5f941b43fa48c0771d3bd8ec88b0517f8d7f997
+  IT-01-169  4x5  8d0d40f4333c0b40358a4114f9f272ecd17b39b7
+  IT-01-169  9x16 734f64c00165654797c8b8c3e522ef9e111f7824
+  IT-01-172  16x9 7326bec1d1a8785ba117ef1952a5c9c45c3deb08
+  IT-01-172  4x5  e7b4ddf0478656225b8f0fa1185ae4b3c23690bf
+  IT-01-172  9x16 36a81e3e092b96853a9fdf26fbabeb5f419d27b3
+  IT-01-173  16x9 1d359bbb97e98aad04178fc45251384e0e407979
+  IT-01-173  4x5  b73abaaacad1b53ae67b39a1232a84c10d5f3076
+  IT-01-173  9x16 85b6b842117b34ad0cc97909c808f0c9e20f71f4
+
+Files:
+  assets/it-01-166-16x9.png
+  assets/it-01-166-4x5.png
+  assets/it-01-166-9x16.png
+  assets/it-01-168-16x9.png
+  assets/it-01-168-4x5.png
+  assets/it-01-168-9x16.png
+  assets/it-01-169-16x9.png
+  assets/it-01-169-4x5.png
+  assets/it-01-169-9x16.png
+  assets/it-01-172-16x9.png
+  assets/it-01-172-4x5.png
+  assets/it-01-172-9x16.png
+  assets/it-01-173-16x9.png
+  assets/it-01-173-4x5.png
+  assets/it-01-173-9x16.png
+
+No night-derived daylight companions existed for these five IDs. None were added.
+
+Gallery: index.html SCENES copy, scenario_label, and approval_status updated. Card status reads Candidate. tools/phase1_mood.json was already day for these five and was left unchanged. ITALY_META day/night was already day; only the cache-bust query on these five thumbs moved to ?v=flagb12.
+
+Corrected geometry aimed at in the plates:
+  IT-01-166 one high humpbacked arch carrying the deck; no secondary arches or piers in the river.
+  IT-01-168 stout cylindrical corner towers and a low rectangular keep.
+  IT-01-169 plain empty tympana; sculpture only as free-standing acroteria on the pediment apex and corners.
+  IT-01-172 diamond-pointed ashlar rustication on the round towers' lower drums.
+  IT-01-173 low peninsula and terraces down to the water; no sheer cliff.
