@@ -1,0 +1,89 @@
+BATCH IT FLAG-spec recreates — batch 18
+Date finished: 2026-09-30
+Work order: wo-italy-flag-specs-2026-09-30 (batch 18)
+Superseded, ignored: wo-italy-recreate-flags-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: 51c7e09cb0f5e01f8683c246579a4d2e959ec7d2
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e was not used as an image anchor. Plates were regenerated from text prompts plus the packet reference URLs and packet weather.)
+
+Scope: ONLY these five scenes. keep_current (IT-01-127, IT-01-128, IT-01-202, IT-01-217, IT-01-350) and hold (IT-01-037, IT-01-236, IT-01-373) were not touched. Draft PRs #34–#51 were not modified. PR #49 remains the batch 16 keeper at 2d7204ca3aa0b2658e9e2a8c1ca03797bb0bc1c7. PR #51 remains the batch 17 keeper. PR #47 was not reopened. italy-916 was left open and unclaimed. LU/MC/EE stay held until 2026-10-02T05:00:00Z.
+  IT-01-233 San Giorgio Maggiore, Venice
+  IT-01-234 Castello di Issogne, Issogne
+  IT-01-238 Parco dei Mostri, Bomarzo
+  IT-01-240 Torcello Cathedral, Torcello
+  IT-01-241 Villa Lante, Bagnaia
+
+Status: Candidate only. Not merged. Cosmo owns QC and merge.
+Approved → Candidate (prior five-gate approval superseded, not self-approved):
+  IT-01-233
+  IT-01-234
+  IT-01-238
+  IT-01-240
+  IT-01-241
+
+No WOTD was invented.
+
+Weather: Open-Meteo current, already retrieved in the packet. Not re-fetched. All is_day=1. Europe/Rome. One retrieval per scene, unique to the second. Each scene uses its own model time, all before local sunset.
+  IT-01-233  retrieval 2026-09-30T20:09:10Z  local 2026-09-30T22:09:10+0200  model 18:00  Clear sky      23.4°C  cloud 0%   code 0  wind 7.9 km/h  sunset 18:53  scenario 30 September 2026 · 18:00 Europe/Rome
+  IT-01-234  retrieval 2026-09-30T20:09:12Z  local 2026-09-30T22:09:12+0200  model 19:00  Overcast       19.5°C  cloud 87%  code 3  wind 5.4 km/h  sunset 19:11  scenario 30 September 2026 · 19:00 Europe/Rome
+  IT-01-238  retrieval 2026-09-30T20:09:14Z  local 2026-09-30T22:09:14+0200  model 17:00  Partly cloudy  27.2°C  cloud 53%  code 2  wind 7.9 km/h  sunset 18:54  scenario 30 September 2026 · 17:00 Europe/Rome
+  IT-01-240  retrieval 2026-09-30T20:09:16Z  local 2026-09-30T22:09:16+0200  model 16:00  Clear sky      24.0°C  cloud 0%   code 0  wind 4.3 km/h  sunset 18:52  scenario 30 September 2026 · 16:00 Europe/Rome
+  IT-01-241  retrieval 2026-09-30T20:09:18Z  local 2026-09-30T22:09:18+0200  model 15:00  Partly cloudy  23.8°C  cloud 74%  code 2  wind 9.7 km/h  sunset 18:54  scenario 30 September 2026 · 15:00 Europe/Rome
+
+Masters: regenerated from text prompts plus the packet reference URLs. Existing masters were not image-anchored. Geometry follows each corrected_spec. Daytime only (is_day=1 and model time before sunset at every site).
+
+Formats: 16:9 plate per scene, 4:5 center-cropped from that plate (Lanczos to 1920×1080, then 864×1080). 9:16 is its own plate, Lanczos to 1080×1920. Photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero overlay on the artwork. Label bar: bold caption, Scenario line, disclosure; right side Jason D's Vision and Jason A. Devlin in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+9:16 is on disk and in each manifest as file_9x16. The live gallery card still offers 16:9 and 4:5 only. These scenes are Candidate, so they are omitted from image-sitemap.xml. The omission is those five URL blocks only. Other scenes already Candidate on main were left in the sitemap so this batch does not republish the rest of the file.
+
+Art.50 PNG chunks on every master: Title, Description, Copyright, Software, Comment.
+Comment date is the true finish date 2026-09-30.
+
+Master git blob SHAs:
+  IT-01-233  16x9 5561f1f7052f0e051844aaa88ade80f7dae7c708
+  IT-01-233  4x5  325fff753f19ad2987d810d43217bbf8de95fcfc
+  IT-01-233  9x16 719cd66f49a4f438fd5cbe074237e9a050cca711
+  IT-01-234  16x9 f0611ada0699b70eb23ba2e992db20528ddf1e9b
+  IT-01-234  4x5  28a0945fcd27cb72510b96f410a3d1f18e365cd2
+  IT-01-234  9x16 b598bb3bb608fd884521b836d378ea57d465dd3d
+  IT-01-238  16x9 629dc839118940f1847fcccee8ca4f7fefe711b8
+  IT-01-238  4x5  a40ceee880f87ac78fa104742e7fd44ed043a32f
+  IT-01-238  9x16 7b4d566b08d45bb0dd1904f61218c5e96aad049f
+  IT-01-240  16x9 e892947900376427033786f897c88d96c0668a06
+  IT-01-240  4x5  e136ad3611f22dac0df5a4c82e75182c0a0a9652
+  IT-01-240  9x16 440b058a6e6ee34e137a4a865d6bd7b57f7658c7
+  IT-01-241  16x9 f6c24a440bc55f7a178a2583881702d8f54c594e
+  IT-01-241  4x5  2c087c94d58fd27cf3b0da56f17439905bd60fbc
+  IT-01-241  9x16 4e55899510bf8f25e1c25a87b1eb61ed5bba0005
+
+Files:
+  assets/it-01-233-16x9.png
+  assets/it-01-233-4x5.png
+  assets/it-01-233-9x16.png
+  assets/it-01-234-16x9.png
+  assets/it-01-234-4x5.png
+  assets/it-01-234-9x16.png
+  assets/it-01-238-16x9.png
+  assets/it-01-238-4x5.png
+  assets/it-01-238-9x16.png
+  assets/it-01-240-16x9.png
+  assets/it-01-240-4x5.png
+  assets/it-01-240-9x16.png
+  assets/it-01-241-16x9.png
+  assets/it-01-241-4x5.png
+  assets/it-01-241-9x16.png
+
+No night-derived daylight companions existed for these five IDs. None were added.
+
+Gallery: index.html SCENES copy, scenario_label, and approval_status updated. Card status reads Candidate. tools/phase1_mood.json was already day for these five and was left unchanged. ITALY_META day/night was already day; only the cache-bust query on these five thumbs moved to ?v=flagb18.
+
+Corrected geometry aimed at in the plates:
+  IT-01-233 Palladian white facade with the grey lead dome and lantern over the crossing rising behind it, as seen from the lagoon front.
+  IT-01-234 wrought-iron Fontana del Melograno (pomegranate tree) in an octagonal stone basin, set before the frescoed stone arcade/loggia of the courtyard portico.
+  IT-01-238 hollow eye sockets; carved teeth/fangs around the mouth; lip inscription OGNI PENSIERO VOLA.
+  IT-01-240 porticoed brick facade with blind arches and small oculi, no rose window; flat-topped square brick campanile.
+  IT-01-241 large square water parterre (Quadrato) with the Fontana dei Mori; twin casini with three-arch ground loggias and roof lanterns.
