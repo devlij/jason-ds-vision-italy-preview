@@ -67,7 +67,7 @@ Files:
 
 No daylight-variant companions existed for these five IDs. The new primary is daytime, so none were added.
 
-Gallery: index.html SCENES copy, scenario_label, and approval_status updated so the new masters show as Candidate. tools/phase1_mood.json and ITALY_META already recorded these five as day; that day/night meta was left in place.
+Gallery: index.html SCENES copy, scenario_label, and approval_status updated so the new masters show as Candidate. tools/phase1_mood.json and ITALY_META already recorded these five as day; that day/night meta was left in place. A duplicate `const statusLabel` in the card renderer (already on main) kept the gallery script from parsing; the extra declaration was removed so the catalogue renders and these cards show Candidate.
 
 Corrected geometry aimed at in the plates:
   IT-01-124 broken concrete Neptune — torso and one shoulder, armless, no trident or shell — built into the rock at the end of Fegina beach; not a complete crowned colossus.
