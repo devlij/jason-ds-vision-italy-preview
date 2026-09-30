@@ -1,0 +1,90 @@
+BATCH IT FLAG-spec recreates — batch 20
+Date finished: 2026-09-30
+Work order: wo-italy-flag-specs-2026-09-30 (batch 20)
+Superseded, ignored: wo-italy-recreate-flags-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: 51c7e09cb0f5e01f8683c246579a4d2e959ec7d2
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e was not used as an image anchor. Plates were regenerated from text prompts plus the packet reference URLs and the packet weather. Existing masters were not image-anchored.)
+
+Scope: ONLY these five scenes. keep_current (IT-01-127, IT-01-128, IT-01-202, IT-01-217, IT-01-350) and hold (IT-01-037, IT-01-236, IT-01-373) were not touched. Draft PRs #34–#53 were not modified. PR #53 remains the batch 19 keeper (OPEN/DRAFT, tip 3d3fa6f). PR #52 remains the batch 18 keeper (OPEN/DRAFT, tip 5a59582). PR #51 remains the batch 17 keeper (OPEN/DRAFT, tip 950b6fb). PR #37 Cosmo rework was not touched. italy-916 was not claimed. LU/MC/EE were not touched. Spain was not touched.
+  IT-01-256 Castello di Aymavilles, Aymavilles
+  IT-01-257 Castello di Avio, Avio
+  IT-01-259 Ponte delle Torri, Spoleto
+  IT-01-262 Castello di Toblino, Calavino
+  IT-01-263 Castello di Melfi, Melfi
+
+Status: Candidate only. Not merged. Cosmo owns QC and merge.
+Not self-approved. approval_status was not set to Approved.
+
+Approved → Candidate (prior approval superseded, not self-approved):
+  IT-01-257
+  IT-01-259
+  IT-01-262
+IT-01-256 and IT-01-263 were already Candidate on this base from the 2026-09-29 Gate 1 holds. They stay Candidate. The gallery card for every one of the five now reads Candidate.
+
+No WOTD was invented.
+
+Weather: Open-Meteo, already retrieved in the packet. Not re-fetched. All is_day=1. Timezone Europe/Rome. The packet records one retrieval per scene. The stored retrieval clock is 2026-09-30T20:42:30Z on each of these five, with a distinct model hour. No night weather was invented.
+  IT-01-256  retrieval 2026-09-30T20:42:30Z  local 2026-09-30T16:42:30-0400  model 15:00  Overcast      20.2°C  cloud 100%  code 3  wind 5.5 km/h   sunset 19:13  scenario 30 September 2026 · 15:00 Europe/Rome
+  IT-01-257  retrieval 2026-09-30T20:42:30Z  local 2026-09-30T16:42:30-0400  model 16:00  Overcast      23.2°C  cloud 100%  code 3  wind 10.9 km/h  sunset 18:58  scenario 30 September 2026 · 16:00 Europe/Rome
+  IT-01-259  retrieval 2026-09-30T20:42:30Z  local 2026-09-30T16:42:30-0400  model 14:00  Clear sky     25.4°C  cloud 8%    code 0  wind 8.7 km/h   sunset 18:52  scenario 30 September 2026 · 14:00 Europe/Rome
+  IT-01-262  retrieval 2026-09-30T20:42:30Z  local 2026-09-30T16:42:30-0400  model 13:00  Mainly clear  22.2°C  cloud 43%   code 1  wind 6.1 km/h   sunset 18:58  scenario 30 September 2026 · 13:00 Europe/Rome
+  IT-01-263  retrieval 2026-09-30T20:42:30Z  local 2026-09-30T16:42:30-0400  model 12:00  Clear sky     21.3°C  cloud 0%    code 0  wind 7.5 km/h   sunset 18:41  scenario 30 September 2026 · 12:00 Europe/Rome
+
+Masters: regenerated from text prompts plus the packet reference URLs. Existing masters were not image-anchored. The Aymavilles commons frame carries a corner credit, so it was not passed in as pixels. Geometry follows each corrected_spec. Daytime only (is_day=1 at every recorded hour).
+
+Formats: 16:9 plate per scene, 4:5 center-cropped from that plate (Lanczos to 1920×1080, then 864×1080). 9:16 is its own plate, Lanczos to 1080×1920. Photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero overlay and zero tint on the artwork. Label bar: bold caption, Scenario line, disclosure; right side Jason D's Vision and Jason A. Devlin in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+9:16 is on disk and in each manifest as file_9x16. The live gallery card still offers 16:9 and 4:5 only. These scenes are Candidate, so they are omitted from image-sitemap.xml. The omission is those five URL blocks only (375 → 370). Other scenes already Candidate on main were left in the sitemap so this batch does not republish the rest of the file.
+
+Art.50 PNG chunks on every master: Title, Description, Copyright, Software, Comment.
+Comment date is the true finish date 2026-09-30.
+
+Master git blob SHAs:
+  IT-01-256  16x9 2a023e3de4de56782b1472621520d1cc2bcb7fde
+  IT-01-256  4x5  ae71088f7d0567bc8d4592dd5faab5ec95b8f40e
+  IT-01-256  9x16 269afd5f90b0c4cefa542df871b5cdc01339b658
+  IT-01-257  16x9 25f8a82f6cf34a133dd4632af198634c7a4139ed
+  IT-01-257  4x5  ef7f4aedfa125998ce4af52e74658a52f2b42a92
+  IT-01-257  9x16 81c85f3c0ad6e61c7221d4ca448dddf6608f41b0
+  IT-01-259  16x9 cae1cb77a4536719dbcd8e9045687983a136da67
+  IT-01-259  4x5  bc9a41b1d67a6e8ea7c1a9604d34db4ce14f8aa3
+  IT-01-259  9x16 6726a3644c83e02920b56e39b4c07c8cae23cf41
+  IT-01-262  16x9 65653c5ce096f2dac54b048f4fde95fd0fe3fde5
+  IT-01-262  4x5  2ae11f9895a3ad7cc82df612b8be4bd35666fffd
+  IT-01-262  9x16 82590de701eae57263fddaa2a29c4db67658f5af
+  IT-01-263  16x9 49e89e570255b7b5338e943a343f73efdd5380fd
+  IT-01-263  4x5  fb9620bcf260d08671e5a35286df09c781c1011b
+  IT-01-263  9x16 11eaf2c7cf502922e6494f404b6096efb9057cff
+
+Files:
+  assets/it-01-256-16x9.png
+  assets/it-01-256-4x5.png
+  assets/it-01-256-9x16.png
+  assets/it-01-257-16x9.png
+  assets/it-01-257-4x5.png
+  assets/it-01-257-9x16.png
+  assets/it-01-259-16x9.png
+  assets/it-01-259-4x5.png
+  assets/it-01-259-9x16.png
+  assets/it-01-262-16x9.png
+  assets/it-01-262-4x5.png
+  assets/it-01-262-9x16.png
+  assets/it-01-263-16x9.png
+  assets/it-01-263-4x5.png
+  assets/it-01-263-9x16.png
+
+No night-derived daylight companions existed for these five IDs. None were added.
+
+Gallery: index.html SCENES copy, scenario_label, and approval_status updated. Card status reads Candidate. tools/phase1_mood.json was already day for these five and was left unchanged. ITALY_META day/night was already day; only the cache-bust query on these five thumbs moved to ?v=flagb20.
+
+Corrected geometry aimed at in the plates:
+  IT-01-256 quadrangular central body; four cylindrical corner towers topped by open crenellated parapets on machicolation corbels (no roofs); white Baroque entrance front with a three-arch loggia.
+  IT-01-257 cylindrical mastio with a flat top carrying a small open-arched lookout; extensive irregular ridge-line enceinte; five-story Casa delle Guardie block at the far end.
+  IT-01-259 one single tier of tall pointed arches (about 80 m) on slender piers; no second arcade level; Rocca Albornoz tower at one end.
+  IT-01-262 low lakeside residential block with pitched terracotta roofs; swallowtail-crenellated curtain wall on the peninsula; no tall keep; no spired turret.
+  IT-01-263 mixed-plan castle with prominent rectangular towers including the clock-faced Torre dell'Orologio; set against the town approach, not an isolated ridge of round towers.
