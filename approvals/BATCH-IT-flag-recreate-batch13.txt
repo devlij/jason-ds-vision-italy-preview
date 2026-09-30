@@ -1,0 +1,71 @@
+BATCH IT FLAG-spec recreates — batch 13
+Date finished: 2026-09-30
+Work order: wo-italy-flag-specs-2026-09-30 (batch 13)
+Superseded, ignored: wo-italy-recreate-flags-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: 51c7e09cb0f5e01f8683c246579a4d2e959ec7d2
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e / Telea wipe ghosts were not used as an image anchor. Existing masters were not passed in as pixels.)
+
+Scope: ONLY these five scenes. keep_current (IT-01-127, IT-01-128, IT-01-202, IT-01-217, IT-01-350) and hold (IT-01-037, IT-01-236, IT-01-373) were not touched. Draft PRs #34–#44 were not modified.
+  IT-01-178 Duomo of Como, Como
+  IT-01-180 Castello di Copertino, Copertino
+  IT-01-183 Castello di Gorizia, Gorizia
+  IT-01-187 Ponte degli Alpini, Bassano del Grappa
+  IT-01-189 Castello di Fontanellato, Fontanellato
+
+Status: Candidate only. Not merged. Cosmo owns QC and merge. Not self-approved. No WOTD was invented.
+
+Approved → Candidate (packet list; FLAG recreate supersedes prior approval pending Cosmo QC):
+  IT-01-178
+  IT-01-180
+  IT-01-183
+  IT-01-187
+  IT-01-189
+IT-01-183: the packet records prior status Approved. The on-disk manifest before this recreate was already Candidate (Gate 1 hold, 2026-09-29). This batch still lands it as Candidate.
+
+Weather: Open-Meteo current, already retrieved in the packet. Not re-fetched. All is_day=1. Model time 2026-09-30T18:00 Europe/Rome. Scenario label on every master: 30 September 2026 · 18:00 Europe/Rome.
+  IT-01-178  retrieval 2026-09-30T17:51:58Z  local 2026-09-30T19:51:58+0200  Partly cloudy  23.5°C  cloud 43%  code 2  sunset 19:05
+  IT-01-180  retrieval 2026-09-30T17:52:00Z  local 2026-09-30T19:52:00+0200  Clear sky     23.3°C  cloud 0%   code 0  sunset 18:31
+  IT-01-183  retrieval 2026-09-30T17:52:02Z  local 2026-09-30T19:52:02+0200  Partly cloudy  23.9°C  cloud 64%  code 2  sunset 18:47
+  IT-01-187  retrieval 2026-09-30T17:52:03Z  local 2026-09-30T19:52:03+0200  Mainly clear   23.9°C  cloud 39%  code 1  sunset 18:55
+  IT-01-189  retrieval 2026-09-30T17:52:05Z  local 2026-09-30T19:52:05+0200  Overcast       25.3°C  cloud 89%  code 3  sunset 19:01
+Retrieval seconds are unique. Sun is still up at 18:00 at every site (is_day=1).
+
+Masters: regenerated from text prompts plus the packet reference URLs. Existing masters were not image-anchored. The Fontanellato reference was not passed as pixels on the accepted plate, because it was pulling conical roofs; that plate was regenerated from the corrected spec. Geometry follows each corrected_spec.
+
+Formats: 16:9 and 9:16 generated for the frame; 4:5 is a centered crop of a 3:4 plate (Lanczos to exact photo size). Photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero overlay on the artwork. Label bar: caption, Scenario line, disclosure; right side Jason D's Vision and Jason A. Devlin in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+9:16 is included on disk and in each manifest as file_9x16. The live gallery card still offers 16:9 and 4:5 only. Italy's image-sitemap standing order does not emit 9:16, and these scenes are Candidate so they are not in image-sitemap.xml. Sitemap URL count 375 → 370. A full image_sitemap.py regen was not run: it would also drop 19 unrelated scenes whose manifests are already non-Approved while the committed sitemap still lists them.
+
+Art.50 PNG chunks on every master: Title, Description, Copyright, Software, Comment.
+Comment date is the true finish date 2026-09-30.
+
+Files:
+  assets/it-01-178-16x9.png
+  assets/it-01-178-4x5.png
+  assets/it-01-178-9x16.png
+  assets/it-01-180-16x9.png
+  assets/it-01-180-4x5.png
+  assets/it-01-180-9x16.png
+  assets/it-01-183-16x9.png
+  assets/it-01-183-4x5.png
+  assets/it-01-183-9x16.png
+  assets/it-01-187-16x9.png
+  assets/it-01-187-4x5.png
+  assets/it-01-187-9x16.png
+  assets/it-01-189-16x9.png
+  assets/it-01-189-4x5.png
+  assets/it-01-189-9x16.png
+
+Gallery: index.html SCENES copy, scenario_label, and approval_status updated so the new masters show as Candidate. ITALY_META thumbs cache-busted to ?v=flagb13. Day/night meta was already day for these five (ITALY_META and tools/phase1_mood.json) and stays day.
+
+Corrected geometry aimed at in the plates:
+  IT-01-178 Broletto left of the Duomo facade: banded/striped marble, two-storey pointed arcade, Torre del Comune; no plain yellow infill.
+  IT-01-180 four angular spear-point (lanceolate) bastions on the trapezoidal enceinte; not cylindrical towers.
+  IT-01-183 squat rounded/semi-circular palas with machicolations under a tiled roof; low roofed skyline; no tall slender crenellated keep.
+  IT-01-187 timber piers with triangular timber starlings/cutwaters and fanning wooden struts; no rectangular ashlar stone piers.
+  IT-01-189 Ghibelline swallow-tail merlons over brick corbel bands; no conical roofs and no open-arched upper drums.
