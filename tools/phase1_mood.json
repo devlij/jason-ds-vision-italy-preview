@@ -127,7 +127,7 @@
     ]
   },
   "IT-01-020": {
-    "daynight": "night",
+    "daynight": "day",
     "moods": [
       "coastal",
       "urban",
@@ -141,7 +141,7 @@
     ]
   },
   "IT-01-022": {
-    "daynight": "night",
+    "daynight": "day",
     "moods": [
       "coastal",
       "urban",
@@ -149,7 +149,7 @@
     ]
   },
   "IT-01-023": {
-    "daynight": "night",
+    "daynight": "day",
     "moods": [
       "historic"
     ]
@@ -161,7 +161,7 @@
     ]
   },
   "IT-01-025": {
-    "daynight": "night",
+    "daynight": "day",
     "moods": [
       "coastal"
     ]
@@ -217,7 +217,7 @@
     ]
   },
   "IT-01-033": {
-    "daynight": "night",
+    "daynight": "day",
     "moods": [
       "urban",
       "historic"
