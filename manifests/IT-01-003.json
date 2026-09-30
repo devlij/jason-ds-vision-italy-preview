@@ -24,6 +24,13 @@
       "date": "2026-09-30",
       "author": "Image Assistant",
       "note": "FLAG-spec daytime recreate (wo-italy-flag-specs-2026-09-30 batch 1) replaces the night primary. Landed as Candidate. Prior hold stands until Cosmo QC. Not merged."
+    },
+    {
+      "date": "2026-09-30",
+      "author": "Cosmo",
+      "gate": "Gate 1",
+      "result": "FLAG",
+      "note": "Cosmo FLAG 2026-09-30: inscription letters now correct, but the inscriptions render as flat pasted/composited panels, not carved stone integrated into the facade. Held for rework — masters must show the text carved into the stone with matching texture, shadow and depth."
     }
   ],
   "file_9x16": "assets/it-01-003-9x16.png",
