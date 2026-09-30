@@ -1,0 +1,51 @@
+BATCH IT FLAG Cosmo rework — IT-01-003 + IT-01-017
+Date finished: 2026-09-30
+Work order: wo-italy-flag-rework-2026-09-30
+Parent specs: wo-italy-flag-specs-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this rework: 873d1efc8777e746f0906a2b7a41c180ac08183d
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e / Telea wipe ghosts were not used as an image anchor. Plates were regenerated from text prompts, the corrected_spec, and the Cosmo defect fixes. Existing masters were not passed in as pixels.)
+
+Scope: ONLY these two scenes. Six masters. No other scene was regenerated.
+  IT-01-003 Trevi Fountain, Rome
+  IT-01-017 Palermo Cathedral, Palermo
+
+Status: Candidate for both. approval_status was not flipped. Not self-approved. Not merged. Cosmo owns QC and merge.
+No WOTD was invented.
+
+Cosmo defects addressed
+  IT-01-003  Inscription letters stay CLEMENS XII / PERFECIT BENEDICTVS XIV.
+             Attic: CLEMENS XII PONT MAX / AQVAM VIRGINEM / COPIA ET SALVBRITATE COMMENDATAM / CVLTV MAGNIFICO ORNAVIT / ANNO DOMINI MDCCXXXV PONT VI.
+             Frieze: PERFECIT BENEDICTVS XIV PONT MAX.
+             Letters are incised into the travertine: they take the facade stone texture, carry an incised shadow, and sit on the stone plane. No floating panel and no printed-serif overlay.
+  IT-01-017  West towers are square crenellated Norman towers with battlement tops and without tall pointed spires.
+             Fuga's large 18th-century neoclassical dome remains over the crossing.
+             South portico remains three large pointed Catalan Gothic arches.
+
+Weather: Open-Meteo values passed through from the rework packet. Not re-fetched. Both is_day=1. Scenario label on every master: 30 September 2026 · 16:23 Europe/Rome.
+  scene      retrieval UTC              local                         code  label   temp    cloud  wind    precip  sunrise            sunset
+  IT-01-003  2026-09-30T14:23:24Z       2026-09-30T16:23:24+0200      0     Clear   26.6°C  1%     10.2    0.0     2026-09-30T07:05   2026-09-30T18:53
+  IT-01-017  2026-09-30T14:23:26Z       2026-09-30T16:23:26+0200      0     Clear   26.1°C  0%     11.5    0.0     2026-09-30T07:01   2026-09-30T18:51
+  Model time for both: 2026-09-30T16:15. Timezone Europe/Rome.
+
+Masters: photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero tint on the artwork. Label bar: bold site+city caption, Scenario line, disclosure "AI-generated artistic interpretation · Not a photograph."; right side Jason D's Vision and Jason A. Devlin in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+
+Art.50 PNG chunks on every master: Title (iTXt), Description (tEXt), Copyright (iTXt), Software (tEXt), Comment (tEXt).
+Comment date is the true finish date 2026-09-30.
+
+Git blob SHA-1 (tip SHAs of the six masters):
+  assets/it-01-003-16x9.png  456b5fddb8ab1814a2f59ad3679e34e9182da9c5
+  assets/it-01-003-4x5.png   a1c5487a689fb52c32e9766e2e2aa0dc293d179f
+  assets/it-01-003-9x16.png  3dfc87ddf019d8235032780149abe4f6ac2e512d
+  assets/it-01-017-16x9.png  da9f18027e28b91cb3241a34c3afdee69b3e45bc
+  assets/it-01-017-4x5.png   bb96c52c852d6e29741ecc53f48b5c1dd5857b00
+  assets/it-01-017-9x16.png  ec4501267db7e0e58a1551fc6f9e191f0334e1f4
+
+Gallery: index.html SCENES copy, scenario_label, and approval_status Candidate updated for these two only. ITALY_META day/night set to day for these two only, matching the daytime masters. tools/phase1_mood.json daynight for IT-01-017 set to day (IT-01-003 was already day). image-sitemap.xml was left untouched.
+
+Candidate note: both scenes stay Candidate. This rework does not approve them. Cosmo five-gate QC still owns the pass. IT-01-003 passes only when the inscription reads as carved stone. IT-01-017 passes only with crenellated, spire-less Norman towers, Fuga's dome, and the three-arch south portico.

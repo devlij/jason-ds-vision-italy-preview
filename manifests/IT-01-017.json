@@ -4,18 +4,18 @@
   "region": "Sicily",
   "city": "Palermo",
   "caption": "Palermo Cathedral, Palermo",
-  "scenario_label": "30 September 2026 · 14:25 Europe/Rome",
-  "composition": "Norman cathedral with neoclassical dome in afternoon light · AI-generated artistic interpretation",
-  "description": "From across the piazza the camera faces the south side of Palermo Cathedral in the afternoon. The south portico is three large pointed Catalan Gothic arches. Fuga's large eighteenth-century neoclassical dome rises over the crossing, and the west towers are crenellated Norman towers without tall spires. The modelled scenario is 30 September 2026 at 14:25 Europe/Rome: clear, 26.6°C, cloud cover 14 percent, warm afternoon sun.",
-  "alt_text": "AI-generated artistic interpretation of Palermo Cathedral in afternoon daylight, with Fuga's dome, crenellated towers, and a three-arch portico",
+  "scenario_label": "30 September 2026 · 16:23 Europe/Rome",
+  "composition": "Norman cathedral with neoclassical dome in late-afternoon light · AI-generated artistic interpretation",
+  "description": "From across the piazza the camera faces the south side of Palermo Cathedral in the late afternoon. The south portico is three large pointed Catalan Gothic arches. Fuga's large eighteenth-century neoclassical dome rises over the crossing, and the west towers are square crenellated Norman towers with battlement tops and without tall spires. The modelled scenario is 30 September 2026 at 16:23 Europe/Rome: clear, 26.1°C, cloudless, warm late-afternoon sun.",
+  "alt_text": "AI-generated artistic interpretation of Palermo Cathedral in late-afternoon daylight, with Fuga's dome, crenellated towers, and a three-arch portico",
   "file_16x9": "assets/it-01-017-16x9.png",
   "file_4x5": "assets/it-01-017-4x5.png",
   "approval_status": "Candidate",
-  "approval_basis": "FLAG-spec daytime recreate 2026-09-30, batch 1 of wo-italy-flag-specs-2026-09-30. Candidate only. Open-Meteo retrieval for 30 September 2026 at 14:25 Europe/Rome, is_day=1. Prior five-gate approval, where it existed, is superseded pending Cosmo QC. Not merged.",
-  "git_blob_sha1_16x9": "62e39a79a03adee8e68fec0ad71b5c017d621a32",
-  "git_blob_sha1_4x5": "8ede051ef5735db1eda1373578be9bd53b242ddf",
+  "approval_basis": "Cosmo QC rework 2026-09-30, wo-italy-flag-rework-2026-09-30, scenes IT-01-003 and IT-01-017 only. Daytime masters recreated so the west towers are crenellated Norman towers without tall spires. Candidate only. Not self-approved. Not merged. Open-Meteo retrieval passed through from the rework packet for 30 September 2026 at 16:23 Europe/Rome, is_day=1.",
+  "git_blob_sha1_16x9": "da9f18027e28b91cb3241a34c3afdee69b3e45bc",
+  "git_blob_sha1_4x5": "bb96c52c852d6e29741ecc53f48b5c1dd5857b00",
   "file_9x16": "assets/it-01-017-9x16.png",
-  "git_blob_sha1_9x16": "7813e299f41f36931b0845dcd3c2d409ac7cb43b",
+  "git_blob_sha1_9x16": "ec4501267db7e0e58a1551fc6f9e191f0334e1f4",
   "weather": {
     "scene_id": "IT-01-017",
     "title": "Palermo Cathedral, Palermo",
@@ -24,33 +24,33 @@
     "timezone": "Europe/Rome",
     "provider": "Open-Meteo",
     "endpoint": "api.open-meteo.com/v1/forecast",
-    "retrieval_time_utc": "2026-09-30T12:25:17Z",
-    "retrieval_time_local": "2026-09-30T14:25:17+0200",
-    "model_time": "2026-09-30T14:15",
-    "valid_time_local": "2026-09-30T14:15",
+    "retrieval_time_utc": "2026-09-30T14:23:26Z",
+    "retrieval_time_local": "2026-09-30T16:23:26+0200",
+    "model_time": "2026-09-30T16:15",
+    "valid_time_local": "2026-09-30T16:15",
     "is_day": 1,
     "weather_code": 0,
     "weather_label": "Clear",
-    "temperature_c": 26.6,
-    "cloud_cover_pct": 14,
-    "wind_speed_kmh": 11.9,
+    "temperature_c": 26.1,
+    "cloud_cover_pct": 0,
+    "wind_speed_kmh": 11.5,
     "precipitation_mm": 0.0,
     "sunrise": "2026-09-30T07:01",
     "sunset": "2026-09-30T18:51",
     "raw_current": {
-      "time": "2026-09-30T14:15",
+      "time": "2026-09-30T16:15",
       "interval": 900,
-      "temperature_2m": 26.6,
-      "relative_humidity_2m": 38,
-      "apparent_temperature": 26.1,
+      "temperature_2m": 26.1,
+      "relative_humidity_2m": 42,
+      "apparent_temperature": 25.0,
       "is_day": 1,
       "precipitation": 0.0,
       "weather_code": 0,
-      "cloud_cover": 14,
-      "wind_speed_10m": 11.9,
-      "wind_direction_10m": 65
+      "cloud_cover": 0,
+      "wind_speed_10m": 11.5,
+      "wind_direction_10m": 49
     },
-    "scenario_label": "30 September 2026 · 14:25 Europe/Rome"
+    "scenario_label": "30 September 2026 · 16:23 Europe/Rome"
   },
   "qc_notes": [
     {
@@ -64,6 +64,11 @@
       "gate": "Gate 1",
       "result": "FLAG",
       "note": "Cosmo FLAG 2026-09-30: west towers still carry tall pointed spires; verified spec requires crenellated Norman towers WITHOUT tall spires. Held for rework."
+    },
+    {
+      "date": "2026-09-30",
+      "author": "Image Assistant",
+      "note": "Cosmo rework: west towers rebuilt as square crenellated Norman towers with battlement tops and without tall pointed spires. Fuga's neoclassical dome over the crossing and the three-arch Catalan Gothic south portico kept. New daytime scenario 16:23 Europe/Rome from the packet weather (is_day=1). Still Candidate. Not self-approved."
     }
   ]
 }
