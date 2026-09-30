@@ -57,6 +57,13 @@
       "date": "2026-09-30",
       "author": "Image Assistant",
       "note": "FLAG recreate supersedes prior approval pending Cosmo QC. Daytime 14:25 Europe/Rome masters replace the night primaries. approval_status set back to Candidate. Not merged."
+    },
+    {
+      "date": "2026-09-30",
+      "author": "Cosmo",
+      "gate": "Gate 1",
+      "result": "FLAG",
+      "note": "Cosmo FLAG 2026-09-30: west towers still carry tall pointed spires; verified spec requires crenellated Norman towers WITHOUT tall spires. Held for rework."
     }
   ]
 }
