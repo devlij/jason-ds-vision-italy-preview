@@ -106,7 +106,7 @@
     ]
   },
   "IT-01-017": {
-    "daynight": "night",
+    "daynight": "day",
     "moods": [
       "urban",
       "historic"
