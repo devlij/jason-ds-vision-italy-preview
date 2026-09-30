@@ -1,0 +1,93 @@
+BATCH IT FLAG-spec recreates — batch 25
+Date finished: 2026-09-30
+Work order: wo-italy-flag-specs-2026-09-30 (batch 25)
+Superseded, ignored: wo-italy-recreate-flags-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: 51c7e09cb0f5e01f8683c246579a4d2e959ec7d2
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e was not used as an image anchor. Plates were regenerated from text prompts plus the packet reference URLs and the packet weather. Existing masters were not image-anchored.)
+
+Scope: ONLY these five scenes. keep_current (IT-01-127, IT-01-128, IT-01-202, IT-01-217, IT-01-350) and hold (IT-01-037, IT-01-236, IT-01-373) were not touched. Historical Italy draft PRs were not modified. Batch 23 remains DRAFT PR #57 at tip d0ea38a393ad5babe3e23dbadc1d95f164226adc. Batch 24 remains DRAFT PR #58 at tip 98f39a3689966b14c91c4d508854acf55254f8d7. Spain and Ireland work were not touched.
+  IT-01-304 Peschici, Gargano
+  IT-01-305 Sanremo Casino and lungomare, Sanremo
+  IT-01-306 Abbey of San Fruttuoso, San Fruttuoso
+  IT-01-308 Fontana delle 99 Cannelle, L'Aquila
+  IT-01-311 Cathedral of San Cerbone, Massa Marittima
+
+Status: Candidate only. Not merged. Cosmo owns QC and merge.
+Not self-approved. approval_status was not set to Approved.
+
+Approved → Candidate (prior approval superseded, not self-approved):
+  IT-01-304
+  IT-01-305
+  IT-01-306
+  IT-01-308
+  IT-01-311
+
+No WOTD was invented.
+
+Weather: Open-Meteo, already retrieved in the packet. Not re-fetched. All is_day=1. Timezone Europe/Rome. One retrieval record per scene, copied from the packet. Each scene keeps its own model hour from the packet. No night weather was invented. Every model hour is before that site's sunset.
+  IT-01-304  retrieval 2026-09-30T21:41:49Z  local 2026-09-30T23:41:49+0200  model 18:00  Clear sky  22.5°C  cloud 6%  code 0  wind 4.6 km/h  sunset 18:39  scenario 30 September 2026 · 18:00 Europe/Rome
+  IT-01-305  retrieval 2026-09-30T21:41:51Z  local 2026-09-30T23:41:51+0200  model 19:00  Overcast  23.7°C  cloud 100%  code 3  wind 7.3 km/h  sunset 19:11  scenario 30 September 2026 · 19:00 Europe/Rome
+  IT-01-306  retrieval 2026-09-30T21:41:52Z  local 2026-09-30T23:41:52+0200  model 17:00  Overcast  26.2°C  cloud 84%  code 3  wind 5.5 km/h  sunset 19:06  scenario 30 September 2026 · 17:00 Europe/Rome
+  IT-01-308  retrieval 2026-09-30T21:41:54Z  local 2026-09-30T23:41:54+0200  model 16:00  Clear sky  25.3°C  cloud 23%  code 0  wind 13.2 km/h  sunset 18:49  scenario 30 September 2026 · 16:00 Europe/Rome
+  IT-01-311  retrieval 2026-09-30T21:41:56Z  local 2026-09-30T23:41:56+0200  model 15:00  Mainly clear  23.5°C  cloud 61%  code 1  wind 10.2 km/h  sunset 18:59  scenario 30 September 2026 · 15:00 Europe/Rome
+
+Masters: regenerated from text prompts plus the packet reference URLs. Existing masters were not image-anchored. Geometry follows each corrected_spec. Daytime only (is_day=1; each model hour is before sunset at that site). The laquilaq.it reference for IT-01-308 returned HTTP 403; the Itabus reference URL was used with the corrected spec.
+
+Formats: 16:9 plate per scene, 4:5 center-cropped from that plate (Lanczos cover to 1920×1080, then 864×1080). 9:16 is its own plate, Lanczos cover to 1080×1920. Photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero overlay and zero tint on the artwork. Label bar: bold caption, Scenario line, disclosure; right side Jason D's Vision and Jason A. Devlin in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+9:16 is on disk and in each manifest as file_9x16. The live gallery card still offers 16:9 and 4:5 only. These scenes are Candidate, so they are omitted from image-sitemap.xml. The omission is those five URL blocks only (375 → 370). Other scenes already Candidate on main were left in the sitemap so this batch does not republish the rest of the file.
+
+Art.50 PNG chunks on every master: Title, Description, Copyright, Software, Comment.
+Comment date is the true finish date 2026-09-30.
+
+The Sanremo portico lettering was set to CASINÒ MUNICIPALE so the facade would not carry a different name.
+
+Master git blob SHAs:
+  IT-01-304  16x9 302ec18cf2c1066ae53323ad9a119b3eb0b01f91
+  IT-01-304  4x5  0618c70d86da709c5c99d0fb4a9a23e2ec69c0da
+  IT-01-304  9x16 b3dd749f843b5a7633e0c1c94740d9ad0e17835c
+  IT-01-305  16x9 f9c4ff3fdcfa195aca67a9e994fd75bc668567c0
+  IT-01-305  4x5  4d9e3da24a6af34fb0065ee6c62d264faa07cf5c
+  IT-01-305  9x16 bc5655e81f0a79acb3b7edd0fcccb7e7509dd89b
+  IT-01-306  16x9 6b3e0c67aa72683bbdd9fff8e2b152387d420d64
+  IT-01-306  4x5  7e1892cfae6249e8824dce9c3f1b60913c23401d
+  IT-01-306  9x16 13bc2114ff017740d4a5480cd85f822e5637f811
+  IT-01-308  16x9 5e8c1c5b93f65f8280513852b54f97cf34de7956
+  IT-01-308  4x5  6b328048b6fa586dc6cb999468c1ef26085e2bff
+  IT-01-308  9x16 ff8f61cf4239fc2c7abc61a58af45f7fc57ec49d
+  IT-01-311  16x9 cf769de4f0e9c6322e021cbecb0cc781799f6bbb
+  IT-01-311  4x5  fb5a0862a0c3c0b7a0d6893a32acc7095c27817f
+  IT-01-311  9x16 01b9b8d1b67a7f56b03232b9fd3dbe002b8bfb53
+
+Files:
+  assets/it-01-304-16x9.png
+  assets/it-01-304-4x5.png
+  assets/it-01-304-9x16.png
+  assets/it-01-305-16x9.png
+  assets/it-01-305-4x5.png
+  assets/it-01-305-9x16.png
+  assets/it-01-306-16x9.png
+  assets/it-01-306-4x5.png
+  assets/it-01-306-9x16.png
+  assets/it-01-308-16x9.png
+  assets/it-01-308-4x5.png
+  assets/it-01-308-9x16.png
+  assets/it-01-311-16x9.png
+  assets/it-01-311-4x5.png
+  assets/it-01-311-9x16.png
+
+No night-derived daylight companions existed for these five IDs. None were added.
+
+Gallery: index.html SCENES copy, scenario_label, and approval_status updated. Card status reads Candidate. tools/phase1_mood.json was already day for these five and was left unchanged. ITALY_META day/night was already day; only the cache-bust query on these five thumbs moved to ?v=flagb25.
+
+Corrected geometry aimed at in the plates:
+  IT-01-304 compact intact pale-limestone fortification in the white town at the promontory tip; rectangular keep with intact cylindrical corner towers; cascading white houses; no detached ruined crown; no jagged silhouette above the town.
+  IT-01-305 white Liberty palace block; two square corner towers with shallow dark hipped terracotta roofs and open loggia tops; columned portico lettered CASINÒ MUNICIPALE; rich white stucco and round-arched piano-nobile windows; only a small greenish cupola set back; no twin metallic onion domes on the front.
+  IT-01-306 low octagonal stone drum with paired arched belfry openings; hemispherical cupola of scaly grey slate and a small stone lantern; rises only modestly above the abbey roofs on the pebble beach in the steep green cove; no tall pointed spire.
+  IT-01-308 sunken trapezoidal courtyard below street level; three pink-and-white checkerboard walls; stone masks spouting into a continuous basin; steps on the fourth side; large geometric paving; mature tree at the far end; not a single straight street wall.
+  IT-01-311 facade largely uniform light travertine; dark-light banding only on the upper nave wall and gable; no full-height striping; tall square campanile in uniform light stone with paired arched belfry openings and a pyramidal stone spire with corner pinnacles.
