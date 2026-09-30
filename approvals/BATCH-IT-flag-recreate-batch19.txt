@@ -1,0 +1,92 @@
+BATCH IT FLAG-spec recreates — batch 19
+Date finished: 2026-09-30
+Work order: wo-italy-flag-specs-2026-09-30 (batch 19)
+Superseded, ignored: wo-italy-recreate-flags-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: 51c7e09cb0f5e01f8683c246579a4d2e959ec7d2
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e was not used as an image anchor. Plates were regenerated from text prompts plus the packet reference URLs and the packet weather. Existing masters were not image-anchored.)
+
+Scope: ONLY these five scenes. keep_current (IT-01-127, IT-01-128, IT-01-202, IT-01-217, IT-01-350) and hold (IT-01-037, IT-01-236, IT-01-373) were not touched. Draft PRs #34–#52 were not modified. PR #52 remains the batch 18 keeper (OPEN/DRAFT, tip 5a59582). PR #51 remains the batch 17 keeper (OPEN/DRAFT, tip 950b6fb). PR #37 Cosmo rework was not touched. italy-916 was not claimed. LU/MC/EE were not touched. Spain pack2 was not touched.
+  IT-01-243 Castello di Racconigi, Racconigi
+  IT-01-245 Scrovegni Chapel, Padua
+  IT-01-247 Castel Sismondo, Rimini
+  IT-01-250 Forte di Fenestrelle, Fenestrelle
+  IT-01-253 Arch of Constantine, Rome
+
+Status: Candidate only. Not merged. Cosmo owns QC and merge.
+Not self-approved. approval_status was not set to Approved.
+
+Approved → Candidate (prior approval superseded, not self-approved):
+  IT-01-243
+  IT-01-245
+  IT-01-247
+  IT-01-250
+  IT-01-253
+IT-01-247 was already Candidate on this base from the 2026-09-29 Gate 1 hold. It stays Candidate. The other four were Approved on this base and are set back to Candidate.
+
+No WOTD was invented.
+
+Weather: Open-Meteo, already retrieved in the packet. Not re-fetched. All is_day=1. Timezone Europe/Rome. One retrieval per scene, unique to the second. Each scene uses its own latest eligible daylight hour. No night weather was invented.
+  IT-01-243  retrieval 2026-09-30T20:29:37Z  local 2026-09-30T16:29:37-0400  model 19:00  Overcast      21.5°C  cloud 100%  code 3  wind 6.8 km/h   sunset 19:11  scenario 30 September 2026 · 19:00 Europe/Rome
+  IT-01-245  retrieval 2026-09-30T20:29:39Z  local 2026-09-30T16:29:39-0400  model 18:00  Clear sky     24.9°C  cloud 0%    code 0  wind 8.8 km/h   sunset 18:54  scenario 30 September 2026 · 18:00 Europe/Rome
+  IT-01-247  retrieval 2026-09-30T20:29:42Z  local 2026-09-30T16:29:42-0400  model 17:00  Clear sky     24.3°C  cloud 0%    code 0  wind 11.0 km/h  sunset 18:52  scenario 30 September 2026 · 17:00 Europe/Rome
+  IT-01-250  retrieval 2026-09-30T20:29:44Z  local 2026-09-30T16:29:44-0400  model 16:00  Overcast      14.0°C  cloud 100%  code 3  wind 7.4 km/h   sunset 19:14  scenario 30 September 2026 · 16:00 Europe/Rome
+  IT-01-253  retrieval 2026-09-30T20:29:46Z  local 2026-09-30T16:29:46-0400  model 15:00  Mainly clear  26.6°C  cloud 26%   code 1  wind 9.4 km/h   sunset 18:53  scenario 30 September 2026 · 15:00 Europe/Rome
+
+Masters: regenerated from text prompts plus the packet reference URLs. Existing masters were not image-anchored. Geometry follows each corrected_spec. Daytime only (is_day=1 at every recorded hour; Racconigi 19:00 is still before the 19:11 sunset).
+
+Formats: 16:9 plate per scene, 4:5 center-cropped from that plate (Lanczos to 1920×1080, then 864×1080). 9:16 is its own plate, Lanczos to 1080×1920. Photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero overlay and zero tint on the artwork. Label bar: bold caption, Scenario line, disclosure; right side Jason D's Vision and Jason A. Devlin in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+9:16 is on disk and in each manifest as file_9x16. The live gallery card still offers 16:9 and 4:5 only. These scenes are Candidate, so they are omitted from image-sitemap.xml. The omission is those five URL blocks only (375 → 370). Other scenes already Candidate on main were left in the sitemap so this batch does not republish the rest of the file.
+
+Art.50 PNG chunks on every master: Title, Description, Copyright, Software, Comment.
+Comment date is the true finish date 2026-09-30.
+
+Master git blob SHAs:
+  IT-01-243  16x9 e260421d7bd7a0c8b1237672ce9dc16a694b1c0a
+  IT-01-243  4x5  1692cf993d3c5d0a43359a323e2ba69ef850144e
+  IT-01-243  9x16 2f8a797524dd305b5571b97d09619de313abb322
+  IT-01-245  16x9 38164f673b511fcbe892cc40c41af6a4d408e14b
+  IT-01-245  4x5  e8146cb6beedd27b56d7a00c11d963e7303031b4
+  IT-01-245  9x16 54acf24d0784fb9675cf2f6e2d3a8cf6e99b6851
+  IT-01-247  16x9 0692a466a7a32d4362f41f7be27b4bc8e3d17521
+  IT-01-247  4x5  e971d6cb710f851b3f0903b41ec56ef9e1690bc2
+  IT-01-247  9x16 7a92d2449ec538790f06f0494481dc3a85a264bb
+  IT-01-250  16x9 f7284f06aaa974efd5f30651079432304c3aca44
+  IT-01-250  4x5  743e44b6b377b671dde9b8bf2b7eee1a59a08b37
+  IT-01-250  9x16 00e95406034653562d78d8f03ba9d2934b90ad57
+  IT-01-253  16x9 b8d64e6e6dc4d2f33641fb6de96497df7f78937b
+  IT-01-253  4x5  26fc5560c58d6734e044d28aa9426129cb5ccbe8
+  IT-01-253  9x16 e15156da8df8322baf3d0597776b84392f6430de
+
+Files:
+  assets/it-01-243-16x9.png
+  assets/it-01-243-4x5.png
+  assets/it-01-243-9x16.png
+  assets/it-01-245-16x9.png
+  assets/it-01-245-4x5.png
+  assets/it-01-245-9x16.png
+  assets/it-01-247-16x9.png
+  assets/it-01-247-4x5.png
+  assets/it-01-247-9x16.png
+  assets/it-01-250-16x9.png
+  assets/it-01-250-4x5.png
+  assets/it-01-250-9x16.png
+  assets/it-01-253-16x9.png
+  assets/it-01-253-4x5.png
+  assets/it-01-253-9x16.png
+
+No night-derived daylight companions existed for these five IDs. None were added.
+
+Gallery: index.html SCENES copy, scenario_label, and approval_status updated. Card status reads Candidate. tools/phase1_mood.json was already day for these five and was left unchanged. ITALY_META day/night was already day; only the cache-bust query on these five thumbs moved to ?v=flagb19.
+
+Corrected geometry aimed at in the plates:
+  IT-01-243 brick Baroque/neoclassical Savoy residence; central body with pagoda-form roof; pavilions with domed roofs and white marble lanterns; southern facade with projecting four-column Corinthian portico under a triangular pediment.
+  IT-01-245 plain brick facade; white-stone trifora (triple light in one arch) under a corbel-table gable; no rose window.
+  IT-01-247 heavy square/polygonal brick towers with steep scarped bases and machicolated tops; no cylindrical keeps.
+  IT-01-250 the defining ascent is the stone-roofed covered staircase (3,996 steps), not an exposed crenellated merlon wall.
+  IT-01-253 central attic dedication in clean Roman capitals: IMP CAES FL CONSTANTINO MAXIMO / P F AVGVSTO S P Q R / QVOD INSTINCTV DIVINITATIS MENTIS / MAGNITVDINE CVM EXERCITV SVO / TAM DE TYRANNO QVAM DE OMNI EIVS / FACTIONE VNO TEMPORE IVSTIS / REMPVBLICAM VLTVS EST ARMIS / ARCVM TRIVMPHIS INSIGNEM DICAVIT. No invented glyph noise.
