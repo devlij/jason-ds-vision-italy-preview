@@ -1,0 +1,92 @@
+BATCH IT FLAG-spec recreates — batch 21
+Date finished: 2026-09-30
+Work order: wo-italy-flag-specs-2026-09-30 (batch 21)
+Superseded, ignored: wo-italy-recreate-flags-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: 51c7e09cb0f5e01f8683c246579a4d2e959ec7d2
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e was not used as an image anchor. Plates were regenerated from text prompts plus the packet reference URLs and the packet weather. Existing masters were not image-anchored.)
+
+Scope: ONLY these five scenes. keep_current (IT-01-127, IT-01-128, IT-01-202, IT-01-217, IT-01-350) and hold (IT-01-037, IT-01-236, IT-01-373) were not touched. Draft PRs #34–#53 were not modified. PR #53 remains the batch 19 keeper (OPEN/DRAFT, tip 3d3fa6f). Batch 20 agent bc-fd6b887f was left running and was not modified. italy-916 was not claimed. LU/MC/EE were not touched. Spain pack3 was not touched.
+  IT-01-264 Cattolica di Stilo, Stilo
+  IT-01-265 Piazza Unità d'Italia, Trieste
+  IT-01-269 Palazzo del Quirinale, Rome
+  IT-01-270 Fontana dei Quattro Fiumi, Rome
+  IT-01-271 Castello di San Giusto, Trieste
+
+Status: Candidate only. Not merged. Cosmo owns QC and merge.
+Not self-approved. approval_status was not set to Approved.
+
+Approved → Candidate (prior approval superseded, not self-approved):
+  IT-01-264
+  IT-01-265
+  IT-01-269
+  IT-01-270
+  IT-01-271
+All five were Approved on this base and are set back to Candidate.
+
+No WOTD was invented.
+
+Weather: Open-Meteo, already retrieved in the packet. Not re-fetched. All is_day=1. Timezone Europe/Rome. One retrieval per scene, unique to the second. Each scene uses its own latest eligible daylight hour. No night weather was invented.
+  IT-01-264  retrieval 2026-09-30T20:57:43Z  local 2026-09-30T22:57:43+0200  model 13:00  Clear sky  23.8°C  cloud 0%  code 0  wind 16.7 km/h  sunset 18:38  scenario 30 September 2026 · 13:00 Europe/Rome
+  IT-01-265  retrieval 2026-09-30T20:57:45Z  local 2026-09-30T22:57:45+0200  model 14:00  Partly cloudy  25.3°C  cloud 22%  code 2  wind 10.0 km/h  sunset 18:47  scenario 30 September 2026 · 14:00 Europe/Rome
+  IT-01-269  retrieval 2026-09-30T20:57:47Z  local 2026-09-30T22:57:47+0200  model 15:00  Mainly clear  26.5°C  cloud 26%  code 1  wind 9.4 km/h  sunset 18:53  scenario 30 September 2026 · 15:00 Europe/Rome
+  IT-01-270  retrieval 2026-09-30T20:57:49Z  local 2026-09-30T22:57:49+0200  model 16:00  Mainly clear  26.3°C  cloud 7%  code 1  wind 9.7 km/h  sunset 18:53  scenario 30 September 2026 · 16:00 Europe/Rome
+  IT-01-271  retrieval 2026-09-30T20:57:50Z  local 2026-09-30T22:57:50+0200  model 17:00  Mainly clear  25.1°C  cloud 35%  code 1  wind 7.9 km/h  sunset 18:47  scenario 30 September 2026 · 17:00 Europe/Rome
+
+Masters: regenerated from text prompts plus the packet reference URLs. Existing masters were not image-anchored. Geometry follows each corrected_spec. Daytime only (is_day=1 at every recorded hour).
+
+Formats: 16:9 plate per scene, 4:5 center-cropped from that plate (Lanczos to 1920×1080, then 864×1080). 9:16 is its own plate, Lanczos to 1080×1920. Photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero overlay and zero tint on the artwork. Label bar: bold caption, Scenario line, disclosure; right side Jason D's Vision and Jason A. Devlin in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+9:16 is on disk and in each manifest as file_9x16. The live gallery card still offers 16:9 and 4:5 only. These scenes are Candidate, so they are omitted from image-sitemap.xml. The omission is those five URL blocks only. Other scenes already Candidate on main were left in the sitemap so this batch does not republish the rest of the file.
+
+Art.50 PNG chunks on every master: Title, Description, Copyright, Software, Comment.
+Comment date is the true finish date 2026-09-30.
+
+Master git blob SHAs:
+  IT-01-264  16x9 526ea04d5893274e664fb97466c9ca31366a0b21
+  IT-01-264  4x5  e013c7ba9b1ce74acf277b375ccefe6887e06734
+  IT-01-264  9x16 fee9cec3e89b621f10e6141134341622a55c7937
+  IT-01-265  16x9 3118e7b8d740e8976b12cff8866f08c82cc50449
+  IT-01-265  4x5  4b1a0992eccc3c4e83b54064dc122cc99f8bbb96
+  IT-01-265  9x16 d59191c5f7608859e25bd2d3f6dc524d05095bfe
+  IT-01-269  16x9 72decf0f394c2a87487778f9623d5d7074f4f674
+  IT-01-269  4x5  699a52e78d756e2d36c01a001c8dac26278b59d7
+  IT-01-269  9x16 1efbdf17fe470ba58e033f681561978bc8042f12
+  IT-01-270  16x9 fd98eb18680bed683f73d3cbc8c693ecf7fa285a
+  IT-01-270  4x5  bbde21ad0219d37ab214f5f34fdbd2eb8cc3ce7e
+  IT-01-270  9x16 8c958a0ec84d8a0f5f1ee7edd0b8624f9e408921
+  IT-01-271  16x9 3b4a52c8d393be3c5850580188941b8022cf2a80
+  IT-01-271  4x5  432b8e44462dccd84ed14746a5872c74bac01761
+  IT-01-271  9x16 b180416ebce5b89ee465fa9eec2f81a9622276f5
+
+Files:
+  assets/it-01-264-16x9.png
+  assets/it-01-264-4x5.png
+  assets/it-01-264-9x16.png
+  assets/it-01-265-16x9.png
+  assets/it-01-265-4x5.png
+  assets/it-01-265-9x16.png
+  assets/it-01-269-16x9.png
+  assets/it-01-269-4x5.png
+  assets/it-01-269-9x16.png
+  assets/it-01-270-16x9.png
+  assets/it-01-270-4x5.png
+  assets/it-01-270-9x16.png
+  assets/it-01-271-16x9.png
+  assets/it-01-271-4x5.png
+  assets/it-01-271-9x16.png
+
+No night-derived daylight companions existed for these five IDs. None were added.
+
+Gallery: index.html SCENES copy, scenario_label, and approval_status updated. Card status reads Candidate. tools/phase1_mood.json was already day for these five and was left unchanged. ITALY_META day/night was already day; only the cache-bust query on these five thumbs moved to ?v=flagb21.
+
+Corrected geometry aimed at in the plates:
+  IT-01-264 small ~7 m brick Byzantine cube with five modest tiled cupolas, on the vegetated slope under Monte Consolino's cliff; modest blind arcading; no monumental summit massing.
+  IT-01-265 piazza as a U open to the Adriatic opposite City Hall (Municipio heading the landward end); sea visible across the open side only; Palazzo della Prefettura sea-front with golden mosaics.
+  IT-01-269 piazza monument = the two Dioscuri with horses flanking the Egyptian obelisk on its pedestal; Quirinale facade with portal and balcony only; no double-ramp stair; no tiered fountain.
+  IT-01-270 distinct hieroglyph bands on the shaft faces; dove-with-olive-branch finial on top; no repetitive pseudo-glyph texture; no starburst.
+  IT-01-271 triangular fortress of low rounded bastions and curtain walls hugging the hilltop; cathedral complex adjacent; no tall square keep.
