@@ -1,0 +1,71 @@
+BATCH IT FLAG-spec recreates — batch 14
+Date finished: 2026-09-30
+Work order: wo-italy-flag-specs-2026-09-30 (batch 14)
+Superseded, ignored: wo-italy-recreate-flags-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: 51c7e09cb0f5e01f8683c246579a4d2e959ec7d2
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e / Telea wipe ghosts were not used as an image anchor. Existing masters were not passed in as pixels.)
+
+Scope: ONLY these five scenes. keep_current (IT-01-127, IT-01-128, IT-01-202, IT-01-217, IT-01-350) and hold (IT-01-037, IT-01-236, IT-01-373) were not touched. Draft PRs #34–#45 were not modified.
+  IT-01-191 Ponte del Diavolo, Cividale del Friuli
+  IT-01-193 Porta Palatina, Turin
+  IT-01-196 Isola Comacina, Lake Como
+  IT-01-201 Sacra di San Michele, Sant'Ambrogio di Torino
+  IT-01-203 Hadrian's Villa Canopus, Tivoli
+
+Status: Candidate only. Not merged. Cosmo owns QC and merge. Not self-approved. No WOTD was invented.
+
+Approved → Candidate (packet list; FLAG recreate supersedes prior approval pending Cosmo QC):
+  IT-01-191
+  IT-01-193
+  IT-01-196
+  IT-01-201
+  IT-01-203
+All five were Approved on disk before this recreate. Each manifest is now Candidate.
+
+Weather: Open-Meteo current, already retrieved in the packet. Not re-fetched. All is_day=1. Model time 2026-09-30T18:00 Europe/Rome. Scenario label on every master: 30 September 2026 · 18:00 Europe/Rome.
+  IT-01-191  retrieval 2026-09-30T18:22:15Z  local 2026-09-30T20:22:15+0200  Overcast       22.3°C  cloud 98%   code 3  sunset 18:48
+  IT-01-193  retrieval 2026-09-30T18:22:16Z  local 2026-09-30T20:22:16+0200  Overcast       22.8°C  cloud 100%  code 3  sunset 19:11
+  IT-01-196  retrieval 2026-09-30T18:22:18Z  local 2026-09-30T20:22:18+0200  Partly cloudy  19.4°C  cloud 62%   code 2  sunset 19:05
+  IT-01-201  retrieval 2026-09-30T18:22:20Z  local 2026-09-30T20:22:20+0200  Overcast       16.7°C  cloud 100%  code 3  sunset 19:13
+  IT-01-203  retrieval 2026-09-30T18:22:21Z  local 2026-09-30T20:22:21+0200  Partly cloudy  24.7°C  cloud 42%   code 2  sunset 18:52
+Retrieval seconds are unique. Sun is still up at 18:00 at every site (is_day=1).
+
+Masters: regenerated from text prompts plus the packet reference URLs. Existing masters were not image-anchored. The Sacra di San Michele reference frame showed an external cliff stair, so it was not passed in as pixels; that plate follows the corrected spec (internal Scalone dei Morti). The first Isola Comacina 16:9 grew a crenellated tower above the trees and was replaced by a text-led plate with only low foundations. Hadrian's Villa packet URLs were article pages, not image files, so those plates are text-led from the corrected spec. Geometry follows each corrected_spec.
+
+Formats: 16:9 and 9:16 generated for the frame; 4:5 is a centered crop of a 3:4 plate (Lanczos to exact photo size). Photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero overlay on the artwork. Label bar: caption, Scenario line, disclosure; right side Jason D's Vision and Jason A. Devlin in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+9:16 is included on disk and in each manifest as file_9x16. The live gallery card still offers 16:9 and 4:5 only. Italy's image-sitemap standing order does not emit 9:16, and these scenes are Candidate so they are not in image-sitemap.xml. Sitemap URL count 375 → 370. A full image_sitemap.py regen was not run: it would also drop unrelated scenes whose manifests are already non-Approved while the committed sitemap still lists them.
+
+Art.50 PNG chunks on every master: Title, Description, Copyright, Software, Comment.
+Comment date is the true finish date 2026-09-30.
+
+Files:
+  assets/it-01-191-16x9.png
+  assets/it-01-191-4x5.png
+  assets/it-01-191-9x16.png
+  assets/it-01-193-16x9.png
+  assets/it-01-193-4x5.png
+  assets/it-01-193-9x16.png
+  assets/it-01-196-16x9.png
+  assets/it-01-196-4x5.png
+  assets/it-01-196-9x16.png
+  assets/it-01-201-16x9.png
+  assets/it-01-201-4x5.png
+  assets/it-01-201-9x16.png
+  assets/it-01-203-16x9.png
+  assets/it-01-203-4x5.png
+  assets/it-01-203-9x16.png
+
+Gallery: index.html SCENES copy, scenario_label, and approval_status updated so the new masters show as Candidate. ITALY_META thumbs cache-busted to ?v=flagb14. Day/night meta was already day for these five (ITALY_META and tools/phase1_mood.json) and stays day. IT-01-196 gallery city stays Sala Comacina; the caption remains Isola Comacina, Lake Como.
+
+Corrected geometry aimed at in the plates:
+  IT-01-191 Two unequal arches on a central pier founded on a rock in the riverbed; paired-arch profile, not a single high span.
+  IT-01-193 Four ground openings — two large central carriage arches and two narrower pedestrian gates; not three equal arches.
+  IT-01-196 Mostly wooded low island with modest foundations around Sant'Eufemia; no dense multi-story ruined streetscape and no tall tower shells.
+  IT-01-201 Buttressed monastic block and apse from the rock with flying buttresses and a brick upper church; Scalone dei Morti is internal, not an external cliff staircase.
+  IT-01-203 Colonnade with alternating arched and flat lintels; Serapeum as a half-dome exedra.
