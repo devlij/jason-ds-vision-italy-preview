@@ -1,0 +1,89 @@
+BATCH IT FLAG-spec recreates — batch 16
+Date finished: 2026-09-30
+Work order: wo-italy-flag-specs-2026-09-30 (batch 16)
+Superseded, ignored: wo-italy-recreate-flags-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: 51c7e09cb0f5e01f8683c246579a4d2e959ec7d2
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e was not used as an image anchor. Plates were regenerated from text prompts plus the packet reference URLs.)
+
+Scope: ONLY these five scenes. keep_current (IT-01-127, IT-01-128, IT-01-202, IT-01-217, IT-01-350) and hold (IT-01-037, IT-01-236, IT-01-373) were not touched. Draft PRs #34–#48 were not modified. PR #47 was not reopened.
+  IT-01-211 Castel Sant'Elmo, Naples
+  IT-01-213 Abbey of Montecassino, Cassino
+  IT-01-218 Palazzo Pitti, Florence
+  IT-01-221 Tempio Malatestiano, Rimini
+  IT-01-223 Villa Cimbrone Infinity Terrace, Ravello
+
+Status: Candidate only. Not merged. Cosmo owns QC and merge.
+Approved → Candidate (prior five-gate approval superseded, not self-approved):
+  IT-01-211
+  IT-01-213
+  IT-01-218
+  IT-01-221
+  IT-01-223
+
+No WOTD was invented.
+
+Weather: Open-Meteo current, already retrieved in the packet. Not re-fetched. All is_day=1. Latest daylight hourly slot used because the current hour was after sunset. Model time 2026-09-30T18:00 Europe/Rome. Scenario label on every master: 30 September 2026 · 18:00 Europe/Rome. One retrieval per scene, unique to the second.
+  IT-01-211  retrieval 2026-09-30T19:01:11Z  local 2026-09-30T21:01:11+0200  Clear sky     24.3°C  cloud 0%   code 0  wind 9.9 km/h   sunset 18:46
+  IT-01-213  retrieval 2026-09-30T19:01:24Z  local 2026-09-30T21:01:24+0200  Mainly clear  23.6°C  cloud 28%  code 1  wind 5.4 km/h   sunset 18:48
+  IT-01-218  retrieval 2026-09-30T19:01:27Z  local 2026-09-30T21:01:27+0200  Clear sky     27.6°C  cloud 0%   code 0  wind 5.9 km/h   sunset 18:58
+  IT-01-221  retrieval 2026-09-30T19:01:29Z  local 2026-09-30T21:01:29+0200  Clear sky     23.7°C  cloud 0%   code 0  wind 11.3 km/h  sunset 18:52
+  IT-01-223  retrieval 2026-09-30T19:01:31Z  local 2026-09-30T21:01:31+0200  Clear sky     23.9°C  cloud 9%   code 0  wind 6.8 km/h   sunset 18:45
+
+Masters: regenerated from text prompts plus the packet reference URLs. Existing masters were not image-anchored. Geometry follows each corrected_spec. Daytime only (sun still up at 18:00 local; sunset is later at every site).
+
+Formats: 16:9 plate per scene, 4:5 center-cropped from that plate (Lanczos to 1920×1080, then 864×1080). 9:16 is its own plate, Lanczos to 1080×1920. Photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero overlay on the artwork. Label bar: bold caption, Scenario line, disclosure; right side Jason D's Vision and Jason A. Devlin in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+9:16 is on disk and in each manifest as file_9x16. The live gallery card still offers 16:9 and 4:5 only. These scenes are Candidate, so they are omitted from image-sitemap.xml. The omission is those five URL blocks only. Other scenes already Candidate on main were left in the sitemap so this batch does not republish the rest of the file.
+
+Art.50 PNG chunks on every master: Title, Description, Copyright, Software, Comment.
+Comment date is the true finish date 2026-09-30.
+
+Master git blob SHAs:
+  IT-01-211  16x9 3f8a43923db76857510d11e087c9e96aa7d933bf
+  IT-01-211  4x5  5f35be4c4dc2119f96afc52f796167cff677355f
+  IT-01-211  9x16 3baa0d560b3a16db0a931dcdac650dd5ab613476
+  IT-01-213  16x9 be810ead91601317075b13519e7b318e846962ae
+  IT-01-213  4x5  8a947c2d95973d21691386b59061052d72f071d3
+  IT-01-213  9x16 f61175b82e0ed6971c16837984762395efe9ad59
+  IT-01-218  16x9 3dc2c34859f9bcae0e1aa707a10edce8640a34ba
+  IT-01-218  4x5  28d07868378a41e930a566c9da8363d19dfa8d80
+  IT-01-218  9x16 cbcb90f6e8bb6ac33daf0b3a18180a38b5f3be66
+  IT-01-221  16x9 c4a81ac128cdd351cc634d973ada9a6289399d77
+  IT-01-221  4x5  5a81c0ea11e3b1b21e1bfbf0815bb4ded1c5628c
+  IT-01-221  9x16 29e472d5ce62599501f8a4822cbf58a848672ab8
+  IT-01-223  16x9 fdb2e13fcb955260b6804d836d7306abf525c6f3
+  IT-01-223  4x5  956347fc47d2dfcbae70fcf8b08fe10d85ca7881
+  IT-01-223  9x16 84defc8e55292bb50f64238d0c58c852eef9f184
+
+Files:
+  assets/it-01-211-16x9.png
+  assets/it-01-211-4x5.png
+  assets/it-01-211-9x16.png
+  assets/it-01-213-16x9.png
+  assets/it-01-213-4x5.png
+  assets/it-01-213-9x16.png
+  assets/it-01-218-16x9.png
+  assets/it-01-218-4x5.png
+  assets/it-01-218-9x16.png
+  assets/it-01-221-16x9.png
+  assets/it-01-221-4x5.png
+  assets/it-01-221-9x16.png
+  assets/it-01-223-16x9.png
+  assets/it-01-223-4x5.png
+  assets/it-01-223-9x16.png
+
+No night-derived daylight companions existed for these five IDs. None were added.
+
+Gallery: index.html SCENES copy, scenario_label, and approval_status updated. Card status reads Candidate. tools/phase1_mood.json was already day for these five and was left unchanged. ITALY_META day/night was already day; only the cache-bust query on these five thumbs moved to ?v=flagb16.
+
+Corrected geometry aimed at in the plates:
+  IT-01-211 six-pointed star plan; six projecting arms about 20 metres beyond the central section; partly cut from the living rock.
+  IT-01-213 closed multi-story valley-facing block with rows of small windows; only a small upper-floor three-arch loggia; no continuous ground-floor arcade.
+  IT-01-218 strongly graduated rustication — massive projecting blocks at ground level, lighter treatment on the upper stories.
+  IT-01-221 unfinished west front with exposed brick gable above; side walls with a straight arcade of sarcophagi; no curved wing.
+  IT-01-223 classical busts crowning the sea-facing parapet of the Terrazza dell'Infinito.
