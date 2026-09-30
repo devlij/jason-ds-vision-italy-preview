@@ -1,0 +1,93 @@
+BATCH IT FLAG-spec recreates — batch 4
+Date finished: 2026-09-30
+Work order: wo-italy-flag-specs-2026-09-30 (batch 4)
+Superseded, ignored: wo-italy-recreate-flags-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: 873d1efc8777e746f0906a2b7a41c180ac08183d
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e / Telea wipe ghosts were not used as an image anchor. Plates were generated from text prompts plus the packet reference URLs.)
+
+Scope: ONLY these five scenes. keep_current and hold IDs were not touched.
+Batch 1 (IT-01-003/011/012/013/017), batch 2 (IT-01-020/022/023/025/033), and batch 3 (IT-01-040/043/050/055/056) were not modified.
+  IT-01-057 Piazza Navona, Rome
+  IT-01-059 Bridge of Sighs, Venice
+  IT-01-060 Marina Grande, Sorrento
+  IT-01-062 Prato della Valle, Padua
+  IT-01-063 Como Duomo and lakefront, Como
+
+Status: Candidate only. Not merged. Cosmo owns QC and merge. Never self-approved. No WOTD was invented.
+IT-01-057, IT-01-059, and IT-01-063 were Approved. This FLAG recreate sets them back to Candidate. The recreate supersedes that prior approval pending Cosmo QC.
+IT-01-060 and IT-01-062 were already Candidate (Gate 1 holds). They stay Candidate.
+
+Weather: Open-Meteo current, already retrieved in the packet. Not re-fetched. All is_day=1. One retrieval per scene, unique to the second. Passed through into each manifest.
+
+  Scene      Retrieval UTC           Local                      Label          Temp   Cloud  Code
+  IT-01-057  2026-09-30T14:01:58Z    2026-09-30T16:01:58+0200   Clear          26.7°C  1%     0
+  IT-01-059  2026-09-30T14:01:59Z    2026-09-30T16:01:59+0200   Clear          24.3°C  0%     0
+  IT-01-060  2026-09-30T14:02:00Z    2026-09-30T16:02:00+0200   Clear          26.8°C  5%     0
+  IT-01-062  2026-09-30T14:02:01Z    2026-09-30T16:02:01+0200   Mainly clear   25.8°C  14%    1
+  IT-01-063  2026-09-30T14:02:02Z    2026-09-30T16:02:02+0200   Partly cloudy  24.0°C  76%    2
+
+Scenario labels on the masters:
+  IT-01-057  30 September 2026 · 16:01 Europe/Rome
+  IT-01-059  30 September 2026 · 16:01 Europe/Rome
+  IT-01-060  30 September 2026 · 16:02 Europe/Rome
+  IT-01-062  30 September 2026 · 16:02 Europe/Rome
+  IT-01-063  30 September 2026 · 16:02 Europe/Rome
+
+Masters: regenerated from text prompts plus the packet reference URLs and corrected_spec. Existing masters were not image-anchored. Como's musement cover shows the rose-window west front, so it was not passed in as pixels. Navona, Bridge of Sighs, Marina Grande, and Santa Giustina frames were used as geometry references, with the prompt holding the corrected spec where a reference fought it (no star on the Navona obelisk; no roof walk on the Bridge of Sighs; no Positano cascade at Marina Grande). Each aspect is its own plate. 16:9 and 9:16 are Lanczos to the photo size. 4:5 keeps the top of a 3:4 plate and trims foreground, then lands at 864×1080, so the apex, pediment, domes, and skyline stay in frame.
+
+Formats: photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero overlay on the artwork. Label bar: bold site+city caption, Scenario line, disclosure "AI-generated artistic interpretation · Not a photograph."; right side "Jason D's Vision" and "Jason A. Devlin" in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+9:16 is included on disk and in each manifest as file_9x16. The live gallery card still offers 16:9 and 4:5 only. Italy's image-sitemap standing order does not emit 9:16, and these scenes are Candidate so their blocks were removed from image-sitemap.xml. Other rows were left in the sitemap.
+
+Art.50 PNG chunks on every master: Title, Description, Copyright, Software, Comment.
+Comment date is the true finish date 2026-09-30.
+
+Git blob SHA-1:
+  IT-01-057  16x9  b7bc54b587fa9627f47f59129525585790dc964b
+  IT-01-057  4x5   63eabe1c08a60538ccded6efffc859721ac2b840
+  IT-01-057  9x16  1fa7a4204a1c97681d73380dd5cbdf6d10de16d9
+  IT-01-059  16x9  cfbbf4a1505494c43fc66416edc2b95175d7fec7
+  IT-01-059  4x5   2366808be28fc94880109269af49e083db7ba27c
+  IT-01-059  9x16  cc8c19fda128ce21b89507f1bbfe9c6b966b3841
+  IT-01-060  16x9  99183857760a7369593ac175ea44df73ccd2e92b
+  IT-01-060  4x5   661f34c013db218d9d8ebd7c04fe55eab405744b
+  IT-01-060  9x16  99c68cdf58bea642e09c602f2c77777a45eac364
+  IT-01-062  16x9  7fc5377a5c13f81c237dba7bc6019c1f5647a273
+  IT-01-062  4x5   705b31b0345c63cd7db7f9c069abef66249c206f
+  IT-01-062  9x16  41ac405a23df2839517dcb7b6478052f24a185a1
+  IT-01-063  16x9  210b030d26d660b59adb10400f4c09571ce038aa
+  IT-01-063  4x5   a2b16b4343fa1c6b91c5bce86f7608d115418688
+  IT-01-063  9x16  9604aefad93e4b51e0a2444b02d514f615dfd09e
+
+Files:
+  assets/it-01-057-16x9.png
+  assets/it-01-057-4x5.png
+  assets/it-01-057-9x16.png
+  assets/it-01-059-16x9.png
+  assets/it-01-059-4x5.png
+  assets/it-01-059-9x16.png
+  assets/it-01-060-16x9.png
+  assets/it-01-060-4x5.png
+  assets/it-01-060-9x16.png
+  assets/it-01-062-16x9.png
+  assets/it-01-062-4x5.png
+  assets/it-01-062-9x16.png
+  assets/it-01-063-16x9.png
+  assets/it-01-063-4x5.png
+  assets/it-01-063-9x16.png
+
+No *-daylight-* companions existed for these five IDs. None were added. The new primary is daytime.
+
+Gallery: index.html SCENES copy, scenario_label, and approval_status updated so the new masters show as Candidate. tools/phase1_mood.json was already day for all five and was not edited. A duplicated `const statusLabel` on main (a parse error left by the batch 1 / batch 2 merge) was removed so the Candidate badge can render. The duplicate CSS rule was left as it was.
+
+Corrected geometry aimed at in the plates:
+  IT-01-057 obelisk topped by the bronze Pamphilj dove with an olive twig; no star on the apex. Sant'Agnese dome and twin bell towers behind.
+  IT-01-059 fully enclosed stone passage; curved scrolled pediment; two stone-grilled windows on the visible side; spans the Doge's Palace loggia to the prison; no open roof walk or balustrade.
+  IT-01-060 small fishing harbor with boats at the base of the cliff; Sorrento on the plateau above; no stacked cascade of houses on the cliff face.
+  IT-01-062 Santa Giustina as unfinished brick with a cluster of domes and a bell tower; not a white single-dome pedimented facade. Elliptical canal and statue ring in front.
+  IT-01-063 from the lungolago, the cathedral as green dome, spires, and flank behind the palazzi; the rose-window west front is not on the quay.
