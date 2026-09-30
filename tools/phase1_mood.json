@@ -262,7 +262,7 @@
     ]
   },
   "IT-01-040": {
-    "daynight": "night",
+    "daynight": "day",
     "moods": [
       "coastal",
       "mountain",
@@ -286,7 +286,7 @@
     ]
   },
   "IT-01-043": {
-    "daynight": "night",
+    "daynight": "day",
     "moods": [
       "urban",
       "historic"

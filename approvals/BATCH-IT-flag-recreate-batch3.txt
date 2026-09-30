@@ -1,0 +1,85 @@
+BATCH IT FLAG-spec recreates — batch 3
+Date finished: 2026-09-30
+Work order: wo-italy-flag-specs-2026-09-30 (batch 3)
+Superseded, ignored: wo-italy-recreate-flags-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: 9f7071aa30c9dacd224f0511b628b73c8080a9ea
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e / Telea wipe ghosts were not used as an image anchor.)
+
+Scope: ONLY these five scenes. keep_current and hold IDs were not touched.
+Batch 1 (IT-01-003/011/012/013/017) and batch 2 (IT-01-020/022/023/025/033) were not modified.
+  IT-01-040 Rocca Calascio, Calascio
+  IT-01-043 Bolzano Cathedral and Waltherplatz, Bolzano
+  IT-01-050 Piazza del Popolo, Ravenna
+  IT-01-055 Portofino harbor, Portofino
+  IT-01-056 Bellagio waterfront, Bellagio
+
+Status: Candidate only. Not merged. Cosmo owns QC and merge.
+IT-01-040, IT-01-043, IT-01-050, IT-01-055, and IT-01-056 were Approved. FLAG recreate sets all five back to Candidate. The FLAG recreate supersedes that prior approval pending Cosmo QC.
+
+No WOTD was invented.
+
+Weather: Open-Meteo current, already retrieved. Not re-fetched. All is_day=1. Model time 2026-09-30T15:15 Europe/Rome. Scenario label on every master: 30 September 2026 · 15:25 Europe/Rome.
+  IT-01-040  retrieval 2026-09-30T13:25:41Z  local 2026-09-30T15:25:41+0200  Clear          17.7°C  cloud 16%  code 0
+  IT-01-043  retrieval 2026-09-30T13:25:43Z  local 2026-09-30T15:25:43+0200  Clear          24.8°C  cloud 0%   code 0
+  IT-01-050  retrieval 2026-09-30T13:25:45Z  local 2026-09-30T15:25:45+0200  Clear          24.9°C  cloud 0%   code 0
+  IT-01-055  retrieval 2026-09-30T13:25:46Z  local 2026-09-30T15:25:46+0200  Partly cloudy  24.4°C  cloud 84%  code 2
+  IT-01-056  retrieval 2026-09-30T13:25:48Z  local 2026-09-30T15:25:48+0200  Partly cloudy  24.1°C  cloud 78%  code 2
+
+Masters: regenerated from text prompts plus the packet reference URLs. Existing masters were not image-anchored. The Rocca Calascio Windows Spotlight frame and the Portofino Castello Brown frame carry watermarks, so those two were not passed in as pixels. Bolzano, Ravenna, and Bellagio reference frames were used as geometry references. Each aspect is its own plate so the corrected geometry stays in frame. 16:9 and 9:16 are Lanczos to the photo size. 4:5 is a center crop of a 3:4 plate to 864×1080.
+
+Formats: photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero overlay on the artwork. Label bar: caption, Scenario line, disclosure; right side Jason D's Vision and Jason A. Devlin in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+9:16 is included on disk and in each manifest as file_9x16. The live gallery card still offers 16:9 and 4:5 only. Italy's image-sitemap standing order does not emit 9:16, and these scenes are Candidate so their blocks were removed from image-sitemap.xml. Other Candidate rows already listed on main were left in the sitemap.
+
+Art.50 PNG chunks on every master: Title, Description, Copyright, Software, Comment.
+Comment date is the true finish date 2026-09-30.
+
+Git blob SHA-1:
+  IT-01-040  16x9 5adc1a62d1f2add04702485f7e28e34275d79875
+  IT-01-040  4x5  4b74a54ac939cecf688521a5b779000ba73a1deb
+  IT-01-040  9x16 6ffef3fa8b7ec4cdb29ec4b4ac456d21a1b4d319
+  IT-01-043  16x9 e056565aa56ef3ff38527bf7dfb035e07aff8685
+  IT-01-043  4x5  c397be5e0e665d0d87c5661df745faa2447a4159
+  IT-01-043  9x16 0829d2815a84f002dad0b1f18fc6ab07a8c78313
+  IT-01-050  16x9 b8782165c539fe038ac39ab3232a7b4a0f70e07d
+  IT-01-050  4x5  a9800493c4ebe64488200dc08bb443191a2f32ad
+  IT-01-050  9x16 7dbf198d4bf190128d46a062fc9e6c4b8c68aa17
+  IT-01-055  16x9 949b01c3e78c9b336cb5ef1939d1dcdbddc225c6
+  IT-01-055  4x5  ae70e7d7bd4adb53169c32ca089e573734ff3fe7
+  IT-01-055  9x16 3d69252cbc43b0ddd6c6839cd0eaa5ffb309ee74
+  IT-01-056  16x9 3e3b7f621b2ccb48372e9f75e3108a63a8f4cde7
+  IT-01-056  4x5  43b96d692f0ce9d1c86bd28c5512844046aed871
+  IT-01-056  9x16 94fff0ca5fabe4e7e01607c295a86427f265aaf4
+
+Files:
+  assets/it-01-040-16x9.png
+  assets/it-01-040-4x5.png
+  assets/it-01-040-9x16.png
+  assets/it-01-043-16x9.png
+  assets/it-01-043-4x5.png
+  assets/it-01-043-9x16.png
+  assets/it-01-050-16x9.png
+  assets/it-01-050-4x5.png
+  assets/it-01-050-9x16.png
+  assets/it-01-055-16x9.png
+  assets/it-01-055-4x5.png
+  assets/it-01-055-9x16.png
+  assets/it-01-056-16x9.png
+  assets/it-01-056-4x5.png
+  assets/it-01-056-9x16.png
+
+No night-derived *-daylight-* companions existed for these five IDs. None were added. The new primary is daytime.
+
+Gallery: index.html SCENES copy, scenario_label, approval_status, and day/night meta updated so the new masters show as Candidate. tools/phase1_mood.json daynight set to day for IT-01-040 and IT-01-043. IT-01-050, IT-01-055, and IT-01-056 were already day in that file.
+
+Corrected geometry aimed at in the plates:
+  IT-01-040 four cylindrical tapered corner towers with small windows; central keep square; no rectangular corner towers.
+  IT-01-043 Walther von der Vogelweide monument: standing marble figure on a tall carved pedestal with flanking lions, in flower beds mid-piazza.
+  IT-01-050 both twin Venetian granite columns with their crowning statues, standing as a pair.
+  IT-01-055 harbor as a tight cove wrapping the piazzetta; Castello Brown small on the promontory above the town.
+  IT-01-056 campanile is a thick square shaft with a low pyramidal cap and corner pinnacles; no tall needle spire.
