@@ -1,0 +1,139 @@
+BATCH IT FLAG-spec recreates — batch 30
+Date finished: 2026-09-30
+Work order: wo-italy-flag-specs-2026-09-30 (batch 30)
+Superseded, ignored: wo-italy-recreate-flags-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: be64cf296feb50c4d6d6afb7461cb1a57be059ce
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e was not used as an image anchor. Plates were regenerated from text prompts plus the packet reference URLs and the packet weather. Existing masters were not image-anchored.)
+
+Scope: ONLY these five scenes. keep_current (IT-01-127, IT-01-128, IT-01-202, IT-01-217, IT-01-350) and hold (IT-01-037, IT-01-236, IT-01-373) were not touched. Historical Italy draft PRs were not modified. Batch 28 remains DRAFT PR #62 at tip aaed511c89eb209c0b99eb146182d182242bcfe3. Batch 29 remains DRAFT PR #63 at tip 0547e31380d3449497e538fef951c318e0699eef. Spain and Ireland work were not touched.
+  IT-01-341 Teramo Cathedral, Teramo
+  IT-01-343 Basilica della Santa Casa, Loreto
+  IT-01-345 La Nave di Cascella and pier, Pescara
+  IT-01-346 Rocca Roveresca, Mondavio
+  IT-01-347 Torre del Passero skyline, Recanati
+
+Status: Candidate only. Not merged. Cosmo owns QC and merge.
+Not self-approved. approval_status was not set to Approved. No Cosmo QC was invented.
+
+Approved → Candidate (prior approval superseded, not self-approved):
+  IT-01-341
+  IT-01-343
+  IT-01-345
+  IT-01-346
+  IT-01-347
+
+No WOTD was invented.
+
+Weather: Open-Meteo, already retrieved in the packet. Not re-fetched. All is_day=1. Timezone Europe/Rome. One retrieval record per scene, copied from the packet. Each scene keeps its own model hour from the packet. No night weather was invented. Every model hour is before that site's sunset.
+  IT-01-341  retrieval 2026-09-30T22:54:38Z  local 2026-10-01T00:54:38+0200  model 18:00  Clear sky     21.2°C  cloud 11%  code 0  wind 5.8 km/h   sunset 18:46  scenario 1 October 2026 · 18:00 Europe/Rome
+  IT-01-343  retrieval 2026-09-30T22:54:40Z  local 2026-10-01T00:54:40+0200  model 17:00  Mainly clear  23.1°C  cloud 27%  code 1  wind 9.1 km/h   sunset 18:46  scenario 1 October 2026 · 17:00 Europe/Rome
+  IT-01-345  retrieval 2026-09-30T22:54:42Z  local 2026-10-01T00:54:42+0200  model 16:00  Clear sky     24.4°C  cloud 0%   code 0  wind 9.4 km/h   sunset 18:44  scenario 1 October 2026 · 16:00 Europe/Rome
+  IT-01-346  retrieval 2026-09-30T22:54:44Z  local 2026-10-01T00:54:44+0200  model 15:00  Clear sky     24.5°C  cloud 7%   code 0  wind 10.9 km/h  sunset 18:49  scenario 1 October 2026 · 15:00 Europe/Rome
+  IT-01-347  retrieval 2026-09-30T22:54:46Z  local 2026-10-01T00:54:46+0200  model 14:00  Mainly clear  23.8°C  cloud 15%  code 1  wind 5.4 km/h   sunset 18:47  scenario 1 October 2026 · 14:00 Europe/Rome
+
+Masters: regenerated from text prompts plus the packet reference URLs. Existing masters were not image-anchored. Geometry follows each corrected_spec. Daytime only (is_day=1; each model hour is before sunset at that site).
+
+Reference handling where a packet URL contradicted the corrected spec or could not be used as pixels:
+  IT-01-341 the packet supplied one URL. That page and the English cathedral article both place the bell tower on the right and describe the Ghibelline merlons and the Gothic tympanum over the portal. The plate follows the written spec: a small rose inside the pointed gable, statue niches flanking it, white-and-pink marble banding on the upper right block, and the square campanile with clock and pyramidal spire on the right. No full-height arcade and no giant rose. The pages were not passed in as pixels.
+  IT-01-343 the packet supplied one URL, a narrative page. The plate follows the written spec: a flat uncurved white-marble screen, three portals with triangular pediments, statue niches, a straight entablature, the dome kept behind the screen, the slender Vanvitelli campanile standing separate at the left, and the long two-storey brick Apostolic Palace with its arcaded loggia along the piazza. A palazzo, not a crenellated castle, and not on an isolated ramp. The pages were not passed in as pixels.
+  IT-01-345 the packet pages describe the Pescara waterfront and the Cascella monument. Some public wording still calls the work a galley on the beach. The plate follows the written spec: a low horizontal geometric marble ship of interlocking flat slabs, tilted discs, and a spiral, at water level inside a shallow rectangular basin on the lungomare by the pier. Not a tall organic flame or sail standing on the sand. The pages were not passed in as pixels.
+  IT-01-346 the commons file is a view of the mastio; the second page is an events listing. Some descriptions mention merlons on an upper floor. The plate follows the written spec: a massive battered brick mastio with a sloping scarped base, a band of tall blind arches around the upper stage, a plain low-pitched tiled roof with no open crenellation, and one small round turret on the enceinte with a low tiled cone roof. Set in the town, not a ring of matching round keeps. Neither page was passed in as pixels.
+  IT-01-347 popular pages often attach the name Torre del Passero to the Sant'Agostino campanile. The plate follows the written spec instead: a civic square brick shaft, a machicolated corbelled cornice, a low octagonal top stage, no pointed spire, no church attached, standing with the old civic walls in the historic center. Never a church campanile. The packet pages were not passed in as pixels.
+
+Formats: 16:9 plate per scene, 4:5 center-cropped from that plate (Lanczos to 1920×1080, then 864×1080). 9:16 is its own plate, Lanczos to 1080×1920. Photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero overlay and zero tint on the artwork. Label bar: bold caption, Scenario line, disclosure; right side Jason D's Vision and Jason A. Devlin in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+9:16 is on disk and in each manifest as file_9x16. The live gallery card still offers 16:9 and 4:5 only. These scenes are Candidate, so they are omitted from image-sitemap.xml. The omission is those five URL blocks only (375 → 370). Other scenes already Candidate on main were left in the sitemap so this batch does not republish the rest of the file.
+
+Art.50 PNG chunks on every master: Title, Description, Copyright, Software, Comment.
+Comment date is the true finish date 2026-09-30.
+
+Master git blob SHAs:
+  IT-01-341  16x9 748ada6d4058b0e12724ed3ffb5c1c75f277235c
+  IT-01-341  4x5  faa797f07bdf63cf7ee991d7f9ab4824e9db280a
+  IT-01-341  9x16 0c08fbd46067467e232021d387dbdbc522fe6cf5
+  IT-01-343  16x9 1348e80a23cc84fb8a700cd4bdbb2e4f112e349c
+  IT-01-343  4x5  ecf75aca9f9e41348ab965106ac29769ca74d9c0
+  IT-01-343  9x16 c5c22f9430aee6479047504057a6b1113c417589
+  IT-01-345  16x9 8b2703dcac1df8d060e765ff77268572c13903f8
+  IT-01-345  4x5  307daa5c727623e53b878f8d7fe78874217fa3bb
+  IT-01-345  9x16 68132cd26dc3d433a770b6cfc607d4a299d1f70e
+  IT-01-346  16x9 0376dc16f519fc5a5264a53941f9928d41380583
+  IT-01-346  4x5  89440e2f605a42b1e303ffb69f46f6c49cff2011
+  IT-01-346  9x16 442d7426c96fc334c95b2352b2d3e09ad7841d6f
+  IT-01-347  16x9 a76bde597279badc950ba33913eb41f67330fe06
+  IT-01-347  4x5  c14a41d7772d74fd1b64ae6bf91d12225a6af624
+  IT-01-347  9x16 035c6b99c781c6c60d63acfd893b27a532b9d7eb
+
+Files:
+  assets/it-01-341-16x9.png
+  assets/it-01-341-4x5.png
+  assets/it-01-341-9x16.png
+  assets/it-01-343-16x9.png
+  assets/it-01-343-4x5.png
+  assets/it-01-343-9x16.png
+  assets/it-01-345-16x9.png
+  assets/it-01-345-4x5.png
+  assets/it-01-345-9x16.png
+  assets/it-01-346-16x9.png
+  assets/it-01-346-4x5.png
+  assets/it-01-346-9x16.png
+  assets/it-01-347-16x9.png
+  assets/it-01-347-4x5.png
+  assets/it-01-347-9x16.png
+
+No night-derived daylight companions existed for these five IDs. None were added.
+
+Gallery: index.html SCENES copy, scenario_label, and approval_status updated. Card status reads Candidate. tools/phase1_mood.json was already day for these five and was left unchanged. ITALY_META day/night was already day; only the cache-bust query on these five thumbs moved to ?v=flagb30.
+
+Per-scene evidence cards
+========================
+
+IT-01-341 Teramo Cathedral, Teramo
+References:
+  https://www.italia.it/it/abruzzo/teramo/musei/cattedrale-santa-maria-assunta
+  https://en.wikipedia.org/wiki/Teramo_Cathedral
+Geometry anchors:
+  1. Facade crowned with swallowtail Ghibelline merlons, and a small rose window set inside a pointed Gothic gable with flanking statuary niches above the single main portal.
+  2. White-and-pink marble banding on the upper right block of the facade. No full-height arcade and no giant rose.
+  3. Tall square campanile with a clock face and a pyramidal spire standing on the right of the facade, never on the left.
+
+IT-01-343 Basilica della Santa Casa, Loreto
+References:
+  https://www.indaginiemisteri.it/la-santa-casa-di-loreto-tra-fede-e-mistero/
+  https://en.wikipedia.org/wiki/Basilica_della_Santa_Casa
+Geometry anchors:
+  1. A flat, uncurved white-marble screen: three portals with triangular pediments, statue niches, and a straight entablature. The dome stays visible behind the screen.
+  2. Tall slender Vanvitelli campanile, open bell stage and small cupola, standing separate at the left of the facade.
+  3. Long two-storey brick Apostolic Palace with an arcaded loggia running along the piazza at ground level. A palazzo, never a crenellated castle, never on an isolated ramp.
+
+IT-01-345 La Nave di Cascella and pier, Pescara
+References:
+  https://www.travel365.it/pescara-cosa-vedere.htm
+  https://www.musement.com/nl/pescara/
+Geometry anchors:
+  1. A low horizontal geometric marble ship of interlocking flat white-marble slabs, tilted discs, and a spiral element.
+  2. The sculpture sits at water level inside a shallow rectangular basin on the lungomare.
+  3. The pier is beside that basin. The work is horizontal and abstract-geometric, never a tall organic flame or sail standing on the sand.
+
+IT-01-346 Rocca Roveresca, Mondavio
+References:
+  https://commons.wikimedia.org/wiki/File:Rocca_Roveresca_-_Mondavio_8.JPG
+  https://www.touringclub.it/eventi/caccia-ai-tesori-arancioni-di-mondavio-2025
+Geometry anchors:
+  1. The mastio is a massive battered brick tower with a sloping scarped base.
+  2. A defining band of tall blind arches wraps the upper stage, under a plain low-pitched tiled roof, with no open crenellation.
+  3. A small round turret on the enceinte has a low tiled cone roof. The fortress is set in the town, not a ring of matching round keeps.
+
+IT-01-347 Torre del Passero skyline, Recanati
+References:
+  https://marcheoutdoor.it/PuntiDiInteresse/Dettagli/mopa_srl
+  https://www.dizy.com/it/foto/1507056003
+Geometry anchors:
+  1. A civic brick tower: a plain square brick shaft.
+  2. The shaft rises to a machicolated corbelled cornice capped by a low octagonal top stage. No pointed spire.
+  3. No church is attached. The tower stands with the old civic walls in the historic center, and is never rendered as a church campanile.
