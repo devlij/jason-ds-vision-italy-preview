@@ -4,21 +4,65 @@
   "region": "Marche",
   "city": "Pesaro",
   "caption": "Rocca Costanza, Pesaro",
-  "scenario_label": "23 September 2026 \u00b7 08:46 Europe/Rome",
-  "composition": "Brick Renaissance fortress bastions by the Adriatic \u00b7 AI-generated artistic interpretation",
-  "description": "From the road the camera faces the corner bastion of the Rocca Costanza, its massive brick walls running left and the keep rising at the corner. An umbrella pine stands at the far left, while the Adriatic opens on the right with a distant headland. The 08:46 morning light warms the brick.",
-  "alt_text": "AI-generated artistic interpretation of Rocca Costanza in Pesaro under morning light",
+  "scenario_label": "30 September 2026 · 18:30 Europe/Rome",
+  "composition": "Quadrilateral brick fortress with four round corner towers · AI-generated artistic interpretation",
+  "description": "The camera looks across the road at Rocca Costanza in Pesaro, a quadrilateral brick fortress with massive cylindrical corner towers and straight curtain walls, no polygonal bastion and no arcaded crown. An umbrella pine stands at the left, and a band of the Adriatic shows beyond the walls. The modelled scenario is 30 September 2026 at 18:30 Europe/Rome: clear sky, 23.0°C, cloudless, sun still up before the 18:51 sunset.",
+  "alt_text": "AI-generated artistic interpretation of Rocca Costanza in Pesaro in late-day light, a square fortress with round corner towers",
   "file_16x9": "assets/it-01-147-16x9.png",
   "file_4x5": "assets/it-01-147-4x5.png",
   "approval_status": "Candidate",
-  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #30 (tip 09cb4b3, merged cc2d6bf146fc): Gate 1 visual/location \u2014 pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical \u2014 exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance \u2014 photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial \u2014 'AI-generated artistic interpretation \u00b7 Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication \u2014 masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 12 scenes / 20 files (143,150,155,165,168,177,189,195,198,209,215,217), zero defects. Full file-count verification: every scene in range holds both finished masters, correctly named.",
-  "git_blob_sha1_16x9": "7012798a353f89f5e9e7235172d3362c1d4c5767",
-  "git_blob_sha1_4x5": "d112e1c523ba8d770750fc7162dd3eb3c1c64815",
+  "approval_basis": "FLAG-spec daytime recreate 2026-09-30, batch 10 of wo-italy-flag-specs-2026-09-30. Candidate only. Open-Meteo retrieval recorded for 30 September 2026 at 18:30 Europe/Rome, is_day=1. Prior approval, where it existed, is superseded pending Cosmo QC. Not merged. Not self-approved.",
+  "git_blob_sha1_16x9": "b9dfbe9f6fd55b9b49e15c4499eeca4e83355271",
+  "git_blob_sha1_4x5": "18349473cfd4f45a13eefc0737a52643b8e9ad8d",
+  "file_9x16": "assets/it-01-147-9x16.png",
+  "git_blob_sha1_9x16": "e2e81008d022ca8c287358891b18148e5213caa3",
+  "weather": {
+    "scene_id": "IT-01-147",
+    "title": "Rocca Costanza, Pesaro",
+    "lat": 43.9107,
+    "lon": 12.9167,
+    "timezone": "Europe/Rome",
+    "provider": "Open-Meteo",
+    "endpoint": "api.open-meteo.com/v1/forecast",
+    "retrieval_time_utc": "2026-09-30T16:31:40Z",
+    "retrieval_time_local": "2026-09-30T18:31:40+0200",
+    "model_time": "2026-09-30T18:30",
+    "valid_time_local": "2026-09-30T18:30",
+    "is_day": 1,
+    "weather_code": 0,
+    "weather_label": "Clear sky",
+    "temperature_c": 23.0,
+    "cloud_cover_pct": 0,
+    "wind_speed_kmh": 8.9,
+    "precipitation_mm": 0.0,
+    "sunrise": "2026-09-30T07:04",
+    "sunset": "2026-09-30T18:51",
+    "raw_current": {
+      "time": "2026-09-30T18:30",
+      "interval": 900,
+      "temperature_2m": 23.0,
+      "relative_humidity_2m": 69,
+      "apparent_temperature": 24.1,
+      "precipitation": 0.0,
+      "rain": 0.0,
+      "weather_code": 0,
+      "cloud_cover": 0,
+      "wind_speed_10m": 8.9,
+      "wind_direction_10m": 104,
+      "is_day": 1
+    },
+    "scenario_label": "30 September 2026 · 18:30 Europe/Rome"
+  },
   "qc_notes": [
     {
       "date": "2026-09-29",
       "author": "Cosmo",
-      "note": "Gate 1 HOLD (sweep 2026-09-29): Architectural verification hold \u2014 see ~/workspace/jason-d-vision/italy-visual-verify-2026-09-29.md for specific finding."
+      "note": "Gate 1 HOLD (sweep 2026-09-29): Architectural verification hold — see ~/workspace/jason-d-vision/italy-visual-verify-2026-09-29.md for specific finding."
+    },
+    {
+      "date": "2026-09-30",
+      "author": "Image Assistant",
+      "note": "FLAG recreate supersedes prior approval pending Cosmo QC. Daytime 18:30 Europe/Rome masters replace the prior primaries. approval_status set to Candidate. Not merged."
     }
   ]
 }
