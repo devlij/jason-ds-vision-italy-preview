@@ -1,0 +1,95 @@
+BATCH IT FLAG-spec recreates — batch 8
+Date finished: 2026-09-30
+Work order: wo-italy-flag-specs-2026-09-30 (batch 8)
+Superseded, ignored: wo-italy-recreate-flags-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: 873d1efc8777e746f0906a2b7a41c180ac08183d
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e / Telea wipe ghosts were not used as an image anchor. Plates were generated from text prompts and the packet reference pages, not from the existing masters.)
+
+Scope: ONLY these five scenes. keep_current and hold IDs were not touched.
+Draft holds #34–#39 were not modified. Merged batches #32 and #33 were not modified.
+  IT-01-105 San Giorgio Cathedral, Modica
+  IT-01-111 Fortezza di Montalcino, Montalcino
+  IT-01-112 Piazza Garibaldi, Sulmona
+  IT-01-114 Castel del Monte, Andria
+  IT-01-122 Vernazza harbor, Vernazza
+
+Status: Candidate only. Not merged. Cosmo owns QC and merge.
+Approved→Candidate: IT-01-105, IT-01-111, IT-01-112, IT-01-114, IT-01-122.
+All five were Approved. This FLAG recreate sets each back to Candidate. The recreate supersedes that prior approval pending Cosmo QC. Nothing in this batch is self-approved.
+
+No WOTD was invented.
+
+Weather: Open-Meteo current, already retrieved. Not re-fetched. All is_day=1. Model time 2026-09-30T17:30 Europe/Rome. Scenario label on every master: 30 September 2026 · 17:30 Europe/Rome. One retrieval per scene.
+  IT-01-105  retrieval 2026-09-30T15:42:00Z  local 2026-09-30T17:42:00+0200  Overcast       23.3°C  cloud 85%  code 3  wind 8.7 km/h
+  IT-01-111  retrieval 2026-09-30T15:42:02Z  local 2026-09-30T17:42:02+0200  Mainly clear   23.1°C  cloud 49%  code 1  wind 16.6 km/h
+  IT-01-112  retrieval 2026-09-30T15:42:03Z  local 2026-09-30T17:42:03+0200  Mainly clear   21.4°C  cloud 24%  code 1  wind 10.8 km/h
+  IT-01-114  retrieval 2026-09-30T15:42:05Z  local 2026-09-30T17:42:05+0200  Clear          20.2°C  cloud 0%   code 0  wind 14.5 km/h
+  IT-01-122  retrieval 2026-09-30T15:42:07Z  local 2026-09-30T17:42:07+0200  Partly cloudy  23.7°C  cloud 70%  code 2  wind 6.5 km/h
+
+Masters: regenerated from text prompts plus the packet reference URLs (read as text for geometry, not passed in as pixels). Existing gallery masters were not image-anchored. Geometry follows each corrected_spec.
+
+Formats: one 16:9 plate per scene, Lanczos to 1920×1080; 4:5 is the center crop of that plate (864×1080). 9:16 is a separate vertical plate, Lanczos to 1080×1920. Photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero overlay on the artwork. Label bar: bold caption, Scenario line, disclosure; right side Jason D's Vision and Jason A. Devlin in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+9:16 is included on disk and in each manifest as file_9x16. The live gallery card still offers 16:9 and 4:5 only. These scenes are Candidate, so their 16:9 and 4:5 masters were removed from image-sitemap.xml. Other sitemap entries were left as they stood on main.
+
+Art.50 PNG chunks on every master: Title, Description, Copyright, Software, Comment.
+Comment date is the true finish date 2026-09-30.
+
+Git blob SHA-1 (masters):
+  IT-01-105  16x9 554a7be159ccc1a6a55cc31643f21aac08007a82  4x5 b77bd4ebf9a5e5bd4360ec93a0d6e72440a9a051  9x16 1fe6059baafc7cc3ac7b0d9547c09405187feef6
+  IT-01-111  16x9 5c2827a2349b97a08b4c921b8b71d129e432ca27  4x5 769cccbb380622955f2f50e84e7a3328a392fdda  9x16 00bccb140d80b284f1bee0793b006109f960b38f
+  IT-01-112  16x9 b54b3a75416536dab852c43c2b0aa0f724e2c982  4x5 f94814ce6a39e4fdce7f5c17da4f1b3a7b94d869  9x16 7c35d912a105b51deb26960244efc0e9594546e8
+  IT-01-114  16x9 6d344a06c163aa209860140ae0b6f4dab7ddf539  4x5 b0edee32f76a02e2600c0ad915e8351e96b76a35  9x16 beed5bea024a3c042655e17097cd898dbf92f15c
+  IT-01-122  16x9 16c1c11e2f44fb3e156b6dcfd46a57da1009413f  4x5 98ad872a0bd53dc4c4d5a6a374f07b8ac749f488  9x16 26590652f2e71d540d7f9fd70d76a9734469d463
+
+SHA-256:
+  it-01-105-16x9.png  b7c7a70cacc910c9ce68c6e64ed6d2da4668a26e44f269c7061467d39a3b1149
+  it-01-105-4x5.png   4179eb8e50bd69fe81a9036a85086fc04a84a65a3955de8b5eca78703599393b
+  it-01-105-9x16.png  0bf091c9efdbf8d66701b7af038914c0bd4adf630e5123a133389acc3900fce0
+  it-01-111-16x9.png  c776be3219ecedb96759bc5cb73a992b63faa350c6230c9d1a8a0d67228bd951
+  it-01-111-4x5.png   c7d6fcf8d1d936664f57e75420e8b77eb4a9d60650299a6e876472d19b346929
+  it-01-111-9x16.png  521fa48c6b0888dab7c0091cf565d0a03f61b593d1f36091f70ae4a905a01dd9
+  it-01-112-16x9.png  98b15ab3ce0dc0d5970ce6cff281f56960f5fffe3923dd15b141fc5f7653c4e3
+  it-01-112-4x5.png   c6a17b2f7ce2a71bec7f62e8e662fc431a71877556a12dd929eb50387626497f
+  it-01-112-9x16.png  e174d4f8063089b22edcecb398d0e9baca4581348932d4ecc7fd844393efa032
+  it-01-114-16x9.png  10b75fc1140e359f1306b895ac7db490ad3e434221b5d49de6f8f563f6e65ab6
+  it-01-114-4x5.png   bfd251b61f154f35eadf6e1e30d2f0a8866d95edb13a2f379f26f23b489a6a9e
+  it-01-114-9x16.png  82456e857384efbbafd4be0d032748931762caae8827938040817042bfe1328f
+  it-01-122-16x9.png  5e88915f8c9d4160de99507acf4a6e3d3681c718c9f2b585572777f7bd986473
+  it-01-122-4x5.png   cb50e6e156d12099b1c2ee6b19c2122f567226eb6c476a369ac2cf96c106cc51
+  it-01-122-9x16.png  f4dc65c0cd4ca1759002702953924653b8d6ab71469ab78b594b8c0731963039
+
+Files:
+  assets/it-01-105-16x9.png
+  assets/it-01-105-4x5.png
+  assets/it-01-105-9x16.png
+  assets/it-01-111-16x9.png
+  assets/it-01-111-4x5.png
+  assets/it-01-111-9x16.png
+  assets/it-01-112-16x9.png
+  assets/it-01-112-4x5.png
+  assets/it-01-112-9x16.png
+  assets/it-01-114-16x9.png
+  assets/it-01-114-4x5.png
+  assets/it-01-114-9x16.png
+  assets/it-01-122-16x9.png
+  assets/it-01-122-4x5.png
+  assets/it-01-122-9x16.png
+
+No daylight-variant companions existed for these five IDs. The new primary is daytime, so none were added.
+
+Gallery: index.html SCENES copy, scenario_label, and approval_status updated so the new masters show as Candidate. tools/phase1_mood.json and ITALY_META already recorded these five as day; they were left unchanged.
+
+The gallery script had a duplicate `const statusLabel` (already on main) that was a syntax error, so no card rendered. The duplicate line was removed so the catalogue can run and these five cards show Candidate. No other gallery behavior was changed.
+
+Corrected geometry aimed at in the plates:
+  IT-01-105 tower-facade: central bay rising into a tall open belfry far above the side wings, approached by the great stair. Not a low scrolled gable. Overcast late-afternoon light.
+  IT-01-111 pentagonal fortress: blind brick curtain walls between five crenellated corner towers, single gate. No windowed residential keep.
+  IT-01-112 medieval aqueduct of pointed Gothic arches (twenty-plus), not Roman semicircular arches, across the broad square with mountains behind.
+  IT-01-114 octagonal plan with eight octagonal flat-topped corner towers; small entrance door under a Gothic bifora. No round drums, no large round portal.
+  IT-01-122 Santa Margherita campanile is an octagonal tiled-dome tower inside the town; Castello Doria is a low cylindrical ruin on the harbor rock. No square cliff campanile, no large round hill ruin.
