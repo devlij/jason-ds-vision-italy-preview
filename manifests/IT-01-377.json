@@ -1,0 +1,20 @@
+{
+  "entry_id": "IT-01-377",
+  "country": "Italy",
+  "region": "Trentino-Alto Adige",
+  "city": "Merano",
+  "category": "christmas",
+  "caption": "Merano Christmas market",
+  "scenario_label": "13 December 2026 · 19:20 Europe/Rome",
+  "composition": "Christmas-market stalls along the Passer beside the Kurhaus · AI-generated artistic interpretation",
+  "description": "Market stalls line the Passer promenade at night, their lights reflected in the river, with the white Art Nouveau Kurhaus and a few of Merano's palms behind them and dark mountains beyond. The 13 December 2026, 19:20 Europe/Rome scenario is a seasonal artistic interpretation of a Christmas-market evening. It is not a weather forecast and not an on-site observation.",
+  "alt_text": "AI-generated artistic interpretation of the Merano Christmas market at night",
+  "file_16x9": "assets/it-01-377-16x9.png",
+  "file_4x5": "assets/it-01-377-4x5.png",
+  "file_9x16": "assets/it-01-377-9x16.png",
+  "approval_status": "Candidate",
+  "approval_basis": "Candidate only. Five-gate QC is Cosmo-only and has not been run. This record is not an approval.",
+  "weather_depiction": "seasonal_artistic_interpretation",
+  "weather_note": "Seasonal artistic interpretation. The December-evening Christmas-market conditions in the picture are not the Open-Meteo retrieval and are not a forecast for the scenario date. Generation-time retrieval is recorded in reviews/IT-01-377.json.",
+  "motion": null
+}

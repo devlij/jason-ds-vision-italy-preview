@@ -1,0 +1,20 @@
+{
+  "entry_id": "IT-01-376",
+  "country": "Italy",
+  "region": "Trentino-Alto Adige",
+  "city": "Bolzano",
+  "category": "christmas",
+  "caption": "Bolzano Mercatino di Natale",
+  "scenario_label": "13 December 2026 · 19:00 Europe/Rome",
+  "composition": "Christmas-market stalls in Piazza Walther before the floodlit cathedral · AI-generated artistic interpretation",
+  "description": "Wooden chalet stalls with warm lights fill Piazza Walther at night, and the Gothic cathedral rises floodlit at the far end of the square, its pointed spire and patterned roof above the market. The 13 December 2026, 19:00 Europe/Rome scenario is a seasonal artistic interpretation of a Christmas-market evening. It is not a weather forecast and not an on-site observation.",
+  "alt_text": "AI-generated artistic interpretation of the Bolzano Christmas market in Piazza Walther at night",
+  "file_16x9": "assets/it-01-376-16x9.png",
+  "file_4x5": "assets/it-01-376-4x5.png",
+  "file_9x16": "assets/it-01-376-9x16.png",
+  "approval_status": "Candidate",
+  "approval_basis": "Candidate only. Five-gate QC is Cosmo-only and has not been run. This record is not an approval.",
+  "weather_depiction": "seasonal_artistic_interpretation",
+  "weather_note": "Seasonal artistic interpretation. The December-evening Christmas-market conditions in the picture are not the Open-Meteo retrieval and are not a forecast for the scenario date. Generation-time retrieval is recorded in reviews/IT-01-376.json.",
+  "motion": null
+}
