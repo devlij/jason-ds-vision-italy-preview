@@ -2492,14 +2492,14 @@
     ]
   },
   "IT-01-371": {
-    "daynight": "night",
+    "daynight": "day",
     "moods": [
       "urban",
       "historic"
     ]
   },
   "IT-01-372": {
-    "daynight": "night",
+    "daynight": "day",
     "moods": [
       "urban",
       "historic"

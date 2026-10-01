@@ -1,0 +1,86 @@
+BATCH IT FLAG-spec recreates — batch 34 (FINAL)
+Date finished: 2026-09-30
+Work order: wo-italy-flag-specs-2026-09-30 (batch 34)
+Superseded, ignored: wo-italy-recreate-flags-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: be64cf296feb50c4d6d6afb7461cb1a57be059ce
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e was not used as an image anchor. Plates were regenerated from text prompts plus the packet reference URLs and the packet weather. Existing masters were not image-anchored.)
+
+Scope: ONLY these two scenes. This is the final FLAG recreate batch. No additional scenes were invented. keep_current (IT-01-127, IT-01-128, IT-01-202, IT-01-217, IT-01-350) and hold (IT-01-037, IT-01-236, IT-01-373) were not touched. Historical Italy draft PRs were not modified. Batch 29 remains DRAFT PR #63 at tip 0547e31380d3449497e538fef951c318e0699eef. Batch 30 remains DRAFT PR #64 at tip 16ac19981583e6bf49fb3e1dc9148f9aef5b12cd. Batch 31 remains DRAFT PR #65 at tip 42d470bf2872eb8bc55cd6f58995ba2a35d3e359. Batch 32 remains DRAFT PR #66 at tip d6c3c85d805fc097b4fcaa24d56ef24edd8e7b49. Batch 33 remains DRAFT PR #67 at tip f3f10a8b4f3639555b9f7632ec9eccb9bc8df9d7.
+  IT-01-371 Chiesa di San Rocco, Capaci
+  IT-01-372 Fontana Grande, Capaci
+
+Status: Candidate only. Not merged. Cosmo owns QC and merge.
+Not self-approved. approval_status was not set to Approved. No Cosmo QC was invented.
+
+Approved → Candidate (prior approval superseded, not self-approved):
+  IT-01-371
+  IT-01-372
+
+No WOTD was invented.
+
+Weather: Open-Meteo, already retrieved in the packet. Not re-fetched. All is_day=1. Timezone Europe/Rome. One retrieval record per scene, copied from the packet. Each scene keeps its own model hour from the packet. No night weather was invented. Every model hour is before that site's sunset.
+  IT-01-371  retrieval 2026-09-30T23:49:12Z  local 2026-10-01T01:49:12+0200  model 18:00  Mainly clear  25.0°C  cloud 18%  code 1  wind 12.2 km/h  sunset 18:50  scenario 1 October 2026 · 18:00 Europe/Rome
+  IT-01-372  retrieval 2026-09-30T23:49:14Z  local 2026-10-01T01:49:14+0200  model 17:00  Clear sky     25.4°C  cloud 0%   code 0  wind 12.9 km/h  sunset 18:50  scenario 1 October 2026 · 17:00 Europe/Rome
+
+Masters: regenerated from text prompts plus the packet reference URLs. Existing masters were not image-anchored. Geometry follows each corrected_spec. Daytime only (is_day=1; each model hour is before sunset at that site).
+
+Reference handling where a packet URL contradicted the corrected spec or could not be used as pixels:
+  IT-01-371 the capaci.info church page and the campanile photograph were read for geometry and were not passed in as pixels. The plate follows the written spec: a plain white gabled facade of simple rectangular form, a gold CHIESA SAN ROCCO lintel over the portal, and a modest ochre bell-gable at its side with an open bell, a clock face, a mosaic pediment panel reading ERECTUM 1773 / REAEDIFICATUM 1927, and small blue finials. It is not rusticated, it has no oculi pair, and it is not a multi-tier spire. The lintel and the mosaic dates were generated in the plate and read back as those strings. No post-hoc type was set on the artwork.
+  IT-01-372 the fountain photograph and the place page were read for geometry and were not passed in as pixels. The plate follows the written spec: a modest wall fountain on Piazza Matrice, two simple metal spouts in grey marble cladding, water falling into a shallow stone channel with a drain, set between flanking steps beside a wooden door. There are no lion heads, no shell basin, and no Baroque ornament. A plain marble tablet sits on the wall above the spouts, as on the reference; its lettering was left as generated and is not claimed as a surveyed transcription.
+
+Formats: 16:9 plate per scene, 4:5 center-cropped from that plate (Lanczos to 1920×1080, then 864×1080). 9:16 is its own plate, Lanczos to 1080×1920. Photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero overlay and zero tint on the artwork. Label bar: bold caption, Scenario line, disclosure; right side Jason D's Vision and Jason A. Devlin in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+9:16 is on disk and in each manifest as file_9x16. The live gallery card still offers 16:9 and 4:5 only. These scenes are Candidate, so they are omitted from image-sitemap.xml. The omission is those two URL blocks only (375 → 373). Other scenes already Candidate on main were left in the sitemap so this batch does not republish the rest of the file.
+
+Art.50 PNG chunks on every master: Title, Description, Copyright, Software, Comment.
+Comment date is the true finish date 2026-09-30.
+
+Master git blob SHAs:
+  IT-01-371  16x9 001206a5517e3138d3f206a098c4a0a5774424eb
+  IT-01-371  4x5  4c85b6f3794fb1789be6943dc5b7a1f67b9fdb2d
+  IT-01-371  9x16 f77661a3c0ae3456d838dbed2f214de5c2203133
+  IT-01-372  16x9 093e1e0ae716544722f86eb0721ba75b23a2b178
+  IT-01-372  4x5  6c921d99899e9096db2272e53cc2c5e0e2e25824
+  IT-01-372  9x16 837b83c0ab345e98ee2263ade164b64a999fb220
+
+Files:
+  assets/it-01-371-16x9.png
+  assets/it-01-371-4x5.png
+  assets/it-01-371-9x16.png
+  assets/it-01-372-16x9.png
+  assets/it-01-372-4x5.png
+  assets/it-01-372-9x16.png
+
+Night-derived daylight companions for these two IDs were removed. The new primary is daytime, so those companions are omitted. They were re-interpretations of the night masters, including the geometry this recreate replaces.
+  assets/it-01-371-daylight-16x9.png
+  assets/it-01-371-daylight-4x5.png
+  assets/it-01-372-daylight-16x9.png
+  assets/it-01-372-daylight-4x5.png
+
+Gallery: index.html SCENES copy, scenario_label, and approval_status updated. Card status reads Candidate. tools/phase1_mood.json day/night for IT-01-371 and IT-01-372 moved from night to day so the daytime recreates are not still tagged night. ITALY_META day/night matches that, and the cache-bust query on these two thumbs is ?v=flagb34.
+
+Per-scene evidence cards
+========================
+
+IT-01-371 Chiesa di San Rocco, Capaci
+References:
+  https://www.capaci.info/08arte/ArteChiesaSanRocco.htm
+  https://www.capaci.info/Images/SanRocco_Campanile_big.jpg
+Geometry anchors:
+  1. Plain white gabled facade of simple rectangular form, with a gold CHIESA SAN ROCCO lintel over the portal.
+  2. Modest ochre campanile/bell-gable at its side: open bell, clock face, mosaic pediment panel reading ERECTUM 1773 / REAEDIFICATUM 1927, and small blue finials.
+  3. No rusticated ornament, no oculi pair, and no multi-tier spire.
+
+IT-01-372 Fontana Grande, Capaci
+References:
+  https://www.capaci.info/Images/Fontana_part_Big.jpg
+  https://sicilia.indettaglio.it/eng/comuni/pa/capaci/capaci.html
+Geometry anchors:
+  1. Two simple metal spouts in grey marble cladding.
+  2. Water falling into a shallow stone channel with a drain.
+  3. Set between flanking steps beside a wooden door. No lion heads, no shell basin, and no Baroque ornament.
