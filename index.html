@@ -7863,6 +7863,93 @@ function relatedFor(id){
       return scene.description + " \u2014 " + scene.caption;
     }
 
+    /* 9:16 tab and Download 9:16 are mounted only after a HEAD probe returns 200.
+       A missing master never gets a tab. Daylight 9:16 is probed separately. */
+    function derive916(path) {
+      if (!path) return "";
+      var bare = String(path).split("?")[0];
+      return /-16x9\.png$/.test(bare) ? bare.replace(/-16x9\.png$/, "-9x16.png") : "";
+    }
+
+    function deriveSibling(path, fromSuffix, toSuffix) {
+      if (!path) return "";
+      var bare = String(path).split("?")[0];
+      return bare.endsWith(fromSuffix) ? bare.slice(0, -fromSuffix.length) + toSuffix : "";
+    }
+
+    var probe916Cache = Object.create(null);
+    var probe916Queue = [];
+    var probe916Active = 0;
+
+    function probe916(url) {
+      if (!url) return Promise.resolve(false);
+      if (Object.prototype.hasOwnProperty.call(probe916Cache, url)) return probe916Cache[url];
+      var settled;
+      var promise = new Promise(function (resolve) { settled = resolve; });
+      probe916Cache[url] = promise;
+      probe916Queue.push({ url: url, resolve: settled });
+      pump916();
+      return promise;
+    }
+
+    function pump916() {
+      while (probe916Active < 6 && probe916Queue.length) {
+        var job = probe916Queue.shift();
+        probe916Active += 1;
+        fetch(job.url, { method: "HEAD" }).then(function (res) {
+          return !!(res && res.ok);
+        }).catch(function () {
+          return false;
+        }).then(function (ok) {
+          probe916Active -= 1;
+          job.resolve(ok);
+          pump916();
+        });
+      }
+    }
+
+    function mount916(cardEl, nightUrl, dayUrl) {
+      var img = cardEl.querySelector("a.thumb img");
+      var tabs = cardEl.querySelector(".fmt-tabs");
+      var actions = cardEl.querySelector(".actions");
+      if (!img || !tabs || !nightUrl) return;
+      if (tabs.querySelector('.fmt-tab[data-format="9x16"]')) return;
+      img.setAttribute("data-src-916", nightUrl);
+      if (dayUrl) img.setAttribute("data-src-916-day", dayUrl);
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "fmt-tab";
+      btn.setAttribute("data-format", "9x16");
+      btn.textContent = "9:16";
+      tabs.appendChild(btn);
+      if (!actions) return;
+      var link = document.createElement("a");
+      link.className = "download";
+      link.setAttribute("data-dl", "9x16");
+      link.href = nightUrl;
+      link.setAttribute("download", nightUrl.split("/").pop());
+      link.textContent = "Download 9:16";
+      var after = actions.querySelector('a.download[data-dl="4x5"]') || actions.querySelector('a.download[data-dl="16x9"]');
+      if (after) after.insertAdjacentElement("afterend", link);
+      else actions.insertBefore(link, actions.firstChild);
+    }
+
+    function queue916(cardEl, scene) {
+      var night = derive916(scene.file_16x9);
+      if (!night) return;
+      /* Daylight 9:16 is attached when that file exists. The daylight toggle
+         itself stays catalogue-driven (file_16x9_day); this does not add one. */
+      var day916 = scene.file_9x16_day || derive916(scene.file_16x9_day) || deriveSibling(scene.file_16x9, "-16x9.png", "-daylight-9x16.png");
+      probe916(night).then(function (ok) {
+        if (!ok || !cardEl.isConnected) return;
+        var follow = day916 ? probe916(day916) : Promise.resolve(false);
+        follow.then(function (dayOk) {
+          if (!cardEl.isConnected) return;
+          mount916(cardEl, night, dayOk ? day916 : "");
+        });
+      });
+    }
+
     function masterOk(path) {
       if (!path) return false;
       var bare = String(path).split("?")[0];
