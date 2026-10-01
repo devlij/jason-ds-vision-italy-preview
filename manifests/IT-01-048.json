@@ -14,5 +14,39 @@
   "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #28 (tip 1a05a75, merged 8ee561218beb): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 8 scenes x both formats (043,052,064,077,088,096,108,117), zero defects. Full file-count verification: every scene in range holds both finished masters, correctly named.",
   "git_blob_sha1_16x9": "f33b86c6d0424fe4ba34243eaadb025d44d0c5f0",
   "git_blob_sha1_4x5": "e5a93c1d526520b8d5ba8eda3972322a6f5d2cc1",
-  "approved_at": "2026-09-29"
+  "approved_at": "2026-09-29",
+  "daylight_variant": {
+    "variant_of_entry_id": "IT-01-048",
+    "kind": "interim-ai-daylight",
+    "honest_disclosure": "Interim AI daylight interpretation. Not a genuine daytime capture. Not an Open-Meteo weather stamp. Scenario timestamp is the model generation time.",
+    "derived_from": "Current main master assets/it-01-048-16x9.png and assets/it-01-048-4x5.png of the same scene. Night/twilight masters were not rewritten.",
+    "source_master": {
+      "16x9": {
+        "path": "assets/it-01-048-16x9.png",
+        "sha256": "22cfc6b7472bdaf8acfdd314b082776d076ff9a826d288817047cb6f52d79994"
+      },
+      "4x5": {
+        "path": "assets/it-01-048-4x5.png",
+        "sha256": "2b8988f6f683375e4c063534804c1752e39bb26c19d0cf77e011b5cb60aa2b7d"
+      },
+      "recorded": "SHA-256 of the main masters immediately before this daylight pack. Post-write hashes are identical; those masters were not rewritten."
+    },
+    "files": {
+      "16x9": "assets/it-01-048-daylight-16x9.png",
+      "4x5": "assets/it-01-048-daylight-4x5.png"
+    },
+    "sha256": {
+      "16x9": "bb015b57d3f557ee58bbca47870d5b784bc28bf74167883dd306f174eaf62680",
+      "4x5": "837ba9cc337ef0a5a5427b5a55f926f619df85422c616244894e46ce64e870f2"
+    },
+    "created_date": "2026-10-01",
+    "generation_timestamp": "1 October 2026 · 13:19 UTC",
+    "on_image_caption": "Castel dell'Ovo, Naples",
+    "on_image_signature": "Jason D’s Vision",
+    "on_image_name": "Jason A. Devlin",
+    "on_image_disclosure": "AI-generated artistic interpretation · Not a photograph.",
+    "on_image_marking": "☀ Interim AI daylight · 1 October 2026 · 13:19 UTC",
+    "art50_comment_date": "2026-10-01",
+    "note": "Interim AI-generated daylight interpretation of the same subject as the main night/twilight master. Not a genuine daytime capture and not a replacement for the separate genuine-daylight rollout. approval_status was not changed."
+  }
 }

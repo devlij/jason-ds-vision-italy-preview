@@ -3263,6 +3263,9 @@ function relatedFor(id){
         alt_text: "AI-generated artistic interpretation of the Faraglioni off Capri at predawn",
         file_16x9: "assets/it-01-046-16x9.png",
         file_4x5: "assets/it-01-046-4x5.png",
+        file_16x9_day: "assets/it-01-046-daylight-16x9.png",
+        file_4x5_day: "assets/it-01-046-daylight-4x5.png",
+        daylight_label: "☀ Interim AI daylight · 1 October 2026 · 13:19 UTC",
         thumb: "assets/it-01-046-16x9.png",
         description: "Shot from the water at dawn, the three limestone stacks fill the frame — the smaller crag at the left, the great central rock pierced by its natural arch, and the tall rounded mass at the right. The sea is calm and dark blue below them, and the sky behind glows pale pink and grey at 06:56, the sun still below the horizon. The arch through the middle stack is the picture's anchor, a dark oval framing the open sea."
       },      {
@@ -3277,6 +3280,9 @@ function relatedFor(id){
         alt_text: "AI-generated artistic interpretation of Amalfi Cathedral at twilight",
         file_16x9: "assets/it-01-047-16x9.png",
         file_4x5: "assets/it-01-047-4x5.png",
+        file_16x9_day: "assets/it-01-047-daylight-16x9.png",
+        file_4x5_day: "assets/it-01-047-daylight-4x5.png",
+        daylight_label: "☀ Interim AI daylight · 1 October 2026 · 13:19 UTC",
         thumb: "assets/it-01-047-16x9.png",
         description: "The striped marble Duomo fills the right of the frame, its grand staircase climbing to the glowing arched portals with the campanile rising behind. To the left the coastal town cascades down the dark mountainside to the sea, windows still lit. A stone fountain stands in the empty piazza foreground under the pale blue 06:57 dawn sky."
       },      {
@@ -3291,6 +3297,9 @@ function relatedFor(id){
         alt_text: "AI-generated artistic interpretation of Castel dell'Ovo in Naples with Vesuvius at twilight",
         file_16x9: "assets/it-01-048-16x9.png",
         file_4x5: "assets/it-01-048-4x5.png",
+        file_16x9_day: "assets/it-01-048-daylight-16x9.png",
+        file_4x5_day: "assets/it-01-048-daylight-4x5.png",
+        daylight_label: "☀ Interim AI daylight · 1 October 2026 · 13:19 UTC",
         thumb: "assets/it-01-048-16x9.png",
         description: "From the lamplit seafront promenade at the left, the view crosses the marina to Castel dell'Ovo, its tuff walls and towers glowing warm on the Megaride islet at center-right. Behind it rises the broad cone of Vesuvius under a pink-streaked dawn sky, with moored boats scattered across the calm bay. The modelled scenario is 23 September 2026 at 06:58 Europe/Rome: sunrise light, not a verified on-site observation."
       },      {
@@ -7635,6 +7644,7 @@ function relatedFor(id){
       const statusLabel = scene.approval_status || "Approved";
       const f16 = masterOk(scene.file_16x9) ? escapeHtml(scene.file_16x9) : "";
       const f45 = masterOk(scene.file_4x5) ? escapeHtml(scene.file_4x5) : "";
+      const dayLabel = scene.daylight_label || "\u2600 Daylight variant \u00b7 derived from the night interpretation";
       /* PHASE1-ITALY-RELATED-START */
       const p1rids = (typeof relatedFor === "function") ? relatedFor(scene.entry_id) : [];
       const p1rel = p1rids.length
@@ -7666,7 +7676,7 @@ el.innerHTML = `
             ${f16 ? `<button type="button" class="fmt-tab is-active" data-format="16x9">16:9</button>` : ""}
             ${f45 ? `<button type="button" class="fmt-tab" data-format="4x5">4:5</button>` : ""}
           </div>
-        ${scene.file_16x9_day && masterOk(scene.file_16x9_day) ? `<div class="day-row"><button type="button" class="day-tab" data-daynight="night" aria-pressed="false" title="Toggle the daylight variant">\u2600 Daylight</button></div>` : ""}
+        ${scene.file_16x9_day && masterOk(scene.file_16x9_day) ? `<div class="day-row"><button type="button" class="day-tab" data-daynight="night" data-day-label="${escapeHtml(dayLabel)}" aria-pressed="false" title="Toggle the daylight variant">\u2600 Daylight</button></div>` : ""}
         <div class="card-body">
           <div class="status-row"><div class="entry-id">${id}</div><span class="status${statusLabel === "Approved" ? "" : " status-candidate"}">${escapeHtml(statusLabel)}</span></div>
           <p class="meta">${meta}</p>
@@ -7785,7 +7795,7 @@ el.innerHTML = `
           if (u) a.href = u;
         });
         const sc = dcard.querySelector("p.scenario");
-        if (sc) sc.textContent = isDay ? "\u2600 Daylight variant \u00b7 derived from the night interpretation" : sc.getAttribute("data-scenario");
+        if (sc) sc.textContent = isDay ? (dtab.getAttribute("data-day-label") || "\u2600 Daylight variant \u00b7 derived from the night interpretation") : sc.getAttribute("data-scenario");
         return;
       }
       const tab = e.target.closest(".fmt-tab");
@@ -7899,8 +7909,10 @@ el.innerHTML = `
       var capBase=t?t.textContent:'';
       var descEl=c.querySelector('.description');
       var descT=descEl?descEl.textContent:'';
-      var capT=capBase;if(daySrc)capT=capT+' \u2014 \u2600 Daylight variant';
-      var altT=descT+' \u2014 '+capBase;if(daySrc)altT=altT+' \u2014 \u2600 Daylight variant';
+      var dbtn=c.querySelector('.day-tab');
+      var dayMark=daySrc?(dbtn&&dbtn.getAttribute('data-day-label')||'\u2600 Daylight variant'):'';
+      var capT=capBase;if(dayMark)capT=capT+' \u2014 '+dayMark;
+      var altT=descT+' \u2014 '+capBase;if(dayMark)altT=altT+' \u2014 '+dayMark;
       return{src:src,cap:capT,alt:altT};
     }).filter(function(x){return x.src;});
     if(!items.length)return;
