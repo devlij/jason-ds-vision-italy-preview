@@ -7,11 +7,14 @@ live count, clear-all, four related thumbs, copy-link, entry-id deep
 links, and no controls for missing masters) is applied here, so a
 rebuild cannot drop the Cosmo one-off patch.
 
-Italy standing order: there is no 9:16 option. This publisher never
-emits a 9:16 tab or download, and it re-applies the A7 head (canonical
-OG/Twitter image, ImageGallery JSON-LD, title without
-"(preview)") so a rebuild cannot drop them. Scene catalogues, word-of-day
-entries, and approval fields are copied through unchanged.
+9:16 tabs are probe-gated. The card template does not emit a 9:16
+button or download; index.html mounts them only after a HEAD probe
+of assets/<scene>-9x16.png returns 200. This publisher leaves that
+probe in place and re-applies the A7 head (canonical OG/Twitter image,
+ImageGallery JSON-LD, title without "(preview)") so a rebuild cannot
+drop them. Scene catalogues, word-of-day entries, and approval fields
+are copied through unchanged. The image sitemap still lists 16:9 and
+4:5 only.
 
 Usage:
   python3 tools/publish_gallery.py          # write index.html
@@ -381,63 +384,12 @@ def _between(html: str, start: str, end: str) -> str:
 
 
 def remove_916_ui(html: str) -> str:
-    """Italy standing order: no 9:16 tab, download, or format branch."""
-    replacements = (
-        ('${f916 ? ` data-src-916="${f916}"` : ""}', ""),
-        (
-            '${scene.file_9x16_day ? ` data-src-916-day="${escapeHtml(scene.file_9x16_day)}"` : ""}',
-            "",
-        ),
-        (
-            '${scene.file_9x16_day && masterOk(scene.file_9x16_day) ? ` data-src-916-day="${escapeHtml(scene.file_9x16_day)}"` : ""}',
-            "",
-        ),
-        (
-            '            ${f916 ? `<button type="button" class="fmt-tab" data-format="9x16">9:16</button>` : ""}\n',
-            "",
-        ),
-        (
-            '            <button type="button" class="fmt-tab" data-format="4x5">4:5</button>\n'
-            '            ${f916 ? `<button type="button" class="fmt-tab" data-format="9x16">9:16</button>` : ""}\n',
-            '            <button type="button" class="fmt-tab" data-format="4x5">4:5</button>\n',
-        ),
-        ('      const f916 = scene.file_9x16 ? escapeHtml(scene.file_9x16) : "";\n', ""),
-        ('      const f916 = masterOk(scene.file_9x16) ? escapeHtml(scene.file_9x16) : "";\n', ""),
-        (
-            '            ${f916 ? `<a class="download" data-dl="9x16" href="${f916}" download="${basename(scene.file_9x16)}">Download 9:16</a>` : ""}\n',
-            "",
-        ),
-        ("    .thumb.tall916 { aspect-ratio: 9 / 16; }\n", ""),
-        ('      const fmt = tab.dataset.format;\n', '      const fmt = tab.getAttribute("data-format");\n'),
-        (
-            ' : dfmt === "9x16" ? (isDay ? "data-src-916-day" : "data-src-916")',
-            "",
-        ),
-        (
-            ' : f === "9x16" ? (isDay ? "data-src-916-day" : "data-src-916")',
-            "",
-        ),
-        (
-            '        : fmt === "9x16"\n'
-            '        ? (useDay && img.getAttribute("data-src-916-day")) || img.getAttribute("data-src-916")\n',
-            "",
-        ),
-        (' link.classList.toggle("tall916", fmt === "9x16");', ""),
-        (
-            "lbFormat==='4x5'?'data-src-45':lbFormat==='9x16'?'data-src-916':'data-src-16'",
-            "lbFormat==='4x5'?'data-src-45':'data-src-16'",
-        ),
-        (
-            "lbFormat==='4x5'?'data-src-45-day':lbFormat==='9x16'?'data-src-916-day':'data-src-16-day'",
-            "lbFormat==='4x5'?'data-src-45-day':'data-src-16-day'",
-        ),
-        (
-            "(tab&&tab.getAttribute('data-format')==='9x16')?'9x16':(tab&&tab.getAttribute('data-format')==='4x5')?'4x5':'16x9'",
-            "(tab&&tab.getAttribute('data-format')==='4x5')?'4x5':'16x9'",
-        ),
-    )
-    for old, new in replacements:
-        html = html.replace(old, new)
+    """Leave probe-gated 9:16 in place.
+
+    A 9:16 tab and Download 9:16 are created in the browser only after
+    HEAD assets/<scene>-9x16.png returns 200. Stripping those branches
+    would hide a master that is on disk, or require a tab before the probe.
+    """
     return html
 
 
@@ -805,11 +757,6 @@ def prove(html: str) -> None:
         if needle not in second:
             raise SystemExit(f"regenerated index lost {needle}")
     banned = (
-        ">9:16<",
-        "Download 9:16",
-        "data-src-916",
-        "data-format=\"9x16\"",
-        "tall916",
         "(preview)</title>",
         "dataset.format",
         "dataset.src45",
@@ -817,6 +764,19 @@ def prove(html: str) -> None:
     for needle in banned:
         if needle in second:
             raise SystemExit(f"regenerated index still has {needle}")
+    for needle in (
+        "function probe916(",
+        "function mount916(",
+        "function queue916(",
+        "tall916",
+        "data-src-916",
+        "Download 9:16",
+    ):
+        if needle not in second:
+            raise SystemExit(f"regenerated index lost probe-gated 9:16 marker {needle}")
+    tabs = _between(second, '<div class="fmt-tabs"', "</div>")
+    if "9:16" in tabs or "9x16" in tabs:
+        raise SystemExit("fmt-tabs template includes 9:16 before the file probe")
     ga = set(re.findall(r"G-[A-Z0-9]+", second))
     if ga != {"G-PDJ4WSS725"}:
         raise SystemExit(f"GA4 ids {ga}")
