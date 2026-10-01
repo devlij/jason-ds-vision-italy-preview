@@ -5551,37 +5551,7 @@
       <image:geo_location>Capaci, Italy</image:geo_location>
     </image:image>
   </url>
-  <url>
-    <loc>https://italy.jdvision.org/#IT-01-371</loc>
-    <image:image>
-      <image:loc>https://italy.jdvision.org/assets/it-01-371-16x9.png</image:loc>
-      <image:caption>The weathered stone facade of the Chiesa di San Rocco stands floodlit on its cobbled piazza, the tall bell tower with its lit belfry rising at the right. Potted olive trees line the square's edge and warm windows glow in the surrounding houses. The modelled 24 September 2026, 21:06 scenario is clear and still at 23°C.</image:caption>
-      <image:title>Chiesa di San Rocco, Capaci</image:title>
-      <image:geo_location>Capaci, Italy</image:geo_location>
-    </image:image>
-    <image:image>
-      <image:loc>https://italy.jdvision.org/assets/it-01-371-4x5.png</image:loc>
-      <image:caption>The weathered stone facade of the Chiesa di San Rocco stands floodlit on its cobbled piazza, the tall bell tower with its lit belfry rising at the right. Potted olive trees line the square's edge and warm windows glow in the surrounding houses. The modelled 24 September 2026, 21:06 scenario is clear and still at 23°C.</image:caption>
-      <image:title>Chiesa di San Rocco, Capaci</image:title>
-      <image:geo_location>Capaci, Italy</image:geo_location>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://italy.jdvision.org/#IT-01-372</loc>
-    <image:image>
-      <image:loc>https://italy.jdvision.org/assets/it-01-372-16x9.png</image:loc>
-      <image:caption>Water streams from three carved lion spouts into the scalloped basin of the Fontana Grande, the old stonework glowing under a wall-mounted lantern. Moss and carving details cover the fountain's aged face, with the dark stone wall of the old town rising behind. The modelled 24 September 2026, 21:07 scenario is clear and quiet at 23°C.</image:caption>
-      <image:title>Fontana Grande, Capaci</image:title>
-      <image:geo_location>Capaci, Italy</image:geo_location>
-    </image:image>
-    <image:image>
-      <image:loc>https://italy.jdvision.org/assets/it-01-372-4x5.png</image:loc>
-      <image:caption>Water streams from three carved lion spouts into the scalloped basin of the Fontana Grande, the old stonework glowing under a wall-mounted lantern. Moss and carving details cover the fountain's aged face, with the dark stone wall of the old town rising behind. The modelled 24 September 2026, 21:07 scenario is clear and quiet at 23°C.</image:caption>
-      <image:title>Fontana Grande, Capaci</image:title>
-      <image:geo_location>Capaci, Italy</image:geo_location>
-    </image:image>
-  </url>
-  <url>
+      <url>
     <loc>https://italy.jdvision.org/#IT-01-373</loc>
     <image:image>
       <image:loc>https://italy.jdvision.org/assets/it-01-373-16x9.png</image:loc>
