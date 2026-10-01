@@ -2462,18 +2462,18 @@
     ]
   },
   "IT-01-366": {
-    "daynight": "night",
+    "daynight": "day",
     "moods": [
       "urban",
       "historic"
     ]
   },
   "IT-01-367": {
-    "daynight": "night",
+    "daynight": "day",
     "moods": []
   },
   "IT-01-368": {
-    "daynight": "night",
+    "daynight": "day",
     "moods": [
       "historic"
     ]
@@ -2485,7 +2485,7 @@
     ]
   },
   "IT-01-370": {
-    "daynight": "night",
+    "daynight": "day",
     "moods": [
       "urban",
       "historic"

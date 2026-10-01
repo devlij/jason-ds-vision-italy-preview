@@ -4,23 +4,63 @@
   "region": "Sicily",
   "city": "Capaci",
   "caption": "MuST23 Museo, Capaci",
-  "scenario_label": "24 September 2026 \u00b7 20:53 Europe/Rome",
-  "composition": "Modern museum building with glowing entrance court at night \u00b7 AI-generated artistic interpretation",
-  "description": "The modern MuST23 museum glows from within, its glass walls revealing softly lit exhibition spaces with sculptures and ceramics. A paved entrance court with bollard lighting stretches toward the building, dark hills dotted with distant lights rising behind. The modelled 24 September 2026, 20:53 scenario is clear and mild at 23\u00b0C.",
-  "alt_text": "AI-generated artistic interpretation of the MuST23 museum in Capaci at night",
+  "scenario_label": "1 October 2026 · 15:00 Europe/Rome",
+  "composition": "Five colored containers of MuST23 on the old Capaci station yard · AI-generated artistic interpretation",
+  "description": "Five shipping containers, dark green and red, stand on the former Capaci railway station yard, lettered MuST23 and MUSEO STAZIONE 23 MAGGIO. The old station building and tracks remain; there is no glass-and-wood pavilion. The modelled scenario is 1 October 2026 at 15:00 Europe/Rome: clear sky, 26.2°C, cloudless.",
+  "alt_text": "AI-generated artistic interpretation of MuST23 at the former Capaci railway station, five green and red containers on the station yard",
   "file_16x9": "assets/it-01-368-16x9.png",
   "file_4x5": "assets/it-01-368-4x5.png",
   "approval_status": "Candidate",
-  "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #26 (tip a591898): Gate 1 visual/location \u2014 pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical \u2014 exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance \u2014 photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial \u2014 'AI-generated artistic interpretation \u00b7 Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication \u2014 masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 8-scene stratified sample incl. Capaci daylight variants, zero defects; 50/50 files confirmed. Full file-count verification: every scene in range holds both finished masters, correctly named.",
-  "git_blob_sha1_16x9": "61e8ba0e424179d681869a83e3a2e34b18291564",
-  "git_blob_sha1_4x5": "0c6a59a75cbb91428fc68252ae5983c8245ab037",
-  "approved_at": "2026-09-29",
-  "qc_status": "Hold",
+  "approval_basis": "FLAG-spec daytime recreate 2026-09-30, batch 33 of wo-italy-flag-specs-2026-09-30. Candidate only. Open-Meteo packet retrieval, is_day=1, Europe/Rome. Prior approval is superseded pending Cosmo QC. Not merged.",
+  "git_blob_sha1_16x9": "52bf3066001c40a947d6b37cb9a50ef7275a8afc",
+  "git_blob_sha1_4x5": "fd66ef9707db9cead46823d85d55bbc66f58cc8d",
+  "file_9x16": "assets/it-01-368-9x16.png",
+  "git_blob_sha1_9x16": "85d7f4936757fe0a0049dfb1241b84930b6029f5",
+  "weather": {
+    "scene_id": "IT-01-368",
+    "title": "MuST23 Museo, Capaci",
+    "lat": 38.1717359,
+    "lon": 13.2324885,
+    "timezone": "Europe/Rome",
+    "provider": "Open-Meteo",
+    "endpoint": "api.open-meteo.com/v1/forecast",
+    "retrieval_time_utc": "2026-09-30T23:26:43Z",
+    "retrieval_time_local": "2026-10-01T01:26:43+0200",
+    "model_time": "15:00",
+    "valid_time_local": "2026-10-01T15:00",
+    "is_day": 1,
+    "weather_code": 0,
+    "weather_label": "Clear sky",
+    "temperature_c": 26.2,
+    "cloud_cover_pct": 0,
+    "wind_speed_kmh": 13.5,
+    "precipitation_mm": 0.0,
+    "sunrise": "2026-10-01T07:02",
+    "sunset": "2026-10-01T18:50",
+    "raw_current": {
+      "temperature_2m": 26.2,
+      "relative_humidity_2m": 48,
+      "apparent_temperature": 26.2,
+      "precipitation": 0.0,
+      "rain": 0.0,
+      "weather_code": 0,
+      "cloud_cover": 0,
+      "wind_speed_10m": 13.5,
+      "wind_direction_10m": 65,
+      "is_day": 1
+    },
+    "scenario_label": "1 October 2026 · 15:00 Europe/Rome"
+  },
   "qc_notes": [
     {
       "date": "2026-09-29",
       "author": "Cosmo",
-      "note": "Gate 1 HOLD: visual/location mismatch confirmed. The image depicts a generic modern glass-pavilion museum, but the real MuST23 (Museo Stazione 23 maggio) is housed in the former Capaci railway station area \u2014 currently container-based installations with MuST23 branding, an immersive antimafia memorial for the 23 May 1992 Falcone bombing. Flagged by a local Italian; verified against travelnostop/ilgiornaledellarchitettura reports and reference photos. The 2026-09-29 blitz approval covered mechanical gates only, not per-scene visual verification. Scene requires regeneration with the correct subject (former station / memorial site)."
+      "note": "Gate 1 HOLD: visual/location mismatch confirmed. The image depicts a generic modern glass-pavilion museum, but the real MuST23 (Museo Stazione 23 maggio) is housed in the former Capaci railway station area — currently container-based installations with MuST23 branding, an immersive antimafia memorial for the 23 May 1992 Falcone bombing. Flagged by a local Italian; verified against travelnostop/ilgiornaledellarchitettura reports and reference photos. The 2026-09-29 blitz approval covered mechanical gates only, not per-scene visual verification. Scene requires regeneration with the correct subject (former station / memorial site)."
+    },
+    {
+      "date": "2026-09-30",
+      "author": "Image Assistant",
+      "note": "FLAG recreate supersedes the prior glass-pavilion hold pending Cosmo QC. Daytime masters show the container museum on the station yard. approval_status remains Candidate. Not merged."
     }
   ]
 }

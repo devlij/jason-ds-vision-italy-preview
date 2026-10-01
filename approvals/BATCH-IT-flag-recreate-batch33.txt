@@ -1,0 +1,141 @@
+BATCH IT FLAG-spec recreates — batch 33
+Date finished: 2026-09-30
+Work order: wo-italy-flag-specs-2026-09-30 (batch 33)
+Superseded, ignored: wo-italy-recreate-flags-2026-09-30
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip before this batch: be64cf296feb50c4d6d6afb7461cb1a57be059ce
+Do-not-image-anchor tip: 1e7881e1455e42e8c6a61ea4480ca49bab24a061
+(Italy tip 1e7881e was not used as an image anchor. Plates were regenerated from text prompts plus the packet reference URLs and the packet weather. Existing masters were not image-anchored.)
+
+Scope: ONLY these five scenes. keep_current (IT-01-127, IT-01-128, IT-01-202, IT-01-217, IT-01-350) and hold (IT-01-037, IT-01-236, IT-01-373) were not touched. Historical Italy draft PRs were not modified. Batch 29 remains DRAFT PR #63 at tip 0547e31380d3449497e538fef951c318e0699eef. Batch 30 remains DRAFT PR #64 at tip 16ac19981583e6bf49fb3e1dc9148f9aef5b12cd. Batch 31 remains DRAFT PR #65 at tip 42d470bf2872eb8bc55cd6f58995ba2a35d3e359. Batch 32 remains DRAFT PR #66 at tip d6c3c85d805fc097b4fcaa24d56ef24edd8e7b49. Spain and Ireland work were not touched.
+  IT-01-365 Caramanico Terme in the Orta valley, Caramanico Terme
+  IT-01-366 Chiesa di Sant'Erasmo, Capaci
+  IT-01-367 Giardino della Memoria, Capaci
+  IT-01-368 MuST23 Museo, Capaci
+  IT-01-370 Palazzo Pilo, Capaci
+
+Status: Candidate only. Not merged. Cosmo owns QC and merge.
+Not self-approved. approval_status was not set to Approved. No Cosmo QC was invented.
+
+Approved → Candidate (prior approval superseded, not self-approved):
+  IT-01-365
+  IT-01-366
+  IT-01-367
+  IT-01-370
+
+Already Candidate, recreated, still Candidate:
+  IT-01-368
+
+No WOTD was invented.
+
+Weather: Open-Meteo, already retrieved in the packet. Not re-fetched. All is_day=1. Timezone Europe/Rome. One retrieval record per scene, copied from the packet. Each scene keeps its own model hour from the packet. No night weather was invented. Every model hour is before that site's sunset.
+  IT-01-365  retrieval 2026-09-30T23:26:38Z  local 2026-10-01T01:26:38+0200  model 18:00  Clear sky  19.4°C  cloud 1%  code 0  wind 9.1 km/h   sunset 18:45  scenario 1 October 2026 · 18:00 Europe/Rome
+  IT-01-366  retrieval 2026-09-30T23:26:40Z  local 2026-10-01T01:26:40+0200  model 17:00  Clear sky  25.4°C  cloud 0%  code 0  wind 12.9 km/h  sunset 18:50  scenario 1 October 2026 · 17:00 Europe/Rome
+  IT-01-367  retrieval 2026-09-30T23:26:41Z  local 2026-10-01T01:26:41+0200  model 16:00  Clear sky  25.9°C  cloud 0%  code 0  wind 12.7 km/h  sunset 18:50  scenario 1 October 2026 · 16:00 Europe/Rome
+  IT-01-368  retrieval 2026-09-30T23:26:43Z  local 2026-10-01T01:26:43+0200  model 15:00  Clear sky  26.2°C  cloud 0%  code 0  wind 13.5 km/h  sunset 18:50  scenario 1 October 2026 · 15:00 Europe/Rome
+  IT-01-370  retrieval 2026-09-30T23:26:45Z  local 2026-10-01T01:26:45+0200  model 14:00  Clear sky  26.2°C  cloud 0%  code 0  wind 14.6 km/h  sunset 18:50  scenario 1 October 2026 · 14:00 Europe/Rome
+
+Masters: regenerated from text prompts plus the packet reference URLs. Existing masters were not image-anchored. Geometry follows each corrected_spec. Daytime only (is_day=1; each model hour is before sunset at that site).
+
+Reference handling where a packet URL contradicted the corrected spec or could not be used as pixels:
+  IT-01-365 the Wikimedia photograph of Santa Maria Maggiore and the FAI place page were read for geometry and were not passed in as pixels. The plate follows the written spec: a stone campanile crowned by a pyramidal cusp, rising above the church, with that pointed termination against the Orta valley. It is not a flat-topped block.
+  IT-01-366 the church photograph and the place page were read for geometry and were not passed in as pixels. The plate follows the written spec: a single-order Baroque front, a curvilinear entablature, oval oculi, and a double-ramp tenaglia staircase. It is not a two-story classical pediment and it is not a straight flight of steps.
+  IT-01-367 the garden photograph and the highway-monument photograph were read for geometry and were not passed in as pixels. The plate follows the written spec: an olive grove with wooden pergolas, benches, and low paved platforms beside the A29 embankment. There is no formal gravel axis and no single plain central stele. The tall steles are the adjacent monument: five rust-red obelisks. Generated lettering was not reliable, so the five names were set in type on the obelisk faces: Antonio Montinaro, Vito Schifani, Giovanni Falcone, Francesca Morvillo, Rocco Dicillo. That sequence is the five victims' names; it is not claimed as a surveyed left-to-right order from a particular photograph.
+  IT-01-368 the station-yard photographs were read for geometry and were not passed in as pixels. The plate follows the written spec: five shipping containers, dark green and red, on the former Capaci railway station grounds, with the station building and tracks kept. It is not a glass-and-wood pavilion. Generated lettering was not reliable, so the branding was set in type: MuST23 and MUSEO STAZIONE 23 MAGGIO.
+  IT-01-370 the Wikimedia photograph and the place page were read for geometry and were not passed in as pixels. The plate follows the written spec: a modest flat two-story peach facade, three French windows with petto d'oca curved iron balconies, and cars on the plain paved square. There is no rounded corner, no rusticated arch, and no four-story front.
+
+Formats: 16:9 plate per scene, 4:5 center-cropped from that plate (Lanczos to 1920×1080, then 864×1080). 9:16 is its own plate, Lanczos to 1080×1920. Photo, then 190px #0e0e12 bar under the photo, 2px hairline #e4e4ea. Zero overlay and zero tint on the artwork. Label bar: bold caption, Scenario line, disclosure; right side Jason D's Vision and Jason A. Devlin in Allura.
+  16:9 photo 1920×1080, finished 1920×1270
+  4:5 photo 864×1080, finished 864×1270
+  9:16 photo 1080×1920, finished 1080×2110
+9:16 is on disk and in each manifest as file_9x16. The live gallery card still offers 16:9 and 4:5 only. These scenes are Candidate, so they are omitted from image-sitemap.xml. The omission is those five URL blocks only (375 → 370). Other scenes already Candidate on main were left in the sitemap so this batch does not republish the rest of the file.
+
+Art.50 PNG chunks on every master: Title, Description, Copyright, Software, Comment.
+Comment date is the true finish date 2026-09-30.
+
+Master git blob SHAs:
+  IT-01-365  16x9 ed4fccc6a32328d294fbea31307ce49f47ab6946
+  IT-01-365  4x5  e843a009fae2584a3a57c259b94190dc4425bcf4
+  IT-01-365  9x16 a13f0d813d172a92fdede62ff4641a536d9ff398
+  IT-01-366  16x9 57805d36290239ee9f0f49eff1fb82b34f03993b
+  IT-01-366  4x5  4901d4759df3b527b22f26f3bb670bb4f409db74
+  IT-01-366  9x16 03067d017e3e627fd8d83cefcd33bcdcb5b9312b
+  IT-01-367  16x9 3c29ac0d1fdabd08e6cb789df4cfcf5f681e3898
+  IT-01-367  4x5  4480fd28c46ea07b40e8760ff8476a05c051f862
+  IT-01-367  9x16 90476b17937373999d4cc2cffb505c79e18e6055
+  IT-01-368  16x9 52bf3066001c40a947d6b37cb9a50ef7275a8afc
+  IT-01-368  4x5  fd66ef9707db9cead46823d85d55bbc66f58cc8d
+  IT-01-368  9x16 85d7f4936757fe0a0049dfb1241b84930b6029f5
+  IT-01-370  16x9 0d63675f54aa2e769167e7c5682f93c42948d1d6
+  IT-01-370  4x5  7a8ebc45127663d0e0cea1c21ba78de1a4d8d9be
+  IT-01-370  9x16 2967292cac07807e986ea00ff7af77760731e817
+
+Files:
+  assets/it-01-365-16x9.png
+  assets/it-01-365-4x5.png
+  assets/it-01-365-9x16.png
+  assets/it-01-366-16x9.png
+  assets/it-01-366-4x5.png
+  assets/it-01-366-9x16.png
+  assets/it-01-367-16x9.png
+  assets/it-01-367-4x5.png
+  assets/it-01-367-9x16.png
+  assets/it-01-368-16x9.png
+  assets/it-01-368-4x5.png
+  assets/it-01-368-9x16.png
+  assets/it-01-370-16x9.png
+  assets/it-01-370-4x5.png
+  assets/it-01-370-9x16.png
+
+No night-derived daylight companions existed for these five IDs. None were added.
+
+Gallery: index.html SCENES copy, scenario_label, and approval_status updated. Card status reads Candidate. tools/phase1_mood.json day/night for IT-01-366, IT-01-367, IT-01-368, and IT-01-370 moved from night to day so the daytime recreates are not still tagged night. IT-01-365 was already day. ITALY_META day/night matches that, and the cache-bust query on these five thumbs is ?v=flagb33.
+
+Per-scene evidence cards
+========================
+
+IT-01-365 Caramanico Terme in the Orta valley, Caramanico Terme
+References:
+  https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Caramanico_Terme_-_Chiesa_abbaziale_Santa_Maria_Maggiore_-_2023-09-06_21-37-47_001.jpg/1280px-Caramanico_Terme_-_Chiesa_abbaziale_Santa_Maria_Maggiore_-_2023-09-06_21-37-47_001.jpg
+  https://fondoambiente.it/luoghi/caramanico-terme
+Geometry anchors:
+  1. Stone campanile.
+  2. The tower is crowned by a pyramidal cusp, a pointed termination, not a flat-topped block.
+  3. The tower rises above the church against the Orta valley.
+
+IT-01-366 Chiesa di Sant'Erasmo, Capaci
+References:
+  https://tmatic.travel/en/view/story/chiesa-madre-parrocchia-santerasmo_UW5l2yz/it
+  https://camico.it/wp-content/uploads/2025/03/Chiesa-Madre-705x529.jpg
+Geometry anchors:
+  1. Single-order Baroque front, not a two-story classical pediment.
+  2. Curvilinear entablature and oval oculi.
+  3. Double-ramp tenaglia (pincer) staircase, not a straight flight of steps.
+
+IT-01-367 Giardino della Memoria, Capaci
+References:
+  https://images.squarespace-cdn.com/content/v1/65830582602a9928b75df35d/9c4a1812-1628-44df-833d-37b995e66ced/giardinomemoroa.jpg?format=2500w
+  https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Capaci_%28Palermo%29_Monumento_a_Falcone%2C_alla_moglie_e_alla_scorta_-_panoramio.jpg/500px-Capaci_%28Palermo%29_Monumento_a_Falcone%2C_alla_moglie_e_alla_scorta_-_panoramio.jpg
+Geometry anchors:
+  1. Olive grove with wooden-frame pergolas, benches, and low paved platforms.
+  2. Beside the A29 embankment. No formal gravel axis and no single plain central stele.
+  3. The tall steles are the adjacent highway monument: inscribed rust-red obelisks bearing the five victims' names.
+
+IT-01-368 MuST23 Museo, Capaci
+References:
+  http://www.dieci.media/2024/05/23-maggio-1992-allex-stazione-di-capaci-un-museo-della-memoria/
+  http://leviedeitesori.com/wp-content/uploads/2025/09/1000146531.jpg
+Geometry anchors:
+  1. Five shipping containers, dark green and red.
+  2. On the former Capaci railway station grounds, with the station building and yard kept. No glass-and-wood pavilion.
+  3. Branded MUSEO STAZIONE 23 MAGGIO and MuST23.
+
+IT-01-370 Palazzo Pilo, Capaci
+References:
+  https://upload.wikimedia.org/wikipedia/commons/7/79/Capaci_Palazzo_Pilo_esterno_20-04-2021.png
+  https://www.capaci.info/08arte/ArtePalazzoPilo.htm
+Geometry anchors:
+  1. Modest flat two-story peach facade. No rounded corner and no four-story front.
+  2. Three French windows, each with a petto d'oca curved iron balcony.
+  3. Cars on the plain paved square in front. No rusticated arch.
