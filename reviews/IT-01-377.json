@@ -1,0 +1,139 @@
+{
+  "work_order": "wo-christmas-sprinkle-italy-2026-10-01",
+  "entry_id": "IT-01-377",
+  "approval_status": "Candidate",
+  "five_gate_qc": "Not run. Cosmo-only. This packet is evidence for review, not an approval and not a QC pass.",
+  "category": "christmas",
+  "scenario_label": "13 December 2026 · 19:20 Europe/Rome",
+  "depiction_label": "seasonal artistic interpretation",
+  "depiction_statement": "Seasonal artistic interpretation. The December-evening Christmas-market conditions in the picture are not the Open-Meteo retrieval and are not a forecast for the scenario date.",
+  "open_meteo": {
+    "role": "generation-time current-conditions provenance",
+    "not_a_forecast_for_scenario_date": true,
+    "scenario_date_not_requested": "2026-12-13",
+    "place": "Christmas market along the Passer by the Kurhaus, Merano",
+    "request_url": "https://api.open-meteo.com/v1/forecast?latitude=46.6714&longitude=11.1633&current=temperature_2m,relative_humidity_2m,apparent_temperature,precipitation,weather_code,cloud_cover,wind_speed_10m,wind_direction_10m,is_day&timezone=Europe%2FRome&forecast_days=1",
+    "http_status": 200,
+    "http_date": "Thu, 01 Oct 2026 21:44:18 GMT",
+    "retrieved_at_utc_before": "2026-10-01T21:44:18.309210+00:00",
+    "retrieved_at_utc_after": "2026-10-01T21:44:18.737971+00:00",
+    "retrieved_at_europe_rome": "2026-10-01T23:44:18.309210+02:00",
+    "latitude": 46.6714,
+    "longitude": 11.1633,
+    "elevation_m": 327.0,
+    "current": {
+      "time": "2026-10-01T23:30",
+      "interval": 900,
+      "temperature_2m": 17.4,
+      "relative_humidity_2m": 69,
+      "apparent_temperature": 17.4,
+      "precipitation": 0.0,
+      "weather_code": 2,
+      "cloud_cover": 84,
+      "wind_speed_10m": 3.6,
+      "wind_direction_10m": 360,
+      "is_day": 0
+    },
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "apparent_temperature": "°C",
+      "precipitation": "mm",
+      "weather_code": "wmo code",
+      "cloud_cover": "%",
+      "wind_speed_10m": "km/h",
+      "wind_direction_10m": "°",
+      "is_day": ""
+    },
+    "raw_response": {
+      "latitude": 46.66,
+      "longitude": 11.16,
+      "generationtime_ms": 1.5157461166381836,
+      "utc_offset_seconds": 7200,
+      "timezone": "Europe/Rome",
+      "timezone_abbreviation": "GMT+2",
+      "elevation": 327.0,
+      "current_units": {
+        "time": "iso8601",
+        "interval": "seconds",
+        "temperature_2m": "°C",
+        "relative_humidity_2m": "%",
+        "apparent_temperature": "°C",
+        "precipitation": "mm",
+        "weather_code": "wmo code",
+        "cloud_cover": "%",
+        "wind_speed_10m": "km/h",
+        "wind_direction_10m": "°",
+        "is_day": ""
+      },
+      "current": {
+        "time": "2026-10-01T23:30",
+        "interval": 900,
+        "temperature_2m": 17.4,
+        "relative_humidity_2m": 69,
+        "apparent_temperature": 17.4,
+        "precipitation": 0.0,
+        "weather_code": 2,
+        "cloud_cover": 84,
+        "wind_speed_10m": 3.6,
+        "wind_direction_10m": 360,
+        "is_day": 0
+      }
+    }
+  },
+  "finish_date": "2026-10-01",
+  "art50_comment_date": "2026-10-01",
+  "masters": {
+    "16x9": {
+      "path": "assets/it-01-377-16x9.png",
+      "width": 1920,
+      "height": 1270,
+      "sha256": "0bc1058791bffdaa8b930bcb7fb2550268565b0fd0152f29857f7a490a50deb7",
+      "art50_comment": "EU AI Act Art. 50 transparency note: this image is AI-generated content. Machine-readable disclosure embedded 2026-10-01.",
+      "art50_keys": [
+        "Title",
+        "Description",
+        "Copyright",
+        "Software",
+        "Comment"
+      ]
+    },
+    "4x5": {
+      "path": "assets/it-01-377-4x5.png",
+      "width": 864,
+      "height": 1270,
+      "sha256": "2d5dc40711e63a898fbbb3b0f9e21bcd9db024d5c2238a59fcbae6184e422a96",
+      "art50_comment": "EU AI Act Art. 50 transparency note: this image is AI-generated content. Machine-readable disclosure embedded 2026-10-01.",
+      "art50_keys": [
+        "Title",
+        "Description",
+        "Copyright",
+        "Software",
+        "Comment"
+      ]
+    },
+    "9x16": {
+      "path": "assets/it-01-377-9x16.png",
+      "width": 1080,
+      "height": 1920,
+      "sha256": "32d41d194ad7c4d7fe99adb52e57eb7c63e589b3adf40e5c7974353e4fc4a776",
+      "art50_comment": "EU AI Act Art. 50 transparency note: this image is AI-generated content. Machine-readable disclosure embedded 2026-10-01.",
+      "art50_keys": [
+        "Title",
+        "Description",
+        "Copyright",
+        "Software",
+        "Comment"
+      ]
+    }
+  },
+  "crop": {
+    "9x16": "Center full-height window 674px wide from the 1920×1080 photo, Lanczos to 1080×1730, plus 190px label bar. Finished plate 1080×1920.",
+    "4x5": "Center 864×1080 crop of the 1920×1080 photo, plus 190px label bar. Finished plate 864×1270.",
+    "16x9": "Photo 1920×1080 plus 190px label bar. Finished plate 1920×1270."
+  },
+  "motion": null,
+  "daylight_variant": null
+}

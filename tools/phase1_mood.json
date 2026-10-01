@@ -2525,5 +2525,26 @@
       "mountain",
       "urban"
     ]
+  },
+  "IT-01-376": {
+    "daynight": "night",
+    "moods": [
+      "urban",
+      "historic"
+    ]
+  },
+  "IT-01-377": {
+    "daynight": "night",
+    "moods": [
+      "urban",
+      "historic"
+    ]
+  },
+  "IT-01-378": {
+    "daynight": "night",
+    "moods": [
+      "urban",
+      "historic"
+    ]
   }
 }
