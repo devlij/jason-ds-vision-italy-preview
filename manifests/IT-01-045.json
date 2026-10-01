@@ -14,5 +14,39 @@
   "approval_basis": "Cosmo five-gate approval 2026-09-29. Finished label-bar masters verified at bake PR #28 (tip 1a05a75, merged 8ee561218beb): Gate 1 visual/location — pure-photo plates passed photo-content QC (zero baked text/tint/scrim, exact plate dims 1920x1080/864x1080, stratified day/night samples both formats); Gate 2 technical — exact finished dims 1920x1270/864x1270, 190px #0e0e12 bar baked UNDER the photo only, zero overlay on artwork, correct caption-left/brand-right bar layout; Gate 3 provenance — photo regions byte-identical to the Cosmo-greenlit pure-photo plates, AI-generated per Art.50 disclosure; Gate 4 IP/commercial — 'AI-generated artistic interpretation · Not a photograph' disclosure on the label bar, Art.50 machine-readable chunks on every master; Gate 5 publication — masters live on main at the verified merge. Art.50 Comment date 2026-09-29 = true bake/finish date (honest per-scene record; scenario label preserved as legacy scene identity). Bake sample audit: 8 scenes x both formats (043,052,064,077,088,096,108,117), zero defects. Full file-count verification: every scene in range holds both finished masters, correctly named.",
   "git_blob_sha1_16x9": "8c43ac92bd3cf92a7c198f4dfdd02fafe4b793c9",
   "git_blob_sha1_4x5": "fb7727910dbfa23f458b7413e53cb2b17fc29226",
-  "approved_at": "2026-09-29"
+  "approved_at": "2026-09-29",
+  "daylight_variant": {
+    "variant_of_entry_id": "IT-01-045",
+    "kind": "interim-ai-daylight",
+    "honest_disclosure": "Interim AI daylight interpretation. Not a genuine daytime capture. Not an Open-Meteo weather stamp. Scenario timestamp is the model generation time.",
+    "derived_from": "Current main master assets/it-01-045-16x9.png and assets/it-01-045-4x5.png of the same scene. Night/twilight masters were not rewritten.",
+    "source_master": {
+      "16x9": {
+        "path": "assets/it-01-045-16x9.png",
+        "sha256": "8d05b4218e823a7a6100ee0a96b4f8315c545466172303be63c66c2529133aeb"
+      },
+      "4x5": {
+        "path": "assets/it-01-045-4x5.png",
+        "sha256": "a050152d163bdb98c83e1fcc0e288d4f2763dc26dff62b4fc7597a339bc135ff"
+      },
+      "recorded": "SHA-256 of the main masters immediately before this daylight pack. Post-write hashes are identical; those masters were not rewritten."
+    },
+    "files": {
+      "16x9": "assets/it-01-045-daylight-16x9.png",
+      "4x5": "assets/it-01-045-daylight-4x5.png"
+    },
+    "sha256": {
+      "16x9": "861f22f6323a59407b7361bf8bb48fe995a50613233a21de8599a1566a883b51",
+      "4x5": "23699f99a7301fb1a13f3213e2c2f053f5e7cea3c96e9339f22c60aa7beb3fe2"
+    },
+    "created_date": "2026-10-01",
+    "generation_timestamp": "1 October 2026 · 13:02 UTC",
+    "on_image_caption": "Piazza del Campo, Siena",
+    "on_image_signature": "Jason D’s Vision",
+    "on_image_name": "Jason A. Devlin",
+    "on_image_disclosure": "AI-generated artistic interpretation · Not a photograph.",
+    "on_image_marking": "☀ Interim AI daylight · 1 October 2026 · 13:02 UTC",
+    "art50_comment_date": "2026-10-01",
+    "note": "Interim AI-generated daylight interpretation of the same subject as the main night/twilight master. Not a genuine daytime capture and not a replacement for the separate genuine-daylight rollout. approval_status was not changed."
+  }
 }

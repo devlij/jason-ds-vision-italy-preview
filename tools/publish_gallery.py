@@ -107,6 +107,7 @@ F_LINES_BASE = """      const f16 = escapeHtml(scene.file_16x9);
 
 F_LINES = """      const f16 = masterOk(scene.file_16x9) ? escapeHtml(scene.file_16x9) : "";
       const f45 = masterOk(scene.file_4x5) ? escapeHtml(scene.file_4x5) : "";
+      const dayLabel = scene.daylight_label || "\\\\u2600 Daylight variant \\\\u00b7 derived from the night interpretation";
 """
 
 PREVIEW_BASE = """        <div class="preview">
@@ -130,7 +131,7 @@ PREVIEW = """        <div class="preview">
             ${f16 ? `<button type="button" class="fmt-tab is-active" data-format="16x9">16:9</button>` : ""}
             ${f45 ? `<button type="button" class="fmt-tab" data-format="4x5">4:5</button>` : ""}
           </div>
-        ${scene.file_16x9_day && masterOk(scene.file_16x9_day) ? `<div class="day-row"><button type="button" class="day-tab" data-daynight="night" aria-pressed="false" title="Toggle the daylight variant">\\u2600 Daylight</button></div>` : ""}
+        ${scene.file_16x9_day && masterOk(scene.file_16x9_day) ? `<div class="day-row"><button type="button" class="day-tab" data-daynight="night" data-day-label="${escapeHtml(dayLabel)}" aria-pressed="false" title="Toggle the daylight variant">\\u2600 Daylight</button></div>` : ""}
 """
 
 DOWNLOADS_BASE = """            <a class="download" data-dl="16x9" href="${f16}" download="${basename(scene.file_16x9)}">Download 16:9</a>
