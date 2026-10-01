@@ -7,14 +7,24 @@ live count, clear-all, four related thumbs, copy-link, entry-id deep
 links, and no controls for missing masters) is applied here, so a
 rebuild cannot drop the Cosmo one-off patch.
 
-9:16 tabs are probe-gated. The card template does not emit a 9:16
-button or download; index.html mounts them only after a HEAD probe
-of assets/<scene>-9x16.png returns 200. This publisher leaves that
-probe in place and re-applies the A7 head (canonical OG/Twitter image,
-ImageGallery JSON-LD, title without "(preview)") so a rebuild cannot
-drop them. Scene catalogues, word-of-day entries, and approval fields
-are copied through unchanged. The image sitemap still lists 16:9 and
-4:5 only.
+360° motion buttons are file-gated. A scene gets a custom player
+button only when assets/<scene>-motion-10s-4x5.mp4 exists. IT-01-024,
+IT-01-032, and IT-01-248 never get a button, even if a clip file is
+present. The player is custom controls only: autoplay, muted, loop,
+playsinline, controls=false, disablePictureInPicture=true. Play switches
+the card frame to the clip's native 4:5 aspect; close restores the
+active format tab. The button stays on every format tab.
+
+9:16 tabs are build-gated, not probe-gated. A 9:16 tab and an
+always-visible Download 9:16 are emitted only when the master exists
+on disk and opens at exactly 1080x1920. Missing files and invalid
+1080x2110 masters get neither a tab nor a download. Tab switching
+reads getAttribute("data-src-916"). This publisher removes the old
+HEAD-probe mounter and re-applies the A7 head (canonical OG/Twitter
+image, ImageGallery JSON-LD, title without "(preview)") so a rebuild
+cannot drop them. Scene catalogues, word-of-day entries, and approval
+fields are copied through unchanged. The image sitemap still lists
+16:9 and 4:5 only.
 
 Usage:
   python3 tools/publish_gallery.py          # write index.html
@@ -25,7 +35,9 @@ from __future__ import annotations
 
 import json
 import re
+import struct
 import sys
+import zlib
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -53,6 +65,12 @@ CSS = """<!-- PHASE1-ITALY-CSS-START -->
 .related-link:hover span{color:var(--text)}
 .actions button.copy-link{display:inline-block;background:#243049;color:var(--text);border-radius:8px;padding:0.4rem 0.7rem;font-size:0.85rem;border:1px solid var(--line);cursor:pointer}
 .actions button.copy-link:hover{border-color:var(--accent)}
+.motion-tab{display:inline-block;background:#243049;color:var(--text);border-radius:8px;padding:0.4rem 0.7rem;font-size:0.85rem;border:1px solid var(--line);cursor:pointer}
+.motion-tab:hover{border-color:var(--accent)}
+.motion-tab.is-active{border-color:var(--accent);color:var(--accent)}
+.day-tab + .motion-tab{margin-left:0.35rem}
+video.motion-clip{width:100%;height:100%;display:block;object-fit:cover;background:#000}
+video.motion-clip::-webkit-media-controls{display:none!important}
 @media(max-width:760px){.related-row{grid-template-columns:repeat(2,1fr)}}
 </style>
 <!-- PHASE1-ITALY-CSS-END -->
@@ -108,8 +126,16 @@ F_LINES_BASE = """      const f16 = escapeHtml(scene.file_16x9);
       const f45 = escapeHtml(scene.file_4x5);
 """
 
+LEGACY_F_LINES = """      const f16 = masterOk(scene.file_16x9) ? escapeHtml(scene.file_16x9) : "";
+      const f45 = masterOk(scene.file_4x5) ? escapeHtml(scene.file_4x5) : "";
+"""
+
 F_LINES = """      const f16 = masterOk(scene.file_16x9) ? escapeHtml(scene.file_16x9) : "";
       const f45 = masterOk(scene.file_4x5) ? escapeHtml(scene.file_4x5) : "";
+      const valid916 = (typeof ITALY_VALID_916 !== "undefined") ? ITALY_VALID_916[scene.entry_id] : null;
+      const f916 = valid916 && valid916[0] ? escapeHtml(valid916[0]) : "";
+      const f916day = valid916 && valid916[1] ? escapeHtml(valid916[1]) : "";
+      const motion = (typeof ITALY_MOTION !== "undefined" && ITALY_MOTION[scene.entry_id]) ? escapeHtml(ITALY_MOTION[scene.entry_id]) : "";
 """
 
 PREVIEW_BASE = """        <div class="preview">
@@ -124,7 +150,7 @@ PREVIEW_BASE = """        <div class="preview">
         ${scene.file_16x9_day ? `<div class="day-row"><button type="button" class="day-tab" data-daynight="night" aria-pressed="false" title="Toggle the daylight variant">\\u2600 Daylight</button></div>` : ""}
 """
 
-PREVIEW = """        <div class="preview">
+LEGACY_PREVIEW = """        <div class="preview">
             ${f16 ? `<a class="thumb" href="${f16}" target="_blank" rel="noopener">
             <img src="${f16}" data-src-16="${f16}" data-src-45="${f45}"${scene.file_16x9_day && masterOk(scene.file_16x9_day) ? ` data-src-16-day="${escapeHtml(scene.file_16x9_day)}" data-src-45-day="${escapeHtml(scene.file_4x5_day)}"` : ""} alt="${alt}" loading="lazy" />
           </a>` : ""}
@@ -136,12 +162,30 @@ PREVIEW = """        <div class="preview">
         ${scene.file_16x9_day && masterOk(scene.file_16x9_day) ? `<div class="day-row"><button type="button" class="day-tab" data-daynight="night" aria-pressed="false" title="Toggle the daylight variant">\\u2600 Daylight</button></div>` : ""}
 """
 
+PREVIEW = """        <div class="preview">
+            ${f16 ? `<a class="thumb" href="${f16}" target="_blank" rel="noopener">
+            <img src="${f16}" data-src-16="${f16}" data-src-45="${f45}"${f916 ? ` data-src-916="${f916}"` : ""}${f916day ? ` data-src-916-day="${f916day}"` : ""}${scene.file_16x9_day && masterOk(scene.file_16x9_day) ? ` data-src-16-day="${escapeHtml(scene.file_16x9_day)}" data-src-45-day="${escapeHtml(scene.file_4x5_day)}"` : ""} alt="${alt}" loading="lazy" />
+          </a>` : ""}
+        </div>
+        <div class="fmt-tabs" role="group" aria-label="Image size">
+            ${f16 ? `<button type="button" class="fmt-tab is-active" data-format="16x9">16:9</button>` : ""}
+            ${f45 ? `<button type="button" class="fmt-tab" data-format="4x5">4:5</button>` : ""}
+            ${f916 ? `<button type="button" class="fmt-tab" data-format="9x16">9:16</button>` : ""}
+          </div>
+        ${(scene.file_16x9_day && masterOk(scene.file_16x9_day)) || motion ? `<div class="day-row">${scene.file_16x9_day && masterOk(scene.file_16x9_day) ? `<button type="button" class="day-tab" data-daynight="night" aria-pressed="false" title="Toggle the daylight variant">\\u2600 Daylight</button>` : ""}${motion ? `<button type="button" class="motion-tab" data-motion="${motion}" title="Play the 360\\u00B0 motion clip">\\u25B6 360\\u00B0</button>` : ""}</div>` : ""}
+"""
+
 DOWNLOADS_BASE = """            <a class="download" data-dl="16x9" href="${f16}" download="${basename(scene.file_16x9)}">Download 16:9</a>
             <a class="download" data-dl="4x5" href="${f45}" download="${basename(scene.file_4x5)}">Download 4:5</a>
 """
 
+LEGACY_DOWNLOADS = """            ${f16 ? `<a class="download" data-dl="16x9" href="${f16}" download="${basename(scene.file_16x9)}">Download 16:9</a>` : ""}
+            ${f45 ? `<a class="download" data-dl="4x5" href="${f45}" download="${basename(scene.file_4x5)}">Download 4:5</a>` : ""}
+"""
+
 DOWNLOADS = """            ${f16 ? `<a class="download" data-dl="16x9" href="${f16}" download="${basename(scene.file_16x9)}">Download 16:9</a>` : ""}
             ${f45 ? `<a class="download" data-dl="4x5" href="${f45}" download="${basename(scene.file_4x5)}">Download 4:5</a>` : ""}
+            ${f916 ? `<a class="download" data-dl="9x16" href="${f916}" download="${f916.split("/").pop()}">Download 9:16</a>` : ""}
 """
 
 COPY_BTN = """            <button type="button" class="copy-link" data-scene="${id}" aria-label="Copy link to this scene">Copy link</button>
@@ -245,6 +289,73 @@ CLICK = """<script>
 """
 
 
+# Night/twilight scenes that must never grow a 360 button, even when a
+# clip file is sitting in assets/.
+NO_MOTION = frozenset({"IT-01-024", "IT-01-032", "IT-01-248"})
+TRUE_916 = (1080, 1920)
+
+MOTION_FN = """    /* MOTION360-START */
+    function stopMotion(cardEl) {
+      if (!cardEl) return;
+      var v = cardEl.querySelector("video.motion-clip");
+      var link = cardEl.querySelector("a.thumb");
+      var img = link && link.querySelector("img");
+      var mtab = cardEl.querySelector(".motion-tab");
+      if (v) v.remove();
+      if (img) img.style.display = "";
+      var ftab = cardEl.querySelector(".fmt-tab.is-active");
+      var dfmt = ftab ? ftab.getAttribute("data-format") : "16x9";
+      if (link) {
+        link.classList.toggle("tall", dfmt === "4x5");
+        link.classList.toggle("tall916", dfmt === "9x16");
+      }
+      if (mtab) {
+        mtab.classList.remove("is-active");
+        mtab.textContent = "\\u25B6 360\\u00B0";
+      }
+    }
+    /* MOTION360-END */
+
+"""
+
+MOTION_CLICK = """      /* MOTION360-CLICK */
+      const mtab = e.target.closest(".motion-tab");
+      if (mtab && gallery.contains(mtab)) {
+        e.preventDefault();
+        const cardEl = mtab.closest(".card");
+        if (!cardEl) return;
+        if (cardEl.querySelector("video.motion-clip")) { stopMotion(cardEl); return; }
+        const link = cardEl.querySelector("a.thumb");
+        const img = link && link.querySelector("img");
+        const src = mtab.getAttribute("data-motion");
+        if (!link || !src) return;
+        const vid = document.createElement("video");
+        vid.className = "motion-clip";
+        vid.src = src;
+        vid.autoplay = true;
+        vid.loop = true;
+        vid.muted = true;
+        vid.playsInline = true;
+        vid.controls = false;
+        vid.disablePictureInPicture = true;
+        vid.setAttribute("autoplay", "");
+        vid.setAttribute("muted", "");
+        vid.setAttribute("loop", "");
+        vid.setAttribute("playsinline", "");
+        vid.removeAttribute("controls");
+        if (img) img.style.display = "none";
+        link.classList.add("tall");
+        link.classList.remove("tall916");
+        link.appendChild(vid);
+        mtab.classList.add("is-active");
+        mtab.textContent = "\\u2715 Close";
+        return;
+      }
+      /* MOTION360-CLICK-END */
+
+"""
+
+
 def js_string(raw: str) -> str:
     return json.loads('"' + raw + '"')
 
@@ -338,16 +449,152 @@ def build_meta(scenes: list[dict], moods: dict, missing: dict[str, int]) -> dict
     return meta
 
 
-def meta_script(meta: dict, missing: dict[str, int]) -> str:
+def clip_exists(rel: str) -> bool:
+    path = ROOT / rel
+    try:
+        return path.is_file() and path.stat().st_size > 0
+    except OSError:
+        return False
+
+
+def motion_rel(entry_id: str) -> str:
+    return f"assets/{entry_id.lower()}-motion-10s-4x5.mp4"
+
+
+def build_motion(scenes: list[dict]) -> dict[str, str]:
+    """Clip path for every scene whose mp4 exists, minus the night exclusions."""
+    found: dict[str, str] = {}
+    for scene in scenes:
+        eid = scene["entry_id"]
+        if eid in NO_MOTION:
+            continue
+        rel = motion_rel(eid)
+        if clip_exists(rel):
+            found[eid] = rel
+    return found
+
+
+def derive_916(path: str) -> str:
+    rel = bare(path)
+    if rel.endswith("-16x9.png"):
+        return rel[: -len("-16x9.png")] + "-9x16.png"
+    return ""
+
+
+def day_916_rel(scene: dict) -> str:
+    explicit = bare(scene.get("file_9x16_day") or "")
+    if explicit:
+        return explicit
+    day = scene.get("file_16x9_day") or ""
+    derived = derive_916(day) if day else ""
+    if derived:
+        return derived
+    night = bare(scene.get("file_16x9") or "")
+    if night.endswith("-16x9.png"):
+        return night[: -len("-16x9.png")] + "-daylight-9x16.png"
+    return ""
+
+
+def png_ihdr(path: Path) -> tuple[int, int] | None:
+    """Return width, height when the file is a PNG with a readable IHDR."""
+    try:
+        data = path.read_bytes()
+    except OSError:
+        return None
+    if len(data) < 24 or data[:8] != b"\x89PNG\r\n\x1a\n":
+        return None
+    length = struct.unpack(">I", data[8:12])[0]
+    if data[12:16] != b"IHDR" or length < 13 or len(data) < 24 + 4:
+        return None
+    chunk = data[16:16 + length]
+    crc = struct.unpack(">I", data[16 + length:20 + length])[0]
+    if (zlib.crc32(b"IHDR" + chunk) & 0xFFFFFFFF) != crc:
+        return None
+    width, height = struct.unpack(">II", chunk[:8])
+    return width, height
+
+
+def png_opens_at(path: Path, size: tuple[int, int]) -> bool:
+    """True when the PNG opens and its IHDR is exactly size.
+
+    Files that are not that size are rejected from the header. A file that
+    claims the size must decompress cleanly, so a truncated or corrupt
+    master is not wired.
+    """
+    ihdr = png_ihdr(path)
+    if ihdr != size:
+        return False
+    try:
+        data = path.read_bytes()
+    except OSError:
+        return False
+    pos = 8
+    bit_depth = color_type = None
+    idat: list[bytes] = []
+    while pos + 8 <= len(data):
+        length = struct.unpack(">I", data[pos:pos + 4])[0]
+        ctype = data[pos + 4:pos + 8]
+        pos += 8
+        if pos + length + 4 > len(data):
+            return False
+        chunk = data[pos:pos + length]
+        crc = struct.unpack(">I", data[pos + length:pos + length + 4])[0]
+        if (zlib.crc32(ctype + chunk) & 0xFFFFFFFF) != crc:
+            return False
+        pos += length + 4
+        if ctype == b"IHDR":
+            bit_depth = chunk[8]
+            color_type = chunk[9]
+        elif ctype == b"IDAT":
+            idat.append(chunk)
+        elif ctype == b"IEND":
+            break
+    channels = {0: 1, 2: 3, 3: 1, 4: 2, 6: 4}.get(color_type)
+    if bit_depth != 8 or not channels or not idat:
+        return False
+    width, height = size
+    try:
+        raw = zlib.decompress(b"".join(idat))
+    except zlib.error:
+        return False
+    return len(raw) == height * (1 + width * channels)
+
+
+def build_valid_916(scenes: list[dict]) -> dict[str, list[str]]:
+    """Scenes whose 9:16 master exists and opens at exactly 1080x1920."""
+    found: dict[str, list[str]] = {}
+    for scene in scenes:
+        rel = bare(scene.get("file_9x16") or "") or derive_916(scene.get("file_16x9") or "")
+        if not rel or not png_opens_at(ROOT / rel, TRUE_916):
+            continue
+        day_rel = day_916_rel(scene)
+        day = day_rel if day_rel and png_opens_at(ROOT / day_rel, TRUE_916) else ""
+        found[scene["entry_id"]] = [rel, day]
+    return found
+
+
+def meta_script(
+    meta: dict,
+    missing: dict[str, int],
+    motion: dict[str, str],
+    valid916: dict[str, list[str]],
+) -> str:
     payload = json.dumps(meta, ensure_ascii=False, separators=(",", ":"))
     missing_js = json.dumps(missing, ensure_ascii=False, separators=(",", ":"))
+    motion_js = json.dumps(motion, ensure_ascii=False, separators=(",", ":"))
+    valid_js = json.dumps(valid916, ensure_ascii=False, separators=(",", ":"))
     return f"""<script>
 /* PHASE1-ITALY */
 /* Phase-1 feature data. Emitted by tools/publish_gallery.py.
    per-scene [region, day|night, mood tags, 16:9 thumb, display name].
-   A blank thumb means the 16:9 master is missing and must not be rendered. */
+   A blank thumb means the 16:9 master is missing and must not be rendered.
+   ITALY_MOTION maps a scene to its 10s 4:5 clip. IT-01-024, IT-01-032, and
+   IT-01-248 are never present. ITALY_VALID_916 maps a scene to
+   [1080x1920 master, daylight master or ""]. */
 const ITALY_META = {payload};
 window.ITALY_MISSING = {missing_js};
+const ITALY_MOTION = {motion_js};
+const ITALY_VALID_916 = {valid_js};
 function relatedFor(id){{
   var me = ITALY_META[id]; if(!me) return [];
   var mm = (me[2]||'').split(',').filter(Boolean); var out=[];
@@ -383,13 +630,37 @@ def _between(html: str, start: str, end: str) -> str:
     return html[s:e]
 
 
-def remove_916_ui(html: str) -> str:
-    """Leave probe-gated 9:16 in place.
+def remove_probe916(html: str) -> str:
+    """Drop the browser HEAD probe that mounted 9:16 for any 200 response.
 
-    A 9:16 tab and Download 9:16 are created in the browser only after
-    HEAD assets/<scene>-9x16.png returns 200. Stripping those branches
-    would hide a master that is on disk, or require a tab before the probe.
+    A 200 from an invalid 1080x2110 master reads as a broken tab. Tabs are
+    emitted at build time only, so this mounter must not survive a rebuild.
     """
+    pattern = re.compile(
+        r"\n    /\* 9:16 tab and Download 9:16 are mounted only after a HEAD probe returns 200\."
+        r"[\s\S]*?\n    function queue916\(cardEl, scene\) \{\n"
+        r"(?:.*\n)*?    \}\n"
+    )
+    html = pattern.sub("\n", html)
+    html = html.replace("      queue916(el, scene);\n", "")
+    return html
+
+
+def remove_916_ui(html: str) -> str:
+    return remove_probe916(html)
+
+
+def _restore_base(html: str, current: str, legacy: str, base: str) -> str:
+    """Put a card snippet back to the pre-rollout shell.
+
+    The current snippet is replaced whole. The legacy snippet is only
+    replaced when the current one is absent, because the legacy text can
+    be a prefix of the current text.
+    """
+    if current in html:
+        return html.replace(current, base)
+    if legacy in html:
+        return html.replace(legacy, base)
     return html
 
 
@@ -564,9 +835,9 @@ def strip_phase1(html: str) -> str:
     html = html.replace("        ${p1rel}\n", "")
     html = html.replace(COPY_BTN, "")
     html = html.replace(MASTER_FN, "")
-    html = html.replace(F_LINES, F_LINES_BASE)
-    html = html.replace(PREVIEW, PREVIEW_BASE)
-    html = html.replace(DOWNLOADS, DOWNLOADS_BASE)
+    html = _restore_base(html, F_LINES, LEGACY_F_LINES, F_LINES_BASE)
+    html = _restore_base(html, PREVIEW, LEGACY_PREVIEW, PREVIEW_BASE)
+    html = _restore_base(html, DOWNLOADS, LEGACY_DOWNLOADS, DOWNLOADS_BASE)
     html = html.replace(
         "    const daynightSel = document.getElementById(\"f-daynight\");\n"
         "    const moodSel = document.getElementById(\"f-mood\");\n",
@@ -587,18 +858,29 @@ def strip_phase1(html: str) -> str:
     return html
 
 
-def insert_phase1(html: str, meta: dict, missing: dict[str, int]) -> str:
+def insert_phase1(
+    html: str,
+    meta: dict,
+    missing: dict[str, int],
+    motion: dict[str, str],
+    valid916: dict[str, list[str]],
+) -> str:
     if "PHASE1-ITALY-CSS-START" not in html:
         html = _replace_once(html, "</head>", CSS + "</head>", "css anchor")
     if "PHASE1-ITALY-FILTERS-START" not in html:
         html = _replace_once(html, REGION_SELECT, REGION_SELECT + FILTERS, "region select")
     if "const ITALY_META" not in html:
         anchor = "  <script>\n    // Approved scenes only"
-        html = _replace_once(html, anchor, meta_script(meta, missing) + anchor, "scenes script")
+        html = _replace_once(
+            html,
+            anchor,
+            meta_script(meta, missing, motion, valid916) + anchor,
+            "scenes script",
+        )
     else:
         html = re.sub(
             r"<script>\n/\* PHASE1-ITALY \*/[\s\S]*?</script>\n",
-            meta_script(meta, missing),
+            meta_script(meta, missing, motion, valid916),
             html,
             count=1,
         )
@@ -646,6 +928,43 @@ def insert_phase1(html: str, meta: dict, missing: dict[str, int]) -> str:
     return html
 
 
+def inject_motion(html: str) -> str:
+    """Install the custom 360 player once. Idempotent across rebuilds."""
+    listener = '    gallery.addEventListener("click", (e) => {\n'
+    if "MOTION360-START" not in html:
+        if html.count(listener) != 1:
+            raise SystemExit(f"motion anchor: expected 1, found {html.count(listener)}")
+        html = html.replace(listener, MOTION_FN + listener, 1)
+    click_anchor = listener + '      const nbtn = e.target.closest(".narrate");\n'
+    if "MOTION360-CLICK" not in html:
+        if html.count(click_anchor) != 1:
+            raise SystemExit(f"motion click anchor: expected 1, found {html.count(click_anchor)}")
+        html = html.replace(
+            click_anchor,
+            listener + MOTION_CLICK + '      const nbtn = e.target.closest(".narrate");\n',
+            1,
+        )
+    day_old = '        const dcard = dtab.closest(".card");\n        if (!dcard) return;\n'
+    day_new = day_old + "        stopMotion(dcard);\n"
+    if "stopMotion(dcard)" not in html:
+        html = _replace_once(html, day_old, day_new, "day stopMotion")
+    fmt_old = '      const cardEl = tab.closest(".card");\n      const link = cardEl && cardEl.querySelector("a.thumb");\n'
+    fmt_new = (
+        '      const cardEl = tab.closest(".card");\n'
+        '      stopMotion(cardEl); /* MOTION360-FMT */\n'
+        '      const link = cardEl && cardEl.querySelector("a.thumb");\n'
+    )
+    if "MOTION360-FMT" not in html:
+        html = _replace_once(html, fmt_old, fmt_new, "fmt stopMotion")
+    guard = 'if(e.target.closest&&e.target.closest("video.motion-clip")){e.preventDefault();return;}'
+    lb_old = "if(a){e.preventDefault();var cards=visibleCards();"
+    lb_new = "if(a){" + guard + "e.preventDefault();var cards=visibleCards();"
+    if guard not in html:
+        html = _replace_once(html, lb_old, lb_new, "lightbox motion guard")
+    html = html.replace("16:9 / 4:5 / probe-gated 9:16 tabs", "16:9 / 4:5 / 9:16 tabs")
+    return html
+
+
 def publish(html: str, moods: dict | None = None) -> str:
     moods = moods if moods is not None else load_moods()
     scenes_blob = _between(html, "const SCENES = [", "\n    ];")
@@ -654,14 +973,21 @@ def publish(html: str, moods: dict | None = None) -> str:
     scenes = parse_scenes(base)
     missing = missing_masters(scenes)
     meta = build_meta(scenes, moods, missing)
+    motion = build_motion(scenes)
+    valid916 = build_valid_916(scenes)
+    for eid in NO_MOTION:
+        if eid in motion:
+            raise SystemExit(f"{eid} must not be wired for 360")
     unknown = [s["entry_id"] for s in scenes if s["entry_id"] not in moods]
     if unknown:
         print(f"warning: {len(unknown)} scenes have no mood row; filters will not match them", file=sys.stderr)
-    out = apply_a7(insert_phase1(base, meta, missing))
+    out = inject_motion(apply_a7(insert_phase1(base, meta, missing, motion, valid916)))
     if _between(out, "const SCENES = [", "\n    ];") != scenes_blob:
         raise SystemExit("publisher changed the SCENES catalogue")
     if _between(out, 'id="wotd-data">', "</script>") != wotd_blob:
         raise SystemExit("publisher changed the word-of-day dataset")
+    if "function probe916(" in out or "queue916(" in out:
+        raise SystemExit("publisher left the 9:16 HEAD probe in place")
     return out
 
 
@@ -751,7 +1077,16 @@ def prove(html: str) -> None:
         'name="twitter:image"',
         'getAttribute("data-src-45")',
         'getAttribute("data-format")',
+        'getAttribute("data-src-916")',
         "Day '+doy+' of 365",
+        "disablePictureInPicture = true",
+        "vid.controls = false",
+        "vid.playsInline = true",
+        'class="motion-tab"',
+        "ITALY_MOTION",
+        "ITALY_VALID_916",
+        "Download 9:16",
+        'data-format="9x16"',
     ]
     for needle in identity:
         if needle not in second:
@@ -760,23 +1095,37 @@ def prove(html: str) -> None:
         "(preview)</title>",
         "dataset.format",
         "dataset.src45",
+        "dataset.src916",
+        "function probe916(",
+        "function mount916(",
+        "function queue916(",
+        'method: "HEAD"',
     )
     for needle in banned:
         if needle in second:
             raise SystemExit(f"regenerated index still has {needle}")
-    for needle in (
-        "function probe916(",
-        "function mount916(",
-        "function queue916(",
-        "tall916",
-        "data-src-916",
-        "Download 9:16",
-    ):
-        if needle not in second:
-            raise SystemExit(f"regenerated index lost probe-gated 9:16 marker {needle}")
     tabs = _between(second, '<div class="fmt-tabs"', "</div>")
-    if "9:16" in tabs or "9x16" in tabs:
-        raise SystemExit("fmt-tabs template includes 9:16 before the file probe")
+    if '${f916 ?' not in tabs or 'data-format="9x16"' not in tabs:
+        raise SystemExit("9:16 tab is not build-gated inside fmt-tabs")
+    motion_map, valid_map = wiring_maps(second)
+    for eid in NO_MOTION:
+        if eid in motion_map:
+            raise SystemExit(f"{eid} is wired for 360")
+        rel = motion_rel(eid)
+        if eid in motion_map:
+            raise SystemExit(f"{eid} button survived the exclusion")
+    for eid, rel in motion_map.items():
+        if eid in NO_MOTION or rel != motion_rel(eid) or not clip_exists(rel):
+            raise SystemExit(f"bad 360 wiring {eid} {rel}")
+    for eid, pair in valid_map.items():
+        if len(pair) != 2 or not png_opens_at(ROOT / pair[0], TRUE_916):
+            raise SystemExit(f"bad 9:16 wiring {eid} {pair}")
+        if pair[1] and not png_opens_at(ROOT / pair[1], TRUE_916):
+            raise SystemExit(f"bad daylight 9:16 wiring {eid} {pair}")
+    sample_invalid = ROOT / "assets/it-01-001-9x16.png"
+    if sample_invalid.is_file() and png_ihdr(sample_invalid) != TRUE_916:
+        if any(pair[0].endswith("/it-01-001-9x16.png") or pair[0] == "assets/it-01-001-9x16.png" for pair in valid_map.values()):
+            raise SystemExit("invalid it-01-001 9:16 master was wired")
     ga = set(re.findall(r"G-[A-Z0-9]+", second))
     if ga != {"G-PDJ4WSS725"}:
         raise SystemExit(f"GA4 ids {ga}")
@@ -785,9 +1134,20 @@ def prove(html: str) -> None:
     print("prove ok")
     print(f"scenes {len(scenes)}")
     print(f"missing masters in live catalogue {len(missing)}")
+    print(f"360 buttons {len(motion_map)}")
+    print(f"9:16 tabs {len(valid_map)}")
+    print(f"360 excluded {', '.join(sorted(NO_MOTION))}")
     print(f"sample {sample} related {related_ids(meta, sample)}")
     print(f"missing thumb {top} replaced by {filled}")
     print(f"idempotent bytes {len(second)}")
+
+
+def wiring_maps(html: str) -> tuple[dict, dict]:
+    motion_match = re.search(r"const ITALY_MOTION = (\{.*?\});\n", html)
+    valid_match = re.search(r"const ITALY_VALID_916 = (\{.*?\});\n", html)
+    if not motion_match or not valid_match:
+        raise SystemExit("publisher did not emit ITALY_MOTION / ITALY_VALID_916")
+    return json.loads(motion_match.group(1)), json.loads(valid_match.group(1))
 
 
 def main() -> None:
