@@ -13,7 +13,9 @@ IT-01-032, and IT-01-248 never get a button, even if a clip file is
 present. The player is custom controls only: autoplay, muted, loop,
 playsinline, controls=false, disablePictureInPicture=true. Play switches
 the card frame to the clip's native 4:5 aspect; close restores the
-active format tab. The button stays on every format tab.
+active format tab. While the clip is open the button's accessible
+label and title are "Close"; stopping restores the play title. The
+button stays on every format tab.
 
 9:16 tabs are build-gated, not probe-gated. A 9:16 tab and an
 always-visible Download 9:16 are emitted only when the master exists
@@ -312,6 +314,8 @@ MOTION_FN = """    /* MOTION360-START */
       if (mtab) {
         mtab.classList.remove("is-active");
         mtab.textContent = "\\u25B6 360\\u00B0";
+        mtab.setAttribute("title", "Play the 360\\u00B0 motion clip");
+        mtab.removeAttribute("aria-label");
       }
     }
     /* MOTION360-END */
@@ -349,6 +353,8 @@ MOTION_CLICK = """      /* MOTION360-CLICK */
         link.appendChild(vid);
         mtab.classList.add("is-active");
         mtab.textContent = "\\u2715 Close";
+        mtab.setAttribute("aria-label", "Close");
+        mtab.setAttribute("title", "Close");
         return;
       }
       /* MOTION360-CLICK-END */
@@ -1083,6 +1089,10 @@ def prove(html: str) -> None:
         "vid.controls = false",
         "vid.playsInline = true",
         'class="motion-tab"',
+        'setAttribute("aria-label", "Close")',
+        'setAttribute("title", "Close")',
+        "https://norway.jdvision.org/",
+        "https://denmark.jdvision.org/",
         "ITALY_MOTION",
         "ITALY_VALID_916",
         "Download 9:16",
@@ -1100,6 +1110,8 @@ def prove(html: str) -> None:
         "function mount916(",
         "function queue916(",
         'method: "HEAD"',
+        "jason-ds-vision-norway-preview",
+        "jason-ds-vision-denmark-preview",
     )
     for needle in banned:
         if needle in second:
