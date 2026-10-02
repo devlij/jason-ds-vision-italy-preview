@@ -1,0 +1,304 @@
+{
+  "pack": "Italy 360 clips backfill pack2 (Candidate)",
+  "date": "2026-10-02",
+  "method": "media.generate_video anchored on daylight 4:5 artwork (190px label bar cropped), lateral-sweep prompt, 864x1080 10.0s h264; per-clip frame-strip QC (0.5s/5s/9.5s); max 2 attempts",
+  "shipped": [
+    "it-01-009",
+    "it-01-010",
+    "it-01-013",
+    "it-01-014",
+    "it-01-015",
+    "it-01-016",
+    "it-01-019",
+    "it-01-020",
+    "it-01-023",
+    "it-01-030",
+    "it-01-038",
+    "it-01-046",
+    "it-01-048",
+    "it-01-054",
+    "it-01-058",
+    "it-01-059",
+    "it-01-062",
+    "it-01-070",
+    "it-01-074",
+    "it-01-078",
+    "it-01-082",
+    "it-01-090",
+    "it-01-094",
+    "it-01-103",
+    "it-01-106",
+    "it-01-110",
+    "it-01-118",
+    "it-01-120",
+    "it-01-121",
+    "it-01-130",
+    "it-01-134",
+    "it-01-138",
+    "it-01-154",
+    "it-01-159",
+    "it-01-166",
+    "it-01-168",
+    "it-01-170",
+    "it-01-178",
+    "it-01-182",
+    "it-01-186",
+    "it-01-190",
+    "it-01-191",
+    "it-01-194",
+    "it-01-198",
+    "it-01-206",
+    "it-01-214",
+    "it-01-221",
+    "it-01-222",
+    "it-01-226",
+    "it-01-228",
+    "it-01-230",
+    "it-01-234",
+    "it-01-238",
+    "it-01-242",
+    "it-01-246",
+    "it-01-254",
+    "it-01-258",
+    "it-01-262",
+    "it-01-265",
+    "it-01-270",
+    "it-01-271",
+    "it-01-274",
+    "it-01-278",
+    "it-01-286",
+    "it-01-290",
+    "it-01-298",
+    "it-01-300",
+    "it-01-302",
+    "it-01-306",
+    "it-01-310",
+    "it-01-314",
+    "it-01-318",
+    "it-01-322",
+    "it-01-324",
+    "it-01-326",
+    "it-01-334",
+    "it-01-345",
+    "it-01-346",
+    "it-01-348",
+    "it-01-358",
+    "it-01-360",
+    "it-01-368",
+    "it-01-369",
+    "it-01-370",
+    "it-01-372",
+    "it-01-373",
+    "it-01-374"
+  ],
+  "hold": [
+    {
+      "id": "it-01-022",
+      "reason": "Both attempts fail QC: cliffside castle drifts out of frame; attempt 1 ends on harbor with no castle visible, attempt 2 ends on open sea with no castle visible."
+    },
+    {
+      "id": "it-01-066",
+      "reason": "Both attempts fail QC: Doge's Palace drifts right and leaves the frame (partially cropped out of left edge); subject not fully framed end to end."
+    },
+    {
+      "id": "it-01-098",
+      "reason": "Both attempts fail QC: camera drifts off the clock-tower palazzo; attempt 1 crops the palazzo's left arches, attempt 2 pans entirely away to a different street view."
+    },
+    {
+      "id": "it-01-122",
+      "reason": "Both attempts fail QC: camera travels around to different viewpoints of the village; castle tower and much of the original panorama leave the frame."
+    },
+    {
+      "id": "it-01-142",
+      "reason": "Both attempts fail QC: church subject completely leaves the frame by end; clip ends on coastline/town ruins instead."
+    },
+    {
+      "id": "it-01-157",
+      "reason": "Both attempts fail QC: camera travels around to a different San Gimignano skyline viewpoint; the original tower cluster drifts out of frame."
+    },
+    {
+      "id": "it-01-216",
+      "reason": "Both attempts fail QC: garden castle leaves the frame in both attempts; camera pans right off to the Amalfi coast panorama."
+    },
+    {
+      "id": "it-01-294",
+      "reason": "Both attempts fail QC: camera zooms in and pans off the Portofino waterfront; the original wide beach/harbor composition is lost by end."
+    },
+    {
+      "id": "it-01-338",
+      "reason": "Both attempts fail QC: castle leaves the frame in both attempts (pan left); attempt 2 ends on a bare hillside with neither castle nor bridge visible."
+    },
+    {
+      "id": "it-01-350",
+      "reason": "Both attempts fail QC: pottery-shop subject leaves the frame in both attempts; camera pans down the street to other shops and crowds."
+    },
+    {
+      "id": "it-01-362",
+      "reason": "Both attempts fail QC: camera travels/orbits to substantially different viewpoints; the castle leaves the frame in both attempts."
+    },
+    {
+      "id": "it-01-375",
+      "reason": "Both attempts fail QC: original grove valley/sea composition leaves the frame; attempt 2 travels to a different bay/harbor viewpoint."
+    },
+    {
+      "id": "it-01-102",
+      "reason": "camera drifts right off the fortress in both attempts; fortress leaves frame entirely by 9.5s"
+    },
+    {
+      "id": "it-01-114",
+      "reason": "camera drifts right off Castel del Monte in both attempts; castle partially exits left frame edge by 9.5s"
+    },
+    {
+      "id": "it-01-126",
+      "reason": "camera drifts right off the fortress in both attempts; left tower exits frame by 9.5s"
+    },
+    {
+      "id": "it-01-146",
+      "reason": "camera pans right off the ruined facade in both attempts; facade exits right edge by 9.5s"
+    },
+    {
+      "id": "it-01-158",
+      "reason": "camera pans right off the palace in both attempts; palace partially exits right edge by 9.5s"
+    },
+    {
+      "id": "it-01-218",
+      "reason": "camera pans right off Palazzo Pitti in both attempts; palace mostly exits frame by 9.5s"
+    },
+    {
+      "id": "it-01-312",
+      "reason": "camera pans right off the village in both attempts; village leaves frame entirely by 9.5s"
+    },
+    {
+      "id": "it-01-342",
+      "reason": "camera pans right off the hill town in both attempts; town partially exits right edge by 9.5s"
+    },
+    {
+      "id": "it-01-354",
+      "reason": "camera pans right off the fountain in both attempts; fountain partially exits right edge by 9.5s"
+    },
+    {
+      "id": "it-01-366",
+      "reason": "camera pans right off the cathedral facade in both attempts; facade partially exits frame edge by 9.5s"
+    },
+    {
+      "id": "it-01-371",
+      "reason": "camera pans right off the facade in both attempts; facade partially exits right edge by 9.5s"
+    },
+    {
+      "id": "it-01-012",
+      "reason": "drift off-subject: camera pans right past the church dome and bell tower, subject leaves frame by the end; failed both attempts"
+    },
+    {
+      "id": "it-01-018",
+      "reason": "drift off-subject: camera pans left past the Temple of Concordia, temple leaves frame by the end; failed both attempts"
+    },
+    {
+      "id": "it-01-026",
+      "reason": "drift off-subject: camera pans left past the fortress walls, subject leaves frame by the end; failed both attempts"
+    },
+    {
+      "id": "it-01-072",
+      "reason": "drift off-subject: camera pans right past Etna, volcano leaves frame by the end; failed both attempts"
+    },
+    {
+      "id": "it-01-086",
+      "reason": "drift off-subject: camera pans left past the Logge del Papa arcade, subject leaves frame by the end; failed both attempts"
+    },
+    {
+      "id": "it-01-150",
+      "reason": "drift off-subject: camera pans past the castle, subject leaves frame by the end; failed both attempts"
+    },
+    {
+      "id": "it-01-174",
+      "reason": "drift off-subject: camera pans past Santa Maria della Salute basilica, subject leaves frame by the end; failed both attempts"
+    },
+    {
+      "id": "it-01-250",
+      "reason": "drift off-subject: camera pans away from the mountain fortress, subject mostly out of frame by the end; failed both attempts"
+    },
+    {
+      "id": "it-01-266",
+      "reason": "anchor master defective: the published assets/it-01-266-4x5.png has a ~50px pure-black band baked into its top edge (rows 0-49 mean brightness 0); both generated clips faithfully reproduce the defect; needs master re-finish by builder"
+    },
+    {
+      "id": "it-01-282",
+      "reason": "drift off-subject: camera pans right past the brick ruin, subject fully out of frame by the end; failed both attempts"
+    },
+    {
+      "id": "it-01-330",
+      "reason": "drift off-subject: camera pans right past the church and fountain, church fully out of frame by the end; failed both attempts"
+    },
+    {
+      "id": "it-01-355",
+      "reason": "drift off-subject: camera pans right past the riverside palazzo, subject fully out of frame by the end; failed both attempts"
+    },
+    {
+      "id": "it-01-367",
+      "reason": "drift off-subject: camera pans left past the obelisk, subject nearly fully out of frame by the end; failed both attempts"
+    },
+    {
+      "id": "it-01-060",
+      "reason": "2 attempts; both generations pan away from the cliffside-village subject until only sea/Vesuvius remain in final frames \u2014 subject leaves frame / drift off-subject"
+    },
+    {
+      "id": "it-01-162",
+      "reason": "2 attempts; both generations drift the Tre Cime peaks out of frame, ending on scree/meadow with only a peak remnant at the edge"
+    },
+    {
+      "id": "it-01-175",
+      "reason": "2 attempts; both generations pan the Ponte Milvio bridge out of frame, ending on the riverbank town with the bridge gone"
+    },
+    {
+      "id": "it-01-210",
+      "reason": "2 attempts; both generations drift the fountain (anchor hero subject) out of frame, ending on the Orvieto cathedral facade with only a sliver of fountain at the left edge"
+    },
+    {
+      "id": "it-01-034",
+      "reason": "HOLD after 2 attempts: both generations drifted the camera right until the Miramare castle left the frame edge; subject not fully framed end to end."
+    },
+    {
+      "id": "it-01-050",
+      "reason": "HOLD after 2 attempts: both generations panned right/left past the tall column until it fully exited the frame."
+    },
+    {
+      "id": "it-01-075",
+      "reason": "HOLD after 2 attempts: both generations panned right until the anchor Roman ruins fully left the frame."
+    },
+    {
+      "id": "it-01-108",
+      "reason": "HOLD after 2 attempts: both generations panned right past the anchor cove/bridge view until it fully left the frame."
+    },
+    {
+      "id": "it-01-156",
+      "reason": "HOLD after 2 attempts: both generations panned right past the anchor cliff-top church until it fully left the frame."
+    },
+    {
+      "id": "it-01-223",
+      "reason": "HOLD after 2 attempts: both generations panned/rotated away from the terrace until the busts and terrace fully left the frame."
+    },
+    {
+      "id": "it-01-336",
+      "reason": "HOLD after 2 attempts: both generations panned right past the anchor Roman bridge until it essentially exited the frame's left edge."
+    }
+  ],
+  "day_only_skip": [
+    {
+      "id": "it-01-042",
+      "reason": "scenario 06:51 (pre-sunrise) master is a night/twilight scene; no genuine it-01-042-daylight-4x5.png exists on the repo (404)"
+    }
+  ],
+  "already_existing": [],
+  "gaps": [
+    {
+      "id": "it-01-202",
+      "reason": "media.generate_video returned an internal privsep transport error (worker disconnected) and the runtime instructed not to repeat this request; clip was never generated or QC'd"
+    }
+  ],
+  "counts": {
+    "shipped": 87,
+    "hold": 47,
+    "day_only_skip": 1,
+    "already": 0,
+    "gaps": 1
+  }
+}
