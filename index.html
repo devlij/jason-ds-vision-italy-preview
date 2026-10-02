@@ -39,14 +39,37 @@
       margin: 0 auto;
       padding: 1.25rem 1.25rem;
     }
+    #christmas {
+      background: linear-gradient(180deg, #14231a, #1e1811);
+      border: 1px solid #2f4a35;
+      border-radius: 12px;
+    }
+    #christmas[hidden] { display: none; }
     #christmas h2 { font-size: 1.35rem; margin: 0 0 0.35rem; }
-    #christmas .xmas-sub { margin: 0 0 0.9rem; color: var(--muted); font-size: 0.95rem; max-width: 70ch; }
+    #christmas .xmas-sub { margin: 0 0 0.9rem; color: #b9c8b2; font-size: 0.95rem; max-width: 70ch; }
+    .xmas-medallion-wrap { display: flex; justify-content: center; padding: 10px 0 6px; }
+    .xmas-medallion { display: inline-flex; align-items: center; gap: 8px;
+                      background: none; border: 1px solid #3a4a3f; border-radius: 999px;
+                      cursor: pointer; padding: 5px 14px 5px 6px; color: inherit; font: inherit; }
+    .xmas-medallion .medal { width: 26px; height: 26px; border-radius: 50%;
+                      background: radial-gradient(circle at 35% 30%, #2f5d3a, #14231a 70%);
+                      border: 1px solid #c9a227;
+                      display: inline-flex; align-items: center; justify-content: center; font-size: 14px;
+                      transition: transform .15s ease; }
+    .xmas-medallion:hover .medal, .xmas-medallion:focus-visible .medal { transform: scale(1.1); }
+    .xmas-medallion .medal-label { font-size: 12px; letter-spacing: .08em;
+                      color: #c9a227; font-weight: 600; }
+    .xmas-medallion[aria-expanded="true"] .medal-label::after { content: " — tap to hide"; text-transform: none;
+                      letter-spacing: 0; font-weight: 400; color: #b9c8b2; }
+    .xmas-close { display: block; margin: 16px auto 0; background: none; border: 1px solid #4a3f2c;
+                  color: #b9c8b2; border-radius: 8px; padding: 8px 18px; cursor: pointer; font-size: 14px; font: inherit; }
+    .xmas-close:hover { border-color: #c9a227; color: #f2ede3; }
     .xmas-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
-    .xmas-card { display: block; border-radius: 10px; overflow: hidden; border: 1px solid var(--line); text-decoration: none; background: var(--card); }
-    .xmas-card:hover { border-color: var(--accent); }
+    .xmas-card { display: block; border-radius: 10px; overflow: hidden; border: 1px solid #3d523f; text-decoration: none; background: #101a12; transition: transform .15s ease; }
+    .xmas-card:hover { transform: translateY(-2px); }
     .xmas-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
-    .xmas-card .xmas-cap { display: block; padding: 8px 10px; color: var(--text); font-size: 13px; font-weight: 600; }
-    .xmas-card .xmas-cap small { display: block; font-weight: 400; color: var(--muted); font-size: 11px; margin-top: 2px; }
+    .xmas-card .xmas-cap { display: block; padding: 8px 10px; color: #f2ede3; font-size: 13px; font-weight: 600; }
+    .xmas-card .xmas-cap small { display: block; font-weight: 400; color: #9db198; font-size: 11px; margin-top: 2px; }
     .pointer {
       font-size: 0.95rem;
       color: var(--muted);
@@ -2565,14 +2588,16 @@ video.motion-clip::-webkit-media-controls{display:none!important}
     <p><a href="#license">Read the full license</a></p>
   </section>
 
-  <section id="christmas" aria-label="Christmas markets">
+  <div class="xmas-medallion-wrap"><button type="button" class="xmas-medallion" data-xmas-toggle aria-expanded="false" aria-controls="christmas" aria-label="View the Christmas collection"><span class="medal" aria-hidden="true">🎄</span><span class="medal-label">Christmas</span></button></div>
+  <section id="christmas" aria-label="Christmas markets" hidden>
     <h2>🎄 Christmas Markets</h2>
-    <p class="xmas-sub">Our special holiday collection &mdash; festive market evenings, growing through the season.</p>
+    <p class="xmas-sub">Our special holiday collection &mdash; festive market evenings, growing through the season. Tap a card to jump to its full gallery entry.</p>
     <div class="xmas-row">
       <a class="xmas-card" href="#IT-01-376"><img src="assets/it-01-376-16x9.png" alt="AI-generated artistic interpretation of the Bolzano Christmas market in Piazza Walther at night" loading="lazy" /><span class="xmas-cap">Bolzano Mercatino di Natale<small>Christmas Markets collection</small></span></a>
       <a class="xmas-card" href="#IT-01-377"><img src="assets/it-01-377-16x9.png" alt="AI-generated artistic interpretation of the Merano Christmas market at night" loading="lazy" /><span class="xmas-cap">Merano Christmas market<small>Christmas Markets collection</small></span></a>
       <a class="xmas-card" href="#IT-01-378"><img src="assets/it-01-378-16x9.png" alt="AI-generated artistic interpretation of the Trento Christmas market in Piazza Fiera at night" loading="lazy" /><span class="xmas-cap">Trento Christmas market<small>Christmas Markets collection</small></span></a>
     </div>
+    <button type="button" class="xmas-close" data-xmas-close>✕ Close the holiday collection</button>
   </section>
 
   <main>
@@ -8384,6 +8409,25 @@ el.innerHTML = `
     }
     if (navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(url).then(done, fb); }
     else { fb(); }
+  });
+})();
+</script>
+<script>
+/* Christmas charm: the holiday collection stays hidden until the charm is tapped. */
+(function(){
+  var toggle = document.querySelector('[data-xmas-toggle]');
+  var section = document.getElementById('christmas');
+  if (!toggle || !section) return;
+  function setOpen(open){
+    section.hidden = !open;
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open) section.scrollIntoView({behavior: 'smooth', block: 'start'});
+  }
+  toggle.addEventListener('click', function(){ setOpen(section.hidden); });
+  var closer = section.querySelector('[data-xmas-close]');
+  if (closer) closer.addEventListener('click', function(){
+    setOpen(false);
+    toggle.scrollIntoView({behavior: 'smooth', block: 'center'});
   });
 })();
 </script>
