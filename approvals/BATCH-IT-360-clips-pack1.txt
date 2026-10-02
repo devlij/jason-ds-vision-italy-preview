@@ -1,0 +1,76 @@
+BATCH IT 360 motion clips — pack1
+Work order: wo-ia-360-clips-2026-09-30
+Date: 2026-10-01
+Country: Italy
+Repo: devlij/jason-ds-vision-italy-preview
+Base tip: be64cf296feb50c4d6d6afb7461cb1a57be059ce
+Floor: Jason 2026-09-30 — one 4:5 clip per daylight scene, duration ≥8s (target ~10s), genuine 180°+ sweep that holds the subject framed end-to-end. Drift-only clips do not qualify. Anchor on the finished daylight master with the label bar cropped out of the motion frames. Night masters must not be used.
+
+Scope: IT-01-004, IT-01-005, IT-01-006, IT-01-007, IT-01-008.
+These five already have finished daylight masters on main. They are not night-without-daylight gaps and they are not FLAG-open. Ireland was not touched.
+
+RESULT
+Clips shipped: 0
+Scenes skipped: 5 (weather gate)
+Player: not added. The 360 control renders only where a clip file exists. No pack1 mp4 exists, so index.html was not edited and no button was rendered.
+approval_status: unchanged on every scene. No Cosmo QC was recorded or invented.
+
+WHY EVERY SCENE SKIPPED
+Germany's qualifying clips (for example assets/de-be-010-motion-10s-4x5.mp4) are 864×1080, 24 fps, ~10.0s, 240-frame H.264 orbits: later frames show sides of the subject that are not in the still. This repo has no bake/360 image-to-video tool, and this environment has no video-generation model or API. ffmpeg pan, zoom, or perspective on a single still is drift-only and does not meet the floor. No such clip was written.
+
+Source check (all five): finished daylight master is 1920×1270 (16:9) and 864×1270 (4:5). The photograph is the top 1080px. The bottom 190px is the #0e0e12 label bar (sampled mean near 15,14,19). A qualifying clip would have been cropped to 864×1080 from assets/it-01-XXX-daylight-4x5.png before any motion frames. That crop was not encoded, because no sweep could be produced. Night files assets/it-01-XXX-16x9.png and assets/it-01-XXX-4x5.png were not read as sources and were not modified.
+
+========================================================================
+IT-01-004  Pantheon, Rome
+SKIP — weather gate. No qualifying 180°+ sweep can be produced from the single daylight still with the tooling in this repo. A drift clip was not substituted.
+approval_status: left as published (Approved in manifests/IT-01-004.json). Not flipped.
+Daylight source (preferred 4:5 plate, label bar still attached): assets/it-01-004-daylight-4x5.png
+  864×1270  SHA-256 c78fefa978b123ec360ef5411406b0453790f0da1769c74ab42fc1f07c4a0b4b
+Daylight 16:9 (not used as the 4:5 motion source): assets/it-01-004-daylight-16x9.png
+  1920×1270  SHA-256 1e222bb1700c822f98f57d1b3a28b870616de739a12fc72eeb1731aead99d152
+Night masters: not used.
+Clip path: none
+
+========================================================================
+IT-01-005  Florence Cathedral (Duomo), Florence
+SKIP — weather gate. Same blocker as IT-01-004. Subject is held in one locked daylight view (dome, nave, campanile). Unseen sides cannot be swept without an image-to-video orbit.
+approval_status: left as published (Approved in manifests/IT-01-005.json). Not flipped.
+Daylight source: assets/it-01-005-daylight-4x5.png
+  864×1270  SHA-256 3a9e66b0452b9600ff9be93f48e532ae408ef17144a7ada3ea1e6ca3de670ca3
+Daylight 16:9: assets/it-01-005-daylight-16x9.png
+  1920×1270  SHA-256 e3e52c6fba25eac105c0d57de6f2e50f1d7c7bcca3886ecbe31d3a544e082842
+Night masters: not used.
+Clip path: none
+
+========================================================================
+IT-01-006  Ponte Vecchio, Florence
+SKIP — weather gate. Same blocker. The bridge spans a locked riverbank view; a pan across that still would be drift and was not encoded.
+approval_status: left as published (Approved in manifests/IT-01-006.json). Not flipped.
+Daylight source: assets/it-01-006-daylight-4x5.png
+  864×1270  SHA-256 358b0b65ea2fa6307929a16fa494ff901be07d04354572a0cfc774ea1a9aaebe
+Daylight 16:9: assets/it-01-006-daylight-16x9.png
+  1920×1270  SHA-256 bfc3c6e905970518d04164cae82a723e848fbb9952617b5a6b38189c106ba105
+Night masters: not used.
+Clip path: none
+
+========================================================================
+IT-01-007  Grand Canal from Rialto Bridge, Venice
+SKIP — weather gate. Same blocker. The plate is one downstream vista from the bridge. Turning the camera 180° while keeping that vista framed cannot be synthesized from the still, and a drift along the canal would not qualify.
+approval_status: left as published (Approved in manifests/IT-01-007.json). Not flipped.
+Daylight source: assets/it-01-007-daylight-4x5.png
+  864×1270  SHA-256 b986e5ebc3c6c5833e2353965436dc2354ad3d0f53d78a056a1ea2654908c3ac
+Daylight 16:9: assets/it-01-007-daylight-16x9.png
+  1920×1270  SHA-256 84b2dfa3dac5efaf315be6c95465940055ab2773cd9e286b40b647411909aedf
+Night masters: not used.
+Clip path: none
+
+========================================================================
+IT-01-008  St. Mark's Basilica, Venice
+SKIP — weather gate. Same blocker. Basilica and campanile are held in one frontal daylight view. No orbit was generated.
+approval_status: left as published (Approved in manifests/IT-01-008.json). Not flipped.
+Daylight source: assets/it-01-008-daylight-4x5.png
+  864×1270  SHA-256 31a77733d40e70037d6a9a8d6a9b15d7741fc63cc033f192a75ea70c8f374d66
+Daylight 16:9: assets/it-01-008-daylight-16x9.png
+  1920×1270  SHA-256 9fa4b7b93bb14d6a44f4203a79fa9649f5b54d680ef60e00365a7470ef04acf2
+Night masters: not used.
+Clip path: none
