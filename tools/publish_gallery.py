@@ -23,8 +23,9 @@ reads getAttribute("data-src-916"). This publisher removes the old
 HEAD-probe mounter and re-applies the A7 head (canonical OG/Twitter
 image, ImageGallery JSON-LD, title without "(preview)") so a rebuild
 cannot drop them. Scene catalogues, word-of-day entries, and approval
-fields are copied through unchanged. The image sitemap still lists
-16:9 and 4:5 only.
+fields are copied through unchanged except that asset URLs are
+rewritten to the assets CDN. Disk checks still use assets/ in this
+repo. The image sitemap still lists 16:9 and 4:5 only.
 
 Usage:
   python3 tools/publish_gallery.py          # write index.html
@@ -42,6 +43,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 INDEX = ROOT / "index.html"
+# Public asset host. Files stay under assets/ both on disk and on the CDN.
+ASSET_CDN = "https://devlij.github.io/jason-ds-vision-italy-assets"
+_ASSET_PREFIXES = (
+    ASSET_CDN + "/",
+    "https://italy.jdvision.org/",
+    "http://italy.jdvision.org/",
+)
 MOODS = Path(__file__).resolve().parent / "phase1_mood.json"
 MOOD_NAMES = ("coastal", "mountain", "urban", "historic")
 IMAGE_FIELDS = (
@@ -364,6 +372,49 @@ def bare(path: str) -> str:
     return path.split("?", 1)[0]
 
 
+def local_asset(path: str) -> str:
+    """On-disk assets/ path for a relative or absolute asset URL."""
+    if not path:
+        return ""
+    bare_path = path.split("?", 1)[0]
+    for prefix in _ASSET_PREFIXES:
+        if bare_path.startswith(prefix):
+            bare_path = bare_path[len(prefix):]
+            break
+    while bare_path.startswith("../"):
+        bare_path = bare_path[3:]
+    if bare_path.startswith("./"):
+        bare_path = bare_path[2:]
+    return bare_path.lstrip("/")
+
+
+def public_asset(path: str) -> str:
+    """Absolute CDN URL. Paths outside assets/ are returned unchanged."""
+    if not path:
+        return ""
+    query = ""
+    raw = path
+    if "?" in raw:
+        raw, query = raw.split("?", 1)
+        query = "?" + query
+    rel = local_asset(raw)
+    if not rel.startswith("assets/"):
+        return path
+    return f"{ASSET_CDN}/{rel}{query}"
+
+
+def absolutize_html_assets(html: str) -> str:
+    """Rewrite relative and gallery-host asset URLs to the CDN. Idempotent."""
+    cdn_assets = ASSET_CDN + "/assets/"
+    html = html.replace("https://italy.jdvision.org/assets/", cdn_assets)
+    html = html.replace("http://italy.jdvision.org/assets/", cdn_assets)
+    html = html.replace('"../assets/', '"' + cdn_assets)
+    html = html.replace("'../assets/", "'" + cdn_assets)
+    html = html.replace('"assets/', '"' + cdn_assets)
+    html = html.replace("'assets/", "'" + cdn_assets)
+    return html
+
+
 def parse_scenes(html: str) -> list[dict]:
     start = html.find("const SCENES")
     if start < 0:
@@ -425,9 +476,9 @@ def missing_masters(scenes: list[dict]) -> dict[str, int]:
             path = scene.get(key) or ""
             if not path:
                 continue
-            rel = bare(path)
-            if not (ROOT / rel).is_file():
-                missing[rel] = 1
+            disk = local_asset(path)
+            if not (ROOT / disk).is_file():
+                missing[bare(path)] = 1
     return missing
 
 
@@ -436,8 +487,8 @@ def build_meta(scenes: list[dict], moods: dict, missing: dict[str, int]) -> dict
     for scene in scenes:
         eid = scene["entry_id"]
         row = moods.get(eid) or {"daynight": "", "moods": []}
-        thumb = scene["file_16x9"]
-        if not thumb or bare(thumb) in missing:
+        thumb = public_asset(scene["file_16x9"])
+        if not scene["file_16x9"] or bare(thumb) in missing or bare(scene["file_16x9"]) in missing:
             thumb = ""
         meta[eid] = [
             scene["region"],
@@ -450,7 +501,7 @@ def build_meta(scenes: list[dict], moods: dict, missing: dict[str, int]) -> dict
 
 
 def clip_exists(rel: str) -> bool:
-    path = ROOT / rel
+    path = ROOT / local_asset(rel)
     try:
         return path.is_file() and path.stat().st_size > 0
     except OSError:
@@ -470,28 +521,28 @@ def build_motion(scenes: list[dict]) -> dict[str, str]:
             continue
         rel = motion_rel(eid)
         if clip_exists(rel):
-            found[eid] = rel
+            found[eid] = public_asset(rel)
     return found
 
 
 def derive_916(path: str) -> str:
-    rel = bare(path)
+    rel = local_asset(path)
     if rel.endswith("-16x9.png"):
-        return rel[: -len("-16x9.png")] + "-9x16.png"
+        return public_asset(rel[: -len("-16x9.png")] + "-9x16.png")
     return ""
 
 
 def day_916_rel(scene: dict) -> str:
-    explicit = bare(scene.get("file_9x16_day") or "")
+    explicit = scene.get("file_9x16_day") or ""
     if explicit:
-        return explicit
+        return public_asset(explicit)
     day = scene.get("file_16x9_day") or ""
     derived = derive_916(day) if day else ""
     if derived:
         return derived
-    night = bare(scene.get("file_16x9") or "")
+    night = local_asset(scene.get("file_16x9") or "")
     if night.endswith("-16x9.png"):
-        return night[: -len("-16x9.png")] + "-daylight-9x16.png"
+        return public_asset(night[: -len("-16x9.png")] + "-daylight-9x16.png")
     return ""
 
 
@@ -564,11 +615,11 @@ def build_valid_916(scenes: list[dict]) -> dict[str, list[str]]:
     """Scenes whose 9:16 master exists and opens at exactly 1080x1920."""
     found: dict[str, list[str]] = {}
     for scene in scenes:
-        rel = bare(scene.get("file_9x16") or "") or derive_916(scene.get("file_16x9") or "")
-        if not rel or not png_opens_at(ROOT / rel, TRUE_916):
+        rel = public_asset(scene.get("file_9x16") or "") or derive_916(scene.get("file_16x9") or "")
+        if not rel or not png_opens_at(ROOT / local_asset(rel), TRUE_916):
             continue
         day_rel = day_916_rel(scene)
-        day = day_rel if day_rel and png_opens_at(ROOT / day_rel, TRUE_916) else ""
+        day = day_rel if day_rel and png_opens_at(ROOT / local_asset(day_rel), TRUE_916) else ""
         found[scene["entry_id"]] = [rel, day]
     return found
 
@@ -616,8 +667,9 @@ function relatedFor(id){{
 
 
 CANONICAL = "https://italy.jdvision.org/"
-# First published scene (IT-01-001). Confirmed on disk and on the live host.
-OG_IMAGE = CANONICAL + "assets/it-01-001-16x9.png"
+# First published scene (IT-01-001). The page stays on the gallery host;
+# the image bytes are served from the assets CDN.
+OG_IMAGE = public_asset("assets/it-01-001-16x9.png")
 
 
 def _between(html: str, start: str, end: str) -> str:
@@ -967,6 +1019,7 @@ def inject_motion(html: str) -> str:
 
 def publish(html: str, moods: dict | None = None) -> str:
     moods = moods if moods is not None else load_moods()
+    html = absolutize_html_assets(html)
     scenes_blob = _between(html, "const SCENES = [", "\n    ];")
     wotd_blob = _between(html, 'id="wotd-data">', "</script>")
     base = strip_phase1(html)
@@ -1071,7 +1124,7 @@ def prove(html: str) -> None:
         "masterOk",
         "PHASE1-ITALY-DEEP",
         "How our images are made",
-        "https://italy.jdvision.org/assets/it-01-001-16x9.png",
+        "https://devlij.github.io/jason-ds-vision-italy-assets/assets/it-01-001-16x9.png",
         '"@type": "ImageGallery"',
         '"@type": "Organization"',
         'name="twitter:image"',
@@ -1115,12 +1168,12 @@ def prove(html: str) -> None:
         if eid in motion_map:
             raise SystemExit(f"{eid} button survived the exclusion")
     for eid, rel in motion_map.items():
-        if eid in NO_MOTION or rel != motion_rel(eid) or not clip_exists(rel):
+        if eid in NO_MOTION or rel != public_asset(motion_rel(eid)) or not clip_exists(rel):
             raise SystemExit(f"bad 360 wiring {eid} {rel}")
     for eid, pair in valid_map.items():
-        if len(pair) != 2 or not png_opens_at(ROOT / pair[0], TRUE_916):
+        if len(pair) != 2 or not png_opens_at(ROOT / local_asset(pair[0]), TRUE_916):
             raise SystemExit(f"bad 9:16 wiring {eid} {pair}")
-        if pair[1] and not png_opens_at(ROOT / pair[1], TRUE_916):
+        if pair[1] and not png_opens_at(ROOT / local_asset(pair[1]), TRUE_916):
             raise SystemExit(f"bad daylight 9:16 wiring {eid} {pair}")
     sample_invalid = ROOT / "assets/it-01-001-9x16.png"
     if sample_invalid.is_file() and png_ihdr(sample_invalid) != TRUE_916:
@@ -1129,8 +1182,9 @@ def prove(html: str) -> None:
     ga = set(re.findall(r"G-[A-Z0-9]+", second))
     if ga != {"G-PDJ4WSS725"}:
         raise SystemExit(f"GA4 ids {ga}")
-    if "https://devlij.github.io/" in re.search(r'property="og:image"[^>]*>', second).group(0):
-        raise SystemExit("og:image is not the canonical host")
+    og = re.search(r'property="og:image"[^>]*>', second)
+    if og is None or OG_IMAGE not in og.group(0):
+        raise SystemExit("og:image is not the assets CDN")
     print("prove ok")
     print(f"scenes {len(scenes)}")
     print(f"missing masters in live catalogue {len(missing)}")
