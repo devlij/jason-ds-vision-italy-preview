@@ -4,7 +4,7 @@
   "approval_status": "Candidate",
   "five_gate_qc": "Not run. Cosmo-only. This packet is evidence for review, not an approval and not a QC pass.",
   "category": "christmas",
-  "scenario_label": "13 December 2026 · 19:40 Europe/Rome",
+  "scenario_label": "Christmas Markets collection",
   "depiction_label": "seasonal artistic interpretation",
   "depiction_statement": "Seasonal artistic interpretation. The December-evening Christmas-market conditions in the picture are not the Open-Meteo retrieval and are not a forecast for the scenario date.",
   "open_meteo": {
@@ -90,7 +90,7 @@
       "path": "assets/it-01-378-16x9.png",
       "width": 1920,
       "height": 1270,
-      "sha256": "402c42b77d316f9e12ee19795c31d2d16e61e2c8a40fa71f154a1da51be69c0f",
+      "sha256": "615c88b9a79218f67708ec136b73549f28dc7c975b4bcf3c3266c0767939e460",
       "art50_comment": "EU AI Act Art. 50 transparency note: this image is AI-generated content. Machine-readable disclosure embedded 2026-10-01.",
       "art50_keys": [
         "Title",
@@ -104,7 +104,7 @@
       "path": "assets/it-01-378-4x5.png",
       "width": 864,
       "height": 1270,
-      "sha256": "c55f77f5f3b466fdf3c886dbc1236462fb887a45d5092e987addf4108f185d3e",
+      "sha256": "dd69ceea96ad0b7c2422dc37a33d8884795448c79bee478b4fa66537ad2b77e7",
       "art50_comment": "EU AI Act Art. 50 transparency note: this image is AI-generated content. Machine-readable disclosure embedded 2026-10-01.",
       "art50_keys": [
         "Title",
@@ -118,7 +118,7 @@
       "path": "assets/it-01-378-9x16.png",
       "width": 1080,
       "height": 1920,
-      "sha256": "81eb4c5f00ac39fd018000c5628b44c0821da5cb993efb834830ec8b21a7b62c",
+      "sha256": "6b080a109ee0fc9d0f6306bebbbcc430292c269528349358bab1122d7201972e",
       "art50_comment": "EU AI Act Art. 50 transparency note: this image is AI-generated content. Machine-readable disclosure embedded 2026-10-01.",
       "art50_keys": [
         "Title",
