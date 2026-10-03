@@ -38,7 +38,9 @@ only when the master file exists on disk.
 Canonical host
 --------------
 Taken from the existing robots.txt Sitemap line, and checked against
-CNAME and <link rel="canonical">. Image URLs are absolute on that host.
+CNAME and <link rel="canonical">. Page URLs stay on that host. Image
+URLs are absolute on the assets CDN
+(https://devlij.github.io/jason-ds-vision-italy-assets/assets/...).
 """
 
 from __future__ import annotations
@@ -54,6 +56,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 INDEX = ROOT / "index.html"
+# Keep in step with tools/publish_gallery.py ASSET_CDN.
+ASSET_CDN = "https://devlij.github.io/jason-ds-vision-italy-assets"
+_ASSET_PREFIXES = (
+    ASSET_CDN + "/",
+    "https://italy.jdvision.org/",
+    "http://italy.jdvision.org/",
+)
 ROBOTS = ROOT / "robots.txt"
 CNAME = ROOT / "CNAME"
 MANIFESTS = ROOT / "manifests"
@@ -72,6 +81,37 @@ def js_string(raw: str) -> str:
 
 def bare(path: str) -> str:
     return path.split("?", 1)[0]
+
+
+def local_asset(path: str) -> str:
+    """On-disk assets/ path for a relative or absolute asset URL."""
+    if not path:
+        return ""
+    bare_path = path.split("?", 1)[0]
+    for prefix in _ASSET_PREFIXES:
+        if bare_path.startswith(prefix):
+            bare_path = bare_path[len(prefix):]
+            break
+    while bare_path.startswith("../"):
+        bare_path = bare_path[3:]
+    if bare_path.startswith("./"):
+        bare_path = bare_path[2:]
+    return bare_path.lstrip("/")
+
+
+def public_asset(path: str) -> str:
+    """Absolute CDN URL. Paths outside assets/ are returned unchanged."""
+    if not path:
+        return ""
+    query = ""
+    raw = path
+    if "?" in raw:
+        raw, query = raw.split("?", 1)
+        query = "?" + query
+    rel = local_asset(raw)
+    if not rel.startswith("assets/"):
+        return path
+    return f"{ASSET_CDN}/{rel}{query}"
 
 
 def parse_scenes(html: str) -> list[dict]:
@@ -218,11 +258,13 @@ def page_loc(canonical: str, entry_id: str) -> str:
     return f"{base}#{entry_id}"
 
 
-def image_loc(origin: str, path: str) -> str:
-    return origin.rstrip("/") + "/" + path.lstrip("/")
+def image_loc(path: str) -> str:
+    return public_asset(path)
 
 
 def build_entries(scenes: list[dict], manifests: dict[str, str | None], origin: str, canonical: str) -> tuple[list[dict], list[str]]:
+    # Page locs use `canonical`. Image locs use the assets CDN, not `origin`.
+    del origin
     entries = []
     problems: list[str] = []
     for scene in scenes:
@@ -240,7 +282,7 @@ def build_entries(scenes: list[dict], manifests: dict[str, str | None], origin: 
             if not path:
                 problems.append(f"{eid} missing {fmt} path")
                 continue
-            rel = bare(path)
+            rel = local_asset(path)
             if "9x16" in rel or "daylight" in rel:
                 problems.append(f"{eid} refused non-master path {path}")
                 continue
@@ -250,7 +292,7 @@ def build_entries(scenes: list[dict], manifests: dict[str, str | None], origin: 
             images.append(
                 {
                     "format": fmt,
-                    "loc": image_loc(origin, path),
+                    "loc": image_loc(path),
                     "caption": scene["description"],
                     "title": scene["caption"],
                     "geo": f"{scene['city']}, {scene['country']}",
@@ -335,8 +377,8 @@ def validate_xml(path: Path, origin: str, canonical: str) -> dict[str, int]:
             caption = image.find(f"{{{IMAGE_NS}}}caption")
             title = image.find(f"{{{IMAGE_NS}}}title")
             geo = image.find(f"{{{IMAGE_NS}}}geo_location")
-            if iloc is None or not (iloc.text or "").startswith(origin + "/assets/"):
-                raise SystemExit(f"image loc is not an absolute master URL: {iloc.text if iloc is not None else None}")
+            if iloc is None or not (iloc.text or "").startswith(ASSET_CDN + "/assets/"):
+                raise SystemExit(f"image loc is not an absolute CDN master URL: {iloc.text if iloc is not None else None}")
             text = iloc.text or ""
             if "9x16" in text or "daylight" in text:
                 raise SystemExit(f"non-master image loc: {text}")
