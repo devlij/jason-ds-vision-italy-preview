@@ -77,6 +77,11 @@ CSS = """<!-- PHASE1-ITALY-CSS-START -->
 .motion-tab:hover{border-color:var(--accent)}
 .motion-tab.is-active{border-color:var(--accent);color:var(--accent)}
 .day-tab + .motion-tab{margin-left:0.35rem}
+.night-tab{display:inline-block;background:#243049;color:var(--text);border-radius:8px;padding:0.4rem 0.7rem;font-size:0.85rem;border:1px solid var(--line);cursor:pointer;font:inherit}
+.night-tab:hover{border-color:var(--accent)}
+.night-tab.is-active{background:#1b2744;border-color:#9eb6e0;color:#e7eefc;font-weight:700}
+.night-tab + .day-tab,.night-tab + .motion-tab{margin-left:0.35rem}
+.fmt-tab:disabled,.fmt-tab.is-disabled{opacity:0.4;cursor:default}
 video.motion-clip{width:100%;height:100%;display:block;object-fit:cover;background:#000}
 video.motion-clip::-webkit-media-controls{display:none!important}
 @media(max-width:760px){.related-row{grid-template-columns:repeat(2,1fr)}}
@@ -144,6 +149,11 @@ F_LINES = """      const f16 = masterOk(scene.file_16x9) ? escapeHtml(scene.file
       const f916 = valid916 && valid916[0] ? escapeHtml(valid916[0]) : "";
       const f916day = valid916 && valid916[1] ? escapeHtml(valid916[1]) : "";
       const motion = (typeof ITALY_MOTION !== "undefined" && ITALY_MOTION[scene.entry_id]) ? escapeHtml(ITALY_MOTION[scene.entry_id]) : "";
+      const nightRec = (typeof ITALY_NIGHT !== "undefined") ? ITALY_NIGHT[scene.entry_id] : null;
+      const night16 = (nightRec && nightRec[0]) || "";
+      const night45 = (nightRec && nightRec[1]) || "";
+      const night916 = (nightRec && nightRec[2]) || "";
+      const hasNight = !!(night16 || night45 || night916);
 """
 
 PREVIEW_BASE = """        <div class="preview">
@@ -172,7 +182,7 @@ LEGACY_PREVIEW = """        <div class="preview">
 
 PREVIEW = """        <div class="preview">
             ${f16 ? `<a class="thumb" href="${f16}" target="_blank" rel="noopener">
-            <img src="${f16}" data-src-16="${f16}" data-src-45="${f45}"${f916 ? ` data-src-916="${f916}"` : ""}${f916day ? ` data-src-916-day="${f916day}"` : ""}${scene.file_16x9_day && masterOk(scene.file_16x9_day) ? ` data-src-16-day="${escapeHtml(scene.file_16x9_day)}" data-src-45-day="${escapeHtml(scene.file_4x5_day)}"` : ""} alt="${alt}" loading="lazy" />
+            <img src="${f16}" data-src-16="${f16}" data-src-45="${f45}"${f916 ? ` data-src-916="${f916}"` : ""}${f916day ? ` data-src-916-day="${f916day}"` : ""}${night16 ? ` data-src-16-night="${night16}"` : ""}${night45 ? ` data-src-45-night="${night45}"` : ""}${night916 ? ` data-src-916-night="${night916}"` : ""}${scene.file_16x9_day && masterOk(scene.file_16x9_day) ? ` data-src-16-day="${escapeHtml(scene.file_16x9_day)}" data-src-45-day="${escapeHtml(scene.file_4x5_day)}"` : ""} alt="${alt}" loading="lazy" />
           </a>` : ""}
         </div>
         <div class="fmt-tabs" role="group" aria-label="Image size">
@@ -180,7 +190,7 @@ PREVIEW = """        <div class="preview">
             ${f45 ? `<button type="button" class="fmt-tab" data-format="4x5">4:5</button>` : ""}
             ${f916 ? `<button type="button" class="fmt-tab" data-format="9x16">9:16</button>` : ""}
           </div>
-        ${(scene.file_16x9_day && masterOk(scene.file_16x9_day)) || motion ? `<div class="day-row">${scene.file_16x9_day && masterOk(scene.file_16x9_day) ? `<button type="button" class="day-tab" data-daynight="night" aria-pressed="false" title="Toggle the daylight variant">\\u2600 Daylight</button>` : ""}${motion ? `<button type="button" class="motion-tab" data-motion="${motion}" title="Play the 360\\u00B0 motion clip">\\u25B6 360\\u00B0</button>` : ""}</div>` : ""}
+        ${(hasNight || (scene.file_16x9_day && masterOk(scene.file_16x9_day)) || motion) ? `<div class="day-row">${hasNight ? `<button type="button" class="night-tab" aria-pressed="false" title="Show the night image">\\uD83C\\uDF19 Night</button>` : ""}${(scene.file_16x9_day && masterOk(scene.file_16x9_day)) ? `<button type="button" class="day-tab" data-daynight="night" aria-pressed="false" title="Toggle the daylight variant">\\u2600 Daylight</button>` : ""}${motion ? `<button type="button" class="motion-tab" data-motion="${motion}" title="Play the 360\\u00B0 motion clip">\\u25B6 360\\u00B0</button>` : ""}</div>` : ""}
 """
 
 DOWNLOADS_BASE = """            <a class="download" data-dl="16x9" href="${f16}" download="${basename(scene.file_16x9)}">Download 16:9</a>
@@ -191,9 +201,9 @@ LEGACY_DOWNLOADS = """            ${f16 ? `<a class="download" data-dl="16x9" hr
             ${f45 ? `<a class="download" data-dl="4x5" href="${f45}" download="${basename(scene.file_4x5)}">Download 4:5</a>` : ""}
 """
 
-DOWNLOADS = """            ${f16 ? `<a class="download" data-dl="16x9" href="${f16}" download="${basename(scene.file_16x9)}">Download 16:9</a>` : ""}
-            ${f45 ? `<a class="download" data-dl="4x5" href="${f45}" download="${basename(scene.file_4x5)}">Download 4:5</a>` : ""}
-            ${f916 ? `<a class="download" data-dl="9x16" href="${f916}" download="${f916.split("/").pop()}">Download 9:16</a>` : ""}
+DOWNLOADS = """            ${f16 ? `<a class="download" data-dl="16x9"${night16 ? ` data-dl-night="${night16}"` : ""} href="${f16}" download="${basename(scene.file_16x9)}">Download 16:9</a>` : ""}
+            ${f45 ? `<a class="download" data-dl="4x5"${night45 ? ` data-dl-night="${night45}"` : ""} href="${f45}" download="${basename(scene.file_4x5)}">Download 4:5</a>` : ""}
+            ${f916 ? `<a class="download" data-dl="9x16"${night916 ? ` data-dl-night="${night916}"` : ""} href="${f916}" download="${f916.split("/").pop()}">Download 9:16</a>` : ""}
 """
 
 COPY_BTN = """            <button type="button" class="copy-link" data-scene="${id}" aria-label="Copy link to this scene">Copy link</button>
@@ -1035,6 +1045,8 @@ def publish(html: str, moods: dict | None = None) -> str:
     if unknown:
         print(f"warning: {len(unknown)} scenes have no mood row; filters will not match them", file=sys.stderr)
     out = inject_motion(apply_a7(insert_phase1(base, meta, missing, motion, valid916)))
+    from night_toggle import apply_gallery
+    out = apply_gallery(out)
     if _between(out, "const SCENES = [", "\n    ];") != scenes_blob:
         raise SystemExit("publisher changed the SCENES catalogue")
     if _between(out, 'id="wotd-data">', "</script>") != wotd_blob:
