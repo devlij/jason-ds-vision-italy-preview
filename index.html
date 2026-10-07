@@ -8990,6 +8990,22 @@ function relatedFor(id){
       return !(window.ITALY_MISSING && window.ITALY_MISSING[bare]);
     }
 
+    function nonDaytimePrimary(scene) {
+      /* Daylight shows the daytime plate of a non-daytime scene.
+         Primary mode is the scene copy (composition, alt text, description):
+         night, evening, and moonlight, plus twilight, blue hour, pre-dawn,
+         and dawn. A copy that clearly names morning, daylight, or sunrise
+         stays daytime, unless it is a pre-dawn or dawn scene (predawn /
+         pre-dawn, "at dawn", or a scenario stated as dawn). "pre-sunrise"
+         is not a sunrise label. The day/night filter tag is not this signal. */
+      var text = [scene.composition, scene.alt_text, scene.description].join(" ");
+      if (/\b(?:night|evening)\b|moonlight|moonlit/i.test(text)) return true;
+      if (!/\b(?:twilight|blue hour|predawn|pre-dawn|dawn)\b/i.test(text)) return false;
+      var daytime = /\b(?:morning|daylight|(?<!pre-)sunrise)\b/i.test(text);
+      if (!daytime) return true;
+      return /\b(?:predawn|pre-dawn)\b|\bat dawn\b|:\s*dawn\b/i.test(text);
+    }
+
     function card(scene) {
       const el = document.createElement("article");
       el.className = "card";
@@ -9013,6 +9029,7 @@ function relatedFor(id){
       const f916 = valid916 && valid916[0] ? escapeHtml(valid916[0]) : "";
       const f916day = valid916 && valid916[1] ? escapeHtml(valid916[1]) : "";
       const motion = (typeof ITALY_MOTION !== "undefined" && ITALY_MOTION[scene.entry_id]) ? escapeHtml(ITALY_MOTION[scene.entry_id]) : "";
+      const showDaylight = !!(scene.file_16x9_day && masterOk(scene.file_16x9_day) && nonDaytimePrimary(scene));
       /* PHASE1-ITALY-RELATED-START */
       const p1rids = (typeof relatedFor === "function") ? relatedFor(scene.entry_id) : [];
       const p1rel = p1rids.length
@@ -9045,7 +9062,7 @@ el.innerHTML = `
             ${f45 ? `<button type="button" class="fmt-tab" data-format="4x5">4:5</button>` : ""}
             ${f916 ? `<button type="button" class="fmt-tab" data-format="9x16">9:16</button>` : ""}
           </div>
-        ${(scene.file_16x9_day && masterOk(scene.file_16x9_day)) || motion ? `<div class="day-row">${scene.file_16x9_day && masterOk(scene.file_16x9_day) ? `<button type="button" class="day-tab" data-daynight="night" aria-pressed="false" title="Toggle the daylight variant">\u2600 Daylight</button>` : ""}${motion ? `<button type="button" class="motion-tab" data-motion="${motion}" title="Play the 360\u00B0 motion clip">\u25B6 360\u00B0</button>` : ""}</div>` : ""}
+        ${showDaylight || motion ? `<div class="day-row">${showDaylight ? `<button type="button" class="day-tab" data-daynight="night" aria-pressed="false" title="Toggle the daylight variant">\u2600 Daylight</button>` : ""}${motion ? `<button type="button" class="motion-tab" data-motion="${motion}" title="Play the 360\u00B0 motion clip">\u25B6 360\u00B0</button>` : ""}</div>` : ""}
         <div class="card-body">
           <div class="status-row"><div class="entry-id">${id}</div><span class="status${statusLabel === "Approved" ? "" : " status-candidate"}">${escapeHtml(statusLabel)}</span></div>
           <p class="meta">${meta}</p>
