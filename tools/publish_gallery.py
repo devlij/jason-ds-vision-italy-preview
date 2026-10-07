@@ -105,6 +105,15 @@ MASTER_FN = """    function masterOk(path) {
       return !(window.ITALY_MISSING && window.ITALY_MISSING[bare]);
     }
 
+    function nightOrEveningPrimary(scene) {
+      /* Primary mode lives in the scene copy. A daylight plate is a variant
+         of a night or evening master (moonlight included), named in
+         composition, alt text, or description. The day/night filter tag is a
+         separate catalogue field and is not this signal. */
+      var text = [scene.composition, scene.alt_text, scene.description].join(" ");
+      return /\\b(?:night|evening)\\b|moonlight|moonlit/i.test(text);
+    }
+
 """
 
 RELATED_JS = """      /* PHASE1-ITALY-RELATED-START */
@@ -144,6 +153,7 @@ F_LINES = """      const f16 = masterOk(scene.file_16x9) ? escapeHtml(scene.file
       const f916 = valid916 && valid916[0] ? escapeHtml(valid916[0]) : "";
       const f916day = valid916 && valid916[1] ? escapeHtml(valid916[1]) : "";
       const motion = (typeof ITALY_MOTION !== "undefined" && ITALY_MOTION[scene.entry_id]) ? escapeHtml(ITALY_MOTION[scene.entry_id]) : "";
+      const showDaylight = !!(scene.file_16x9_day && masterOk(scene.file_16x9_day) && nightOrEveningPrimary(scene));
 """
 
 PREVIEW_BASE = """        <div class="preview">
@@ -180,7 +190,7 @@ PREVIEW = """        <div class="preview">
             ${f45 ? `<button type="button" class="fmt-tab" data-format="4x5">4:5</button>` : ""}
             ${f916 ? `<button type="button" class="fmt-tab" data-format="9x16">9:16</button>` : ""}
           </div>
-        ${(scene.file_16x9_day && masterOk(scene.file_16x9_day)) || motion ? `<div class="day-row">${scene.file_16x9_day && masterOk(scene.file_16x9_day) ? `<button type="button" class="day-tab" data-daynight="night" aria-pressed="false" title="Toggle the daylight variant">\\u2600 Daylight</button>` : ""}${motion ? `<button type="button" class="motion-tab" data-motion="${motion}" title="Play the 360\\u00B0 motion clip">\\u25B6 360\\u00B0</button>` : ""}</div>` : ""}
+        ${showDaylight || motion ? `<div class="day-row">${showDaylight ? `<button type="button" class="day-tab" data-daynight="night" aria-pressed="false" title="Toggle the daylight variant">\\u2600 Daylight</button>` : ""}${motion ? `<button type="button" class="motion-tab" data-motion="${motion}" title="Play the 360\\u00B0 motion clip">\\u25B6 360\\u00B0</button>` : ""}</div>` : ""}
 """
 
 DOWNLOADS_BASE = """            <a class="download" data-dl="16x9" href="${f16}" download="${basename(scene.file_16x9)}">Download 16:9</a>
