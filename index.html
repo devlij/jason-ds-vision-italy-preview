@@ -9443,5 +9443,113 @@ el.innerHTML = `
   });
 })();
 </script>
+
+<script>
+// Postcard support - injected 2026-10-08
+const POSTCARD_SCENES = new Set(["IT-01-001", "IT-01-002", "IT-01-003", "IT-01-004", "IT-01-005", "IT-01-006", "IT-01-007", "IT-01-008", "IT-01-009", "IT-01-010", "IT-01-011", "IT-01-012", "IT-01-013", "IT-01-014", "IT-01-015", "IT-01-016", "IT-01-017", "IT-01-018", "IT-01-019", "IT-01-020", "IT-01-021", "IT-01-022", "IT-01-023", "IT-01-024", "IT-01-025", "IT-01-026", "IT-01-027", "IT-01-028", "IT-01-029", "IT-01-030", "IT-01-031", "IT-01-032", "IT-01-033", "IT-01-034", "IT-01-035", "IT-01-036", "IT-01-037", "IT-01-038", "IT-01-039", "IT-01-040", "IT-01-041", "IT-01-042", "IT-01-043", "IT-01-044", "IT-01-045", "IT-01-046", "IT-01-047", "IT-01-048", "IT-01-049", "IT-01-050", "IT-01-051", "IT-01-052", "IT-01-053", "IT-01-054", "IT-01-055", "IT-01-056", "IT-01-057", "IT-01-058", "IT-01-059", "IT-01-060", "IT-01-061", "IT-01-062", "IT-01-063", "IT-01-064", "IT-01-065", "IT-01-066", "IT-01-067", "IT-01-068", "IT-01-069", "IT-01-070", "IT-01-071", "IT-01-072", "IT-01-073", "IT-01-074", "IT-01-075", "IT-01-076", "IT-01-077", "IT-01-078", "IT-01-079", "IT-01-080", "IT-01-111", "IT-01-133", "IT-01-142", "IT-01-145", "IT-01-170", "IT-01-181", "IT-01-211", "IT-01-212", "IT-01-214", "IT-01-220", "IT-01-238", "IT-01-280", "IT-01-283", "IT-01-305", "IT-01-310", "IT-01-313", "IT-01-314", "IT-01-318", "IT-01-321", "IT-01-322", "IT-01-324", "IT-01-325", "IT-01-327", "IT-01-328", "IT-01-336", "IT-01-339", "IT-01-340", "IT-01-341", "IT-01-342", "IT-01-343", "IT-01-344", "IT-01-348", "IT-01-352", "IT-01-353", "IT-01-355", "IT-01-356", "IT-01-357", "IT-01-358", "IT-01-359", "IT-01-361", "IT-01-363", "IT-01-364", "IT-01-365", "IT-01-366", "IT-01-367", "IT-01-369", "IT-01-370", "IT-01-372", "IT-01-373"]);
+(function() {
+  function initPostcards() {
+    document.querySelectorAll('.card').forEach(card => {
+      if (card.querySelector('.pc-tab')) return; // already added
+      const entryId = card.id || (card.querySelector('.entry-id') && card.querySelector('.entry-id').textContent.trim());
+      if (!entryId || !POSTCARD_SCENES.has(entryId)) return;
+      
+      const idLower = entryId.toLowerCase();
+      const pc16 = 'assets/' + idLower + '-postcard-16x9.png';
+      const pc45 = 'assets/' + idLower + '-postcard-4x5.png';
+      const pc916 = 'assets/' + idLower + '-postcard-9x16.png';
+      
+      let dayRow = card.querySelector('.day-row');
+      if (!dayRow) {
+        const cardBody = card.querySelector('.card-body');
+        if (!cardBody) return;
+        dayRow = document.createElement('div');
+        dayRow.className = 'day-row';
+        cardBody.parentNode.insertBefore(dayRow, cardBody);
+      }
+      
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'pc-tab';
+      btn.setAttribute('aria-pressed', 'false');
+      btn.title = 'View the postcard version';
+      btn.textContent = '\uD83D\uDCE9 Postcard';
+      dayRow.appendChild(btn);
+      
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const isPc = btn.classList.contains('is-active');
+        btn.classList.toggle('is-active', !isPc);
+        btn.setAttribute('aria-pressed', !isPc ? 'true' : 'false');
+        
+        const link = card.querySelector('a.thumb');
+        const img = link && link.querySelector('img');
+        const fmtTab = card.querySelector('.fmt-tab.is-active');
+        const fmt = fmtTab ? fmtTab.getAttribute('data-format') : '16x9';
+        
+        if (img) {
+          const pcSrc = fmt === '4x5' ? pc45 : fmt === '9x16' ? pc916 : pc16;
+          let origSrc = null;
+          if (!isPc) {
+            // Store original before switching
+            if (!img.getAttribute('data-orig-src')) {
+              img.setAttribute('data-orig-src', img.src);
+              if (link) link.setAttribute('data-orig-href', link.href);
+            }
+            origSrc = pcSrc;
+          } else {
+            origSrc = img.getAttribute('data-orig-src');
+          }
+          if (origSrc) {
+            img.src = origSrc;
+            if (link) link.href = (isPc ? link.getAttribute('data-orig-href') : origSrc) || origSrc;
+          }
+        }
+        
+        const sc = card.querySelector('p.scenario');
+        if (sc) {
+          if (!isPc) {
+            if (!sc.getAttribute('data-orig-scenario')) {
+              sc.setAttribute('data-orig-scenario', sc.textContent);
+            }
+            sc.textContent = '\uD83D\uDCE9 Postcard \u00b7 timeless beauty shot';
+          } else {
+            const orig = sc.getAttribute('data-orig-scenario');
+            if (orig) sc.textContent = orig;
+          }
+        }
+      });
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPostcards);
+  } else {
+    initPostcards();
+  }
+  // Re-run after dynamic content loads (for filtered views)
+  setTimeout(initPostcards, 2000);
+})();
+</script>
+<style>
+.pc-tab {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid var(--line, #ddd);
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  margin-left: 0.35rem;
+}
+.pc-tab:hover { border-color: var(--accent, #c00); }
+.pc-tab.is-active {
+  background: var(--accent, #c00);
+  color: #fff;
+  border-color: var(--accent, #c00);
+}
+</style>
+
 </body>
 </html>
