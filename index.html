@@ -9272,6 +9272,8 @@ el.innerHTML = `
         dtab.classList.toggle("is-active", isDay);
         dtab.setAttribute("aria-pressed", isDay ? "true" : "false");
         dtab.setAttribute("data-daynight", isDay ? "day" : "night");
+        dtab.innerHTML = isDay ? "🌙 Night" : "☀ Daylight";
+        dtab.setAttribute("title", isDay ? "Show the night image" : "Show the daylight variant");
         const ftab = dcard.querySelector(".fmt-tab.is-active");
         const dfmt = ftab ? ftab.getAttribute("data-format") : "16x9";
         const dlink = dcard.querySelector("a.thumb");
