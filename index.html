@@ -224,6 +224,8 @@
 .lb-close{position:absolute;top:14px;right:14px}
 .lb-controls{display:flex;gap:12px;align-items:center;justify-content:center}
 .lb-play.is-playing,.lb-narrate.playing{color:#f6c344;border-color:#f6c344;box-shadow:0 0 12px rgba(246,195,68,.5)}
+.lb-close,.lb-prev,.lb-next,.lb-play,.lb-narrate,.lb-tour{background:rgba(12,20,17,.85);color:#eef4f0;border:1px solid #26402f;border-radius:999px;width:46px;height:46px;font-size:20px;cursor:pointer;line-height:1;flex:0 0 auto}
+.lb-tour.active{color:#f6c344;border-color:#f6c344;box-shadow:0 0 12px rgba(246,195,68,.5)}
 
 .wotd{border-top:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12);background:#141419;padding:10px 24px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;font-size:14px;line-height:1.5}
 .wotd .kicker{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8f8a7d;font-weight:600;white-space:nowrap}
@@ -9361,7 +9363,8 @@ el.innerHTML = `
     +'<button class="lb-next" aria-label="Next image">&#8594;</button></div>'
     +'<figure><img><figcaption><span class="lb-cap"></span></figcaption></figure>'
     +'<div class="lb-controls"><button class="lb-play" aria-label="Play slideshow">&#9654;</button>'
-    +'<button class="lb-narrate" aria-label="Play scene narration" style="display:none">&#128266;</button></div>';
+    +'<button class="lb-narrate" aria-label="Play scene narration" style="display:none">&#128266;</button>'
+    +'<button class="lb-tour" aria-label="Start the narrated tour from this scene" style="display:none">&#127911;</button></div>';
   document.body.appendChild(overlay);
   var img=overlay.querySelector('img'),cap=overlay.querySelector('.lb-cap'),count=overlay.querySelector('.lb-count');
   if (typeof SCENES !== "undefined" && SCENES.length) {
@@ -9369,7 +9372,9 @@ el.innerHTML = `
   }
   var playBtn=overlay.querySelector('.lb-play');
   var narrBtn=overlay.querySelector('.lb-narrate');
+  var tourBtn=overlay.querySelector('.lb-tour');
   var narrAudio=null;
+  var tourMode=false;
   var lbNarrBus=(window.__narrBus=window.__narrBus||{stops:[]});
   function stopNarr(){if(narrAudio){narrAudio.pause();narrAudio=null;}narrBtn.classList.remove('playing');narrBtn.setAttribute('aria-label','Play scene narration');narrBtn.innerHTML='&#128266;';}
   function setNarrState(playing){narrBtn.classList.toggle('playing',playing);narrBtn.setAttribute('aria-label',playing?'Pause scene narration':'Play scene narration');narrBtn.innerHTML=playing?'&#10074;&#10074;':'&#128266;';}
@@ -9380,11 +9385,33 @@ el.innerHTML = `
     if(narrAudio&&!narrAudio.paused){stopAllLbNarr();return;}
     stopAllLbNarr();
     narrAudio=new Audio(src);
-    narrAudio.addEventListener('ended',stopAllLbNarr);
+    narrAudio.addEventListener('ended',function(){if(tourMode&&window.__narrTourNext){var fn=window.__narrTourNext;window.__narrTourNext=null;fn();}else{stopAllLbNarr();}});
     narrAudio.addEventListener('error',stopAllLbNarr);
     setNarrState(true);
     narrAudio.play().catch(stopAllLbNarr);
   }
+  function setTourState(on){tourBtn.classList.toggle('active',on);tourBtn.setAttribute('aria-label',on?'Stop the narrated tour':'Start the narrated tour from this scene');}
+  function playNarrArmed(){
+    var card=visibleCards()[idx];var src=card?card.getAttribute('data-audio'):'';
+    if(!src){tourAdvance();return;}
+    stopNarr();
+    narrAudio=new Audio(src);
+    window.__narrTourNext=tourAdvance;
+    narrAudio.addEventListener('ended',function(){var fn=window.__narrTourNext;window.__narrTourNext=null;if(fn)fn();});
+    narrAudio.addEventListener('error',function(){var fn=window.__narrTourNext;window.__narrTourNext=null;if(fn)fn();});
+    setNarrState(true);
+    narrAudio.play().catch(function(){var fn=window.__narrTourNext;window.__narrTourNext=null;if(fn)fn();});
+  }
+  function tourAdvance(){
+    if(!tourMode)return;
+    suppressTourStop=true;
+    try{nav(1);}finally{suppressTourStop=false;}
+    setTimeout(function(){if(tourMode)playNarrArmed();},350);
+  }
+  function startTour(){tourMode=true;setTourState(true);playNarrArmed();}
+  function stopTour(){tourMode=false;window.__narrTourNext=null;setTourState(false);stopAllLbNarr();}
+  function toggleTour(){if(tourMode){stopTour();}else{if(tourMode)stopTour();startTour();}}
+  window.__tourStop=stopTour;
   lbNarrBus.stops.push(stopNarr);
   var items=[],idx=0;
   var lbFormat='16x9';/* lightbox-session format: seeded from the opening card's active tab; persists across prev/next + slideshow, never reset to 16:9 */
@@ -9420,11 +9447,13 @@ el.innerHTML = `
     img.src=items[idx].src;img.alt=items[idx].alt||items[idx].cap;cap.textContent=items[idx].cap;
     var curCard=visibleCards()[idx];var hasA=!!(curCard&&curCard.getAttribute('data-audio'));
     narrBtn.style.display=hasA?'':'none';
+    tourBtn.style.display=hasA?'':'none';
     count.textContent=(idx+1)+' / '+items.length;
     overlay.classList.add('open');overlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';
   }
-  function hide(){setPlaying(false);stopAllLbNarr();overlay.classList.remove('open');overlay.setAttribute('aria-hidden','true');document.body.style.overflow='';}
-  function nav(d){show(idx+d);if(playing)setPlaying(true);}
+  function hide(){setPlaying(false);if(tourMode)stopTour();stopAllLbNarr();overlay.classList.remove('open');overlay.setAttribute('aria-hidden','true');document.body.style.overflow='';}
+  var suppressTourStop=false;
+  function nav(d){if(tourMode&&!suppressTourStop)stopTour();show(idx+d);if(playing)setPlaying(true);}
   document.addEventListener('click',function(e){
     var a=e.target.closest?e.target.closest('a.thumb'):null;
     if(a){if(e.target.closest&&e.target.closest("video.motion-clip")){e.preventDefault();return;}e.preventDefault();var cards=visibleCards();var card=a.closest('.card');var tab=card.querySelector('.fmt-tab.is-active');lbFormat=(tab&&tab.getAttribute('data-format')==='9x16')?'9x16':(tab&&tab.getAttribute('data-format')==='4x5')?'4x5':'16x9';var dtab=card.querySelector('.day-tab.is-active');lbDay=(dtab&&dtab.getAttribute('data-daynight')==='day')?'day':'night';show(cards.indexOf(card));return;}
@@ -9432,7 +9461,8 @@ el.innerHTML = `
     else if(e.target.closest&&e.target.closest('.lb-prev'))nav(-1);
     else if(e.target.closest&&e.target.closest('.lb-next'))nav(1);
     else if(e.target.closest&&e.target.closest('.lb-play')){setPlaying(!playing);playBtn.blur();}
-    else if(e.target.closest&&e.target.closest('.lb-narrate')){toggleNarr();narrBtn.blur();}
+    else if(e.target.closest&&e.target.closest('.lb-narrate')){if(tourMode)stopTour();toggleNarr();narrBtn.blur();}
+    else if(e.target.closest&&e.target.closest('.lb-tour')){toggleTour();tourBtn.blur();}
   });
   document.addEventListener('keydown',function(e){
     if(!overlay.classList.contains('open'))return;
